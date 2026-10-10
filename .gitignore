@@ -115,3 +115,6 @@ docs/refinement2/PREVIOUS_DELIVERY_PROTECTED_SHA256.json
 docs/refinement2/SOURCE_CHANGE_INDEX.json
 docs/refinement2/STATUS.json
 docs/research/NATIVE_AUDIT_FINDINGS.md
+
+# Built libraries are distributed as release assets, not in the source tree
+artifacts/evidence/*.so
