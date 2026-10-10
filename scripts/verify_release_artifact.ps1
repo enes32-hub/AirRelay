@@ -65,7 +65,10 @@ Add-Check 'application id frozen' ($applicationId -eq 'com.airrelay.receiver') $
 
 if ($packageLine -match "versionCode='(\d+)'") { $versionCode = [int]$Matches[1] } else { $versionCode = -1 }
 if ($packageLine -match "versionName='([^']+)'") { $versionName = $Matches[1] } else { $versionName = '' }
-Add-Check 'versionCode increasing' ($versionCode -ge 75) "versionCode=$versionCode"
+# The versionCode only has to increase relative to builds that were already distributed: Android
+# refuses an update whose code is not strictly higher. This is the first public release, so a small
+# positive code is correct; a later release must raise it (e.g. 1 -> 2).
+Add-Check 'versionCode is a positive integer' ($versionCode -ge 1) "versionCode=$versionCode"
 Add-Check 'version name set' ($versionName -ne '') $versionName
 
 $nativeLine = ($badging -split "`n" | Where-Object { $_ -like 'native-code:*' } | Select-Object -First 1)

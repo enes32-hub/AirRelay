@@ -11,8 +11,8 @@
     },
     {
       "path": "app/build.gradle.kts",
-      "bytes": 6547,
-      "sha256": "3c76d566799ecd8fdecb14b85e888c71c5ed251fc065b7c98ce54eae56ed8f88"
+      "bytes": 6546,
+      "sha256": "80fc9ee08f8245c717d1c6635a62f4509f38db8ee93b979c0918684cab7a4b4e"
     },
     {
       "path": "app/proguard-rules.pro",

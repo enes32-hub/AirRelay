@@ -7,7 +7,7 @@ cloud service.
 | | |
 |---|---|
 | Application ID | `com.airrelay.receiver` |
-| Version | `1.0.0` (versionCode 76) |
+| Version | `1.0.0` (versionCode 1) |
 | Platform | Android TV, Android 7.0+ (API 24+), landscape, D-pad remote |
 | Architectures | `arm64-v8a`, `armeabi-v7a` |
 | Language | Kotlin + Jetpack Compose (Material 3), native C/C++ core |
