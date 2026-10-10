@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rec_options_title">Kayıt ayarları</string>
+    <string name="app_name">AirRelay</string>
+    <string name="notification_channel">AirRelay Alıcı Hizmeti</string>
+    <string name="notification_title">AirRelay alıcısı çalışıyor</string>
+    <string name="notification_text">AirPlay bağlantıları bekleniyor</string>
+    <string name="notification_pin_title">AirRelay eşleştirme onayı</string>
+    <string name="notification_pin_text">Eşleştirme kodunu görmek için AirRelay ekranını aç.</string>
+    <string name="tab_logs">Destek günlükleri</string>
+    <string name="cd_pip">Küçük pencere</string>
+    <string name="cd_play_pause">Oynat veya duraklat</string>
+    <string name="download_saved">%1$s konumuna kaydedildi</string>
+    <string name="download_failed">İndirme başarısız</string>
+    <string name="seconds_short">%1$d sn</string>
+    <string name="scale_best_fit">Ekrana sığdır</string>
+    <string name="scale_stretch">Esnet</string>
+    <string name="export_logs_chooser_title">Destek günlüğünü paylaş</string>
+    <string name="section_server">Alıcı</string>
+    <string name="section_display">Görüntü</string>
+    <string name="section_decode">Görüntü ve ses çözme</string>
+    <string name="section_developer">Tanılama ve ince ayarlar</string>
+    <string name="setting_server_port">Alıcı portu</string>
+    <string name="setting_advertise_video">AirPlay video desteğini duyur</string>
+    <string name="setting_advertise_video_desc">Kapatıldığında ayrı video gönderimleri yalnız ses olarak sunulabilir.</string>
+    <string name="setting_advertise_audio">AirPlay ses desteğini duyur</string>
+    <string name="setting_advertise_audio_desc">Kapatıldığında cihaz medya oynatıcılarının ses listesinde görünmez; yansıtma ayrı kalır.</string>
+    <string name="setting_alac">ALAC desteğini duyur</string>
+    <string name="setting_alac_desc">Müzik aktarımında kullanılan ALAC codec bilgisini ağ ilanına ekle.</string>
+    <string name="setting_aac">AAC desteğini duyur</string>
+    <string name="setting_aac_desc">Ekran yansıtma sesinde kullanılan AAC-ELD/AAC-LC bilgisini ağ ilanına ekle.</string>
+    <string name="setting_launch_on_connect">Yayın geldiğinde ekrana getir</string>
+    <string name="setting_launch_on_connect_desc">Yeni bir yayın başladığında uygulamayı öne getir. TV izinleri geçerlidir.</string>
+    <string name="setting_launch_on_connect_no_permission">Otomatik görüntüleme için diğer uygulamaların üzerinde gösterme izni gerekiyor.</string>
+    <string name="setting_resolution">Çözünürlük</string>
+    <string name="setting_resolution_desc">Göndericiye önerilen en yüksek görüntü boyutu.</string>
+    <string name="setting_resolution_width">Genişlik</string>
+    <string name="setting_resolution_height">Yükseklik</string>
+    <string name="setting_max_fps">En yüksek kare hızı</string>
+    <string name="setting_max_fps_desc">1–%1$d FPS seç. Değiştirdiğinde görüntü tercihi Özel olur.</string>
+    <string name="setting_max_fps_placeholder">1–%1$d FPS</string>
+    <string name="setting_overscanned">Taşma payı ekle</string>
+    <string name="setting_overscanned_desc">Görüntüyü kenarlardan kırpan ekranlar için piksel sınırı duyur.</string>
+    <string name="chip_custom">Özel</string>
+    <string name="chip_device_portrait">Dikey</string>
+    <string name="chip_device_landscape">Yatay</string>
+    <string name="setting_h265">H.265 (HEVC)</string>
+    <string name="setting_h265_desc">Cihaz destekliyorsa H.265 görüntü çözmeyi etkinleştir.</string>
+    <string name="setting_enforce_sdr">SDR renk uyumluluğu</string>
+    <string name="setting_enforce_sdr_desc">Videoyu sınırlı SDR olarak işaretle; kapatmak HDR kaynaklarını geçirmeye izin verir.</string>
+    <string name="setting_sw_alac">Yazılımsal ALAC çözmeyi zorla</string>
+    <string name="setting_sw_alac_desc">Donanım yerine yazılımsal ALAC kullan. Ses gecikmesini etkileyebilir.</string>
+    <string name="setting_developer_options">Ek teknik seçenekler</string>
+    <string name="setting_developer_options_desc">Ses tamponu, görüntü çözme ve destek günlükleri.</string>
+    <string name="setting_key_allow_frame_drop">Geciken kareleri atla</string>
+    <string name="setting_key_allow_frame_drop_desc">Android 10 ve sonrasında çözücünün yetişemediği kareleri atmasına izin ver.</string>
+    <string name="setting_realtime_decoder_priority">Ses çözmeye öncelik ver</string>
+    <string name="setting_realtime_decoder_priority_desc">Ses çözücü için gerçek zamanlı öncelik iste.</string>
+    <string name="setting_operating_rate">Çözücü çalışma hızı</string>
+    <string name="setting_operating_rate_desc">Çözücüden en yüksek çalışma hızını iste.</string>
+    <string name="chip_auto">Otomatik</string>
+    <string name="chip_on">Açık</string>
+    <string name="chip_off">Kapalı</string>
+    <string name="setting_low_latency">Düşük gecikme</string>
+    <string name="setting_low_latency_desc">Düşük gecikmeli ses çözmeyi kullan. İşlemci ve güç kullanımını artırabilir.</string>
+    <string name="setting_scheduled_output_buffer_release">Zamanlanmış kare sunumu</string>
+    <string name="setting_scheduled_output_buffer_release_desc">Çözülmüş kareleri sunum zaman damgasına uygun ekran yenilemesine zamanla.</string>
+    <string name="setting_audio_delay">Ses gecikmesini elle belirle</string>
+    <string name="setting_audio_delay_desc">Telefona bildirilen ses gecikmesini özel bir değere ayarla.</string>
+    <string name="audio_delay_value">%d ms</string>
+    <string name="setting_audio_auto_buffer">Otomatik yazılımsal ses tamponu</string>
+    <string name="setting_audio_auto_buffer_desc">Tamponu ağ ve cihaz koşullarına göre uyarla. Seçilen seviye düzensiz gelişlere karşı dayanıklılığı belirler.</string>
+    <string name="audio_adaptive_value">%1$d%% (%2$s)</string>
+    <string-array name="audio_adaptive_step_names">
+        <item>En düşük gecikme</item>
+        <item>Daha düşük gecikme</item>
+        <item>Dengeli</item>
+        <item>Daha kararlı</item>
+        <item>En kararlı</item>
+    </string-array>
+    <string name="setting_audio_cushion_ms">Yazılımsal ses tamponu (ms)</string>
+    <string name="setting_audio_cushion_ms_desc">Kısa tampon gecikmeyi, uzun tampon kesinti riskini azaltır.</string>
+    <string name="setting_oboe_buffer_frames">Donanım çıkış tamponu (kare)</string>
+    <string name="setting_oboe_buffer_frames_desc">Uygulama ile ses cihazı arasındaki tampon. Otomatik boyut için 0 bırak.</string>
+    <string name="transition_live">Canlı</string>
+    <string name="transition_seek_hint">Sol/sağ: 10 saniye · OK: sar · Geri: iptal</string>
+    <string name="transition_playback_error">Video oynatılamadı (kod %1$d). Telefon ekranına dönün veya başka bir video seçin.</string>
+    <string name="transition_access_denied">Video kaynağı erişimi reddetti. Oynatma şekli düğmesinden Ekrandan yansıt seçeneğini deneyebilir veya videoyu cihazınızda yeniden açabilirsiniz.</string>
+</resources>

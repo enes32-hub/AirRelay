@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="r2_invalid_number">Введите число от %1$d до %2$d.</string>
+    <string name="r2_invalid_resolution">Ширина и высота должны быть от 16 до 16384.</string>
+    <string name="settings_playback">Изображение и воспроизведение</string>
+    <string name="help_modes_title">Как воспроизводится видео?</string>
+    <string name="help_modes_body">Повтор экрана показывает экран iPhone, iPad или Mac. Прямое воспроизведение использует плеер телевизора, если передающее приложение это поддерживает. Выберите способ в управлении трансляцией. Открытое видео может не переключиться автоматически; закройте и снова откройте его на устройстве.</string>
+    <string name="help_video_title">Видео не воспроизводится или экран чёрный</string>
+    <string name="help_video_body">Если источник запрещает доступ, выберите повтор экрана в разделе воспроизведения. Выйдите из экрана видео AirPlay на устройстве и заново откройте видео. Некоторый защищённый контент нельзя передавать повтором экрана. Если экран устройства тоже не виден, остановите повтор экрана на устройстве и подключитесь снова.</string>
+    <string name="help_network_title">Зависания, задержка или VPN</string>
+    <string name="help_network_body">Телевизор и отправитель должны быть в одной локальной сети. Гостевые сети и изоляция клиентов могут блокировать доступ. VPN может менять локальный доступ или маршрут соединения. Разрешите локальную сеть в VPN, если возможно; при необходимости сравните с отключённым VPN. При рывках попробуйте профиль низкой задержки в настройках изображения и воспроизведения.</string>
+    <string name="help_record_title">Запись и просмотр записей</string>
+    <string name="help_record_body">Кнопка записи в управлении трансляцией начинает или останавливает запись. Предоставьте разрешение Android при запросе. Выберите качество: Настройки → Параметры записи. Смотрите, удаляйте и экспортируйте файлы через «Записи» в главном меню. Перед просмотром завершите трансляцию. В плеере записи нажмите вверх для выбора шкалы времени, влево/вправо для шага 10 секунд и OK для применения.</string>
+    <string name="help_tracks_title">Качество, звук и субтитры</string>
+    <string name="help_tracks_body">При прямом воспроизведении доступны варианты качества, звука и субтитров, предоставленные источником. Размер субтитров меняется кнопками −/+ в разделе субтитров. Встроенные в изображение субтитры изменить нельзя. При повторе экрана используйте эти настройки в передающем приложении.</string>
+    <string name="stream_profile_title">Предпочтение изображения</string>
+    <string name="stream_profile_hint">Интернет-видео подстраивается под подключение. Повтор экрана зависит от передающего устройства и телевизора. Изменения во время трансляции применяются при следующем запуске.</string>
+    <string name="stream_profile_custom">Пользовательское</string>
+    <string name="stream_profile_balanced">Сбалансированное</string>
+    <string name="stream_profile_quality">Качество изображения</string>
+    <string name="stream_profile_responsive">Низкая задержка</string>
+    <string name="stream_profile_stable">Стабильность</string>
+    <string name="rec_options_title">Параметры записи</string>
+    <string name="app_name">AirRelay</string>
+    <string name="notification_channel">Служба приёмника AirRelay</string>
+    <string name="notification_title">Приёмник AirRelay работает</string>
+    <string name="notification_text">Ожидание подключений AirPlay</string>
+    <string name="notification_pin_title">Подтверждение сопряжения AirRelay</string>
+    <string name="notification_pin_text">Откройте AirRelay, чтобы увидеть код сопряжения.</string>
+    <string name="tab_logs">Журналы</string>
+    <string name="cd_pip">Картинка в картинке</string>
+    <string name="cd_play_pause">Воспроизведение/Пауза</string>
+    <string name="download_saved">Сохранено в %1$s</string>
+    <string name="download_failed">Не удалось скачать</string>
+    <string name="seconds_short">%1$d с</string>
+    <string name="scale_best_fit">Вписать</string>
+    <string name="scale_stretch">Растянуть</string>
+    <string name="export_logs_chooser_title">Поделиться диагностикой</string>
+    <string name="section_server">Сервер</string>
+    <string name="section_display">Экран</string>
+    <string name="section_decode">Декодирование</string>
+    <string name="section_developer">Диагностика и настройка</string>
+    <string name="setting_server_port">Порт сервера</string>
+    </resources>

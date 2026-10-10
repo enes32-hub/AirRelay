@@ -1,0 +1,3894 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "AynaTV Receiver provisional SBOM",
+  "documentNamespace": "https://aynatv.local/spdx/b9dc9d2c-bf4a-4b4e-a214-5577dc9dfe0c",
+  "creationInfo": {
+    "created": "2026-08-31T22:27:22Z",
+    "creators": [
+      "Tool: tools/generate_sbom.py"
+    ],
+    "comment": "PROVISIONAL. Generated from debugRuntimeClasspath, native source pins and checked-in license files. It is not distribution clearance."
+  },
+  "documentDescribes": [
+    "SPDXRef-AynaTV-Receiver"
+  ],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-AynaTV-Receiver",
+      "name": "AynaTV Receiver",
+      "versionInfo": "0.0.31",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "GPL-3.0-only",
+      "licenseDeclared": "GPL-3.0-only",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-UxPlay",
+      "name": "UxPlay",
+      "versionInfo": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "downloadLocation": "https://github.com/FDH2/UxPlay",
+      "filesAnalyzed": false,
+      "licenseConcluded": "GPL-3.0-only",
+      "licenseDeclared": "GPL-3.0-only",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "other",
+          "referenceLocator": "git+https://github.com/FDH2/UxPlay@462153392f2e30937424922039ff9f0cda5e7b1a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Native-FFmpeg",
+      "name": "FFmpeg",
+      "versionInfo": "38b88335f99e76ed89ff3c93f877fdefce736c13",
+      "downloadLocation": "https://github.com/FFmpeg/FFmpeg",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "other",
+          "referenceLocator": "git+https://github.com/FFmpeg/FFmpeg@38b88335f99e76ed89ff3c93f877fdefce736c13"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Native-libplist",
+      "name": "libplist",
+      "versionInfo": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "downloadLocation": "https://github.com/libimobiledevice/libplist",
+      "filesAnalyzed": false,
+      "licenseConcluded": "LGPL-2.1-or-later",
+      "licenseDeclared": "LGPL-2.1-or-later",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "other",
+          "referenceLocator": "git+https://github.com/libimobiledevice/libplist@f41b1ea67045e0c09339974d83e389972d84f166"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Native-OpenSSL",
+      "name": "OpenSSL",
+      "versionInfo": "openssl-3.4.4",
+      "downloadLocation": "https://github.com/openssl/openssl",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "other",
+          "referenceLocator": "git+https://github.com/openssl/openssl@openssl-3.4.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.activity-activity-1.9.3",
+      "name": "androidx.activity:activity",
+      "versionInfo": "1.9.3",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/activity/activity/1.9.3/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.activity/activity@1.9.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.activity-activity-compose-1.9.3",
+      "name": "androidx.activity:activity-compose",
+      "versionInfo": "1.9.3",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/activity/activity-compose/1.9.3/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.activity/activity-compose@1.9.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.activity-activity-ktx-1.9.3",
+      "name": "androidx.activity:activity-ktx",
+      "versionInfo": "1.9.3",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/activity/activity-ktx/1.9.3/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.activity/activity-ktx@1.9.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.annotation-annotation-1.9.1",
+      "name": "androidx.annotation:annotation",
+      "versionInfo": "1.9.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/annotation/annotation/1.9.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.annotation/annotation@1.9.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.annotation-annotation-experimental-1.4.1",
+      "name": "androidx.annotation:annotation-experimental",
+      "versionInfo": "1.4.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/annotation/annotation-experimental/1.4.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.annotation/annotation-experimental@1.4.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.annotation-annotation-jvm-1.9.1",
+      "name": "androidx.annotation:annotation-jvm",
+      "versionInfo": "1.9.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/annotation/annotation-jvm/1.9.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.annotation/annotation-jvm@1.9.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.arch.core-core-common-2.2.0",
+      "name": "androidx.arch.core:core-common",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/arch/core/core-common/2.2.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.arch.core/core-common@2.2.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.arch.core-core-runtime-2.2.0",
+      "name": "androidx.arch.core:core-runtime",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/arch/core/core-runtime/2.2.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.arch.core/core-runtime@2.2.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.autofill-autofill-1.0.0",
+      "name": "androidx.autofill:autofill",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/autofill/autofill/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.autofill/autofill@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.collection-collection-1.5.0",
+      "name": "androidx.collection:collection",
+      "versionInfo": "1.5.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/collection/collection/1.5.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.collection/collection@1.5.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.collection-collection-jvm-1.5.0",
+      "name": "androidx.collection:collection-jvm",
+      "versionInfo": "1.5.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/collection/collection-jvm/1.5.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.collection/collection-jvm@1.5.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.collection-collection-ktx-1.5.0",
+      "name": "androidx.collection:collection-ktx",
+      "versionInfo": "1.5.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/collection/collection-ktx/1.5.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.collection/collection-ktx@1.5.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose-compose-bom-2026.05.00",
+      "name": "androidx.compose:compose-bom",
+      "versionInfo": "2026.05.00",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/compose-bom/2026.05.00/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose/compose-bom@2026.05.00"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.animation-animation-1.11.1",
+      "name": "androidx.compose.animation:animation",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/animation/animation/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.animation/animation@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.animation-animation-android-1.11.1",
+      "name": "androidx.compose.animation:animation-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/animation/animation-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.animation/animation-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.animation-animation-core-1.11.1",
+      "name": "androidx.compose.animation:animation-core",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/animation/animation-core/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.animation/animation-core@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.animation-animation-core-android-1.11.1",
+      "name": "androidx.compose.animation:animation-core-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/animation/animation-core-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.animation/animation-core-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.foundation-foundation-1.11.1",
+      "name": "androidx.compose.foundation:foundation",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/foundation/foundation/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.foundation/foundation@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.foundation-foundation-android-1.11.1",
+      "name": "androidx.compose.foundation:foundation-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/foundation/foundation-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.foundation/foundation-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.foundation-foundation-layout-1.11.1",
+      "name": "androidx.compose.foundation:foundation-layout",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/foundation/foundation-layout/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.foundation/foundation-layout@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.foundation-foundation-layout-android-1.11.1",
+      "name": "androidx.compose.foundation:foundation-layout-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/foundation/foundation-layout-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.foundation/foundation-layout-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.material-material-icons-core-1.7.8",
+      "name": "androidx.compose.material:material-icons-core",
+      "versionInfo": "1.7.8",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/material/material-icons-core/1.7.8/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.material/material-icons-core@1.7.8"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.material-material-icons-core-android-1.7.8",
+      "name": "androidx.compose.material:material-icons-core-android",
+      "versionInfo": "1.7.8",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/material/material-icons-core-android/1.7.8/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.material/material-icons-core-android@1.7.8"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.material-material-icons-extended-1.7.8",
+      "name": "androidx.compose.material:material-icons-extended",
+      "versionInfo": "1.7.8",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/material/material-icons-extended/1.7.8/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.material/material-icons-extended@1.7.8"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.material-material-icons-extended-android-1.7.8",
+      "name": "androidx.compose.material:material-icons-extended-android",
+      "versionInfo": "1.7.8",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/material/material-icons-extended-android/1.7.8/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.material/material-icons-extended-android@1.7.8"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.material-material-ripple-1.11.1",
+      "name": "androidx.compose.material:material-ripple",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/material/material-ripple/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.material/material-ripple@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.material-material-ripple-android-1.11.1",
+      "name": "androidx.compose.material:material-ripple-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/material/material-ripple-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.material/material-ripple-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.material3-material3-1.4.0",
+      "name": "androidx.compose.material3:material3",
+      "versionInfo": "1.4.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/material3/material3/1.4.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.material3/material3@1.4.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.material3-material3-android-1.4.0",
+      "name": "androidx.compose.material3:material3-android",
+      "versionInfo": "1.4.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/material3/material3-android/1.4.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.material3/material3-android@1.4.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.runtime-runtime-1.11.1",
+      "name": "androidx.compose.runtime:runtime",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/runtime/runtime/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.runtime/runtime@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.runtime-runtime-android-1.11.1",
+      "name": "androidx.compose.runtime:runtime-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/runtime/runtime-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.runtime/runtime-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.runtime-runtime-annotation-1.11.1",
+      "name": "androidx.compose.runtime:runtime-annotation",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/runtime/runtime-annotation/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.runtime/runtime-annotation@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.runtime-runtime-annotation-android-1.11.1",
+      "name": "androidx.compose.runtime:runtime-annotation-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/runtime/runtime-annotation-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.runtime/runtime-annotation-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.runtime-runtime-retain-1.11.1",
+      "name": "androidx.compose.runtime:runtime-retain",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/runtime/runtime-retain/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.runtime/runtime-retain@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.runtime-runtime-retain-android-1.11.1",
+      "name": "androidx.compose.runtime:runtime-retain-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/runtime/runtime-retain-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.runtime/runtime-retain-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.runtime-runtime-saveable-1.11.1",
+      "name": "androidx.compose.runtime:runtime-saveable",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/runtime/runtime-saveable/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.runtime/runtime-saveable@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.runtime-runtime-saveable-android-1.11.1",
+      "name": "androidx.compose.runtime:runtime-saveable-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/runtime/runtime-saveable-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.runtime/runtime-saveable-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-1.11.1",
+      "name": "androidx.compose.ui:ui",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-android-1.11.1",
+      "name": "androidx.compose.ui:ui-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-geometry-1.11.1",
+      "name": "androidx.compose.ui:ui-geometry",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-geometry/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-geometry@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-geometry-android-1.11.1",
+      "name": "androidx.compose.ui:ui-geometry-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-geometry-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-geometry-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-graphics-1.11.1",
+      "name": "androidx.compose.ui:ui-graphics",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-graphics/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-graphics@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-graphics-android-1.11.1",
+      "name": "androidx.compose.ui:ui-graphics-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-graphics-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-graphics-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-text-1.11.1",
+      "name": "androidx.compose.ui:ui-text",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-text/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-text@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-text-android-1.11.1",
+      "name": "androidx.compose.ui:ui-text-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-text-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-text-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-1.11.1",
+      "name": "androidx.compose.ui:ui-tooling",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-tooling/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-tooling@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-android-1.11.1",
+      "name": "androidx.compose.ui:ui-tooling-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-tooling-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-tooling-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-data-1.11.1",
+      "name": "androidx.compose.ui:ui-tooling-data",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-tooling-data/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-tooling-data@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-data-android-1.11.1",
+      "name": "androidx.compose.ui:ui-tooling-data-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-tooling-data-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-tooling-data-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-preview-1.11.1",
+      "name": "androidx.compose.ui:ui-tooling-preview",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-tooling-preview/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-tooling-preview@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-preview-android-1.11.1",
+      "name": "androidx.compose.ui:ui-tooling-preview-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-tooling-preview-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-tooling-preview-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-unit-1.11.1",
+      "name": "androidx.compose.ui:ui-unit",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-unit/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-unit@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-unit-android-1.11.1",
+      "name": "androidx.compose.ui:ui-unit-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-unit-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-unit-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-util-1.11.1",
+      "name": "androidx.compose.ui:ui-util",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-util/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-util@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.compose.ui-ui-util-android-1.11.1",
+      "name": "androidx.compose.ui:ui-util-android",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/compose/ui/ui-util-android/1.11.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-util-android@1.11.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.concurrent-concurrent-futures-1.2.0",
+      "name": "androidx.concurrent:concurrent-futures",
+      "versionInfo": "1.2.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/concurrent/concurrent-futures/1.2.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.concurrent/concurrent-futures@1.2.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.core-core-1.16.0",
+      "name": "androidx.core:core",
+      "versionInfo": "1.16.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/core/core/1.16.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.core/core@1.16.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.core-core-ktx-1.16.0",
+      "name": "androidx.core:core-ktx",
+      "versionInfo": "1.16.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/core/core-ktx/1.16.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.core/core-ktx@1.16.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.core-core-viewtree-1.0.0",
+      "name": "androidx.core:core-viewtree",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/core/core-viewtree/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.core/core-viewtree@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.customview-customview-1.0.0",
+      "name": "androidx.customview:customview",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/customview/customview/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.customview/customview@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.customview-customview-poolingcontainer-1.0.0",
+      "name": "androidx.customview:customview-poolingcontainer",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/customview/customview-poolingcontainer/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.customview/customview-poolingcontainer@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.datastore-datastore-1.1.1",
+      "name": "androidx.datastore:datastore",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/datastore/datastore/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.datastore-datastore-android-1.1.1",
+      "name": "androidx.datastore:datastore-android",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/datastore/datastore-android/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore-android@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.datastore-datastore-core-1.1.1",
+      "name": "androidx.datastore:datastore-core",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/datastore/datastore-core/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore-core@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.datastore-datastore-core-android-1.1.1",
+      "name": "androidx.datastore:datastore-core-android",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/datastore/datastore-core-android/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore-core-android@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.datastore-datastore-core-okio-1.1.1",
+      "name": "androidx.datastore:datastore-core-okio",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/datastore/datastore-core-okio/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore-core-okio@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.datastore-datastore-core-okio-jvm-1.1.1",
+      "name": "androidx.datastore:datastore-core-okio-jvm",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/datastore/datastore-core-okio-jvm/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore-core-okio-jvm@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.datastore-datastore-preferences-1.1.1",
+      "name": "androidx.datastore:datastore-preferences",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/datastore/datastore-preferences/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore-preferences@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.datastore-datastore-preferences-android-1.1.1",
+      "name": "androidx.datastore:datastore-preferences-android",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/datastore/datastore-preferences-android/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore-preferences-android@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.datastore-datastore-preferences-core-1.1.1",
+      "name": "androidx.datastore:datastore-preferences-core",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/datastore/datastore-preferences-core/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore-preferences-core@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.datastore-datastore-preferences-core-jvm-1.1.1",
+      "name": "androidx.datastore:datastore-preferences-core-jvm",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/datastore/datastore-preferences-core-jvm/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore-preferences-core-jvm@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.documentfile-documentfile-1.0.0",
+      "name": "androidx.documentfile:documentfile",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/documentfile/documentfile/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.documentfile/documentfile@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.dynamicanimation-dynamicanimation-1.0.0",
+      "name": "androidx.dynamicanimation:dynamicanimation",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/dynamicanimation/dynamicanimation/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.dynamicanimation/dynamicanimation@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.emoji2-emoji2-1.4.0",
+      "name": "androidx.emoji2:emoji2",
+      "versionInfo": "1.4.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/emoji2/emoji2/1.4.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.emoji2/emoji2@1.4.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.exifinterface-exifinterface-1.3.6",
+      "name": "androidx.exifinterface:exifinterface",
+      "versionInfo": "1.3.6",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/exifinterface/exifinterface/1.3.6/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.exifinterface/exifinterface@1.3.6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.fragment-fragment-1.5.1",
+      "name": "androidx.fragment:fragment",
+      "versionInfo": "1.5.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/fragment/fragment/1.5.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.fragment/fragment@1.5.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.graphics-graphics-path-1.0.1",
+      "name": "androidx.graphics:graphics-path",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/graphics/graphics-path/1.0.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.graphics/graphics-path@1.0.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.hilt-hilt-navigation-1.2.0",
+      "name": "androidx.hilt:hilt-navigation",
+      "versionInfo": "1.2.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/hilt/hilt-navigation/1.2.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.hilt/hilt-navigation@1.2.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.hilt-hilt-navigation-compose-1.2.0",
+      "name": "androidx.hilt:hilt-navigation-compose",
+      "versionInfo": "1.2.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/hilt/hilt-navigation-compose/1.2.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.hilt/hilt-navigation-compose@1.2.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.interpolator-interpolator-1.0.0",
+      "name": "androidx.interpolator:interpolator",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/interpolator/interpolator/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.interpolator/interpolator@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.legacy-legacy-support-core-utils-1.0.0",
+      "name": "androidx.legacy:legacy-support-core-utils",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/legacy/legacy-support-core-utils/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.legacy/legacy-support-core-utils@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-common-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-common",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-common/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-common@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-common-java8-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-common-java8",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-common-java8/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-common-java8@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-common-jvm-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-common-jvm",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-common-jvm/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-common-jvm@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-livedata-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-livedata",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-livedata/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-livedata@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-livedata-core-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-livedata-core",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-livedata-core/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-livedata-core@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-livedata-core-ktx-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-livedata-core-ktx",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-livedata-core-ktx/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-livedata-core-ktx@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-process-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-process",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-process/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-process@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-runtime",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-runtime/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-runtime@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-android-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-runtime-android",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-runtime-android/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-runtime-android@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-compose-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-runtime-compose",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-runtime-compose/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-runtime-compose@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-compose-android-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-runtime-compose-android",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-runtime-compose-android/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-runtime-compose-android@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-ktx-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-runtime-ktx",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-runtime-ktx/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-runtime-ktx@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-ktx-android-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-runtime-ktx-android",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-runtime-ktx-android/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-runtime-ktx-android@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-service-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-service",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-service/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-service@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-viewmodel",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-viewmodel/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-android-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-viewmodel-android",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-viewmodel-android/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-android@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-compose-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-viewmodel-compose",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-viewmodel-compose/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-compose@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-compose-android-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-viewmodel-compose-android",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-viewmodel-compose-android/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-compose-android@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-ktx-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-viewmodel-ktx",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-viewmodel-ktx/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-ktx@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-savedstate-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-viewmodel-savedstate",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-savedstate@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-savedstate-android-2.9.4",
+      "name": "androidx.lifecycle:lifecycle-viewmodel-savedstate-android",
+      "versionInfo": "2.9.4",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate-android/2.9.4/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-savedstate-android@2.9.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.loader-loader-1.0.0",
+      "name": "androidx.loader:loader",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/loader/loader/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.loader/loader@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.localbroadcastmanager-localbroadcastmanager-1.0.0",
+      "name": "androidx.localbroadcastmanager:localbroadcastmanager",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/localbroadcastmanager/localbroadcastmanager/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.localbroadcastmanager/localbroadcastmanager@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media-media-1.7.0",
+      "name": "androidx.media:media",
+      "versionInfo": "1.7.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media/media/1.7.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media/media@1.7.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-common-1.11.0-beta01",
+      "name": "androidx.media3:media3-common",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-common/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-common@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-common-ktx-1.11.0-beta01",
+      "name": "androidx.media3:media3-common-ktx",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-common-ktx/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-common-ktx@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-container-1.11.0-beta01",
+      "name": "androidx.media3:media3-container",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-container/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-container@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-database-1.11.0-beta01",
+      "name": "androidx.media3:media3-database",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-database/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-database@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-datasource-1.11.0-beta01",
+      "name": "androidx.media3:media3-datasource",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-datasource/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-datasource@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-decoder-1.11.0-beta01",
+      "name": "androidx.media3:media3-decoder",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-decoder/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-decoder@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-effect-1.11.0-beta01",
+      "name": "androidx.media3:media3-effect",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-effect/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-effect@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-exoplayer-1.11.0-beta01",
+      "name": "androidx.media3:media3-exoplayer",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-exoplayer/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-exoplayer@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-exoplayer-hls-1.11.0-beta01",
+      "name": "androidx.media3:media3-exoplayer-hls",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-exoplayer-hls/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-exoplayer-hls@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-extractor-1.11.0-beta01",
+      "name": "androidx.media3:media3-extractor",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-extractor/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-extractor@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-muxer-1.11.0-beta01",
+      "name": "androidx.media3:media3-muxer",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-muxer/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-muxer@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-transformer-1.11.0-beta01",
+      "name": "androidx.media3:media3-transformer",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-transformer/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-transformer@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-ui-compose-1.11.0-beta01",
+      "name": "androidx.media3:media3-ui-compose",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-ui-compose/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-ui-compose@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.media3-media3-ui-compose-material3-1.11.0-beta01",
+      "name": "androidx.media3:media3-ui-compose-material3",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/media3/media3-ui-compose-material3/1.11.0-beta01/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-ui-compose-material3@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.navigation-navigation-common-2.5.1",
+      "name": "androidx.navigation:navigation-common",
+      "versionInfo": "2.5.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/navigation/navigation-common/2.5.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.navigation/navigation-common@2.5.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.navigation-navigation-common-ktx-2.5.1",
+      "name": "androidx.navigation:navigation-common-ktx",
+      "versionInfo": "2.5.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/navigation/navigation-common-ktx/2.5.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.navigation/navigation-common-ktx@2.5.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.navigation-navigation-compose-2.5.1",
+      "name": "androidx.navigation:navigation-compose",
+      "versionInfo": "2.5.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/navigation/navigation-compose/2.5.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.navigation/navigation-compose@2.5.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.navigation-navigation-runtime-2.5.1",
+      "name": "androidx.navigation:navigation-runtime",
+      "versionInfo": "2.5.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/navigation/navigation-runtime/2.5.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.navigation/navigation-runtime@2.5.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.navigation-navigation-runtime-ktx-2.5.1",
+      "name": "androidx.navigation:navigation-runtime-ktx",
+      "versionInfo": "2.5.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/navigation/navigation-runtime-ktx/2.5.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.navigation/navigation-runtime-ktx@2.5.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.print-print-1.0.0",
+      "name": "androidx.print:print",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/print/print/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.print/print@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.profileinstaller-profileinstaller-1.4.0",
+      "name": "androidx.profileinstaller:profileinstaller",
+      "versionInfo": "1.4.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/profileinstaller/profileinstaller/1.4.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.profileinstaller/profileinstaller@1.4.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.savedstate-savedstate-1.3.2",
+      "name": "androidx.savedstate:savedstate",
+      "versionInfo": "1.3.2",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/savedstate/savedstate/1.3.2/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.savedstate/savedstate@1.3.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.savedstate-savedstate-android-1.3.2",
+      "name": "androidx.savedstate:savedstate-android",
+      "versionInfo": "1.3.2",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/savedstate/savedstate-android/1.3.2/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.savedstate/savedstate-android@1.3.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.savedstate-savedstate-compose-1.3.2",
+      "name": "androidx.savedstate:savedstate-compose",
+      "versionInfo": "1.3.2",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/savedstate/savedstate-compose/1.3.2/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.savedstate/savedstate-compose@1.3.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.savedstate-savedstate-compose-android-1.3.2",
+      "name": "androidx.savedstate:savedstate-compose-android",
+      "versionInfo": "1.3.2",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/savedstate/savedstate-compose-android/1.3.2/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.savedstate/savedstate-compose-android@1.3.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.savedstate-savedstate-ktx-1.3.2",
+      "name": "androidx.savedstate:savedstate-ktx",
+      "versionInfo": "1.3.2",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/savedstate/savedstate-ktx/1.3.2/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.savedstate/savedstate-ktx@1.3.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.startup-startup-runtime-1.1.1",
+      "name": "androidx.startup:startup-runtime",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/startup/startup-runtime/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.startup/startup-runtime@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.tracing-tracing-1.2.0",
+      "name": "androidx.tracing:tracing",
+      "versionInfo": "1.2.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/tracing/tracing/1.2.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.tracing/tracing@1.2.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.transition-transition-1.6.0",
+      "name": "androidx.transition:transition",
+      "versionInfo": "1.6.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/transition/transition/1.6.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.transition/transition@1.6.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.versionedparcelable-versionedparcelable-1.1.1",
+      "name": "androidx.versionedparcelable:versionedparcelable",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/versionedparcelable/versionedparcelable/1.1.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.versionedparcelable/versionedparcelable@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.viewpager-viewpager-1.0.0",
+      "name": "androidx.viewpager:viewpager",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/viewpager/viewpager/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.viewpager/viewpager@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.window-window-1.5.0",
+      "name": "androidx.window:window",
+      "versionInfo": "1.5.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/window/window/1.5.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.window/window@1.5.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.window-window-core-1.5.0",
+      "name": "androidx.window:window-core",
+      "versionInfo": "1.5.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/window/window-core/1.5.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.window/window-core@1.5.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-androidx.window-window-core-android-1.5.0",
+      "name": "androidx.window:window-core-android",
+      "versionInfo": "1.5.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/androidx/window/window-core-android/1.5.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.window/window-core-android@1.5.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.code.findbugs-jsr305-3.0.2",
+      "name": "com.google.code.findbugs:jsr305",
+      "versionInfo": "3.0.2",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.dagger-dagger-2.53.1",
+      "name": "com.google.dagger:dagger",
+      "versionInfo": "2.53.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/dagger/dagger/2.53.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.dagger/dagger@2.53.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.dagger-dagger-lint-aar-2.53.1",
+      "name": "com.google.dagger:dagger-lint-aar",
+      "versionInfo": "2.53.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/dagger/dagger-lint-aar/2.53.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.dagger/dagger-lint-aar@2.53.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.dagger-hilt-android-2.53.1",
+      "name": "com.google.dagger:hilt-android",
+      "versionInfo": "2.53.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/dagger/hilt-android/2.53.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.dagger/hilt-android@2.53.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.dagger-hilt-core-2.53.1",
+      "name": "com.google.dagger:hilt-core",
+      "versionInfo": "2.53.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/dagger/hilt-core/2.53.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.dagger/hilt-core@2.53.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.errorprone-error-prone-annotations-2.28.0",
+      "name": "com.google.errorprone:error_prone_annotations",
+      "versionInfo": "2.28.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/errorprone/error_prone_annotations/2.28.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.errorprone/error_prone_annotations@2.28.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.guava-failureaccess-1.0.2",
+      "name": "com.google.guava:failureaccess",
+      "versionInfo": "1.0.2",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/guava/failureaccess/1.0.2/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.guava/failureaccess@1.0.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.guava-guava-33.3.1-android",
+      "name": "com.google.guava:guava",
+      "versionInfo": "33.3.1-android",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/guava/guava/33.3.1-android/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.guava/guava@33.3.1-android"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.guava-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava",
+      "name": "com.google.guava:listenablefuture",
+      "versionInfo": "9999.0-empty-to-avoid-conflict-with-guava",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.j2objc-j2objc-annotations-3.0.0",
+      "name": "com.google.j2objc:j2objc-annotations",
+      "versionInfo": "3.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/j2objc/j2objc-annotations/3.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.google.oboe-oboe-1.9.3",
+      "name": "com.google.oboe:oboe",
+      "versionInfo": "1.9.3",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/google/oboe/oboe/1.9.3/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.oboe/oboe@1.9.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.squareup.okio-okio-3.4.0",
+      "name": "com.squareup.okio:okio",
+      "versionInfo": "3.4.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/squareup/okio/okio/3.4.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.squareup.okio/okio@3.4.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-com.squareup.okio-okio-jvm-3.4.0",
+      "name": "com.squareup.okio:okio-jvm",
+      "versionInfo": "3.4.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/com/squareup/okio/okio-jvm/3.4.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.squareup.okio/okio-jvm@3.4.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-jakarta.inject-jakarta.inject-api-2.0.1",
+      "name": "jakarta.inject:jakarta.inject-api",
+      "versionInfo": "2.0.1",
+      "downloadLocation": "https://repo1.maven.org/maven2/jakarta/inject/jakarta.inject-api/2.0.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-javax.inject-javax.inject-1",
+      "name": "javax.inject:javax.inject",
+      "versionInfo": "1",
+      "downloadLocation": "https://repo1.maven.org/maven2/javax/inject/javax.inject/1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/javax.inject/javax.inject@1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.checkerframework-checker-qual-3.43.0",
+      "name": "org.checkerframework:checker-qual",
+      "versionInfo": "3.43.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/checkerframework/checker-qual/3.43.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.checkerframework/checker-qual@3.43.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains-annotations-23.0.0",
+      "name": "org.jetbrains:annotations",
+      "versionInfo": "23.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/annotations/23.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains/annotations@23.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-android-extensions-runtime-1.9.22",
+      "name": "org.jetbrains.kotlin:kotlin-android-extensions-runtime",
+      "versionInfo": "1.9.22",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-android-extensions-runtime/1.9.22/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-android-extensions-runtime@1.9.22"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-parcelize-runtime-1.9.22",
+      "name": "org.jetbrains.kotlin:kotlin-parcelize-runtime",
+      "versionInfo": "1.9.22",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-parcelize-runtime/1.9.22/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-parcelize-runtime@1.9.22"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-stdlib-2.2.10",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib",
+      "versionInfo": "2.2.10",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.10/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.10"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-stdlib-common-2.2.10",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-common",
+      "versionInfo": "2.2.10",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/2.2.10/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-common@2.2.10"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-stdlib-jdk7-1.8.0",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
+      "versionInfo": "1.8.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk7@1.8.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-stdlib-jdk8-1.8.0",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+      "versionInfo": "1.8.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8@1.8.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-coroutines-android-1.9.0",
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-android",
+      "versionInfo": "1.9.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-android/1.9.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-android@1.9.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-coroutines-bom-1.9.0",
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-bom",
+      "versionInfo": "1.9.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.9.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-bom@1.9.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-coroutines-core-1.9.0",
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core",
+      "versionInfo": "1.9.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core@1.9.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-coroutines-core-jvm-1.9.0",
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
+      "versionInfo": "1.9.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.9.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm@1.9.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-coroutines-guava-1.9.0",
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-guava",
+      "versionInfo": "1.9.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-guava/1.9.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-guava@1.9.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-serialization-bom-1.7.3",
+      "name": "org.jetbrains.kotlinx:kotlinx-serialization-bom",
+      "versionInfo": "1.7.3",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.7.3/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-serialization-bom@1.7.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-serialization-core-1.7.3",
+      "name": "org.jetbrains.kotlinx:kotlinx-serialization-core",
+      "versionInfo": "1.7.3",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-core/1.7.3/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-serialization-core@1.7.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-serialization-core-jvm-1.7.3",
+      "name": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm",
+      "versionInfo": "1.7.3",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-core-jvm/1.7.3/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm@1.7.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-org.jspecify-jspecify-1.0.0",
+      "name": "org.jspecify:jspecify",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://repo1.maven.org/maven2/org/jspecify/jspecify/1.0.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jspecify/jspecify@1.0.0"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-AynaTV-Receiver"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-UxPlay"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-FFmpeg"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-libplist"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-OpenSSL"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.activity-activity-1.9.3"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.activity-activity-compose-1.9.3"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.activity-activity-ktx-1.9.3"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.annotation-annotation-1.9.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.annotation-annotation-experimental-1.4.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.annotation-annotation-jvm-1.9.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.arch.core-core-common-2.2.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.arch.core-core-runtime-2.2.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.autofill-autofill-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.collection-collection-1.5.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.collection-collection-jvm-1.5.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.collection-collection-ktx-1.5.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose-compose-bom-2026.05.00"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.animation-animation-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.animation-animation-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.animation-animation-core-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.animation-animation-core-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.foundation-foundation-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.foundation-foundation-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.foundation-foundation-layout-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.foundation-foundation-layout-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.material-material-icons-core-1.7.8"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.material-material-icons-core-android-1.7.8"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.material-material-icons-extended-1.7.8"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.material-material-icons-extended-android-1.7.8"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.material-material-ripple-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.material-material-ripple-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.material3-material3-1.4.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.material3-material3-android-1.4.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.runtime-runtime-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.runtime-runtime-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.runtime-runtime-annotation-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.runtime-runtime-annotation-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.runtime-runtime-retain-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.runtime-runtime-retain-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.runtime-runtime-saveable-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.runtime-runtime-saveable-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-geometry-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-geometry-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-graphics-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-graphics-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-text-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-text-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-data-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-data-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-preview-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-tooling-preview-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-unit-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-unit-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-util-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.compose.ui-ui-util-android-1.11.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.concurrent-concurrent-futures-1.2.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.core-core-1.16.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.core-core-ktx-1.16.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.core-core-viewtree-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.customview-customview-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.customview-customview-poolingcontainer-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.datastore-datastore-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.datastore-datastore-android-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.datastore-datastore-core-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.datastore-datastore-core-android-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.datastore-datastore-core-okio-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.datastore-datastore-core-okio-jvm-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.datastore-datastore-preferences-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.datastore-datastore-preferences-android-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.datastore-datastore-preferences-core-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.datastore-datastore-preferences-core-jvm-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.documentfile-documentfile-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.dynamicanimation-dynamicanimation-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.emoji2-emoji2-1.4.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.exifinterface-exifinterface-1.3.6"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.fragment-fragment-1.5.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.graphics-graphics-path-1.0.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.hilt-hilt-navigation-1.2.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.hilt-hilt-navigation-compose-1.2.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.interpolator-interpolator-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.legacy-legacy-support-core-utils-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-common-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-common-java8-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-common-jvm-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-livedata-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-livedata-core-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-livedata-core-ktx-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-process-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-android-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-compose-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-compose-android-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-ktx-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-runtime-ktx-android-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-service-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-android-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-compose-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-compose-android-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-ktx-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-savedstate-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.lifecycle-lifecycle-viewmodel-savedstate-android-2.9.4"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.loader-loader-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.localbroadcastmanager-localbroadcastmanager-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media-media-1.7.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-common-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-common-ktx-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-container-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-database-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-datasource-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-decoder-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-effect-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-exoplayer-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-exoplayer-hls-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-extractor-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-muxer-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-transformer-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-ui-compose-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.media3-media3-ui-compose-material3-1.11.0-beta01"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.navigation-navigation-common-2.5.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.navigation-navigation-common-ktx-2.5.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.navigation-navigation-compose-2.5.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.navigation-navigation-runtime-2.5.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.navigation-navigation-runtime-ktx-2.5.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.print-print-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.profileinstaller-profileinstaller-1.4.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.savedstate-savedstate-1.3.2"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.savedstate-savedstate-android-1.3.2"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.savedstate-savedstate-compose-1.3.2"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.savedstate-savedstate-compose-android-1.3.2"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.savedstate-savedstate-ktx-1.3.2"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.startup-startup-runtime-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.tracing-tracing-1.2.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.transition-transition-1.6.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.versionedparcelable-versionedparcelable-1.1.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.viewpager-viewpager-1.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.window-window-1.5.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.window-window-core-1.5.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-androidx.window-window-core-android-1.5.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.code.findbugs-jsr305-3.0.2"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.dagger-dagger-2.53.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.dagger-dagger-lint-aar-2.53.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.dagger-hilt-android-2.53.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.dagger-hilt-core-2.53.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.errorprone-error-prone-annotations-2.28.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.guava-failureaccess-1.0.2"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.guava-guava-33.3.1-android"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.guava-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.j2objc-j2objc-annotations-3.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.google.oboe-oboe-1.9.3"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.squareup.okio-okio-3.4.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-com.squareup.okio-okio-jvm-3.4.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-jakarta.inject-jakarta.inject-api-2.0.1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-javax.inject-javax.inject-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.checkerframework-checker-qual-3.43.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains-annotations-23.0.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-android-extensions-runtime-1.9.22"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-parcelize-runtime-1.9.22"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-stdlib-2.2.10"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-stdlib-common-2.2.10"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-stdlib-jdk7-1.8.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlin-kotlin-stdlib-jdk8-1.8.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-coroutines-android-1.9.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-coroutines-bom-1.9.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-coroutines-core-1.9.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-coroutines-core-jvm-1.9.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-coroutines-guava-1.9.0"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-serialization-bom-1.7.3"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-serialization-core-1.7.3"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jetbrains.kotlinx-kotlinx-serialization-core-jvm-1.7.3"
+    },
+    {
+      "spdxElementId": "SPDXRef-AynaTV-Receiver",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-org.jspecify-jspecify-1.0.0"
+    }
+  ],
+  "annotations": [
+    {
+      "annotationType": "OTHER",
+      "annotator": "Tool: tools/generate_sbom.py",
+      "annotationDate": "2026-08-31T22:27:22Z",
+      "comment": "Input report SHA-256: 802332898fe7fea41f8530d1c7e5188100f069beaaf7a3662f32e2f0c2a38089. Maven package licenses are intentionally NOASSERTION pending release-grade notice and license verification."
+    }
+  ]
+}

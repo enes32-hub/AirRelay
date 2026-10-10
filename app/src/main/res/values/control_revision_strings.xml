@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="restart_stream_title">Stop the current stream?</string>
+    <string name="restart_stream_body">The current stream will stop and the new settings will be applied. Reconnect from your device afterwards.</string>
+    <string name="custom_advanced_shortcut">Open advanced receiver settings</string>
+</resources>

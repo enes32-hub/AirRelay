@@ -1,0 +1,9 @@
+<resources>
+    <string name="stream_profile_title">Picture preference</string>
+    <string name="stream_profile_hint">Internet video adapts to your connection. Screen mirroring performance depends on the sending device and TV. Changes made during a stream apply on the next start.</string>
+    <string name="stream_profile_custom">Custom</string>
+    <string name="stream_profile_balanced">Balanced</string>
+    <string name="stream_profile_quality">Picture quality</string>
+    <string name="stream_profile_responsive">Low latency</string>
+    <string name="stream_profile_stable">Stability</string>
+</resources>

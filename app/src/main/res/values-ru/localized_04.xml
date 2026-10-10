@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="setting_advertise_video">Объявлять поддержку видео AirPlay</string>
+    <string name="setting_advertise_video_desc">Если выключено, от видео передаётся только звук</string>
+    <string name="setting_advertise_audio">Объявлять поддержку звука AirPlay</string>
+    <string name="setting_advertise_audio_desc">Если выключено, устройство доступно только для повтора экрана и скрыто от медиаплееров</string>
+    <string name="setting_alac">Объявлять кодек ALAC</string>
+    <string name="setting_alac_desc">Предлагать ALAC в записи mDNS; используется для трансляции музыки</string>
+    <string name="setting_aac">Объявлять кодек AAC</string>
+    <string name="setting_aac_desc">Предлагать AAC-ELD/AAC-LC в записи mDNS; используется для звука при повторе экрана</string>
+    <string name="setting_launch_on_connect">Показывать входящие трансляции</string>
+    <string name="setting_launch_on_connect_desc">Открывать приложение при новой трансляции. Требуются разрешения телевизора.</string>
+    <string name="setting_launch_on_connect_no_permission">Для автоматического показа нужно разрешение на отображение поверх других приложений.</string>
+    <string name="setting_resolution">Разрешение</string>
+    <string name="setting_resolution_desc">Максимальный размер изображения, предлагаемый передающему устройству.</string>
+    <string name="setting_resolution_width">Ширина</string>
+    <string name="setting_resolution_height">Высота</string>
+    <string name="setting_max_fps">Максимальная частота кадров</string>
+    <string name="setting_max_fps_desc">Выберите 1–%1$d кадр/с. При изменении выбирается пользовательское предпочтение изображения.</string>
+    <string name="setting_max_fps_placeholder">1–%1$d кадр/с</string>
+    <string name="setting_overscanned">Вылет изображения за края</string>
+    <string name="setting_overscanned_desc">Добавлять пиксельную рамку для экранов с полноэкранным вылетом изображения</string>
+    <string name="chip_custom">Пользовательское</string>
+    <string name="chip_device_portrait">Вертикально</string>
+    <string name="chip_device_landscape">Горизонтально</string>
+    <string name="setting_h265">H.265 (HEVC)</string>
+    <string name="setting_h265_desc">Включить декодирование H.265, если устройство его поддерживает</string>
+    <string name="setting_enforce_sdr">Совместимость цветов SDR</string>
+    <string name="setting_enforce_sdr_desc">Помечать видео как SDR с ограниченным диапазоном; выключите для передачи источников HDR</string>
+    <string name="setting_sw_alac">Принудительно использовать программный декодер ALAC</string>
+    <string name="setting_sw_alac_desc">Всегда использовать программный декодер ALAC вместо аппаратного; это может повлиять на задержку звука</string>
+    <string name="setting_developer_options">Дополнительные технические параметры</string>
+    <string name="setting_developer_options_desc">Аудиобуфер, декодирование и журналы поддержки.</string>
+    <string name="setting_key_allow_frame_drop">Пропускать запоздавшие кадры</string>
+    <string name="setting_key_allow_frame_drop_desc">Разрешить видеодекодерам пропускать кадры для своевременного воспроизведения на Android 10+</string>
+    <string name="setting_realtime_decoder_priority">Приоритет декодирования звука</string>
+    <string name="setting_realtime_decoder_priority_desc">Запрашивать планирование реального времени для аудиодекодера</string>
+    <string name="setting_operating_rate">Рабочая скорость декодера</string>
+    <string name="setting_operating_rate_desc">Запрашивать максимальную рабочую скорость декодера</string>
+    <string name="chip_auto">Авто</string>
+    <string name="chip_on">Вкл.</string>
+    <string name="chip_off">Выкл.</string>
+    <string name="setting_low_latency">Низкая задержка</string>
+    <string name="setting_low_latency_desc">Использовать декодирование звука с низкой задержкой; повышает расход энергии и нагрузку на процессор</string>
+    <string name="setting_scheduled_output_buffer_release">Согласованный вывод кадров</string>
+    <string name="setting_scheduled_output_buffer_release_desc">Планировать вывод каждого декодированного кадра на VSYNC, соответствующий его метке времени</string>
+    <string name="setting_audio_delay">Переопределить задержку звука</string>
+    <string name="setting_audio_delay_desc">Задать собственную задержку звука, сообщаемую клиенту</string>
+    <string name="audio_delay_value">%d мс</string>
+    <string name="setting_audio_auto_buffer">Автоматический размер программного аудиобуфера</string>
+    <string name="setting_audio_auto_buffer_desc">Подстраивать программный аудиобуфер под сеть и производительность устройства; ползунок задаёт допустимый разброс задержки</string>
+    <string name="audio_adaptive_value">%1$d%% (%2$s)</string>
+    <string-array name="audio_adaptive_step_names">
+        <item>Минимальная задержка</item>
+        <item>Пониженная задержка</item>
+        <item>Баланс</item>
+        <item>Повышенная стабильность</item>
+        <item>Максимальная стабильность</item>
+    </string-array>
+    <string name="setting_audio_cushion_ms">Программный аудиобуфер (мс)</string>
+    <string name="setting_audio_cushion_ms_desc">Буфер сглаживает разброс задержек сети и декодера: меньшее время снижает задержку, большее уменьшает сбои</string>
+    <string name="setting_oboe_buffer_frames">Аппаратный буфер вывода (кадры)</string>
+    <string name="setting_oboe_buffer_frames_desc">Буфер между приложением и аудиоустройством, сглаживающий только нестабильность планирования процессора. Значение 0 включает автоматический размер.</string>
+    <string name="transition_live">Прямой эфир</string>
+    <string name="transition_seek_hint">Влево/вправо: 10 секунд · OK: переход · Назад: отмена</string>
+    <string name="transition_playback_error">Не удалось воспроизвести видео (код %1$d). Вернитесь к экрану телефона или выберите другое видео.</string>
+    <string name="transition_access_denied">Источник видео запретил доступ. Выберите повтор экрана в способах воспроизведения или заново откройте видео на устройстве.</string>
+    <string name="subtitle_size_value">Размер: %1$d%%</string>
+    <string name="track_quality">Качество</string>
+    <string name="track_subtitles">Субтитры</string>
+    <string name="track_audio">Звук</string>
+    <string name="track_auto">Автоматически</string>
+    <string name="track_off">Выкл.</string>
+    <string name="track_unavailable">Источник видео не предлагает дорожек для выбора.</string>
+    <string name="transition_transport_interrupted">Видеоподключение потеряно. Проверьте, что устройство может подключиться к телевизору по локальной сети. При использовании VPN разрешите доступ к локальной сети.</string>
+</resources>

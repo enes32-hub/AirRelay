@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec /c/Users/ASUS/AppData/Local/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/x86_64-linux-android24-clang++ "$@"

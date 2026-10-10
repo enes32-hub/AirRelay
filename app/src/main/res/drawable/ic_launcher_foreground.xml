@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Adaptive-icon foreground, drawn as a 108dp x 108dp VECTOR.
+
+  Why a vector and not a layer-list: a layer-list <item> with an explicit width/height pins the
+  child to that fixed dp size instead of following the icon's real bounds. AdaptiveIconDrawable
+  sets the layer bounds to whatever size the icon is drawn at, so a pinned 108dp child overflows
+  every smaller rendering (the system settings list drew only its top-left quarter) — and the
+  earlier 66dp x 60dp pin produced the originally reported crop. A vector scales with its bounds,
+  so one drawing is correct at 320dp and at 24dp.
+
+  Geometry: the 600x600 master mark is scaled by 0.091603 into a 108-unit canvas and centred, so
+  the drawn mark is 48 x 40.1 units with a half-diagonal of 31.3 units. That fits inside the
+  66-unit circle the system guarantees to be visible, and inside the usual 72-unit mask too.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.091603"
+        android:scaleY="0.091603"
+        android:translateX="26.336"
+        android:translateY="26.519">
+        <group
+            android:translateX="-310"
+            android:translateY="-131">
+            <path
+                android:fillColor="#FFF9ED"
+                android:pathData="M360,650 Q350,650 352,638 L551,225 Q557,212 568,212 L657,212 Q669,212 675,228 L684,242 L611,397 L578,373 Q558,362 558,385 L557,549 L511,635 Q504,650 487,650 Z" />
+            <path
+                android:fillColor="#3ACDB7"
+                android:pathData="M684,242 L869,638 Q874,650 862,650 L738,650 Q721,650 714,636 L647,510 L692,477 Q707,465 692,454 L611,397 Z" />
+        </group>
+    </group>
+</vector>

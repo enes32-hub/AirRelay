@@ -1,0 +1,3 @@
+<resources>
+    <string name="transition_transport_interrupted">The video connection was lost. Check that your device can reach the TV on your local network. If you use a VPN, allow local network access.</string>
+</resources>

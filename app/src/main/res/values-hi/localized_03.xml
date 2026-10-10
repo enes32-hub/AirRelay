@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="r2_invalid_number">%1$d से %2$d के बीच संख्या डालें।</string>
+    <string name="r2_invalid_resolution">चौड़ाई और ऊँचाई दोनों 16 से 16384 के बीच होनी चाहिए।</string>
+    <string name="settings_playback">तस्वीर और प्लेबैक</string>
+    <string name="help_modes_title">वीडियो कैसे चलते हैं?</string>
+    <string name="help_modes_body">स्क्रीन मिररिंग iPhone, iPad या Mac की स्क्रीन दिखाती है। भेजने वाला ऐप समर्थन दे तो सीधा प्लेबैक टीवी के प्लेयर का इस्तेमाल करता है। स्ट्रीम नियंत्रण में प्लेबैक बदलें। खुला वीडियो अपने-आप नहीं बदल सकता; डिवाइस पर उसे बंद करके दोबारा खोलें।</string>
+    <string name="help_video_title">वीडियो नहीं चलता या स्क्रीन काली है</string>
+    <string name="help_video_body">स्रोत पहुँच न दे तो प्लेबैक में स्क्रीन मिररिंग चुनें। डिवाइस पर AirPlay वीडियो स्क्रीन से बाहर आएँ और वीडियो दोबारा खोलें। कुछ सुरक्षित सामग्री मिरर नहीं हो सकती। डिवाइस की स्क्रीन भी न दिखे तो डिवाइस पर स्क्रीन मिररिंग रोकें और फिर कनेक्ट करें।</string>
+    <string name="help_network_title">अटकना, विलंब या VPN</string>
+    <string name="help_network_body">टीवी और भेजने वाले डिवाइस को एक ही स्थानीय नेटवर्क पर रखें। गेस्ट नेटवर्क और क्लाइंट आइसोलेशन पहुँच रोक सकते हैं। VPN स्थानीय पहुँच या मौजूदा कनेक्शन का मार्ग बदल सकता है। VPN में विकल्प हो तो स्थानीय नेटवर्क की अनुमति दें; ज़रूरत पर VPN बंद करके तुलना करें। अटकने पर तस्वीर और प्लेबैक में कम विलंब वाला प्रोफ़ाइल आज़माएँ।</string>
+    <string name="help_record_title">रिकॉर्ड करना और रिकॉर्डिंग देखना</string>
+    <string name="help_record_body">स्ट्रीम नियंत्रण में रिकॉर्ड से रिकॉर्डिंग शुरू या बंद करें। माँगने पर Android की अनुमति दें। सेटिंग → रिकॉर्डिंग विकल्प में गुणवत्ता चुनें। मुख्य मेनू की रिकॉर्डिंग से फ़ाइलें देखें, मिटाएँ या एक्सपोर्ट करें। रिकॉर्डिंग देखने से पहले सक्रिय स्ट्रीम समाप्त करें। रिकॉर्डिंग प्लेयर में टाइमलाइन चुनने के लिए ऊपर, 10 सेकंड के चरणों के लिए बाएँ/दाएँ और लागू करने के लिए OK दबाएँ।</string>
+    <string name="help_tracks_title">गुणवत्ता, ऑडियो और सबटाइटल</string>
+    <string name="help_tracks_body">स्रोत उपलब्ध कराए तो सीधे वीडियो में गुणवत्ता, ऑडियो और सबटाइटल विकल्प मिलते हैं। सबटाइटल में −/+ से आकार बदलें। तस्वीर में जुड़े सबटाइटल नहीं बदले जा सकते। स्क्रीन मिररिंग में ये विकल्प भेजने वाले ऐप से बदलें।</string>
+    <string name="stream_profile_title">तस्वीर की प्राथमिकता</string>
+    <string name="stream_profile_hint">इंटरनेट वीडियो कनेक्शन के अनुसार बदलता है। स्क्रीन मिररिंग का प्रदर्शन भेजने वाले डिवाइस और टीवी पर निर्भर है। स्ट्रीम के दौरान किए बदलाव अगली बार शुरू होने पर लागू होते हैं।</string>
+    <string name="stream_profile_custom">कस्टम</string>
+    <string name="stream_profile_balanced">संतुलित</string>
+    <string name="stream_profile_quality">तस्वीर की गुणवत्ता</string>
+    <string name="stream_profile_responsive">कम विलंब</string>
+    <string name="stream_profile_stable">स्थिरता</string>
+    <string name="rec_options_title">रिकॉर्डिंग विकल्प</string>
+    <string name="app_name">AirRelay</string>
+    <string name="notification_channel">AirRelay रिसीवर सेवा</string>
+    <string name="notification_title">AirRelay रिसीवर चल रहा है</string>
+    <string name="notification_text">AirPlay कनेक्शन का इंतज़ार है</string>
+    <string name="notification_pin_title">AirRelay पेयरिंग की मंज़ूरी</string>
+    <string name="notification_pin_text">पेयरिंग कोड देखने के लिए AirRelay खोलें।</string>
+    <string name="tab_logs">लॉग</string>
+    <string name="cd_pip">पिक्चर-इन-पिक्चर</string>
+    <string name="cd_play_pause">चलाएँ/रोकें</string>
+    <string name="download_saved">%1$s में सेव हुआ</string>
+    <string name="download_failed">डाउनलोड विफल</string>
+    <string name="seconds_short">%1$d से॰</string>
+    <string name="scale_best_fit">बेहतरीन फ़िट</string>
+    <string name="scale_stretch">खींचकर भरें</string>
+    <string name="export_logs_chooser_title">सहायता जाँच शेयर करें</string>
+    <string name="section_server">सर्वर</string>
+    <string name="section_display">डिस्प्ले</string>
+    <string name="section_decode">डिकोडिंग</string>
+    <string name="section_developer">जाँच और समायोजन</string>
+    <string name="setting_server_port">सर्वर पोर्ट</string>
+    </resources>

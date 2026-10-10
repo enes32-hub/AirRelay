@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_help_title">Videoyu başka bir şekilde izleyin</string>
+    <string name="playback_help_body">Bazı videolar doğrudan TV’de oynatılamayabilir. Alt kontrol çubuğunun solundaki Oynatma şekli düğmesini açıp Ekrandan yansıt seçeneğini deneyin. Ardından videoyu cihazınızda yeniden açın.</string>
+    <string name="playback_help_confirm">Anladım</string>
+    <string name="playback_choice_title">Oynatma şekli</string>
+    <string name="playback_mirror">Ekrandan yansıt</string>
+    <string name="playback_direct">Doğrudan oynat</string>
+    <string name="playback_mirror_description">Videoları cihazınızda oynatın; görüntü ve sesi TV’ye yansıtın.</string>
+    <string name="playback_direct_description">Videonun AirPlay menüsünden bu TV’yi seçin. Desteklenen videolar TV’de açılır; cihazınızdan kontrol edebilirsiniz. Devam eden ekran yansıtma bu seçimle otomatik olarak değişmeyebilir.</string>
+    <string name="playback_actual_direct">Aktarım: Doğrudan video</string>
+    <string name="playback_switch_hint">Alıcı yeniden başlamaz. Görüntü geri gelmezse videoyu cihazınızda yeniden açın. Bazı uygulamalar tekrar bağlanmanızı gerektirebilir.</string>
+    <string name="playback_return_to_screen">Ekrandan yansıt seçildi. Cihazınızdaki AirPlay video ekranından çıkıp videoyu yeniden açın. Görüntü gelmezse ekran yansıtmayı yeniden bağlayın.</string>
+</resources>

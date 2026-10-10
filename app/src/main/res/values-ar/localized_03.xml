@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="r2_invalid_number">أدخل رقمًا من %1$d إلى %2$d.</string>
+    <string name="r2_invalid_resolution">يجب أن يكون كل من العرض والارتفاع بين 16 و16384.</string>
+    <string name="settings_playback">الصورة والتشغيل</string>
+    <string name="help_modes_title">كيف تُشغّل الفيديوهات؟</string>
+    <string name="help_modes_body">يعرض انعكاس الشاشة شاشة iPhone أو iPad أو Mac. يستخدم التشغيل المباشر مشغّل التلفزيون إذا دعمه التطبيق المرسل. غيّر «التشغيل» في عناصر تحكم البث. قد لا ينتقل الفيديو المفتوح تلقائيًا؛ أغلقه وأعد فتحه على جهازك.</string>
+    <string name="help_video_title">الفيديو لا يعمل أو الشاشة سوداء</string>
+    <string name="help_video_body">إذا رفض المصدر الوصول، اختر انعكاس الشاشة ضمن التشغيل. غادر شاشة فيديو AirPlay على جهازك وأعد فتح الفيديو. لا يمكن عكس بعض المحتوى المحمي. إن كانت شاشة الجهاز أيضًا غير ظاهرة، أوقف انعكاس الشاشة على جهازك وأعد الاتصال.</string>
+    <string name="help_network_title">التجمّد أو التأخير أو VPN</string>
+    <string name="help_network_body">أبقِ التلفزيون والمرسل على الشبكة المحلية نفسها. قد تمنع شبكات الضيوف وعزل العملاء الوصول. يمكن أن يغيّر VPN الوصول المحلي أو مسار الاتصال القائم. اسمح بالشبكة المحلية في VPN إن أمكن؛ وقارن مع إيقافه عند الحاجة. للتقطّع جرّب ملف التأخير المنخفض ضمن الصورة والتشغيل.</string>
+    <string name="help_record_title">التسجيل ومشاهدة التسجيلات</string>
+    <string name="help_record_body">استخدم التسجيل في عناصر تحكم البث لبدء التسجيل أو إيقافه. امنح إذن Android عند طلبه. اختر الجودة من الإعدادات ← خيارات التسجيل. شاهد الملفات أو احذفها أو صدّرها من التسجيلات في القائمة الرئيسية. أنهِ البث النشط قبل مشاهدة تسجيل. في مشغّل التسجيل، اضغط أعلى للانتقال للشريط الزمني، ويسار/يمين بخطوات 10 ثوانٍ، وOK للتطبيق.</string>
+    <string name="help_tracks_title">الجودة والصوت والترجمة</string>
+    <string name="help_tracks_body">يوفّر الفيديو المباشر خيارات الجودة والصوت والترجمة إن أتاحها المصدر. اضبط حجم الترجمة باستخدام −/+ في الترجمة. لا يمكن تغيير الترجمة المدمجة في الصورة. أثناء انعكاس الشاشة، استخدم التطبيق المرسل لهذه الخيارات.</string>
+    <string name="stream_profile_title">تفضيل الصورة</string>
+    <string name="stream_profile_hint">يتكيّف فيديو الإنترنت مع اتصالك. يعتمد أداء انعكاس الشاشة على الجهاز المرسل والتلفزيون. التغييرات أثناء البث تسري عند التشغيل التالي.</string>
+    <string name="stream_profile_custom">مخصّص</string>
+    <string name="stream_profile_balanced">متوازن</string>
+    <string name="stream_profile_quality">جودة الصورة</string>
+    <string name="stream_profile_responsive">تأخير منخفض</string>
+    <string name="stream_profile_stable">الاستقرار</string>
+    <string name="rec_options_title">خيارات التسجيل</string>
+    <string name="app_name">AirRelay</string>
+    <string name="notification_channel">خدمة مستقبل AirRelay</string>
+    <string name="notification_title">مستقبل AirRelay قيد التشغيل</string>
+    <string name="notification_text">بانتظار اتصالات AirPlay</string>
+    <string name="notification_pin_title">الموافقة على اقتران AirRelay</string>
+    <string name="notification_pin_text">افتح AirRelay لعرض رمز الاقتران.</string>
+    <string name="tab_logs">السجلات</string>
+    <string name="cd_pip">صورة داخل صورة</string>
+    <string name="cd_play_pause">تشغيل/إيقاف مؤقت</string>
+    <string name="download_saved">حُفظ في %1$s</string>
+    <string name="download_failed">فشل التنزيل</string>
+    <string name="seconds_short">%1$d ث</string>
+    <string name="scale_best_fit">أفضل ملاءمة</string>
+    <string name="scale_stretch">تمديد</string>
+    <string name="export_logs_chooser_title">مشاركة تشخيص الدعم</string>
+    <string name="section_server">الخادم</string>
+    <string name="section_display">العرض</string>
+    <string name="section_decode">فك الترميز</string>
+    <string name="section_developer">التشخيص والضبط</string>
+    <string name="setting_server_port">منفذ الخادم</string>
+    </resources>

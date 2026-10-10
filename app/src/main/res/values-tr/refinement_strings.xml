@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="r2_hero">Ekranını yansıt</string>
+    <string name="r2_hero_body">iPhone, iPad veya Mac ekranını paylaş.</string>
+    <string name="r2_starting_body">Alıcı hazırlanıyor. Hazır olduğunda cihaz adı burada görünecek.</string>
+    <string name="r2_active_body">Yayın sürüyor. Buraya dönmek bağlantıyı kesmez.</string>
+    <string name="r2_connecting_body">Cihaz bağlanıyor. Eşleştirme adımını gönderici cihazda tamamla.</string>
+    <string name="r2_audio_body">Bir ses oturumu etkin. Ses denetimleri telefonunda.</string>
+    <string name="r2_connection_guide">Bağlantı rehberi</string>
+    <string name="r2_notice_dismiss">Anladım</string>
+    <string name="r2_cannot_find">TV listede görünmüyor mu?</string>
+    <string name="r2_step1">Cihazını ve TV’yi aynı yerel ağa bağla.</string>
+    <string name="r2_step2">Denetim Merkezi → Ekran Yansıtma.</string>
+    <string name="r2_step3">Soldaki adı seç; istenirse TV kodunu gir.</string>
+    <string name="r2_settings_intro">Bağlantı, görüntü ve başlangıç tercihlerini düzenle.</string>
+    <string name="r2_pending_brief">Yayın ayarları sonraki alıcı başlangıcında etkinleşir.</string>
+    <string name="r2_discard_settings">Değişiklikleri geri al</string>
+    <string name="r2_settings_restarting">Ayarları uygulamak için alıcı yeniden başlatılıyor.</string>
+    <string name="r2_settings_blocked">İşlem şu an uygulanamıyor. Alıcının hazırlanmasını veya oturumun bitmesini bekle.</string>
+    <string name="r2_settings_discarded">Bekleyen değişiklikler geri alındı. Etkin ayarlar korunuyor.</string>
+    <string name="r2_discovery_requested">Alıcı ağda yeniden duyuruluyor. Yayının devam ediyor.</string>
+    <string name="r2_retry_unavailable">Alıcı hazır olduğunda yeniden dene</string>
+    <string name="r2_takeover_title">Yeni cihaz mevcut yayını kesebilsin mi?</string>
+    <string name="r2_takeover_body">Yeni bağlantı denemeleri açık oturumu sonlandırabilir. Bu değişiklik sonraki alıcı başlangıcında uygulanır; PIN ayarını değiştirmez.</string>
+    <string name="r2_takeover_confirm">İzin ver</string>
+    <string name="r2_working">Hazırlanıyor…</string>
+    <string name="r2_refresh_snapshot">Görünümü yenile</string>
+    <string name="r2_logs_live">CANLI AKIŞ · Okumaya başladığında otomatik kaydırma durur.</string>
+    <string name="r2_logs_frozen">OKUMA MODU · Yeni kayıtlar okuduğun satırları değiştirmez.</string>
+    <string name="r2_pair_eyebrow">BAĞLANTIYI ONAYLA</string>
+    <string name="r2_invalid_number">%1$d ile %2$d arasında bir sayı gir.</string>
+    <string name="r2_invalid_resolution">Genişlik ve yükseklik 16–16384 arasında olmalı.</string>
+</resources>

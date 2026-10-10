@@ -1,0 +1,8 @@
+<resources>
+    <string name="track_quality">Quality</string>
+    <string name="track_subtitles">Subtitles</string>
+    <string name="track_audio">Audio</string>
+    <string name="track_auto">Automatic</string>
+    <string name="track_off">Off</string>
+    <string name="track_unavailable">This video source offers no selectable tracks.</string>
+</resources>

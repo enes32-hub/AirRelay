@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scale_fill">Fill (crop)</string>
+    <string name="appearance_theme">Theme</string>
+    <string name="theme_classic">Classic</string>
+    <string name="theme_light">White</string>
+    <string name="theme_dark">Dark</string>
+    <string name="stream_metrics">Show stream metrics</string>
+    <string name="stream_metrics_desc">Show resolution, codec and stream information during playback.</string>
+    <string name="metrics_live">Live video</string>
+    <string name="metrics_video">Remote video</string>
+    <string name="metrics_mirror">Screen mirroring</string>
+    <string name="metrics_source_fps">Source: %1$s FPS</string>
+    <string name="metrics_track_bitrate">Selected video: %1$s Mbps</string>
+    <string name="metrics_buffer">Buffer: %1$s s</string>
+    <string name="metrics_input_fps">Input: %1$d FPS</string>
+    <string name="metrics_input_bitrate">Incoming: %1$s</string>
+    <string name="metrics_dropped">Dropped frames: %1$d</string>
+</resources>

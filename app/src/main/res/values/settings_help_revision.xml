@@ -1,0 +1,13 @@
+<resources>
+<string name="settings_playback">Picture and playback</string>
+<string name="help_modes_title">How are videos played?</string>
+<string name="help_modes_body">Screen mirroring shows your iPhone, iPad or Mac screen. Direct playback uses the TV player when the sending app supports it. Change Playback in the stream controls. An open video may not switch automatically; close and reopen it on your device.</string>
+<string name="help_video_title">Video will not play or the screen is black</string>
+<string name="help_video_body">If the source denies access, choose Screen mirroring under Playback. Leave the AirPlay video screen on your device and reopen the video. Some protected content cannot be mirrored. If the device screen is also missing, stop screen mirroring on your device and reconnect.</string>
+<string name="help_network_title">Freezing, delay or VPN</string>
+<string name="help_network_body">Keep the TV and sender on the same local network. Guest networks and client isolation may block access. A VPN can change local access or an existing connection route. Allow local network access if your VPN offers it; compare with VPN off if needed. Try the lower-latency profile under Picture and playback for stuttering.</string>
+<string name="help_record_title">Recording and watching recordings</string>
+<string name="help_record_body">Use Record in the stream controls to start or stop recording. Grant Android permission when requested. Choose quality under Settings → Recording options. Watch, delete or export files from Recordings in the main menu. End the active stream before watching a recording. In the recording player, press Up to focus the timeline, Left/Right for 10-second steps and OK to apply.</string>
+<string name="help_tracks_title">Quality, audio and subtitles</string>
+<string name="help_tracks_body">Direct video offers quality, audio and subtitle choices when supplied by the source. Adjust subtitle size with −/+ in Subtitles. Subtitles embedded in the picture cannot be changed. During screen mirroring, use the sending app for these choices.</string>
+</resources>

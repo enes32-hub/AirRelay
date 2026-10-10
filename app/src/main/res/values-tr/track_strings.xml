@@ -1,0 +1,8 @@
+<resources>
+    <string name="track_quality">Kalite</string>
+    <string name="track_subtitles">Altyazı</string>
+    <string name="track_audio">Ses</string>
+    <string name="track_auto">Otomatik</string>
+    <string name="track_off">Kapalı</string>
+    <string name="track_unavailable">Bu video kaynağı seçim sunmuyor.</string>
+</resources>

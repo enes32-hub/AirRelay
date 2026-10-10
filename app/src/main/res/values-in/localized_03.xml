@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="r2_invalid_number">Masukkan angka dari %1$d hingga %2$d.</string>
+    <string name="r2_invalid_resolution">Lebar dan tinggi masing-masing harus antara 16 dan 16384.</string>
+    <string name="settings_playback">Gambar dan pemutaran</string>
+    <string name="help_modes_title">Bagaimana video diputar?</string>
+    <string name="help_modes_body">Pencerminan layar menampilkan layar iPhone, iPad, atau Mac. Pemutaran langsung memakai pemutar TV jika didukung aplikasi pengirim. Ubah Pemutaran di kontrol siaran. Video yang terbuka mungkin tidak beralih otomatis; tutup dan buka kembali di perangkat Anda.</string>
+    <string name="help_video_title">Video tidak diputar atau layar hitam</string>
+    <string name="help_video_body">Jika sumber menolak akses, pilih Pencerminan layar di Pemutaran. Keluar dari layar video AirPlay di perangkat lalu buka kembali video. Sebagian konten terlindungi tidak dapat dicerminkan. Jika layar perangkat juga tidak muncul, hentikan pencerminan di perangkat dan sambungkan kembali.</string>
+    <string name="help_network_title">Macet, jeda, atau VPN</string>
+    <string name="help_network_body">Pastikan TV dan pengirim berada di jaringan lokal yang sama. Jaringan tamu dan isolasi klien dapat memblokir akses. VPN dapat mengubah akses lokal atau rute koneksi. Izinkan jaringan lokal jika VPN mendukungnya; bandingkan dengan VPN dimatikan bila perlu. Untuk tersendat, coba profil latensi rendah di Gambar dan pemutaran.</string>
+    <string name="help_record_title">Merekam dan menonton rekaman</string>
+    <string name="help_record_body">Gunakan Rekam di kontrol siaran untuk memulai atau menghentikan rekaman. Berikan izin Android saat diminta. Pilih kualitas di Pengaturan → Opsi rekaman. Tonton, hapus, atau ekspor berkas dari Rekaman di menu utama. Akhiri siaran aktif sebelum menonton rekaman. Di pemutar rekaman, tekan Atas untuk fokus ke garis waktu, Kiri/Kanan untuk langkah 10 detik, dan OK untuk menerapkan.</string>
+    <string name="help_tracks_title">Kualitas, audio, dan subtitel</string>
+    <string name="help_tracks_body">Video langsung menyediakan pilihan kualitas, audio, dan subtitel jika tersedia dari sumber. Atur ukuran subtitel dengan −/+ di Subtitel. Subtitel yang menyatu dengan gambar tidak dapat diubah. Saat pencerminan layar, gunakan aplikasi pengirim untuk pilihan ini.</string>
+    <string name="stream_profile_title">Preferensi gambar</string>
+    <string name="stream_profile_hint">Video internet menyesuaikan koneksi. Kinerja pencerminan layar bergantung pada perangkat pengirim dan TV. Perubahan selama siaran berlaku saat mulai berikutnya.</string>
+    <string name="stream_profile_custom">Kustom</string>
+    <string name="stream_profile_balanced">Seimbang</string>
+    <string name="stream_profile_quality">Kualitas gambar</string>
+    <string name="stream_profile_responsive">Latensi rendah</string>
+    <string name="stream_profile_stable">Stabilitas</string>
+    <string name="rec_options_title">Opsi rekaman</string>
+    <string name="app_name">AirRelay</string>
+    <string name="notification_channel">Layanan Penerima AirRelay</string>
+    <string name="notification_title">Penerima AirRelay berjalan</string>
+    <string name="notification_text">Menunggu koneksi AirPlay</string>
+    <string name="notification_pin_title">Persetujuan pemasangan AirRelay</string>
+    <string name="notification_pin_text">Buka AirRelay untuk melihat kode pemasangan.</string>
+    <string name="tab_logs">Log</string>
+    <string name="cd_pip">Gambar dalam gambar</string>
+    <string name="cd_play_pause">Putar/Jeda</string>
+    <string name="download_saved">Disimpan ke %1$s</string>
+    <string name="download_failed">Unduhan gagal</string>
+    <string name="seconds_short">%1$d dtk</string>
+    <string name="scale_best_fit">Paling sesuai</string>
+    <string name="scale_stretch">Regangkan</string>
+    <string name="export_logs_chooser_title">Bagikan diagnostik dukungan</string>
+    <string name="section_server">Server</string>
+    <string name="section_display">Tampilan</string>
+    <string name="section_decode">Dekode</string>
+    <string name="section_developer">Diagnostik dan penyetelan</string>
+    <string name="setting_server_port">Port server</string>
+    </resources>

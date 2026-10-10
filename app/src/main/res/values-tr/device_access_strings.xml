@@ -1,0 +1,13 @@
+<resources>
+    <string name="access_devices">Cihaz erişimi</string>
+    <string name="access_hint">Eşleşmiş cihazları engelleyebilirsiniz. Engelleme sonraki bağlantılarda geçerlidir; mevcut yayını bitirmek için Yayını bitir düğmesini kullanın.</string>
+    <string name="access_empty">Henüz eşleşmiş cihaz yok.</string>
+    <string name="access_device">Eşleşmiş cihaz</string>
+    <string name="access_blocked">Engellendi · kapatarak izin ver</string>
+    <string name="access_allowed">İzin veriliyor · açarak engelle</string>
+    <string name="access_save_failed">Değişiklik kaydedilemedi. Tekrar deneyin.</string>
+    <string name="access_close">Kapat</string>
+    <string name="access_video_issue">Video oynatılamadı</string>
+    <string name="access_waiting_screen">Telefon görüntüsü bekleniyor</string>
+    <string name="access_return_stream">Yayın ekranına dönerek oynatma şeklini değiştirebilirsiniz.</string>
+</resources>

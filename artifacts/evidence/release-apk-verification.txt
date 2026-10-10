@@ -1,0 +1,115 @@
+Artifact: C:\AirRelayReleaseGate\app\build\outputs\apk\release\app-release.apk
+Size: 18113784 bytes
+SHA-256: 2f37abc0be62cca9d6b17be41a3fa108ccba500506ea13256afbcf9eb65fa2f4
+
+$ aapt2 dump badging
+package: name='com.airrelay.receiver' versionCode='75' versionName='0.1.0-rc40-test' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+targetSdkVersion:'36'
+application-label:'AirRelay'
+application-label-af:'AirRelay'
+application-label-am:'AirRelay'
+application-label-ar:'AirRelay'
+application-label-as:'AirRelay'
+application-label-az:'AirRelay'
+application-label-be:'AirRelay'
+application-label-bg:'AirRelay'
+application-label-bn:'AirRelay'
+application-label-bs:'AirRelay'
+application-label-ca:'AirRelay'
+application-label-cs:'AirRelay'
+application-label-da:'AirRelay'
+application-label-de:'AirRelay'
+application-label-el:'AirRelay'
+application-label-en-AU:'AirRelay'
+application-label-en-CA:'AirRelay'
+application-label-en-GB:'AirRelay'
+application-label-en-IN:'AirRelay'
+application-label-en-XC:'AirRelay'
+application-label-es:'AirRelay'
+application-label-es-US:'AirRelay'
+application-label-et:'AirRelay'
+application-label-eu:'AirRelay'
+application-label-fa:'AirRelay'
+application-label-fi:'AirRelay'
+application-label-fr:'AirRelay'
+application-label-fr-CA:'AirRelay'
+application-label-gl:'AirRelay'
+application-label-gu:'AirRelay'
+application-label-hi:'AirRelay'
+application-label-hr:'AirRelay'
+application-label-hu:'AirRelay'
+application-label-hy:'AirRelay'
+application-label-in:'AirRelay'
+application-label-is:'AirRelay'
+application-label-it:'AirRelay'
+application-label-iw:'AirRelay'
+application-label-ja:'AirRelay'
+application-label-ka:'AirRelay'
+application-label-kk:'AirRelay'
+application-label-km:'AirRelay'
+application-label-kn:'AirRelay'
+application-label-ko:'AirRelay'
+application-label-ky:'AirRelay'
+application-label-lo:'AirRelay'
+application-label-lt:'AirRelay'
+application-label-lv:'AirRelay'
+application-label-mk:'AirRelay'
+application-label-ml:'AirRelay'
+application-label-mn:'AirRelay'
+application-label-mr:'AirRelay'
+application-label-ms:'AirRelay'
+application-label-my:'AirRelay'
+application-label-nb:'AirRelay'
+application-label-ne:'AirRelay'
+application-label-nl:'AirRelay'
+application-label-or:'AirRelay'
+application-label-pa:'AirRelay'
+application-label-pl:'AirRelay'
+application-label-pt:'AirRelay'
+application-label-pt-BR:'AirRelay'
+application-label-pt-PT:'AirRelay'
+application-label-ro:'AirRelay'
+application-label-ru:'AirRelay'
+application-label-si:'AirRelay'
+application-label-sk:'AirRelay'
+application-label-sl:'AirRelay'
+application-label-sq:'AirRelay'
+application-label-sr:'AirRelay'
+application-label-sr-Latn:'AirRelay'
+application-label-sv:'AirRelay'
+application-label-sw:'AirRelay'
+application-label-ta:'AirRelay'
+application-label-te:'AirRelay'
+application-label-th:'AirRelay'
+application-label-tl:'AirRelay'
+application-label-tr:'AirRelay'
+application-label-uk:'AirRelay'
+application-label-ur:'AirRelay'
+application-label-uz:'AirRelay'
+application-label-vi:'AirRelay'
+application-label-zh-CN:'AirRelay'
+application-label-zh-HK:'AirRelay'
+application-label-zh-TW:'AirRelay'
+application-label-zu:'AirRelay'
+native-code: 'arm64-v8a' 'armeabi-v7a'
+
+$ apksigner verify --print-certs
+Signer #1 certificate DN: CN=AirRelay, OU=Receiver, O=AirRelay, C=TR
+Signer #1 certificate SHA-256 digest: c24b1ae32c1b12ad7461728a4d24675a41cda63a464f13eb3cbd7adfb7c77ef2
+Signer #1 certificate SHA-1 digest: e4ce9bd3fe78ca3aa80f46181c3303f410d16517
+Signer #1 certificate MD5 digest: 51587be4567aaab86e87bcae16047c73
+
+
+$ zipalign -c -P 16 -v 4
+16212411 res/vO.xml (OK - compressed)
+16213023 res/vv.xml (OK - compressed)
+16213584 res/wN.9.png (OK)
+16213849 res/x3.xml (OK - compressed)
+16214416 res/x4.xml (OK - compressed)
+16215190 res/xN.xml (OK - compressed)
+16216024 res/xa.9.png (OK)
+16216288 res/z-.9.png (OK)
+16216549 res/zZ.xml (OK - compressed)
+16216852 res/zb.xml (OK - compressed)
+16217200 resources.arsc (OK)
+Verification successful

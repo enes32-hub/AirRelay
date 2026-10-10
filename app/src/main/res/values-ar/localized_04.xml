@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="setting_advertise_video">الإعلان عن دعم فيديو AirPlay</string>
+    <string name="setting_advertise_video_desc">عند الإيقاف، يُبث صوت الفيديو فقط</string>
+    <string name="setting_advertise_audio">الإعلان عن دعم صوت AirPlay</string>
+    <string name="setting_advertise_audio_desc">عند الإيقاف، يُستخدم الجهاز لانعكاس الشاشة فقط ويُخفى عن مشغّلات الوسائط</string>
+    <string name="setting_alac">الإعلان عن ترميز ALAC</string>
+    <string name="setting_alac_desc">عرض ALAC في سجل mDNS؛ يُستخدم لبث الموسيقى</string>
+    <string name="setting_aac">الإعلان عن ترميز AAC</string>
+    <string name="setting_aac_desc">عرض AAC-ELD/AAC-LC في سجل mDNS؛ يُستخدم لصوت انعكاس الشاشة</string>
+    <string name="setting_launch_on_connect">عرض البث الوارد</string>
+    <string name="setting_launch_on_connect_desc">إظهار التطبيق عند بدء بث جديد. تنطبق أذونات التلفزيون.</string>
+    <string name="setting_launch_on_connect_no_permission">يتطلب العرض التلقائي إذن الظهور فوق التطبيقات الأخرى.</string>
+    <string name="setting_resolution">الدقة</string>
+    <string name="setting_resolution_desc">أقصى حجم للصورة يُقترح على الجهاز المرسل.</string>
+    <string name="setting_resolution_width">العرض</string>
+    <string name="setting_resolution_height">الارتفاع</string>
+    <string name="setting_max_fps">الحد الأقصى للإطارات/ث</string>
+    <string name="setting_max_fps_desc">اختر 1–%1$d إطار/ث. يحدد التغيير تفضيل الصورة المخصّص.</string>
+    <string name="setting_max_fps_placeholder">1–%1$d إطار/ث</string>
+    <string name="setting_overscanned">تجاوز حدود الشاشة</string>
+    <string name="setting_overscanned_desc">إضافة حدّ بكسلي للشاشات التي تستخدم تجاوز الحدود بملء الشاشة</string>
+    <string name="chip_custom">مخصّص</string>
+    <string name="chip_device_portrait">عمودي</string>
+    <string name="chip_device_landscape">أفقي</string>
+    <string name="setting_h265">H.265 (HEVC)</string>
+    <string name="setting_h265_desc">تفعيل فك ترميز فيديو H.265 إن كان الجهاز يدعمه</string>
+    <string name="setting_enforce_sdr">توافق ألوان SDR</string>
+    <string name="setting_enforce_sdr_desc">وسم الفيديو كـ SDR محدود؛ أوقفه للسماح بمرور مصادر HDR</string>
+    <string name="setting_sw_alac">فرض مفكك ترميز ALAC البرمجي</string>
+    <string name="setting_sw_alac_desc">استخدام مفكك ALAC البرمجي دائمًا بدل العتادي؛ قد يؤثر في تأخير الصوت</string>
+    <string name="setting_developer_options">خيارات تقنية إضافية</string>
+    <string name="setting_developer_options_desc">التخزين المؤقت للصوت وفك الترميز وسجلات الدعم.</string>
+    <string name="setting_key_allow_frame_drop">تخطي الإطارات المتأخرة</string>
+    <string name="setting_key_allow_frame_drop_desc">السماح لمفككات الفيديو بإسقاط إطارات داخليًا لمواكبة التشغيل على Android 10+</string>
+    <string name="setting_realtime_decoder_priority">إعطاء الأولوية لفك ترميز الصوت</string>
+    <string name="setting_realtime_decoder_priority_desc">طلب جدولة آنية لمفكك ترميز الصوت</string>
+    <string name="setting_operating_rate">معدل عمل مفكك الترميز</string>
+    <string name="setting_operating_rate_desc">طلب أقصى معدل عمل من مفكك الترميز</string>
+    <string name="chip_auto">تلقائي</string>
+    <string name="chip_on">تشغيل</string>
+    <string name="chip_off">إيقاف</string>
+    <string name="setting_low_latency">تأخير منخفض</string>
+    <string name="setting_low_latency_desc">استخدام فك صوت منخفض التأخير للإخراج؛ يستهلك طاقة ومعالجًا أكثر</string>
+    <string name="setting_scheduled_output_buffer_release">توقيت إطارات متزامن</string>
+    <string name="setting_scheduled_output_buffer_release_desc">جدولة كل إطار مفكوك إلى VSYNC الموافق لطابع عرضه الزمني</string>
+    <string name="setting_audio_delay">تجاوز تأخير الصوت</string>
+    <string name="setting_audio_delay_desc">تعيين تأخير صوت مخصّص يُبلّغ للعميل</string>
+    <string name="audio_delay_value">%d مللي ثانية</string>
+    <string name="setting_audio_auto_buffer">حجم تلقائي لمخزن الصوت البرمجي</string>
+    <string name="setting_audio_auto_buffer_desc">ضبط مخزن الصوت البرمجي حسب الشبكة وأداء الجهاز؛ يحدد شريط التمرير مقدار تفاوت التأخير الذي يمتصه المخزن</string>
+    <string name="audio_adaptive_value">%1$d%% (%2$s)</string>
+    <string-array name="audio_adaptive_step_names">
+        <item>أقل تأخير ممكن</item>
+        <item>تأخير أقل</item>
+        <item>متوازن</item>
+        <item>استقرار أفضل</item>
+        <item>أقصى استقرار</item>
+    </string-array>
+    <string name="setting_audio_cushion_ms">مخزن الصوت البرمجي (مللي ثانية)</string>
+    <string name="setting_audio_cushion_ms_desc">مخزن لامتصاص تفاوت تأخير الشبكة وفك الترميز: المدة الأقصر تقلل التأخير، والأطول تقلل التقطّع</string>
+    <string name="setting_oboe_buffer_frames">مخزن الإخراج العتادي (إطارات)</string>
+    <string name="setting_oboe_buffer_frames_desc">مخزن بث بين التطبيق وجهاز الصوت لامتصاص تفاوت جدولة المعالج فقط. اتركه عند 0 للحجم التلقائي.</string>
+    <string name="transition_live">مباشر</string>
+    <string name="transition_seek_hint">يسار/يمين: 10 ثوانٍ · OK: انتقال · رجوع: إلغاء</string>
+    <string name="transition_playback_error">تعذر تشغيل الفيديو (الرمز %1$d). عُد إلى شاشة هاتفك أو اختر فيديو آخر.</string>
+    <string name="transition_access_denied">رفض مصدر الفيديو الوصول. جرّب انعكاس الشاشة من طريقة التشغيل، أو أعد فتح الفيديو على جهازك.</string>
+    <string name="subtitle_size_value">الحجم: %1$d%%</string>
+    <string name="track_quality">الجودة</string>
+    <string name="track_subtitles">الترجمة</string>
+    <string name="track_audio">الصوت</string>
+    <string name="track_auto">تلقائي</string>
+    <string name="track_off">إيقاف</string>
+    <string name="track_unavailable">لا يوفّر مصدر الفيديو مسارات قابلة للاختيار.</string>
+    <string name="transition_transport_interrupted">فُقد اتصال الفيديو. تحقق من وصول جهازك إلى التلفزيون عبر الشبكة المحلية. إذا كنت تستخدم VPN، فاسمح بالوصول للشبكة المحلية.</string>
+</resources>

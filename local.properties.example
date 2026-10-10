@@ -1,0 +1,20 @@
+# Local machine configuration. Not part of the delivery (see .gitignore).
+sdk.dir=C:/Users/YOUR_USER/AppData/Local/Android/Sdk
+
+# Optional: explicit tool paths when they are not on PATH.
+# airrelay.python=C:/Python/python.exe
+# airrelay.cmake.command=C:/Users/YOUR_USER/AppData/Local/Android/Sdk/cmake/3.22.1/bin/cmake.exe
+
+# Optional: MSYS2 root used for the FFmpeg/OpenSSL cross-build on Windows.
+# airrelay.msys.root=C:/msys64
+
+# Optional: release signing. When these four keys are present, app/build.gradle.kts
+# creates the release signing config. Keep real values out of version control.
+# storeFile=C:/keys/airrelay-release.jks
+# storePassword=CHANGE_ME
+# keyAlias=airrelay
+# keyPassword=CHANGE_ME
+
+# Legacy property names (aynatv.python, aynatv.cmake.command, aynatv.msys.root) are
+# still accepted for one release and take effect only when the airrelay.* keys above
+# are absent.

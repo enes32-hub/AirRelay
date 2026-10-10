@@ -1,0 +1,29 @@
+{
+  "path": "app/src/main/kotlin/io/github/jqssun/airplay/service/AirPlayService.kt",
+  "original_call_expressions": [
+    "NativeBridge.nativeDestroy(retiredHandle)",
+    "NativeBridge.nativeEndCurrentStream(nativeHandle)",
+    "NativeBridge.nativeGetAirplayTxtRecords(nativeHandle)",
+    "NativeBridge.nativeGetRaopServiceName(nativeHandle)",
+    "NativeBridge.nativeGetRaopTxtRecords(nativeHandle)",
+    "NativeBridge.nativeGetServerName(nativeHandle)",
+    "NativeBridge.nativeInit(this,hwAddr,effectiveName,keyFile,nohold,requirePin)",
+    "NativeBridge.nativeSetAudioEnabled(nativeHandle,advertiseAudio)",
+    "NativeBridge.nativeSetCodecs(nativeHandle,alac,aac)",
+    "NativeBridge.nativeSetDefaultStreamValues(audioManager.getProperty(AudioManager.PROPERTY_OUTPUT_SAMPLE_RATE)?.toIntOrNull()?:0,audioManager.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER)?.toIntOrNull()?:0)",
+    "NativeBridge.nativeSetDisplaySize(nativeHandle,w,h,effectiveMirrorFps())",
+    "NativeBridge.nativeSetDisplaySize(nativeHandle,w,h,maxFps)",
+    "NativeBridge.nativeSetH265Enabled(nativeHandle,h265)",
+    "NativeBridge.nativeSetHlsEnabled(nativeHandle,advertiseVideo)",
+    "NativeBridge.nativeSetHlsEnabled(nativeHandle,enabled)",
+    "NativeBridge.nativeSetLang(nativeHandle,\"\",\"\",resources.configuration.locales.toLanguageTags().replace(',',':'))",
+    "NativeBridge.nativeSetPlist(nativeHandle,\"audio_delay_micros\",audioLatencyMs*1000)",
+    "NativeBridge.nativeSetPlist(nativeHandle,\"maxFPS\",maxFps)",
+    "NativeBridge.nativeSetPlist(nativeHandle,\"overscanned\",if(overscanned)1else0)",
+    "NativeBridge.nativeStart(nativeHandle,requestedPort)",
+    "NativeBridge.nativeStop(retiredHandle)",
+    "NativeBridge.nativeUpdatePlaybackInfo(nativeHandle,snapshot.position,snapshot.duration,snapshot.rate,snapshot.ready)"
+  ],
+  "regenerated_at": "2026-10-10T15:21:36.462710+00:00",
+  "regenerated_for": "JNI call expressions of the current reviewed AirPlayService: nativeDestroy/nativeStop now receive the retired handle, add nativeEndCurrentStream and nativeSetHlsEnabled, and the display size uses effectiveMirrorFps(). No native symbol was renamed."
+}

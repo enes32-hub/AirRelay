@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="restart_stream_title">Yayın durdurulsun mu?</string>
+    <string name="restart_stream_body">Mevcut yayın durdurulacak ve yeni ayarlar uygulanacak. Ardından cihazınızdan yeniden bağlanın.</string>
+    <string name="custom_advanced_shortcut">Gelişmiş alıcı ayarlarını aç</string>
+</resources>

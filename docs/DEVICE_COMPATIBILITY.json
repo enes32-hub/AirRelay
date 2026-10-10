@@ -1,0 +1,31 @@
+{
+  "scope": "iPhone to Android TV only",
+  "support_verified": false,
+  "sender": {
+    "id": "IPHONE-01",
+    "model": "iPhone 14 Pro",
+    "source": "User statement in this task, 2026-08-31",
+    "ios_version": null,
+    "ios_build": null,
+    "physically_tested": false
+  },
+  "receiver": {
+    "id": "TV-01",
+    "reported_model": "Xiaomi TV Box 4K",
+    "reported_generation": "Son nesil (user description; exact generation unverified)",
+    "source": "User statement in this task, 2026-08-31",
+    "exact_model_number": null,
+    "android_version": null,
+    "android_build": null,
+    "abi": null,
+    "physical_adb_access_verified": false,
+    "hardware_h264_1080p60_verified": false,
+    "physically_tested": false
+  },
+  "acceptance_status": "NOT_RUN",
+  "notes": [
+    "No latest-generation model number is inferred from the user's description.",
+    "ADB emulators do not prove physical Android TV access or hardware codec compatibility.",
+    "These two devices are the initial pair; the full specification's device coverage remains required."
+  ]
+}

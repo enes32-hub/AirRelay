@@ -1,0 +1,13 @@
+<resources>
+    <string name="access_devices">Device access</string>
+    <string name="access_hint">Block paired devices from connecting again. To end an existing stream, use End stream.</string>
+    <string name="access_empty">No paired devices yet.</string>
+    <string name="access_device">Paired device</string>
+    <string name="access_blocked">Blocked · switch off to allow</string>
+    <string name="access_allowed">Allowed · switch on to block</string>
+    <string name="access_save_failed">Could not save the change. Try again.</string>
+    <string name="access_close">Close</string>
+    <string name="access_video_issue">Video could not play</string>
+    <string name="access_waiting_screen">Waiting for your device screen</string>
+    <string name="access_return_stream">Return to the stream to change the playback method.</string>
+</resources>

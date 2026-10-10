@@ -1,0 +1,27 @@
+<resources>
+    <string name="rec_title">Kayıtlar</string>
+    <string name="rec_description">Yalnızca yayının görüntüsünü ve sesini kaydedin; AirRelay menüleri ve denetimleri kayda girmez. Ses izni mikrofonu değil, uygulama oynatımını yakalar. Android 10 öncesinde kayıtlar sessizdir. Korumalı içerik kaydedilemez. Her kayıt 1 saat veya 2 GB ile sınırlıdır; dosyalar siz silene kadar kalır.</string>
+    <string name="rec_start">Kaydı başlat</string>
+    <string name="rec_stop">Kaydı durdur</string>
+    <string name="rec_active">● Kaydediliyor</string>
+    <string name="rec_saved">Kayıt kaydedildi.</string>
+    <string name="rec_failed">Kayıt kaydedilemedi.</string>
+    <string name="rec_unavailable">Kayıt başlatılamadı. TV’niz ekran yakalamayı desteklemiyor olabilir ya da depolama veya kodlayıcı kaynakları yetersiz olabilir.</string>
+    <string name="rec_export">MP4 dışa aktar</string>
+    <string name="rec_export_cancelled">Dışa aktarma iptal edildi veya hedef seçilmedi.</string>
+    <string name="rec_exported">Kayıt dışa aktarıldı.</string>
+    <string name="rec_exported_movies">TV’nizdeki Filmler/AirRelay klasörüne kaydedildi.</string>
+    <string name="rec_export_failed">Dışa aktarma başarısız. Hedefi ve boş alanı kontrol edin. Orijinal kaydınız duruyor.</string>
+    <string name="rec_empty">Henüz kayıt yok.</string>
+    <string name="rec_close">Kapat</string>
+    <string name="rec_watch">Kaydı oynat</string>
+    <string name="rec_delete">Kaydı sil</string>
+    <string name="rec_delete_confirm">Bu kayıt AirRelay’den silinsin mi? Bu işlem geri alınamaz. Dışa aktarılmış kopyalar kalır.</string>
+    <string name="rec_deleted">Kayıt silindi.</string>
+    <string name="rec_delete_failed">Kayıt silinemedi.</string>
+    <string name="rec_play_failed">Bu kayıt açılamıyor.</string>
+    <string name="rec_duration_unknown">Süre bilinmiyor</string>
+    <string name="rec_end_stream_first">Kaydı oynatmak için önce yayını bitirin.</string>
+    <string name="rec_audio_permission">Oynatım sesini kaydetmek için ses iznini verin.</string>
+    <string name="rec_audio_failed">Görüntü kaydedildi, ancak ses eklenemedi.</string>
+</resources>

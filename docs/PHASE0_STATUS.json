@@ -1,0 +1,33 @@
+{
+  "phase": "emulator-integration",
+  "execution_status": "emulator-spike-passed-clean-source-native-core-and-arm-packaging-verified",
+  "resume_requires": [
+    "Physical Xiaomi TV access and real iPhone participation for the final connection spike",
+    "Release-grade source, license and third-party notice package"
+  ],
+  "product_complete": false,
+  "traceability_complete": false,
+  "selected_core": "jqssun/android-airplay-server at c8defdd70d7e6a04f4f1b71d353653682d594106 (GPL-3.0 integration candidate)",
+  "gates": [
+    {
+      "id": "G0-LICENSE",
+      "status": "BLOCKED",
+      "reason": "GPL-3.0 integration candidate is selected. Any distribution requires corresponding source, modifications and third-party notices; the receiver's cryptographic provenance still needs release-grade review."
+    },
+    {
+      "id": "G0-SPIKE",
+      "status": "NOT_RUN",
+      "reason": "iPhone 14 Pro and Xiaomi TV Box 4K acceptance is intentionally deferred. Emulator cannot prove real Wi-Fi discovery, video, audio or sync."
+    },
+    {
+      "id": "G0-TOOLCHAIN",
+      "status": "BLOCKED",
+      "reason": "The full native receiver was clean-built from source, installed and ran on Android TV emulator x86_64. D-pad stop/restart, AirPlay/RAOP mDNS and foreground service state were observed. ARM64 and ARM32 APK libraries passed 16 KB zip alignment verification after the secure PIN-default update. The final release toolchain gate remains blocked until signed release artifacts and physical acceptance evidence exist."
+    },
+    {
+      "id": "G0-SELECTION",
+      "status": "BLOCKED",
+      "reason": "jqssun/android-airplay-server is selected as the free GPL-3.0 integration candidate. Release selection remains conditional on license and physical acceptance gates."
+    }
+  ]
+}

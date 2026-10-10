@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="setting_advertise_video">Umumkan dukungan video AirPlay</string>
+    <string name="setting_advertise_video_desc">Jika nonaktif, video disiarkan sebagai audio saja</string>
+    <string name="setting_advertise_audio">Umumkan dukungan audio AirPlay</string>
+    <string name="setting_advertise_audio_desc">Jika nonaktif, perangkat hanya dapat digunakan untuk pencerminan dan disembunyikan dari pemutar media</string>
+    <string name="setting_alac">Umumkan codec ALAC</string>
+    <string name="setting_alac_desc">Tawarkan ALAC dalam catatan mDNS; digunakan untuk siaran musik</string>
+    <string name="setting_aac">Umumkan codec AAC</string>
+    <string name="setting_aac_desc">Tawarkan AAC-ELD/AAC-LC dalam catatan mDNS; digunakan untuk audio pencerminan layar</string>
+    <string name="setting_launch_on_connect">Tampilkan siaran masuk</string>
+    <string name="setting_launch_on_connect_desc">Tampilkan aplikasi saat siaran baru dimulai. Izin TV berlaku.</string>
+    <string name="setting_launch_on_connect_no_permission">Tampilan otomatis memerlukan izin tampil di atas aplikasi lain.</string>
+    <string name="setting_resolution">Resolusi</string>
+    <string name="setting_resolution_desc">Ukuran gambar maksimum yang disarankan kepada perangkat pengirim.</string>
+    <string name="setting_resolution_width">Lebar</string>
+    <string name="setting_resolution_height">Tinggi</string>
+    <string name="setting_max_fps">FPS maksimum</string>
+    <string name="setting_max_fps_desc">Pilih 1–%1$d FPS. Perubahan ini memilih preferensi gambar Kustom.</string>
+    <string name="setting_max_fps_placeholder">1–%1$d FPS</string>
+    <string name="setting_overscanned">Overscan</string>
+    <string name="setting_overscanned_desc">Tambahkan batas piksel untuk layar penuh dengan overscan</string>
+    <string name="chip_custom">Kustom</string>
+    <string name="chip_device_portrait">Potret</string>
+    <string name="chip_device_landscape">Lanskap</string>
+    <string name="setting_h265">H.265 (HEVC)</string>
+    <string name="setting_h265_desc">Aktifkan dekode video H.265 jika didukung perangkat</string>
+    <string name="setting_enforce_sdr">Kompatibilitas warna SDR</string>
+    <string name="setting_enforce_sdr_desc">Tandai video sebagai SDR terbatas; nonaktifkan agar sumber HDR dapat diteruskan</string>
+    <string name="setting_sw_alac">Paksa dekoder ALAC perangkat lunak</string>
+    <string name="setting_sw_alac_desc">Selalu gunakan dekoder ALAC perangkat lunak, bukan perangkat keras; dapat memengaruhi latensi audio</string>
+    <string name="setting_developer_options">Opsi teknis tambahan</string>
+    <string name="setting_developer_options_desc">Buffer audio, dekode, dan log dukungan.</string>
+    <string name="setting_key_allow_frame_drop">Lewati bingkai terlambat</string>
+    <string name="setting_key_allow_frame_drop_desc">Izinkan dekoder video membuang bingkai secara internal agar tetap lancar di Android 10+</string>
+    <string name="setting_realtime_decoder_priority">Prioritaskan dekode audio</string>
+    <string name="setting_realtime_decoder_priority_desc">Minta penjadwalan waktu nyata untuk dekoder audio</string>
+    <string name="setting_operating_rate">Laju operasi dekoder</string>
+    <string name="setting_operating_rate_desc">Minta laju operasi maksimum dari dekoder</string>
+    <string name="chip_auto">Otomatis</string>
+    <string name="chip_on">Aktif</string>
+    <string name="chip_off">Nonaktif</string>
+    <string name="setting_low_latency">Latensi rendah</string>
+    <string name="setting_low_latency_desc">Gunakan dekode audio berlatensi rendah untuk keluaran; memakai lebih banyak daya dan CPU</string>
+    <string name="setting_scheduled_output_buffer_release">Pengaturan waktu bingkai selaras</string>
+    <string name="setting_scheduled_output_buffer_release_desc">Jadwalkan setiap bingkai terdekode ke VSYNC yang sesuai dengan cap waktu penyajiannya</string>
+    <string name="setting_audio_delay">Ganti latensi audio</string>
+    <string name="setting_audio_delay_desc">Atur latensi audio kustom yang dilaporkan ke klien</string>
+    <string name="audio_delay_value">%d md</string>
+    <string name="setting_audio_auto_buffer">Ukuran buffer audio perangkat lunak otomatis</string>
+    <string name="setting_audio_auto_buffer_desc">Sesuaikan buffer audio perangkat lunak dengan kondisi jaringan dan kinerja perangkat; penggeser mengatur seberapa banyak jitter yang dapat diserap</string>
+    <string name="audio_adaptive_value">%1$d%% (%2$s)</string>
+    <string-array name="audio_adaptive_step_names">
+        <item>Latensi terendah</item>
+        <item>Latensi lebih rendah</item>
+        <item>Seimbang</item>
+        <item>Stabilitas lebih baik</item>
+        <item>Stabilitas terbaik</item>
+    </string-array>
+    <string name="setting_audio_cushion_ms">Buffer audio perangkat lunak (md)</string>
+    <string name="setting_audio_cushion_ms_desc">Buffer menyerap jitter jaringan dan dekoder: durasi pendek menurunkan latensi; durasi panjang mengurangi gangguan</string>
+    <string name="setting_oboe_buffer_frames">Buffer keluaran perangkat keras (bingkai)</string>
+    <string name="setting_oboe_buffer_frames_desc">Buffer siaran antara aplikasi dan perangkat audio untuk menyerap jitter penjadwalan CPU saja. Biarkan 0 agar ukuran diatur otomatis.</string>
+    <string name="transition_live">Langsung</string>
+    <string name="transition_seek_hint">Kiri/kanan: 10 detik · OK: lompat · Kembali: batal</string>
+    <string name="transition_playback_error">Video tidak dapat diputar (kode %1$d). Kembali ke layar ponsel atau pilih video lain.</string>
+    <string name="transition_access_denied">Sumber video menolak akses. Gunakan metode Pemutaran untuk mencoba Cerminkan layar, atau buka ulang video di perangkat.</string>
+    <string name="subtitle_size_value">Ukuran: %1$d%%</string>
+    <string name="track_quality">Kualitas</string>
+    <string name="track_subtitles">Subtitel</string>
+    <string name="track_audio">Audio</string>
+    <string name="track_auto">Otomatis</string>
+    <string name="track_off">Nonaktif</string>
+    <string name="track_unavailable">Sumber video ini tidak menyediakan trek yang dapat dipilih.</string>
+    <string name="transition_transport_interrupted">Koneksi video terputus. Pastikan perangkat dapat mengakses TV melalui jaringan lokal. Jika memakai VPN, izinkan akses jaringan lokal.</string>
+</resources>

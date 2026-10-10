@@ -1,0 +1,3142 @@
+{
+  "observed_at": "2026-08-31T16:03:12.678961+00:00",
+  "scope": "static-source-license-signals",
+  "source_code_saved": false,
+  "code_executed": false,
+  "dependency_approval": false,
+  "complete_transitive_link_graph": false,
+  "repositories": [
+    {
+      "id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "tree_url": "https://api.github.com/repos/jqssun/android-airplay-server/git/trees/c8defdd70d7e6a04f4f1b71d353653682d594106?recursive=1",
+      "selected_files": 21,
+      "tree_truncated": false
+    },
+    {
+      "id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "tree_url": "https://api.github.com/repos/FDH2/UxPlay/git/trees/462153392f2e30937424922039ff9f0cda5e7b1a?recursive=1",
+      "selected_files": 72,
+      "tree_truncated": false
+    },
+    {
+      "id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "tree_url": "https://api.github.com/repos/FD-/RPiPlay/git/trees/64d0341ed3bef098c940c9ed0675948870a271f9?recursive=1",
+      "selected_files": 11,
+      "tree_truncated": false
+    },
+    {
+      "id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "tree_url": "https://api.github.com/repos/EstebanKubata/playfair/git/trees/96c232ed7e65cccfbd1eae8e0d70e7179799290d?recursive=1",
+      "selected_files": 10,
+      "tree_truncated": false
+    },
+    {
+      "id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "tree_url": "https://api.github.com/repos/libimobiledevice/libplist/git/trees/f41b1ea67045e0c09339974d83e389972d84f166?recursive=1",
+      "selected_files": 57,
+      "tree_truncated": false
+    },
+    {
+      "id": "openssl-cmake",
+      "repository": "viaduck/openssl-cmake",
+      "commit": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8",
+      "tree_url": "https://api.github.com/repos/viaduck/openssl-cmake/git/trees/4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8?recursive=1",
+      "selected_files": 7,
+      "tree_truncated": false
+    },
+    {
+      "id": "ffmpeg-selected-alac",
+      "repository": "FFmpeg/FFmpeg",
+      "commit": "38b88335f99e76ed89ff3c93f877fdefce736c13",
+      "tree_url": "https://api.github.com/repos/FFmpeg/FFmpeg/git/trees/38b88335f99e76ed89ff3c93f877fdefce736c13?recursive=1",
+      "selected_files": 7,
+      "tree_truncated": false
+    }
+  ],
+  "submodules": [
+    {
+      "repository_id": "android-wrapper",
+      "path": "app/src/main/cpp/third_party/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "path": "app/src/main/cpp/third_party/ffmpeg",
+      "commit": "38b88335f99e76ed89ff3c93f877fdefce736c13"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "path": "app/src/main/cpp/third_party/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "path": "app/src/main/cpp/third_party/openssl-cmake",
+      "commit": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8"
+    }
+  ],
+  "files": [
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": ".gitmodules",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/.gitmodules",
+      "git_blob_sha1": "69918b6c47a82c01ce356548f37149a75bc536cf",
+      "sha256": "2c73c5cb0b8653b85c013c11e0af602c7fa72d9a6c17fddedb85156f1a1617e8",
+      "bytes": 652,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/LICENSE",
+      "git_blob_sha1": "e72bfddabc15be5718a7cc061ac10e47741d8219",
+      "sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+      "bytes": 35148,
+      "license_signals": [
+        "LGPL-text",
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/README.md",
+      "git_blob_sha1": "a130e71ac0de7f75da5c22f6ede62f31ccf728d0",
+      "sha256": "c6e2f8fdf3495a5e0e542f845e7c8b7ae5b9ac9745d4cbff7dd9121fdfb30fce",
+      "bytes": 4194,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/build.gradle.kts",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/build.gradle.kts",
+      "git_blob_sha1": "2604452f84813f1a54f24c847084352e3107c9f3",
+      "sha256": "e8cf49bdf09c8b809a58a6dabaf8d17da7ca35ad62af8c9c4b6553f5c8e87723",
+      "bytes": 4663,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/CMakeLists.txt",
+      "git_blob_sha1": "d0c600cba752f6c8d98c05533fe2e5f4f97f5df4",
+      "sha256": "161f40f03f778c31fe17bcbe18a5671a18fdfd7fee477b8b370538f0ee4ad0f1",
+      "bytes": 4915,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/android_dnssd_shim.c",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/android_dnssd_shim.c",
+      "git_blob_sha1": "a00e1a77618ed4c0e62f5eb56519976ce4b68102",
+      "sha256": "3835a15f75407028c65c335dcb7b2edce77f5d18bece7e2724687ca3efaafab7",
+      "bytes": 6713,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/android_dnssd_shim.h",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/android_dnssd_shim.h",
+      "git_blob_sha1": "b20b31c75ad490818593dec1c6374e84cdd3d1e4",
+      "sha256": "5fd2dff0b18a5a39cff64d6563c2bfc70fe941f223da1b3f6212fe39d399431e",
+      "bytes": 686,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/android_raop_callbacks.c",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/android_raop_callbacks.c",
+      "git_blob_sha1": "3b3b618e0c59ee1ee5a491c01f93b5bd79ca5992",
+      "sha256": "6e6c857b5ae94e44357179e894364e3b33b68d846a1e61cfa6a6bb4b4f2e0011",
+      "bytes": 18470,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/android_raop_callbacks.h",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/android_raop_callbacks.h",
+      "git_blob_sha1": "43e9908b32d39a4b7bc59a82d8ae5a4e4deb2ee8",
+      "sha256": "73f2179866908e55864c9734f6d2f497e2422b2985914531988851fb3748ba0f",
+      "bytes": 1950,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/audio_decoder.h",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/audio_decoder.h",
+      "git_blob_sha1": "67b343195da36578950a03130f10a80b4101f970",
+      "sha256": "aab46a2c98e6928b2309da31d5c04d3cfe15dd91e0cf91addd58bd020f13c13e",
+      "bytes": 18931,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/audio_engine.cpp",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/audio_engine.cpp",
+      "git_blob_sha1": "c3e2c70dd7d44f72a227dbd07d2bd725d46faf1a",
+      "sha256": "aad1711d3453839ee73bafffc7987349fcb8dfd167a186e6355e55fa2c4d6ad8",
+      "bytes": 10031,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/audio_engine.h",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/audio_engine.h",
+      "git_blob_sha1": "1284d45c27a121f8b94ee69bc7227bfc76e32c93",
+      "sha256": "7f50c61ed26353b0da6f957f18ccc2b8ee82f2804bdf49d987aef7118af153d6",
+      "bytes": 2224,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/audio_output.h",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/audio_output.h",
+      "git_blob_sha1": "e6b09269ec39dcba1b4e4b537a9ee491b746eff7",
+      "sha256": "96cd01cea3082b922272a870c0e67e23b69e3043132f2ca5fd4475d8303c339a",
+      "bytes": 7461,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/audio_time.h",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/audio_time.h",
+      "git_blob_sha1": "cb95cae093497d55dee39f35f41755e54f421608",
+      "sha256": "4ca104fedffe89b08e353c3f395253140006c9b1c6596d4e31fc2143ae378f5e",
+      "bytes": 315,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/cmake/BuildFFmpeg.cmake",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/cmake/BuildFFmpeg.cmake",
+      "git_blob_sha1": "9d7d458e633aa7468c183c3445f3feacdf5d458d",
+      "sha256": "4d0434d5fb95b0c4c5923154af960e039a63a23d33d2d44ef206ed68073d1deb",
+      "bytes": 3006,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/cmake/PatchOpenSSL.cmake",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/cmake/PatchOpenSSL.cmake",
+      "git_blob_sha1": "40f168fd77f18b4988e6d7afa384b6ec2c65dc99",
+      "sha256": "901cdd37974cbc5614b4b4f2086a6bf8e331ea7ee97dcc0ed625465b7dd8c777",
+      "bytes": 151,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/cmake/scrub_mkbuildinf.cmake",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/cmake/scrub_mkbuildinf.cmake",
+      "git_blob_sha1": "1d3604465662b3b9beb515f9875f36bf57f171e2",
+      "sha256": "b2a739e66283ca65ca9c1106c4e3a212322d7f996befc5cb0a694c061f5ce5ae",
+      "bytes": 274,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/log_sink.h",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/log_sink.h",
+      "git_blob_sha1": "6130194342c4b4537016986ccf95fe2aeb97bd29",
+      "sha256": "d215d31889ff61f654db0bf7b1f9808ada30c5082e3eae2ff56a185ca298978b",
+      "bytes": 2617,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/native_bridge.cpp",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/native_bridge.cpp",
+      "git_blob_sha1": "4119db5f6fcfd3b0d409d844134908b46837c52a",
+      "sha256": "d0098bab3aef54d69f3e68840bd1fd0dd435e24d17011169976eb18fc582fefc",
+      "bytes": 14762,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "app/src/main/cpp/timeline_buffer.h",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/timeline_buffer.h",
+      "git_blob_sha1": "ddaa6fac73d8dbaa2ac978c913dcced6270b739b",
+      "sha256": "048de5545e08ef950d0f55d8e055eba8de8f44a109de84709e891fa321f739c5",
+      "bytes": 17407,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "android-wrapper",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "path": "gradle/libs.versions.toml",
+      "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/gradle/libs.versions.toml",
+      "git_blob_sha1": "ef6d6a04a3edc5c98fe1414af60c37717893eac0",
+      "sha256": "f6f0d94f2d87d40e61fe68c25e90ff4fc3a5a1f84c86820deffb00807c272a2f",
+      "bytes": 3001,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "ffmpeg-selected-alac",
+      "repository": "FFmpeg/FFmpeg",
+      "commit": "38b88335f99e76ed89ff3c93f877fdefce736c13",
+      "path": "COPYING.LGPLv2.1",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/COPYING.LGPLv2.1",
+      "git_blob_sha1": "40924c2a6da76a2b0c639f6fe7ef0b2d095a6adb",
+      "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30",
+      "bytes": 26517,
+      "license_signals": [
+        "LGPL-text",
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "ffmpeg-selected-alac",
+      "repository": "FFmpeg/FFmpeg",
+      "commit": "38b88335f99e76ed89ff3c93f877fdefce736c13",
+      "path": "LICENSE.md",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/LICENSE.md",
+      "git_blob_sha1": "371b0913ce7c199c4092d9344680c80f78ebeb2a",
+      "sha256": "2e1d16c72fd74e12063776371da757322f8b77589386532f4fd8634bde7de1af",
+      "bytes": 4346,
+      "license_signals": [
+        "LGPL-text",
+        "GPL-text",
+        "Apache-2.0-text"
+      ],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "ffmpeg-selected-alac",
+      "repository": "FFmpeg/FFmpeg",
+      "commit": "38b88335f99e76ed89ff3c93f877fdefce736c13",
+      "path": "libavcodec/alac.c",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavcodec/alac.c",
+      "git_blob_sha1": "f91288e97c84ee95713e1fece8a8f215c6d76b85",
+      "sha256": "76fda3b1079c6a1bbea717e36e060ca8444a855f007acfd8523bcc30ce758333",
+      "bytes": 21223,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "ffmpeg-selected-alac",
+      "repository": "FFmpeg/FFmpeg",
+      "commit": "38b88335f99e76ed89ff3c93f877fdefce736c13",
+      "path": "libavcodec/alac_data.c",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavcodec/alac_data.c",
+      "git_blob_sha1": "d8ed53f444208d5ab7b36c8bdb65341565e951f3",
+      "sha256": "a90269bc1dff8086cf43faea843e331acd0fcc002692d554f0329d1cd80de493",
+      "bytes": 2041,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "ffmpeg-selected-alac",
+      "repository": "FFmpeg/FFmpeg",
+      "commit": "38b88335f99e76ed89ff3c93f877fdefce736c13",
+      "path": "libavcodec/alac_data.h",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavcodec/alac_data.h",
+      "git_blob_sha1": "802074639b569f97fed9abeba6817676ec5033f5",
+      "sha256": "eebb5f1160d3b4de01f798e8c2bd847a25565a0a425d09733b2c0aa532b42b23",
+      "bytes": 1451,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "ffmpeg-selected-alac",
+      "repository": "FFmpeg/FFmpeg",
+      "commit": "38b88335f99e76ed89ff3c93f877fdefce736c13",
+      "path": "libavcodec/alacdsp.c",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavcodec/alacdsp.c",
+      "git_blob_sha1": "c06cc9da97d84732efecdf015d8c47bbadab4d90",
+      "sha256": "d5eae02d51a01bd09ef8a205e8cb984e907e375b8b856150c779031c82b3af27",
+      "bytes": 1979,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "ffmpeg-selected-alac",
+      "repository": "FFmpeg/FFmpeg",
+      "commit": "38b88335f99e76ed89ff3c93f877fdefce736c13",
+      "path": "libavcodec/alacdsp.h",
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/38b88335f99e76ed89ff3c93f877fdefce736c13/libavcodec/alacdsp.h",
+      "git_blob_sha1": "489ebc6704a1742e5184fd9043742de290dc4651",
+      "sha256": "8cf9089161d80bba4da9c1c526afec957255904e5f84402a148969c69d87de97",
+      "bytes": 1359,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "COPYING",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/COPYING",
+      "git_blob_sha1": "08ddefd0401d1d29e6c07b629344ce1675e6b095",
+      "sha256": "7619c753cac95d4740220223bde48a032606fcaccde5e546f9bc444c81ab356d",
+      "bytes": 17988,
+      "license_signals": [
+        "LGPL-text",
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "COPYING.LESSER",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/COPYING.LESSER",
+      "git_blob_sha1": "732811e4f1faf71870b7350f211b26e00d7bfbe9",
+      "sha256": "e237fa56668030e928551ddd60f05df5fe957f75eab874bbd017e085ed722e7c",
+      "bytes": 26434,
+      "license_signals": [
+        "LGPL-text",
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Array.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Array.h",
+      "git_blob_sha1": "f4360c5d2c7d8d914b70a762dbd455e6df192d83",
+      "sha256": "46505fc115694da2f563bede32f63800102cb27d4d4a5483a3773407c54f87fe",
+      "bytes": 2298,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Boolean.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Boolean.h",
+      "git_blob_sha1": "9ecbc48c6f195117f8092f54df8e63eb92717412",
+      "sha256": "37a6e5ddec0d78b7d083544462d2948a7dfca1532cbde0c01169a017ddaff930",
+      "bytes": 1309,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Data.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Data.h",
+      "git_blob_sha1": "1de88aaadcfeec8cc177531a2dfc7b6a7f435404",
+      "sha256": "e839ac6e3acd40ad7d460bf40657f6c1c522431eed3bdbf6b5580cbf98cb6093",
+      "bytes": 1387,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Date.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Date.h",
+      "git_blob_sha1": "70266997f55d0cdd318b9ffae983401273d86535",
+      "sha256": "858d25d69f794ad0cba453cf74abc82839f78fefb484a8d26be9366c35d12375",
+      "bytes": 1366,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Dictionary.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Dictionary.h",
+      "git_blob_sha1": "37ff1c938628a654ee9f7a2ca1d8e442f161fe8d",
+      "sha256": "26ea0cc35b6583b587e539f41da68f5e9be15c919ac291034131fc4388c0e5b0",
+      "bytes": 2210,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Integer.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Integer.h",
+      "git_blob_sha1": "1a4d9803e2d3a5208bfb31faccb01c421078201a",
+      "sha256": "2229d832e8b5f5cbcbd43ac6649b7e50acf0f21020a2476efe72fe4e67321f13",
+      "bytes": 1482,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Key.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Key.h",
+      "git_blob_sha1": "bd5f7bc9be5a6f3fa7fa1f953422939b2c9e4051",
+      "sha256": "806b610963c5aa729271c1e6750e30b1efcc5267c4e768599f8379c2dfed454c",
+      "bytes": 1307,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Node.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Node.h",
+      "git_blob_sha1": "6c9ae436996b31755a1c41e9ef486077cf87ede0",
+      "sha256": "c38bc3dcae889534b0d214b093ff6cc56805f25ea24979289774beaf9d725a91",
+      "bytes": 1448,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Real.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Real.h",
+      "git_blob_sha1": "5afb0c0af5200d380c71ccc2f28ad6b8dd1d680b",
+      "sha256": "4e05071c92650d0cf524ece765599a479b1d544b9219020b5227eb0e8ef53b9e",
+      "bytes": 1273,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/String.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/String.h",
+      "git_blob_sha1": "95f8dd145fd323cdc90e639372d1862e0b53bd99",
+      "sha256": "33ed99438d7a631c60e95f4bbb30d7e0848b9c3be6128e6eaaab77d49a02816a",
+      "bytes": 1458,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Structure.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Structure.h",
+      "git_blob_sha1": "b7fbdb5d04f95ff70b44bb6e4415f68d04821b31",
+      "sha256": "fe7452a0f561e0a45cdf81aee4b9e04b50053ca07a7ab7ebf2b625ced9aab1cf",
+      "bytes": 1841,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/Uid.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/Uid.h",
+      "git_blob_sha1": "af6e51d04cb2f56214cd450dd0d32f47affd10b1",
+      "sha256": "c101bd72df5f13887965063212ec18e317383de37666766444c63dadf8df02e3",
+      "bytes": 1266,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/plist++.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/plist%2B%2B.h",
+      "git_blob_sha1": "b29fc76c4d44da356ec534c063975b6e3355b341",
+      "sha256": "73cf4f7ff61d8bac3f42e24e6871ba805d284aac3e3664f469c6770e2a200d9b",
+      "bytes": 1169,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "include/plist/plist.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/include/plist/plist.h",
+      "git_blob_sha1": "94930b84f6f429714c20251ab29e11c09f69c220",
+      "sha256": "c4397d3b05aacb5b5bd58eab568783c34b57df227b56b7e12ef8ef8324e1ac7e",
+      "bytes": 62065,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "libcnary/cnary.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/libcnary/cnary.c",
+      "git_blob_sha1": "07321fc2f95e7d06cee022230d2eedb93212546d",
+      "sha256": "601a327597b4b8d2cc64030ac484a8424724841043f1776a0586799df52fb95f",
+      "bytes": 1359,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "libcnary/include/node.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/libcnary/include/node.h",
+      "git_blob_sha1": "5b3ae37becab295978be63b83a379c9567578df6",
+      "sha256": "f91295a3d7cffcf29db289a53ea9f98b8f885ee638f6bf344538938b44a2c533",
+      "bytes": 2168,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "libcnary/include/node_list.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/libcnary/include/node_list.h",
+      "git_blob_sha1": "d566b0056a190c6b65b0021f2abe8b36c7d7d819",
+      "sha256": "c6a1d92efdf370d4d15f54924ce14473f99295c7b7e8f7b0a2c1a61f872a1c73",
+      "bytes": 1461,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "libcnary/include/object.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/libcnary/include/object.h",
+      "git_blob_sha1": "b0a8cd8da99606fe6cc929be89d208265b7bd00d",
+      "sha256": "5adf6aeee21b4239a5d9eea14e65638cba88f9914db06ae5ffe2a800508df8ff",
+      "bytes": 1108,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "libcnary/node.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/libcnary/node.c",
+      "git_blob_sha1": "63b449cd047aa8a8fbd3d7037f2aff0b1a0b1239",
+      "sha256": "6502a12e1ff1a1f3874138f4ad03ba4ac22027ea45cb268ccfeebf2a494cad79",
+      "bytes": 7247,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "libcnary/node_list.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/libcnary/node_list.c",
+      "git_blob_sha1": "218c81d634f9f0cfb471f103268ab61a77887708",
+      "sha256": "b87054d9f12a4cf89691f603eddf1b55dc5ad49a7c9a694abb0edd110d0f8bac",
+      "bytes": 3541,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Array.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Array.cpp",
+      "git_blob_sha1": "784df7c933380aede3149ed4c206dbe8460b0b00",
+      "sha256": "ac13d1ee7d104a33e5e5c25b12ee872974581f2bc9174cdad48e76f8dfeaaf2f",
+      "bytes": 4694,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Boolean.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Boolean.cpp",
+      "git_blob_sha1": "2a5e30351bdecbfd7dc790630295c36e3879437c",
+      "sha256": "e69f532a2a40789f812c13c6394729afae92cb824fa04a8bec1b3d4e018ff4f3",
+      "bytes": 1713,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Data.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Data.cpp",
+      "git_blob_sha1": "94767c9ddad70fa5f7bc79ff059ef66f58f01ff7",
+      "sha256": "c7c5bbded3cd14e7a7e6009bc459864f339d3e5ec912961d1a2652c802d6f77f",
+      "bytes": 1952,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Date.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Date.cpp",
+      "git_blob_sha1": "214220bb9ac6a8d49dd91cacec6eb7933c068162",
+      "sha256": "15194a395765446a1c58b7afd9c007652802f8e63ac821a475bc67f4a3b63b0e",
+      "bytes": 1673,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Dictionary.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Dictionary.cpp",
+      "git_blob_sha1": "b3549455d3d942c3ac302eceda04bd917dc488bb",
+      "sha256": "edf4dd52915d8a498ba3b6769e318037ed7a40409972fb33b56a6e541a30319f",
+      "bytes": 4611,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Integer.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Integer.cpp",
+      "git_blob_sha1": "26e7ccfe6ed80b80a834e9c1b007fa0095d87e82",
+      "sha256": "acd8681d7e2aa0e7c46830f77f87ab2edcf01705386fd46e70d48f5286bdc82b",
+      "bytes": 2159,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Key.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Key.cpp",
+      "git_blob_sha1": "459227ac37ac0c3531220a9c56750bbff86b55ab",
+      "sha256": "c39a8de737dbde29900b300a16dd46304e1846c0d11349d85b9a6f0c6677ab15",
+      "bytes": 1724,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Node.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Node.cpp",
+      "git_blob_sha1": "1043b3155575f76a65cac7b7c423708db7fba61d",
+      "sha256": "00ff7ff9dea93e7ee8b02eb6a84459cc0e0884d24ddc77f7379a29904826cacd",
+      "bytes": 3943,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Real.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Real.cpp",
+      "git_blob_sha1": "b743ab583495cefc9d605134add40c8c9762057a",
+      "sha256": "f1a83816c87c9caf9ea0ffef0dabdd01cf945fba46e412f622e4f9b3769a002b",
+      "bytes": 1624,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/String.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/String.cpp",
+      "git_blob_sha1": "bcd5e2e41dacc52ae5d910292eb3484fa9c854ee",
+      "sha256": "c18e7d465b9edab78768d487e1d12399167b9b1748caf745b03165c9efc5555c",
+      "bytes": 2130,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Structure.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Structure.cpp",
+      "git_blob_sha1": "65e5ca80e49614a5e967f110fc9d206fc4acc094",
+      "sha256": "1cef234f9b1f449a36bcb84812195537f9f184a1fb21c3fc14733bd706bab58c",
+      "bytes": 3360,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/Uid.cpp",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/Uid.cpp",
+      "git_blob_sha1": "d73f7773bf6fed51935c86cfe872ef57eac64178",
+      "sha256": "2f83367b2d078f369ade63c856dffddc86521d6540ea4e8ece1fbdec37a959ce",
+      "bytes": 1625,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/base64.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/base64.c",
+      "git_blob_sha1": "603ab6dc120ee32629c292da3d0f352a125c9610",
+      "sha256": "23a7140d4036423dc07b37f67210c2bc96a38c7fdc16668efac96e58902c54ac",
+      "bytes": 4029,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/base64.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/base64.h",
+      "git_blob_sha1": "58b8396b24bde8289fd4f96db08b27f972aef6ff",
+      "sha256": "c33bceaa32b966d32bac4228b20febe02c9378494113caf0b9a1af620a0de718",
+      "bytes": 1060,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/bplist.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/bplist.c",
+      "git_blob_sha1": "1187c7ad0aeab4f8a48c833019c673c1daf8fe9e",
+      "sha256": "968851b5d695ddeb90a45c947f6df293c84d37704dd2b941f4e335a98711b429",
+      "bytes": 48612,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/bytearray.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/bytearray.c",
+      "git_blob_sha1": "39fad5fc16f678aba432d11f57594f78efedbd9d",
+      "sha256": "4dfe76b2d4d8c40fe47edc08ee6f03c1abdd12055b4fdf009ea510c1073a0df9",
+      "bytes": 2293,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/bytearray.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/bytearray.h",
+      "git_blob_sha1": "b53e00689e0027d885f3a96d41872f0506a94d11",
+      "sha256": "7d4a8c4e40bcc8747ddb76066c85782b7bf024f00d73b059b564c896536d1662",
+      "bytes": 1327,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/hashtable.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/hashtable.c",
+      "git_blob_sha1": "dd6dbfc8d59ca0b9eb4ba0f48af9dab6aa36de08",
+      "sha256": "4876b7640ba65982b189b1932fb15d8a81594617545f5ca0a2bad221dde37470",
+      "bytes": 3199,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/hashtable.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/hashtable.h",
+      "git_blob_sha1": "514cfec8cab8002734d3e53cb64cc8544dfb513e",
+      "sha256": "3f4977a5b8cf923d4fa1b2f1fb2fc8a97a3c21413c52ec2ccb74f4eb77ee7126",
+      "bytes": 1697,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/jplist.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/jplist.c",
+      "git_blob_sha1": "410d4b3cb43b5a3c2b8802737caeda62f7344830",
+      "sha256": "7b917a3fa83924e279a373452e87561bde1abacfe607e6098d5c00af184dc975",
+      "bytes": 33317,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/jsmn.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/jsmn.c",
+      "git_blob_sha1": "889b8d76a76305cc57696a69a564f3aca7890809",
+      "sha256": "03c97735b8770297f901d86206eb005bc188eacd90d2a400161a201f80c1a187",
+      "bytes": 8116,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/jsmn.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/jsmn.h",
+      "git_blob_sha1": "629a0ddbc3cab1ef5b362b4d2da2e3b8775980a4",
+      "sha256": "b56012ca0a8e7fa0ceb8007d9070a6e967e092cea40b9a7de2be288df9aa8a01",
+      "bytes": 3037,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/oplist.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/oplist.c",
+      "git_blob_sha1": "3c48b3ab2434c545d2b8cdecfc73037d70ed86d8",
+      "sha256": "fea8008eac29621dee80973ed1f4ab594a452ffce6b28124d3fdb1d9537b08a5",
+      "bytes": 35190,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/out-default.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/out-default.c",
+      "git_blob_sha1": "fb57bcf880ea6549431ac1341083c805cee0d1ea",
+      "sha256": "df98edd57e02e50de8d4dc1601aa0c93d3a57cbd712e3d3342c17016e694ede0",
+      "bytes": 15570,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/out-limd.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/out-limd.c",
+      "git_blob_sha1": "35247fbda3975a3ea659426f48e9e7de917d00c8",
+      "sha256": "5331713ec1870f29544da8fb7319f7126379e103ed8e628ebe1675f20f0e7083",
+      "bytes": 13789,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/out-plutil.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/out-plutil.c",
+      "git_blob_sha1": "bf9e72e7d960fae8849369dde89a5888aaaca7ad",
+      "sha256": "4c982e83d05d4d2d5d546f7bb5b5f95f1b3c78d6b3e931cf369abc4c62c5623e",
+      "bytes": 14423,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/plist.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/plist.c",
+      "git_blob_sha1": "2ad1b0a62a7bd4d5c0aa43420584f1f7f7a9a660",
+      "sha256": "65233ae5bc29d91368913ef9285360e84dba9c31da556aa5aa430360d21e500c",
+      "bytes": 68867,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/plist.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/plist.h",
+      "git_blob_sha1": "72286964ef2af4df79d9610bd35cd50d234571d1",
+      "sha256": "4015814c82c5a4dd9df8a78a651939ea6a31f8deaa3c82d23f4b2c83e448806a",
+      "bytes": 3055,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/ptrarray.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/ptrarray.c",
+      "git_blob_sha1": "3a110314eb4a0cc374ddfdf81a84b2a69af3e0c2",
+      "sha256": "feac199b7dba2dafb39cc4b2ce00b6980a84fecfa8ff5decf0bb6d260d538395",
+      "bytes": 2703,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/ptrarray.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/ptrarray.h",
+      "git_blob_sha1": "ed673517393b02efb15ee88baf467f2fc9695671",
+      "sha256": "759c4a721de38485dcc4976d287696fe35afef2aeec5c4fb5036383ad1736d52",
+      "bytes": 1446,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/strbuf.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/strbuf.h",
+      "git_blob_sha1": "2fbfe931c7f16cbda58c711894db855aec17725d",
+      "sha256": "a5989e3db109250448819765c4ecd9394d1a163534ce3bfd0c310f70f8d6925b",
+      "bytes": 1361,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/time64.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/time64.c",
+      "git_blob_sha1": "218088e565fa6eac49e8f0bb8276348a30f37732",
+      "sha256": "82a09739ef00863ac47e9e3f41fae26dc3cc1c4b65c6ff5d394b54ba9348a841",
+      "bytes": 22229,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/time64.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/time64.h",
+      "git_blob_sha1": "28968c04537ba7801593308293574568c3f8d58e",
+      "sha256": "096882636b4a4d8337cccf9c1235b340fec6c9dfad767d29a203eeaeb01c2680",
+      "bytes": 2112,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/time64_limits.h",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/time64_limits.h",
+      "git_blob_sha1": "1151cf249946c8d2b603aa61dde6a523fe35e7d4",
+      "sha256": "022f29fc04ce57457dc13c65f938c83a3941256104dbd64bed2c99b5285cca01",
+      "bytes": 1549,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "libplist",
+      "repository": "libimobiledevice/libplist",
+      "commit": "f41b1ea67045e0c09339974d83e389972d84f166",
+      "path": "src/xplist.c",
+      "url": "https://raw.githubusercontent.com/libimobiledevice/libplist/f41b1ea67045e0c09339974d83e389972d84f166/src/xplist.c",
+      "git_blob_sha1": "de5227a9ad90e533e82adcb9126399346453221c",
+      "sha256": "fb383d472e8c266d3fc8fb3c1c25ecf3974bce00ab63aa708c5f470fe3621b6c",
+      "bytes": 59834,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "openssl-cmake",
+      "repository": "viaduck/openssl-cmake",
+      "commit": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8",
+      "path": "CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/viaduck/openssl-cmake/4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8/CMakeLists.txt",
+      "git_blob_sha1": "39ca5940f8f1935d6f4859dcd704e9b8efc0711f",
+      "sha256": "65c268b337ad9f67f4e24559dcf99831c2f07ac5f13e575c43ebd013cb497b5c",
+      "bytes": 4294,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "openssl-cmake",
+      "repository": "viaduck/openssl-cmake",
+      "commit": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/viaduck/openssl-cmake/4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8/LICENSE",
+      "git_blob_sha1": "8b7f19fa3a53b6fa047abd0c28009a146792e8d4",
+      "sha256": "41f17297983347aa36427f83cee2780d898b1ca6e82fc3a9f033c413ddec093b",
+      "bytes": 1081,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "openssl-cmake",
+      "repository": "viaduck/openssl-cmake",
+      "commit": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8",
+      "path": "cmake/BuildOpenSSL.cmake",
+      "url": "https://raw.githubusercontent.com/viaduck/openssl-cmake/4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8/cmake/BuildOpenSSL.cmake",
+      "git_blob_sha1": "8091a727b799358c8bc6ce041cb8d459efd2d3a3",
+      "sha256": "ed4970f344dae3c02b7fe8913df42d46b604263fe7d870bf3744d5c0bd9b576c",
+      "bytes": 8949,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "openssl-cmake",
+      "repository": "viaduck/openssl-cmake",
+      "commit": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8",
+      "path": "cmake/ByproductsOpenSSL.cmake",
+      "url": "https://raw.githubusercontent.com/viaduck/openssl-cmake/4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8/cmake/ByproductsOpenSSL.cmake",
+      "git_blob_sha1": "374137144129fb7d8fad0a5aa8218dacbd6ac8de",
+      "sha256": "21daf96ae8a028d4329025d6fb2cf0def24e3c10c68050b9940e152581b52986",
+      "bytes": 2985,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "openssl-cmake",
+      "repository": "viaduck/openssl-cmake",
+      "commit": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8",
+      "path": "cmake/PatchOpenSSL.cmake",
+      "url": "https://raw.githubusercontent.com/viaduck/openssl-cmake/4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8/cmake/PatchOpenSSL.cmake",
+      "git_blob_sha1": "c0ca2bab6cd83d5bfe8f11a747825e341e671f15",
+      "sha256": "b78714ea76ea11e71d356c8098aa31e0e0d7107bd5aa3b459b9f2f803ec21d24",
+      "bytes": 2862,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "openssl-cmake",
+      "repository": "viaduck/openssl-cmake",
+      "commit": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8",
+      "path": "cmake/PrebuiltOpenSSL.cmake",
+      "url": "https://raw.githubusercontent.com/viaduck/openssl-cmake/4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8/cmake/PrebuiltOpenSSL.cmake",
+      "git_blob_sha1": "078b8bf94edbe3b25e9846f99b03bbb981fd777a",
+      "sha256": "4e8a6403912bfc3a45f61f7ce79bc153493ab4ebd89428e1f77bc427e6893798",
+      "bytes": 2402,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "openssl-cmake",
+      "repository": "viaduck/openssl-cmake",
+      "commit": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8",
+      "path": "cmake/TargetArch.cmake",
+      "url": "https://raw.githubusercontent.com/viaduck/openssl-cmake/4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8/cmake/TargetArch.cmake",
+      "git_blob_sha1": "8fb9ba314907f87ea7e6d410a4e1b81106ad5570",
+      "sha256": "37ff2f8ab23310d5ed0127e84678c00f13e6fd7dd85adba3f6408c5fbeca4943",
+      "bytes": 7308,
+      "license_signals": [
+        "BSD-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "path": "LICENSE.md",
+      "url": "https://raw.githubusercontent.com/EstebanKubata/playfair/96c232ed7e65cccfbd1eae8e0d70e7179799290d/LICENSE.md",
+      "git_blob_sha1": "09f984dbcff9d11a9d5c7827ec7d6272fc55d762",
+      "sha256": "0b7cf235e6136b426f00870c3200bac308950973d062a733bdc3fc1eca36fa06",
+      "bytes": 34941,
+      "license_signals": [
+        "LGPL-text",
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/EstebanKubata/playfair/96c232ed7e65cccfbd1eae8e0d70e7179799290d/README.md",
+      "git_blob_sha1": "20bbfd1f2eda39da4fb84beab5f7d4f80d676bfd",
+      "sha256": "6e5013dcdc6b46b9a5042d94502d31f4798ae4b1e549d9291174d464446b89cf",
+      "bytes": 11,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "path": "bplist.c",
+      "url": "https://raw.githubusercontent.com/EstebanKubata/playfair/96c232ed7e65cccfbd1eae8e0d70e7179799290d/bplist.c",
+      "git_blob_sha1": "9e511dc1a63daf3900c13cdef64f1cde13e7a7c5",
+      "sha256": "d6d33f798c3f3d7614aa074c90ec612e676cf992dc27782b4e09e41571ad72e1",
+      "bytes": 10054,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "path": "bplist.h",
+      "url": "https://raw.githubusercontent.com/EstebanKubata/playfair/96c232ed7e65cccfbd1eae8e0d70e7179799290d/bplist.h",
+      "git_blob_sha1": "89832855367e651d2c2ff3255a53dae5ee182881",
+      "sha256": "0465e88988a87e37546d5892ab42ddc0bb2ed2de1a57001aed1a1b110ee81188",
+      "bytes": 801,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "path": "hand_garble.c",
+      "url": "https://raw.githubusercontent.com/EstebanKubata/playfair/96c232ed7e65cccfbd1eae8e0d70e7179799290d/hand_garble.c",
+      "git_blob_sha1": "8e8361b42b177e892f0efe3cb993e34c5cbea0c2",
+      "sha256": "cac6be5bb721e07d36d44577d112de63b40b8a12dd663495cd7cd600ab8743e4",
+      "bytes": 20325,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "path": "mirror_http.c",
+      "url": "https://raw.githubusercontent.com/EstebanKubata/playfair/96c232ed7e65cccfbd1eae8e0d70e7179799290d/mirror_http.c",
+      "git_blob_sha1": "22c32290daf959bfa35642d02ad7eb24bb4d83ce",
+      "sha256": "067bc64885ed447405ecbcb51640b10c443b9b470c64202ee8ce633b062360ad",
+      "bytes": 33550,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "path": "modified_md5.c",
+      "url": "https://raw.githubusercontent.com/EstebanKubata/playfair/96c232ed7e65cccfbd1eae8e0d70e7179799290d/modified_md5.c",
+      "git_blob_sha1": "3758a33e018fe3eced10c0d5bf144e9cc27e2276",
+      "sha256": "850c815fd99c9f8459e2ff323c25963e20873328b838cda33fff88400fba2667",
+      "bytes": 3459,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "path": "omg_hax.c",
+      "url": "https://raw.githubusercontent.com/EstebanKubata/playfair/96c232ed7e65cccfbd1eae8e0d70e7179799290d/omg_hax.c",
+      "git_blob_sha1": "0741554117633c5c9487855b12c0b9377f30a912",
+      "sha256": "ed79dc6571438b232cf31db3b6053a37a0439e22e4b7df6c5bd7591ba45421c7",
+      "bytes": 21617,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "path": "omg_hax.h",
+      "url": "https://raw.githubusercontent.com/EstebanKubata/playfair/96c232ed7e65cccfbd1eae8e0d70e7179799290d/omg_hax.h",
+      "git_blob_sha1": "d6f19d316666944decc87b57fc5432ab8213f221",
+      "sha256": "839517a07a208435bce0f789f3c7a3b10d698f65509fdb6a2e601249ac4e3e88",
+      "bytes": 483271,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "playfair-origin-reference",
+      "repository": "EstebanKubata/playfair",
+      "commit": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "path": "sap_hash.c",
+      "url": "https://raw.githubusercontent.com/EstebanKubata/playfair/96c232ed7e65cccfbd1eae8e0d70e7179799290d/sap_hash.c",
+      "git_blob_sha1": "8d975d4a981d6c8839d121bc166dbde93d127358",
+      "sha256": "4f5da3f07a5d0247205518e5822f3b5e735374e0ea93ad4efd03f540d275118d",
+      "bytes": 3327,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/LICENSE",
+      "git_blob_sha1": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149,
+      "license_signals": [
+        "LGPL-text",
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/README.md",
+      "git_blob_sha1": "38263c9677f11ac4a1766633878ddacb5ad09f79",
+      "sha256": "cf8742cecbc803bbf29ae67c556a461f682f61e50b52799f4165139b806f0fbb",
+      "bytes": 15409,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [
+        124
+      ],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "lib/playfair/CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/lib/playfair/CMakeLists.txt",
+      "git_blob_sha1": "792daf0645932cdb9fc176aebc6004f017c2c2c3",
+      "sha256": "0676ba61f0dec1b811cfb80ad828f374af5955005fe0446515a9d8393358189b",
+      "bytes": 185,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "lib/playfair/LICENSE.md",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/lib/playfair/LICENSE.md",
+      "git_blob_sha1": "09f984dbcff9d11a9d5c7827ec7d6272fc55d762",
+      "sha256": "0b7cf235e6136b426f00870c3200bac308950973d062a733bdc3fc1eca36fa06",
+      "bytes": 34941,
+      "license_signals": [
+        "LGPL-text",
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "lib/playfair/hand_garble.c",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/lib/playfair/hand_garble.c",
+      "git_blob_sha1": "8e8361b42b177e892f0efe3cb993e34c5cbea0c2",
+      "sha256": "cac6be5bb721e07d36d44577d112de63b40b8a12dd663495cd7cd600ab8743e4",
+      "bytes": 20325,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "lib/playfair/modified_md5.c",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/lib/playfair/modified_md5.c",
+      "git_blob_sha1": "3758a33e018fe3eced10c0d5bf144e9cc27e2276",
+      "sha256": "850c815fd99c9f8459e2ff323c25963e20873328b838cda33fff88400fba2667",
+      "bytes": 3459,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "lib/playfair/omg_hax.c",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/lib/playfair/omg_hax.c",
+      "git_blob_sha1": "96f79a9f25cc41a8c82f77d6a45f878746a7528a",
+      "sha256": "1bfdce59d4b462cf3b5c39f3d8b3f0f6a9c20eccf003128f972bcc7572f50823",
+      "bytes": 21648,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "lib/playfair/omg_hax.h",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/lib/playfair/omg_hax.h",
+      "git_blob_sha1": "d6f19d316666944decc87b57fc5432ab8213f221",
+      "sha256": "839517a07a208435bce0f789f3c7a3b10d698f65509fdb6a2e601249ac4e3e88",
+      "bytes": 483271,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "lib/playfair/playfair.c",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/lib/playfair/playfair.c",
+      "git_blob_sha1": "782c17e0b5711e20c12f8c64947749664fa1592b",
+      "sha256": "322077cfb1f4ca555c302ec4f4f718c7daa42fbb358f9c7738e95d522263b707",
+      "bytes": 1025,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "lib/playfair/playfair.h",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/lib/playfair/playfair.h",
+      "git_blob_sha1": "5909a99afa8dca8a0e3878126fe046c60688d52f",
+      "sha256": "5160ba53c5557f207d81998cc17a126ecb07842dc157c002ed54b397c536e613",
+      "bytes": 145,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "rpiplay-antecedent",
+      "repository": "FD-/RPiPlay",
+      "commit": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "path": "lib/playfair/sap_hash.c",
+      "url": "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/lib/playfair/sap_hash.c",
+      "git_blob_sha1": "9e7ae851de3c9cca4160293c0e8f378727c0aa42",
+      "sha256": "ec90021e184776e825582486588d3edf61f70b494bf74915e28bd6d37870a70d",
+      "bytes": 3357,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/LICENSE",
+      "git_blob_sha1": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149,
+      "license_signals": [
+        "LGPL-text",
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/README.md",
+      "git_blob_sha1": "7428bee839884550f67e1b7fd578002394db2320",
+      "sha256": "9ee5d3a4bb7a29c8e108bf3796b16143856af0a344ca07e91e0c0157fa495551",
+      "bytes": 137909,
+      "license_signals": [],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [
+        2487
+      ],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/CMakeLists.txt",
+      "git_blob_sha1": "bcb414e4afeadd4f75ca056120ce735e3571d248",
+      "sha256": "e42340163cc39b1b7c393ea84da8e70fb6d130d0bf72ff6516512f4fed6220c8",
+      "bytes": 5813,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/airplay_video.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/airplay_video.c",
+      "git_blob_sha1": "8fa87ff156500d0c1905d9734bac21958109d8c2",
+      "sha256": "92442287940ae0148d8ae6501eec308e1757359f7cc8fbaad7a39dab34370c6b",
+      "bytes": 43602,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/airplay_video.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/airplay_video.h",
+      "git_blob_sha1": "bdb607ab8513852f563c1aca3d32904eb9508c22",
+      "sha256": "dce13af4b4a93bda2f32b9e311cf29d8faa283de3bebc50bc9ef850043d55181",
+      "bytes": 4320,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/byteutils.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/byteutils.c",
+      "git_blob_sha1": "095020881258a95eb2a33995653868c73a24ac2d",
+      "sha256": "837d0d4f140b62fa3535c22ecfeefa01a1c97904b104a52021267cab438842ee",
+      "bytes": 4183,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/byteutils.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/byteutils.h",
+      "git_blob_sha1": "ebdac21897c58a05e4f0662303fdf42fd2e9d822",
+      "sha256": "37b7a8604c901ac2504b66c3bea2942ff4f77bb28f5ffdeb31243585f54d342d",
+      "bytes": 1405,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/compat.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/compat.c",
+      "git_blob_sha1": "cba80fccf795df2da330f952de5e65aadf279eee",
+      "sha256": "75eb83b482111906a958bca977ce5c434f8161c5e4d307e32babd661bf1d4abc",
+      "bytes": 1228,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/compat.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/compat.h",
+      "git_blob_sha1": "79ddc24d894516464cdb977b5bdd6231d6db4869",
+      "sha256": "f3b04119d2aa9a98319d539418cd2aab2b7557ba0b44eb5e6bfa51150768d7e8",
+      "bytes": 1169,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/crypto.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/crypto.c",
+      "git_blob_sha1": "762c6481ed7f155e6bc6d4bb0ce5aed34af91624",
+      "sha256": "6265ec5526942bba4b517698085abb9e664f112aa4774f8564d05d732b50df1e",
+      "bytes": 17065,
+      "license_signals": [
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/crypto.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/crypto.h",
+      "git_blob_sha1": "b999c92c371504c8bbd3542470cdfb8d73ee33cb",
+      "sha256": "6e380f79d689a4ffcfdbc32471ab08b9fa36568c495b1be56b402f2b218eca36",
+      "bytes": 4532,
+      "license_signals": [
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/dns_sd/CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/dns_sd/CMakeLists.txt",
+      "git_blob_sha1": "90b118dad43dff688c996f49dfaec474e222536e",
+      "sha256": "9fa28a70582a134b46224400288f47ca36e77c72a3ae2c9883b22dd49c7906fb",
+      "bytes": 1737,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/dns_sd/dns_sd.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/dns_sd/dns_sd.c",
+      "git_blob_sha1": "1e5bed7a56a6769ba32ed40e3777023476f9a47c",
+      "sha256": "f69e3463296d14a69548e8adbd500a2503570cfa72140a5235f02cae00d759d2",
+      "bytes": 18067,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/dnssd.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/dnssd.c",
+      "git_blob_sha1": "8eac4f7720f6c638fd0e340f8bceddeed35c924a",
+      "sha256": "06c21460e121b45a5826cd88ee3914fcb5e3d52b71382bb64b5a9f0365741238",
+      "bytes": 4975,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/dnssd.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/dnssd.h",
+      "git_blob_sha1": "dad365cd7696d885afb6a84c69a5233d254df430",
+      "sha256": "82ea90235c08c59b881895dc4ce584bce61a3325fb21d0068f22a5a24da5709a",
+      "bytes": 2420,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/dnssdint.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/dnssdint.h",
+      "git_blob_sha1": "b1478ea88a9877f85dae1a0c8ea31b333931a5c9",
+      "sha256": "d791eedc92d276537670f16ef2f49c9694e69024e474d306c2a324bb49c525d7",
+      "bytes": 2144,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/fairplay.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/fairplay.h",
+      "git_blob_sha1": "2b7c30fc06a11bb6e3e1411685e03cc419413f4f",
+      "sha256": "1d1c0443a968f886a80c655cf1fa0890c0c9c4e7bb5f6262d4077814d5334217",
+      "bytes": 1049,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/fairplay_playfair.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/fairplay_playfair.c",
+      "git_blob_sha1": "2a72fdfb52659f3def196463ad050d12f2aede9b",
+      "sha256": "5a7c123bba599bfca553e815c2ff1fed947636999a1deb44c2fa640e86b2a90a",
+      "bytes": 5010,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/fcup_request.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/fcup_request.h",
+      "git_blob_sha1": "bbb2e755fdb05892f5db93e8b06c2cdf08f64c68",
+      "sha256": "8738f196954f4fe2afdaf02eeb4e8982a4ab569f2aaafdfed2f0504441d322eb",
+      "bytes": 5068,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/global.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/global.h",
+      "git_blob_sha1": "03f2dcb738df8660be43173a452d68be741c7083",
+      "sha256": "7093864cf044f0fc28f2f4e31676e92d93ec23502363dc2ed7e0d9ca5caf9917",
+      "bytes": 1125,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/http_handlers.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/http_handlers.h",
+      "git_blob_sha1": "b92bf75859b42c75ce2aca9bd0b627fe82914272",
+      "sha256": "f0cb4579156042ab4107e8dc07c6bab4c1fd6ac92ac891144acd3476b682dfed",
+      "bytes": 42249,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/http_request.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/http_request.c",
+      "git_blob_sha1": "ec030c4a1dd5f10597f44b003c2adf079288c1ea",
+      "sha256": "5ade0d6c8d1e978aa5c0f7bc8229bd1e681ebfeb05e14ab6b60049cdda4fed59",
+      "bytes": 9131,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/http_request.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/http_request.h",
+      "git_blob_sha1": "53089479a7f9f97809ee007d51b09e7c73adc701",
+      "sha256": "2562f4c16f410504e3d4b97f1cb1605135fd2a06591d8c371bbb362e533e6bb2",
+      "bytes": 1787,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/http_response.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/http_response.c",
+      "git_blob_sha1": "fc9c69dd97dcd03134abb529e1b93d3b021fb36b",
+      "sha256": "1d7fa3f6cd6226a97dbd70aa267be854e5bf04c2763fd87c987cf65d8f5093e2",
+      "bytes": 5844,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/http_response.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/http_response.h",
+      "git_blob_sha1": "e34ba0c8ba480c77731f2384063535c0beea5b71",
+      "sha256": "59699deb1bc3e6242de72389bbfaf9f215f414743aa372deeb150e5953e8690f",
+      "bytes": 1554,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/httpd.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/httpd.c",
+      "git_blob_sha1": "56a3742f5f9e1bb1ccbcc2879b4663d2e747c726",
+      "sha256": "448ca5b3ba0139d82ac9239af00470d69c654137ceeaba6f0bdfbc3e19304cd9",
+      "bytes": 25710,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/httpd.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/httpd.h",
+      "git_blob_sha1": "72cc1372c778aab3a3f90d4d7dd27693b2f221da",
+      "sha256": "ada5767083ef16899bace3962b61aea2cb4df66d6f42875f4ff37aa8192e73e6",
+      "bytes": 2208,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/llhttp/CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/llhttp/CMakeLists.txt",
+      "git_blob_sha1": "cebc2a74932c225a47e15d0e1a4c4cb39199b3ae",
+      "sha256": "c638871eb05992ee50904aaf2f66aab455b44108820442bf30ef5ec87c2d34c4",
+      "bytes": 142,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/llhttp/LICENSE-MIT",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/llhttp/LICENSE-MIT",
+      "git_blob_sha1": "6c1512dd6bcd6de314673f8c2c7ff3fd6139f28e",
+      "sha256": "ebca854e0134cd256d673627c20499f42577eb74bacf08b9f25b626a73c91277",
+      "bytes": 1105,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/llhttp/api.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/llhttp/api.c",
+      "git_blob_sha1": "ae5e862d98055acb17202dc78b86267f0acf1de8",
+      "sha256": "0f8590206fe2f264db2825401b5fb856b979ee1363dc88b06f36dc9577afb941",
+      "bytes": 13384,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/llhttp/http.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/llhttp/http.c",
+      "git_blob_sha1": "1ab91a55796e01bc7bda2b96cdcda6419857c386",
+      "sha256": "a1f2b23168f8e9b5bfa464c89027d3ca259fc649ae3d7e72bfff997d1aeb5d72",
+      "bytes": 5209,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/llhttp/llhttp.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/llhttp/llhttp.c",
+      "git_blob_sha1": "cbbb36cd955c9d395254e8a9e03807d720ecf251",
+      "sha256": "d8299eb3d717a73fe9a27e72cc4ccdf84d9b04f2456e6845bf66a73cf83985ef",
+      "bytes": 321498,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/llhttp/llhttp.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/llhttp/llhttp.h",
+      "git_blob_sha1": "5670da5229642df73672db7b262a4352e1e17bb2",
+      "sha256": "044bf4adf449d2565cd25c845dee1fc23706b97b52113bc73f667b05e2bdfdfa",
+      "bytes": 31469,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/logger.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/logger.c",
+      "git_blob_sha1": "ab27e11551765e407b20f4aab7f25a29eb137df2",
+      "sha256": "4f1767dd0ec176ca0718a0b4a6e6ab59fa2d1d97b7a184a2f9760b7e9028690b",
+      "bytes": 2833,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/logger.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/logger.h",
+      "git_blob_sha1": "bf2653f0d8d8c916fdaad6d7ddb7a5b3af14967b",
+      "sha256": "bad1178211f6c3341bf4a9a278c49d0dc96191bd1c5c524d95e344d75a541043",
+      "bytes": 1855,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/mdnsd/CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/mdnsd/CMakeLists.txt",
+      "git_blob_sha1": "4424e9b2b0b82622def717c0842eed0f9ac96285",
+      "sha256": "bf3b2235c596326449385cde1b921c0112e597e7898b83807eed3901168cc0ec",
+      "bytes": 143,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/mdnsd/dnssd_mdnsd.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/mdnsd/dnssd_mdnsd.c",
+      "git_blob_sha1": "09f27efbbd77ae3a25d5f90101bde408451d6573",
+      "sha256": "fe7400efd2b8f5051cc61a88ecdedb023834c45f9075ef4fa64bcb9e22dc21b6",
+      "bytes": 10898,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/mdnsd/mdnsd.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/mdnsd/mdnsd.c",
+      "git_blob_sha1": "597fc4cb107ca051d51eb7ee828a7f92ed325b5e",
+      "sha256": "ef0199bbff28e65a34c66a600125136abe3147b756e56462714c825252c5ccd1",
+      "bytes": 31679,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/mdnsd/mdnsd.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/mdnsd/mdnsd.h",
+      "git_blob_sha1": "55685143bba1c4fc3b917257ed16db5ca27e1181",
+      "sha256": "06a5cb5ef0d668ddafd75773531e13ac831812be3318d47dd9ef16ef976badcc",
+      "bytes": 1469,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/mirror_buffer.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/mirror_buffer.c",
+      "git_blob_sha1": "95492e81ecd67277d11e850f2ac5a65cc7b0a5e2",
+      "sha256": "519f7af8e825bc5dcc2229a7d154ac7f8d0b3303a2ec1712a5db7c25d4acc9d2",
+      "bytes": 4896,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/mirror_buffer.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/mirror_buffer.h",
+      "git_blob_sha1": "2b65ab08ad3592bd86cc83a136a5076e7d86020e",
+      "sha256": "b70754d814e707af15dbb49b74e3aa39f0a3f69c04c89d917bf77b4b63eadc81",
+      "bytes": 1203,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/netutils.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/netutils.c",
+      "git_blob_sha1": "8e4de1db8a28aa229e7ec0dc244235f1892a02cb",
+      "sha256": "09ef4ede863d4477718f7fb270296ffdb16dbb22ec5675457ba3ca255acd76de",
+      "bytes": 6317,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/netutils.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/netutils.h",
+      "git_blob_sha1": "541adabe2029a662d6f6fc62b3e4fde825de2ac2",
+      "sha256": "54b89fb2a7d88b2b17abc0d86ba657016ef3be7e120d0ce492e5e05417126f5d",
+      "bytes": 991,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/pairing.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/pairing.c",
+      "git_blob_sha1": "c83200ea28c4dc4627da1c5c3782f15876beae7d",
+      "sha256": "261bc90c673bab1d72fbc14db80d837292246c18ea00b8614a836a9b41c88d68",
+      "bytes": 19695,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/pairing.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/pairing.h",
+      "git_blob_sha1": "cdb1374663ed5a01db2d9d5b17bfa27104a7e3ff",
+      "sha256": "9548cd840bf282eada598e504f999789001e824bd94f0b0bc31667acede48704",
+      "bytes": 3180,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/playfair/CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/playfair/CMakeLists.txt",
+      "git_blob_sha1": "548d3ae06ccc6ae0dd4cd765a86d117e27688ee9",
+      "sha256": "70ecc4531ef7f695390265a8ef400552c4f22bfaf291140cde187ea47203da03",
+      "bytes": 148,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/playfair/LICENSE.md",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/playfair/LICENSE.md",
+      "git_blob_sha1": "09f984dbcff9d11a9d5c7827ec7d6272fc55d762",
+      "sha256": "0b7cf235e6136b426f00870c3200bac308950973d062a733bdc3fc1eca36fa06",
+      "bytes": 34941,
+      "license_signals": [
+        "LGPL-text",
+        "GPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/playfair/hand_garble.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/playfair/hand_garble.c",
+      "git_blob_sha1": "8e8361b42b177e892f0efe3cb993e34c5cbea0c2",
+      "sha256": "cac6be5bb721e07d36d44577d112de63b40b8a12dd663495cd7cd600ab8743e4",
+      "bytes": 20325,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/playfair/modified_md5.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/playfair/modified_md5.c",
+      "git_blob_sha1": "3758a33e018fe3eced10c0d5bf144e9cc27e2276",
+      "sha256": "850c815fd99c9f8459e2ff323c25963e20873328b838cda33fff88400fba2667",
+      "bytes": 3459,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/playfair/omg_hax.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/playfair/omg_hax.c",
+      "git_blob_sha1": "96f79a9f25cc41a8c82f77d6a45f878746a7528a",
+      "sha256": "1bfdce59d4b462cf3b5c39f3d8b3f0f6a9c20eccf003128f972bcc7572f50823",
+      "bytes": 21648,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/playfair/omg_hax.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/playfair/omg_hax.h",
+      "git_blob_sha1": "d6f19d316666944decc87b57fc5432ab8213f221",
+      "sha256": "839517a07a208435bce0f789f3c7a3b10d698f65509fdb6a2e601249ac4e3e88",
+      "bytes": 483271,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/playfair/playfair.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/playfair/playfair.c",
+      "git_blob_sha1": "782c17e0b5711e20c12f8c64947749664fa1592b",
+      "sha256": "322077cfb1f4ca555c302ec4f4f718c7daa42fbb358f9c7738e95d522263b707",
+      "bytes": 1025,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/playfair/playfair.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/playfair/playfair.h",
+      "git_blob_sha1": "5909a99afa8dca8a0e3878126fe046c60688d52f",
+      "sha256": "5160ba53c5557f207d81998cc17a126ecb07842dc157c002ed54b397c536e613",
+      "bytes": 145,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/playfair/sap_hash.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/playfair/sap_hash.c",
+      "git_blob_sha1": "9e7ae851de3c9cca4160293c0e8f378727c0aa42",
+      "sha256": "ec90021e184776e825582486588d3edf61f70b494bf74915e28bd6d37870a70d",
+      "bytes": 3357,
+      "license_signals": [],
+      "copyright_notice_present": false,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop.c",
+      "git_blob_sha1": "b6fc8f3ca31190900c64660a6e6c970381f5b48c",
+      "sha256": "0d61950c61bf54834a364a1bfa2219ae931c6ad98fe8e01fa41ac605c087bf77",
+      "bytes": 30911,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop.h",
+      "git_blob_sha1": "d65913495cc97c9133c9cb53d203a7904e0f46d1",
+      "sha256": "b080e17701620a872ef57eb51a69dc50dbb1bd5219a05f9776a1223842ee347d",
+      "bytes": 6323,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop_buffer.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop_buffer.c",
+      "git_blob_sha1": "d0ed36857d8d3946999db325565117badb495de0",
+      "sha256": "2b41e46fd435512648fae8ce0404c762eae636c17fed39c56d547fcf49cec62f",
+      "bytes": 9608,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop_buffer.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop_buffer.h",
+      "git_blob_sha1": "a3322da9004cd26a8a32076cfba598b0e10feac1",
+      "sha256": "9a4856cb793577558ddbe8aeb795a8ebb511f91a763937a2283473c1b16b3954",
+      "bytes": 1742,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop_handlers.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop_handlers.h",
+      "git_blob_sha1": "94206001e106da9c0439cea91e880b5d97e3eb60",
+      "sha256": "f9c09fc3dc678c269d4f72260f5aa7366a0ae1cb43ed34e851bd3dd2c27c833a",
+      "bytes": 61193,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop_ntp.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop_ntp.c",
+      "git_blob_sha1": "c8eac2b3116d95ed21030a7af63f5e63e30a8bd9",
+      "sha256": "69287c6865fc2b5164bb48c77a1d1eaab98936ea512740b7907995895f94c011",
+      "bytes": 26269,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop_ntp.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop_ntp.h",
+      "git_blob_sha1": "61aaa71d16ecbaa3f0fa423f587e6fede5f739a5",
+      "sha256": "4bbb00fa6ff95826d1e60c88b8a963788406953c0ea77672532f49391da8f6e9",
+      "bytes": 2340,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop_rtp.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop_rtp.c",
+      "git_blob_sha1": "35d42dfea65902c01daba00535e7de382cbb66ca",
+      "sha256": "4d1c4c58cc500df6c1ad79c30fadc8cdc320ef7ee0a37cff49bb6afa7f39d3d9",
+      "bytes": 29392,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop_rtp.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop_rtp.h",
+      "git_blob_sha1": "d9f5476734c58c29764ba9bef8020b3e49db8820",
+      "sha256": "1f17be7557598602b7902987c4895beaea7fa052ec6881b1636cdcb55a80d97f",
+      "bytes": 1986,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop_rtp_mirror.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop_rtp_mirror.c",
+      "git_blob_sha1": "4ddedfdb16e7a35295bc5fd150a35284b15361c0",
+      "sha256": "7dd074bf3bed89f8a556071a7b88a5471ad123cef1ef4781d10881e76b528773",
+      "bytes": 46624,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/raop_rtp_mirror.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/raop_rtp_mirror.h",
+      "git_blob_sha1": "2e7914d610ebd9d1382493570e6cff12c1ae07ad",
+      "sha256": "d3c51fcb5c02792eabe71ca5c62f4b0bd1e645b5dd93932d805a30312349f3db",
+      "bytes": 1481,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/sockets.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/sockets.h",
+      "git_blob_sha1": "ace7fda93a1640e0fd44bb8ba410455ce3da353c",
+      "sha256": "fd9d9047d9b564ab469776bb891377633e8467b8d8004cbc3f8bca09f9e117d3",
+      "bytes": 1453,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/srp.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/srp.c",
+      "git_blob_sha1": "7fd752c0d4f4ec0b75130e67f0128b84396a5c46",
+      "sha256": "64c3970e37b5c1f7feeffe62636938211308d7b3a9afc0f2217cca35546a3e08",
+      "bytes": 36705,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/srp.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/srp.h",
+      "git_blob_sha1": "6af96a7190d508c4c4040f647dacefbc4ab5fd75",
+      "sha256": "8ed980db30783717694d83a010988831ef48847cadf2b8d0dc12ecda45ce3d3c",
+      "bytes": 10171,
+      "license_signals": [
+        "MIT-style-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/stream.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/stream.h",
+      "git_blob_sha1": "c54488634fc7dd0678f7ee4b022f163f785feb76",
+      "sha256": "7eacbcf8ab20c375e88bde7610ef47a815b7a6d8902e9876a7ca008aabac5539",
+      "bytes": 1238,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/threads.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/threads.h",
+      "git_blob_sha1": "d9881da8db281899d2b336df34673cfcc96ae185",
+      "sha256": "b61705a31a0959261f65bb1285a3ea16a7b16dcf5477bd805d339db6ceaf9665",
+      "bytes": 1594,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/utils.c",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/utils.c",
+      "git_blob_sha1": "ee7064acde2e6373d857db8931193a45c468b66a",
+      "sha256": "b7df5e78328495c21ecba50616b4a5fc17028984e1a6df0a097bad75adf86d8a",
+      "bytes": 10880,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    },
+    {
+      "repository_id": "uxplay-pinned-submodule",
+      "repository": "FDH2/UxPlay",
+      "commit": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "path": "lib/utils.h",
+      "url": "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/lib/utils.h",
+      "git_blob_sha1": "fcdc0ff52341770278b3a10728dac9f990035698",
+      "sha256": "61bef49b8176e94f2830e1c756147bba062ef2ac17eb3971d6e512b96a3be7d6",
+      "bytes": 1752,
+      "license_signals": [
+        "LGPL-text"
+      ],
+      "copyright_notice_present": true,
+      "upstream_legal_uncertainty_lines": [],
+      "contains_private_key_pem_marker": false,
+      "review_status": "MANUAL_REVIEW_REQUIRED"
+    }
+  ],
+  "total_files": 185,
+  "files_without_license_text": 57,
+  "upstream_legal_uncertainty_files": [
+    "https://raw.githubusercontent.com/FD-/RPiPlay/64d0341ed3bef098c940c9ed0675948870a271f9/README.md",
+    "https://raw.githubusercontent.com/FDH2/UxPlay/462153392f2e30937424922039ff9f0cda5e7b1a/README.md"
+  ]
+}

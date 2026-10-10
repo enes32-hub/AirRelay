@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Brand surface colours shared by the window background, the launcher icon and the TV banner,
+     so the first frame the user sees matches the app instead of flashing white. -->
+<resources>
+    <color name="airrelay_brand_background">#FF17191B</color>
+</resources>

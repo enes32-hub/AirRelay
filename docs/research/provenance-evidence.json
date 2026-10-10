@@ -1,0 +1,284 @@
+{
+  "observed_at": "2026-08-31T10:50:50.009816+00:00",
+  "scope": "static-provenance-only",
+  "candidates": [
+    {
+      "id": "uxplay",
+      "repository": "FDH2/UxPlay",
+      "commit": "fd5192b06f0c2ab2f664b8ab778ac6f772e4d741",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/FDH2/UxPlay/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/LICENSE",
+          "bytes": 35149,
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "lf_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "mentions_gpl": true,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "lib/playfair/LICENSE.md",
+          "url": "https://raw.githubusercontent.com/FDH2/UxPlay/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/lib/playfair/LICENSE.md",
+          "bytes": 34941,
+          "sha256": "0b7cf235e6136b426f00870c3200bac308950973d062a733bdc3fc1eca36fa06",
+          "lf_sha256": "0b7cf235e6136b426f00870c3200bac308950973d062a733bdc3fc1eca36fa06",
+          "mentions_gpl": true,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "lib/playfair/playfair.c",
+          "url": "https://raw.githubusercontent.com/FDH2/UxPlay/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/lib/playfair/playfair.c",
+          "bytes": 1025,
+          "sha256": "322077cfb1f4ca555c302ec4f4f718c7daa42fbb358f9c7738e95d522263b707",
+          "lf_sha256": "322077cfb1f4ca555c302ec4f4f718c7daa42fbb358f9c7738e95d522263b707",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "lib/playfair/hand_garble.c",
+          "url": "https://raw.githubusercontent.com/FDH2/UxPlay/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/lib/playfair/hand_garble.c",
+          "bytes": 20325,
+          "sha256": "cac6be5bb721e07d36d44577d112de63b40b8a12dd663495cd7cd600ab8743e4",
+          "lf_sha256": "cac6be5bb721e07d36d44577d112de63b40b8a12dd663495cd7cd600ab8743e4",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "lib/playfair/modified_md5.c",
+          "url": "https://raw.githubusercontent.com/FDH2/UxPlay/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/lib/playfair/modified_md5.c",
+          "bytes": 3459,
+          "sha256": "850c815fd99c9f8459e2ff323c25963e20873328b838cda33fff88400fba2667",
+          "lf_sha256": "850c815fd99c9f8459e2ff323c25963e20873328b838cda33fff88400fba2667",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "lib/playfair/omg_hax.c",
+          "url": "https://raw.githubusercontent.com/FDH2/UxPlay/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/lib/playfair/omg_hax.c",
+          "bytes": 21648,
+          "sha256": "1bfdce59d4b462cf3b5c39f3d8b3f0f6a9c20eccf003128f972bcc7572f50823",
+          "lf_sha256": "1bfdce59d4b462cf3b5c39f3d8b3f0f6a9c20eccf003128f972bcc7572f50823",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "lib/playfair/omg_hax.h",
+          "url": "https://raw.githubusercontent.com/FDH2/UxPlay/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/lib/playfair/omg_hax.h",
+          "bytes": 483271,
+          "sha256": "839517a07a208435bce0f789f3c7a3b10d698f65509fdb6a2e601249ac4e3e88",
+          "lf_sha256": "839517a07a208435bce0f789f3c7a3b10d698f65509fdb6a2e601249ac4e3e88",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "lib/playfair/playfair.h",
+          "url": "https://raw.githubusercontent.com/FDH2/UxPlay/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/lib/playfair/playfair.h",
+          "bytes": 145,
+          "sha256": "5160ba53c5557f207d81998cc17a126ecb07842dc157c002ed54b397c536e613",
+          "lf_sha256": "5160ba53c5557f207d81998cc17a126ecb07842dc157c002ed54b397c536e613",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "lib/playfair/sap_hash.c",
+          "url": "https://raw.githubusercontent.com/FDH2/UxPlay/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/lib/playfair/sap_hash.c",
+          "bytes": 3357,
+          "sha256": "ec90021e184776e825582486588d3edf61f70b494bf74915e28bd6d37870a70d",
+          "lf_sha256": "ec90021e184776e825582486588d3edf61f70b494bf74915e28bd6d37870a70d",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        }
+      ]
+    },
+    {
+      "id": "android-airplay-server",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/LICENSE",
+          "bytes": 35148,
+          "sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+          "lf_sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+          "mentions_gpl": true,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": ".gitmodules",
+          "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/.gitmodules",
+          "bytes": 652,
+          "sha256": "2c73c5cb0b8653b85c013c11e0af602c7fa72d9a6c17fddedb85156f1a1617e8",
+          "lf_sha256": "2c73c5cb0b8653b85c013c11e0af602c7fa72d9a6c17fddedb85156f1a1617e8",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "app/src/main/cpp/CMakeLists.txt",
+          "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/CMakeLists.txt",
+          "bytes": 4915,
+          "sha256": "161f40f03f778c31fe17bcbe18a5671a18fdfd7fee477b8b370538f0ee4ad0f1",
+          "lf_sha256": "161f40f03f778c31fe17bcbe18a5671a18fdfd7fee477b8b370538f0ee4ad0f1",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "app/src/main/cpp/cmake/BuildFFmpeg.cmake",
+          "url": "https://raw.githubusercontent.com/jqssun/android-airplay-server/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/cmake/BuildFFmpeg.cmake",
+          "bytes": 3006,
+          "sha256": "4d0434d5fb95b0c4c5923154af960e039a63a23d33d2d44ef206ed68073d1deb",
+          "lf_sha256": "4d0434d5fb95b0c4c5923154af960e039a63a23d33d2d44ef206ed68073d1deb",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        }
+      ]
+    },
+    {
+      "id": "phairplay",
+      "repository": "mazer666/PhairPlay",
+      "commit": "4a3948c51d7f9d050d1f7437c0bd88877ef6db0f",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/mazer666/PhairPlay/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/LICENSE",
+          "bytes": 10244,
+          "sha256": "e2ca80146e5a5e4786713b5ef01dd16d3f531276c1ed3a03ae2bfb23111d893c",
+          "lf_sha256": "e2ca80146e5a5e4786713b5ef01dd16d3f531276c1ed3a03ae2bfb23111d893c",
+          "mentions_gpl": false,
+          "mentions_apache_2": true,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "app/src/main/cpp/CMakeLists.txt",
+          "url": "https://raw.githubusercontent.com/mazer666/PhairPlay/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/app/src/main/cpp/CMakeLists.txt",
+          "bytes": 1190,
+          "sha256": "6b29eabaf1c50f08a4804c767590e02699a59a461d44e255255fc409db618bbd",
+          "lf_sha256": "6b29eabaf1c50f08a4804c767590e02699a59a461d44e255255fc409db618bbd",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": true
+        },
+        {
+          "path": "app/src/main/cpp/playfair/playfair.c",
+          "url": "https://raw.githubusercontent.com/mazer666/PhairPlay/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/app/src/main/cpp/playfair/playfair.c",
+          "bytes": 1025,
+          "sha256": "322077cfb1f4ca555c302ec4f4f718c7daa42fbb358f9c7738e95d522263b707",
+          "lf_sha256": "322077cfb1f4ca555c302ec4f4f718c7daa42fbb358f9c7738e95d522263b707",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "app/src/main/cpp/playfair/hand_garble.c",
+          "url": "https://raw.githubusercontent.com/mazer666/PhairPlay/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/app/src/main/cpp/playfair/hand_garble.c",
+          "bytes": 20325,
+          "sha256": "cac6be5bb721e07d36d44577d112de63b40b8a12dd663495cd7cd600ab8743e4",
+          "lf_sha256": "cac6be5bb721e07d36d44577d112de63b40b8a12dd663495cd7cd600ab8743e4",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "app/src/main/cpp/playfair/modified_md5.c",
+          "url": "https://raw.githubusercontent.com/mazer666/PhairPlay/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/app/src/main/cpp/playfair/modified_md5.c",
+          "bytes": 3909,
+          "sha256": "c9ffd69caccdc969687bdbae905c14fb33285bc3af233f4da5e55f66bdb899a6",
+          "lf_sha256": "c9ffd69caccdc969687bdbae905c14fb33285bc3af233f4da5e55f66bdb899a6",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "app/src/main/cpp/playfair/omg_hax.c",
+          "url": "https://raw.githubusercontent.com/mazer666/PhairPlay/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/app/src/main/cpp/playfair/omg_hax.c",
+          "bytes": 21648,
+          "sha256": "1bfdce59d4b462cf3b5c39f3d8b3f0f6a9c20eccf003128f972bcc7572f50823",
+          "lf_sha256": "1bfdce59d4b462cf3b5c39f3d8b3f0f6a9c20eccf003128f972bcc7572f50823",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "app/src/main/cpp/playfair/omg_hax.h",
+          "url": "https://raw.githubusercontent.com/mazer666/PhairPlay/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/app/src/main/cpp/playfair/omg_hax.h",
+          "bytes": 483271,
+          "sha256": "839517a07a208435bce0f789f3c7a3b10d698f65509fdb6a2e601249ac4e3e88",
+          "lf_sha256": "839517a07a208435bce0f789f3c7a3b10d698f65509fdb6a2e601249ac4e3e88",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "app/src/main/cpp/playfair/playfair.h",
+          "url": "https://raw.githubusercontent.com/mazer666/PhairPlay/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/app/src/main/cpp/playfair/playfair.h",
+          "bytes": 145,
+          "sha256": "5160ba53c5557f207d81998cc17a126ecb07842dc157c002ed54b397c536e613",
+          "lf_sha256": "5160ba53c5557f207d81998cc17a126ecb07842dc157c002ed54b397c536e613",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        },
+        {
+          "path": "app/src/main/cpp/playfair/sap_hash.c",
+          "url": "https://raw.githubusercontent.com/mazer666/PhairPlay/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/app/src/main/cpp/playfair/sap_hash.c",
+          "bytes": 3555,
+          "sha256": "0936bfd4b38fe13c5eb4c2cb47499510dff43fba0b0a860c2d96c6a2e0f641b1",
+          "lf_sha256": "0936bfd4b38fe13c5eb4c2cb47499510dff43fba0b0a860c2d96c6a2e0f641b1",
+          "mentions_gpl": false,
+          "mentions_apache_2": false,
+          "mentions_rpiplay": false
+        }
+      ]
+    }
+  ],
+  "uxplay_phairplay_comparison": [
+    {
+      "file": "playfair.c",
+      "identical_bytes": true,
+      "identical_after_lf": true
+    },
+    {
+      "file": "hand_garble.c",
+      "identical_bytes": true,
+      "identical_after_lf": true
+    },
+    {
+      "file": "modified_md5.c",
+      "identical_bytes": false,
+      "identical_after_lf": false
+    },
+    {
+      "file": "omg_hax.c",
+      "identical_bytes": true,
+      "identical_after_lf": true
+    },
+    {
+      "file": "omg_hax.h",
+      "identical_bytes": true,
+      "identical_after_lf": true
+    },
+    {
+      "file": "playfair.h",
+      "identical_bytes": true,
+      "identical_after_lf": true
+    },
+    {
+      "file": "sap_hash.c",
+      "identical_bytes": false,
+      "identical_after_lf": false
+    }
+  ]
+}

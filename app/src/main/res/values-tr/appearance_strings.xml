@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scale_fill">Doldur (kırp)</string>
+    <string name="appearance_theme">Tema</string>
+    <string name="theme_classic">Klasik</string>
+    <string name="theme_light">Beyaz</string>
+    <string name="theme_dark">Karanlık</string>
+    <string name="stream_metrics">Yayın metriklerini göster</string>
+    <string name="stream_metrics_desc">Yayın sırasında çözünürlük, kodek ve akış bilgilerini göster.</string>
+    <string name="metrics_live">Canlı video</string>
+    <string name="metrics_video">Video aktarımı</string>
+    <string name="metrics_mirror">Ekran yansıtma</string>
+    <string name="metrics_source_fps">Kaynak: %1$s FPS</string>
+    <string name="metrics_track_bitrate">Seçili video: %1$s Mbps</string>
+    <string name="metrics_buffer">Tampon: %1$s sn</string>
+    <string name="metrics_input_fps">Giriş: %1$d FPS</string>
+    <string name="metrics_input_bitrate">Gelen veri: %1$s</string>
+    <string name="metrics_dropped">Atlanan kare: %1$d</string>
+</resources>

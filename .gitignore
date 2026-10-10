@@ -1,0 +1,15 @@
+# Local SDK, caches and secrets never belong to the delivery.
+.idea/
+.gradle/
+**/build/
+local.properties
+__pycache__/
+*.py[cod]
+*.jks
+*.keystore
+*.p12
+*.pfx
+.env
+.env.*
+.research/
+artifacts/local/

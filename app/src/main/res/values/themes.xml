@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark base: the receiver UI is dark in every mode, so a light base theme produced a white
+         launch flash with the dark brand mark on it. The window background matches the brand
+         surface and the launcher icon background. -->
+    <style name="Theme.AirPlayServer" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/airrelay_brand_background</item>
+    </style>
+</resources>

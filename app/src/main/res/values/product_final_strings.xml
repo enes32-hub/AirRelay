@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="p_quit">Quit app</string>
+    <string name="p_quit_title">Quit this app?</string>
+    <string name="p_quit_body">The stream ends and the receiver stops running in the background. Open the app to use it again.</string>
+    <string name="p_automatic_display_permission">Allow automatic display</string>
+    <string name="p_port_conflict">Another receiver is using %1$s. Stop the other receiver and try again.</string>
+    <string name="notification_incoming_title">Incoming stream ready</string>
+    <string name="notification_incoming_text">Open AirRelay to view the stream.</string>
+    <string name="setting_remote_bitrate">Preferred video bitrate</string>
+    <string name="setting_remote_bitrate_desc">Depends on the internet video’s available quality options. Does not change screen mirroring.</string>
+    <string name="p_about">About</string>
+    <string name="p_version">Version %1$s</string>
+    <string name="p_about_body">Share your screen, videos and audio with your TV over your local network.</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad and Mac are trademarks of Apple Inc.</string>
+    <string name="p_open_source_licenses">Component licences</string>
+    <string name="p_licenses_unavailable">Licence information could not be opened. Please contact the app provider.</string>
+    <string name="profile_balanced_detail">1080p screen mirroring. Internet video prefers quality up to 8 Mbps.</string>
+    <string name="profile_quality_detail">1080p screen mirroring. Internet video prefers higher quality up to 12 Mbps.</string>
+    <string name="profile_responsive_detail">720p screen mirroring reduces processing load. Internet video prefers quality up to 4 Mbps.</string>
+    <string name="profile_custom_detail">Uses the picture and audio values selected in advanced settings.</string>
+    <string name="transition_picture_interrupted">Picture interrupted. Return to your device’s home screen or choose other content. Playback resumes when a new picture arrives.</string>
+</resources>

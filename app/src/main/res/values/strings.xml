@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rec_options_title">Recording options</string>
+    <string name="app_name">AirRelay</string>
+    <string name="notification_channel">AirRelay Receiver Service</string>
+    <string name="notification_title">AirRelay receiver is running</string>
+    <string name="notification_text">Waiting for AirPlay connections</string>
+    <string name="notification_pin_title">AirRelay pairing approval</string>
+    <string name="notification_pin_text">Open AirRelay to view the pairing code.</string>
+    <string name="tab_logs">Logs</string>
+    <string name="cd_pip">Picture-in-Picture</string>
+    <string name="cd_play_pause">Play/Pause</string>
+    <string name="download_saved">Saved to %1$s</string>
+    <string name="download_failed">Download failed</string>
+    <string name="seconds_short">%1$ds</string>
+    <string name="scale_best_fit">Best fit</string>
+    <string name="scale_stretch">Stretch</string>
+    <string name="export_logs_chooser_title">Share support diagnostics</string>
+    <string name="section_server">Server</string>
+    <string name="section_display">Display</string>
+    <string name="section_decode">Decode</string>
+    <string name="section_developer">Diagnostics and tuning</string>
+    <string name="setting_server_port">Server port</string>
+    <string name="setting_advertise_video">Advertise AirPlay video support</string>
+    <string name="setting_advertise_video_desc">When off, videos are cast as audio only streams</string>
+    <string name="setting_advertise_audio">Advertise AirPlay audio support</string>
+    <string name="setting_advertise_audio_desc">When off, the device can only be used for mirroring and will be hidden from media players</string>
+    <string name="setting_alac">Advertise ALAC codec</string>
+    <string name="setting_alac_desc">Offer ALAC in the mDNS record; used for music streaming</string>
+    <string name="setting_aac">Advertise AAC codec</string>
+    <string name="setting_aac_desc">Offer AAC-ELD/AAC-LC in the mDNS record; used for screen mirroring audio</string>
+    <string name="setting_launch_on_connect">Show incoming streams</string>
+    <string name="setting_launch_on_connect_desc">Bring the app forward when a new stream starts. TV permissions apply.</string>
+    <string name="setting_launch_on_connect_no_permission">Automatic display requires permission to appear over other apps.</string>
+    <string name="setting_resolution">Resolution</string>
+    <string name="setting_resolution_desc">Maximum picture size suggested to the sending device.</string>
+    <string name="setting_resolution_width">Width</string>
+    <string name="setting_resolution_height">Height</string>
+    <string name="setting_max_fps">Maximum FPS</string>
+    <string name="setting_max_fps_desc">Choose 1–%1$d FPS. Changing this selects the Custom picture preference.</string>
+    <string name="setting_max_fps_placeholder">1–%1$d FPS</string>
+    <string name="setting_overscanned">Overscanned</string>
+    <string name="setting_overscanned_desc">Add pixel boundary for full-screen overscan displays</string>
+    <string name="chip_custom">Custom</string>
+    <string name="chip_device_portrait">Portrait</string>
+    <string name="chip_device_landscape">Landscape</string>
+    <string name="setting_h265">H.265 (HEVC)</string>
+    <string name="setting_h265_desc">Enable H.265 video decoding if device supports it</string>
+    <string name="setting_enforce_sdr">SDR colour compatibility</string>
+    <string name="setting_enforce_sdr_desc">Tag video as limited SDR; disable to allow HDR sources to pass through</string>
+    <string name="setting_sw_alac">Force software ALAC decoder</string>
+    <string name="setting_sw_alac_desc">Always use software ALAC decoder instead of hardware decoder, may affect audio latency</string>
+    <string name="setting_developer_options">Additional technical options</string>
+    <string name="setting_developer_options_desc">Audio buffering, decoding and support logs.</string>
+    <string name="setting_key_allow_frame_drop">Skip late frames</string>
+    <string name="setting_key_allow_frame_drop_desc">Allow video decoders to drop frames internally to keep up on Android 10+</string>
+    <string name="setting_realtime_decoder_priority">Prioritise audio decoding</string>
+    <string name="setting_realtime_decoder_priority_desc">Request real-time scheduling for audio decoder</string>
+    <string name="setting_operating_rate">Decoder operating rate</string>
+    <string name="setting_operating_rate_desc">Request maximum operating rate from decoder</string>
+    <string name="chip_auto">Auto</string>
+    <string name="chip_on">On</string>
+    <string name="chip_off">Off</string>
+    <string name="setting_low_latency">Low latency</string>
+    <string name="setting_low_latency_desc">Use low-latency audio decoding for output; this uses more power and CPU</string>
+    <string name="setting_scheduled_output_buffer_release">Aligned frame pacing</string>
+    <string name="setting_scheduled_output_buffer_release_desc">Schedule each decoded frame to the VSYNC matching its presentation timestamp</string>
+    <string name="setting_audio_delay">Override audio delay</string>
+    <string name="setting_audio_delay_desc">Set a custom audio latency reported to client</string>
+    <string name="audio_delay_value">%dms</string>
+    <string name="setting_audio_auto_buffer">Automatic software audio buffer size</string>
+    <string name="setting_audio_auto_buffer_desc">Adaptively tune the software audio buffer according to network conditions and device performance; slider adjusts how much jitter the buffer can absorb</string>
+    <string name="audio_adaptive_value">%1$d%% (%2$s)</string>
+    <string-array name="audio_adaptive_step_names">
+        <item>Lowest Latency</item>
+        <item>Lower Latency</item>
+        <item>Balanced</item>
+        <item>Better Stability</item>
+        <item>Best Stability</item>
+    </string-array>
+    <string name="setting_audio_cushion_ms">Software audio buffer (ms)</string>
+    <string name="setting_audio_cushion_ms_desc">Buffer to absorb network and decoder jitter: shorter duration means lower latency; longer duration means fewer glitches</string>
+    <string name="setting_oboe_buffer_frames">Hardware output buffer (frames)</string>
+    <string name="setting_oboe_buffer_frames_desc">Stream buffer between this app and the audio device to absorb CPU scheduling jitter only. Keep at 0 for automatic sizing.</string>
+    <string name="transition_live">Live</string>
+    <string name="transition_seek_hint">Left/right: 10 seconds · OK: seek · Back: cancel</string>
+    <string name="transition_playback_error">Video could not be played (code %1$d). Return to your phone screen or choose another video.</string>
+    <string name="transition_access_denied">The video source denied access. Use Playback method to try Mirror screen, or reopen the video on your device.</string>
+</resources>

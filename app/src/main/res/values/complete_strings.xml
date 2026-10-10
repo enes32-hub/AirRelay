@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="rec_title">Recordings</string>
+  <string name="rec_description">Record only the stream picture and audio, without AirRelay menus or controls. Audio permission captures app playback, not the microphone. Recordings are silent before Android 10. Protected content cannot be recorded. Each recording is limited to 1 hour or 2 GB; files remain until you delete them.</string>
+  <string name="rec_start">Start recording</string>
+  <string name="rec_stop">Stop recording</string>
+  <string name="rec_active">● Recording</string>
+  <string name="rec_saved">Recording saved.</string>
+  <string name="rec_failed">Recording could not be saved.</string>
+  <string name="rec_unavailable">Recording could not start. Your TV may not support screen capture, or storage or encoder resources may be unavailable.</string>
+  <string name="rec_export">Export MP4</string>
+  <string name="rec_export_cancelled">Export cancelled or no destination selected.</string>
+  <string name="rec_exported">Recording exported.</string>
+  <string name="rec_exported_movies">Saved to Movies/AirRelay on your TV.</string>
+  <string name="rec_export_failed">Export failed. Check the destination and available space. Your original recording is still available.</string>
+  <string name="rec_empty">No recordings yet.</string>
+  <string name="rec_close">Close</string>
+  <string name="rec_watch">Play recording</string>
+  <string name="rec_delete">Delete recording</string>
+  <string name="rec_delete_confirm">Delete this recording from AirRelay? This cannot be undone. Exported copies will remain.</string>
+  <string name="rec_deleted">Recording deleted.</string>
+  <string name="rec_delete_failed">Recording could not be deleted.</string>
+  <string name="rec_play_failed">This recording cannot be opened.</string>
+  <string name="rec_duration_unknown">Duration unavailable</string>
+  <string name="rec_end_stream_first">End the current stream to play a recording.</string>
+  <string name="rec_audio_permission">Allow audio permission to record playback sound.</string>
+  <string name="rec_audio_failed">Video saved, but audio could not be added.</string>
+  </resources>

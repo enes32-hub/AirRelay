@@ -1,0 +1,3 @@
+<resources>
+    <string name="transition_transport_interrupted">Görüntü bağlantısı kesildi. Cihazınızın TV’ye yerel ağdan erişebildiğini kontrol edin. VPN kullanıyorsanız yerel ağ erişimine izin verin.</string>
+</resources>

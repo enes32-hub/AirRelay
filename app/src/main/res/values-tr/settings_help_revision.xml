@@ -1,0 +1,13 @@
+<resources>
+<string name="settings_playback">Görüntü ve oynatma</string>
+<string name="help_modes_title">Video nasıl oynatılır?</string>
+<string name="help_modes_body">Ekrandan yansıt, iPhone, iPad veya Mac ekranını gösterir. Doğrudan oynat, uygulama destekliyorsa videoyu TV oynatıcısına aktarır. Seçimi yayın kontrollerindeki Oynatma şekli üzerinden değiştirin. Açık video her zaman otomatik geçmez; cihazınızdaki videodan çıkıp yeniden açmanız gerekebilir.</string>
+<string name="help_video_title">Video açılmıyor veya ekran siyah</string>
+<string name="help_video_body">Kaynak erişimi reddederse Oynatma şeklinden Ekrandan yansıtı seçin. Cihazınızdaki AirPlay video ekranından çıkıp videoyu yeniden açın. Bazı korumalı içerikler yansıtmaya izin vermez. Telefon ekranı da gelmiyorsa ekran yansıtmayı cihazınızdan durdurup tekrar bağlanın.</string>
+<string name="help_network_title">Donma, gecikme veya VPN</string>
+<string name="help_network_body">TV ve gönderici aynı yerel ağda olmalı. Misafir ağı ve cihaz yalıtımı bağlantıyı engelleyebilir. VPN, yerel ağ erişimini veya açık bağlantının yönünü değiştirebilir. VPN uygulamasında varsa yerel ağa izin verin; sorun sürerse VPN kapalı karşılaştırın. Takılmalarda Görüntü ve oynatma bölümünden daha düşük gecikme profilini deneyin.</string>
+<string name="help_record_title">Kayıt başlatma ve kayıtları izleme</string>
+<string name="help_record_body">Yayın kontrollerindeki Kayıt düğmesi kaydı başlatır veya durdurur. Android izin isterse onaylayın. Kaliteyi Ayarlar → Kayıt ayarları bölümünden seçin. Kayıtları ana menüdeki Kayıtlar bölümünden izleyin, silin veya dışa aktarın. Kaydı izlemek için etkin yayını bitirin. Kayıt oynatıcısında Yukarı ile süre çubuğuna geçin; Sağ/Sol ile 10 saniyelik adımlar atın, OK ile uygulayın.</string>
+<string name="help_tracks_title">Kalite, ses ve altyazı</string>
+<string name="help_tracks_body">Doğrudan videoda kaynak sunuyorsa kalite, ses ve altyazı seçebilirsiniz. Altyazı boyutunu Altyazı penceresindeki −/+ ile ayarlayın. Görüntüye gömülü altyazı değiştirilemez. Ekran yansıtmada bu seçimleri gönderici cihazdaki uygulamadan yapın.</string>
+</resources>

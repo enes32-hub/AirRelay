@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AirRelay Receiver — Privacy Policy</title>
+<style>
+    :root { color-scheme: light dark; }
+    body { margin: 0 auto; max-width: 52rem; padding: 2.5rem 1.25rem 4rem; line-height: 1.65;
+           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+    h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 .4rem; }
+    h2 { font-size: 1.35rem; margin: 2.4rem 0 .6rem; }
+    h3 { font-size: 1.1rem; margin: 1.8rem 0 .5rem; }
+    p, li, td, th { font-size: 1rem; }
+    code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .9em;
+           background: rgba(127,127,127,.16); padding: .1em .35em; border-radius: .25rem; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; display: block; overflow-x: auto; }
+    th, td { border: 1px solid rgba(127,127,127,.4); padding: .5rem .6rem; text-align: left;
+             vertical-align: top; }
+    th { background: rgba(127,127,127,.12); }
+    hr { border: 0; border-top: 1px solid rgba(127,127,127,.35); margin: 2.5rem 0 1.5rem; }
+    .lang { margin: 0 0 2rem; font-size: .95rem; }
+    footer { margin-top: 3rem; font-size: .9rem; opacity: .75; }
+</style>
+</head>
+<body>
+<nav class="lang"><a href="privacy-tr.html">English version</a></nav>
+<h1>AirRelay Receiver — Privacy Policy</h1>
+<p><strong>App:</strong> AirRelay Receiver (<code>com.airrelay.receiver</code>) for Android TV <strong>Developer:</strong> Mahmut Enes Bozdoğan <strong>Contact:</strong> alquariz@yandex.com <strong>Effective date:</strong> 11 October 2026 <strong>Document version:</strong> 1.0 (applies to app version 1.0.0 and later)</p>
+<hr>
+<h2>1. Summary</h2>
+<ul><li>AirRelay Receiver <strong>does not collect, transmit or sell your personal data.</strong> There is no account, no sign-in and no developer server.</li><li>The app works entirely on <strong>your own local network</strong>, between your Apple device (iPhone, iPad or Mac) and your Android TV.</li><li><strong>No advertising, no analytics, no tracking, no crash-reporting SDKs</strong> are included.</li><li>Anything the app stores — screen recordings, saved videos, technical logs — is stored <strong>on your device</strong> and stays there unless <strong>you</strong> choose to share it.</li><li>The app requests the microphone-adjacent permission <code>RECORD_AUDIO</code>, but it <strong>never reads your microphone</strong>. That permission is a technical prerequisite of the Android API used to capture the app's *own* audio while you record. See section 5.</li></ul>
+<hr>
+<h2>2. What the app does</h2>
+<p>AirRelay Receiver turns an Android TV device into an AirPlay receiver. When you start screen mirroring from an Apple device on the same local network, the TV shows that screen and plays its audio. On request, the app can also:</p>
+<ul><li>record the incoming picture and sound to a video file on the TV,</li><li>save a video that is being streamed to the TV,</li><li>keep technical logs to help diagnose problems.</li></ul>
+<p>All of this happens on the TV. Nothing is uploaded anywhere.</p>
+<hr>
+<h2>3. Data we collect</h2>
+<p><strong>None.</strong> The developer of this app does not receive, store or process any of your data.</p>
+<p>Specifically:</p>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr><td>Is an account or sign-in required?</td><td>No.</td></tr>
+<tr><td>Do you collect names, e-mail addresses or device identifiers?</td><td>No.</td></tr>
+<tr><td>Is usage data, telemetry or analytics sent anywhere?</td><td>No.</td></tr>
+<tr><td>Are advertising identifiers used?</td><td>No.</td></tr>
+<tr><td>Is any data sent to the developer or third parties?</td><td>No, none.</td></tr>
+<tr><td>Does the app work without internet access?</td><td>Yes — it needs only a local network.</td></tr>
+</tbody>
+</table>
+<p>Because no data reaches the developer, there is no developer-side data to access, correct, export or delete.</p>
+<hr>
+<h2>4. What is stored on your device (and how to delete it)</h2>
+<table>
+<thead><tr><th>Stored item</th><th>Where it lives</th><th>Why</th><th>How to delete</th></tr></thead>
+<tbody>
+<tr><td>Screen recordings you start</td><td>App storage on the TV (private app directory; can be exported to the Movies library from inside the app)</td><td>The recording feature you asked for</td><td>Delete inside the app, or remove the files from the TV</td></tr>
+<tr><td>Videos you choose to save to the TV</td><td>TV media library</td><td>The "save video" feature you asked for</td><td>Delete from the TV's media library</td></tr>
+<tr><td>Technical / support logs</td><td>Private app directory on the TV</td><td>Troubleshooting and support requests</td><td>Use "clear logs" in the app, or clear the app's storage / uninstall the app</td></tr>
+<tr><td>App settings (device name, PIN preference, display preferences)</td><td>Private app directory on the TV</td><td>Remembering your preferences</td><td>Clear the app's storage or uninstall the app</td></tr>
+</tbody>
+</table>
+<p>Cloud backup is disabled (<code>android:allowBackup="false"</code>), so this data is <strong>not</strong> copied to Google's cloud backup service.</p>
+<p>Logs stay on the device unless <strong>you</strong> explicitly export or send them. If you send a log to the developer for support, it is used only to answer your request and is deleted afterwards.</p>
+<hr>
+<h2>5. Permissions and why they are needed</h2>
+<table>
+<thead><tr><th>Permission</th><th>Why the app asks for it</th><th>What it does <strong>not</strong> do</th></tr></thead>
+<tbody>
+<tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code></td><td>Receive the AirPlay stream and discover receivers on the local network</td><td>Does not contact developer or third-party servers</td></tr>
+<tr><td><code>CHANGE_WIFI_MULTICAST_STATE</code></td><td>Multicast/mDNS discovery so your Apple device can find the TV</td><td>—</td></tr>
+<tr><td><code>RECORD_AUDIO</code></td><td><strong>Technical prerequisite</strong> of Android's audio-playback-capture API, used only while you record. Capture is restricted to <strong>this app's own audio output</strong> (matching its own UID)</td><td><strong>Never reads the microphone.</strong> No microphone audio is recorded, stored or transmitted</td></tr>
+<tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_CONNECTED_DEVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>, <code>FOREGROUND_SERVICE_MEDIA_PROJECTION</code></td><td>Keep receiving reliably while the app is in the background, as required by Android</td><td>—</td></tr>
+<tr><td><code>POST_NOTIFICATIONS</code></td><td>Show the ongoing "receiver active / recording" notification required for background operation</td><td>—</td></tr>
+<tr><td><code>WAKE_LOCK</code></td><td>Prevent the TV from sleeping in the middle of a cast</td><td>—</td></tr>
+<tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Optional: start the receiver automatically after the TV boots, <strong>only if you enable this setting</strong> (it is off by default)</td><td>Does not start anything you did not enable</td></tr>
+<tr><td><code>SYSTEM_ALERT_WINDOW</code> (display over other apps)</td><td>Optional: bring the receiver to the foreground when a cast begins</td><td>Not used to show advertising or to monitor other apps</td></tr>
+</tbody>
+</table>
+<p>Screen recording additionally requires Android's own MediaProjection consent dialog, which you must approve each time.</p>
+<hr>
+<h2>6. Network activity</h2>
+<ul><li>The app communicates <strong>only within your local network</strong> (LAN): it discovers AirPlay senders via mDNS and receives the stream on the AirPlay/RTSP ports (7000 and 7100 by default) from the sending device.</li><li>The app contains <strong>no hard-coded internet addresses</strong> and makes no connections to the developer or to third-party services.</li><li>AirPlay/RTSP traffic between your Apple device and the TV is <strong>not encrypted</strong> — this is how the AirPlay mirroring protocol works. Anyone who can observe your local network could in principle see that traffic. Use a trusted, password-protected Wi-Fi network, and prefer a separate network for guests.</li><li>Because Android's cleartext-traffic flag is enabled for protocol compatibility, the app is able to receive such unencrypted local traffic. It does not use it to contact the internet.</li></ul>
+<hr>
+<h2>7. Recordings and copyright</h2>
+<p>Recordings and saved videos are created <strong>at your request</strong> and are stored on your device. You are responsible for having the right to record or save the content that appears on your screen (for example protected video from a streaming service may not be recordable, and recording other people's material may require their permission). The app does not remove or bypass content protection.</p>
+<hr>
+<h2>8. Third-party software and open-source components</h2>
+<p>The app includes open-source components, among them:</p>
+<ul><li><strong>UxPlay</strong> (GPL-3.0) and <strong>android-airplay-server</strong> (GPL-3.0) — AirPlay receiver implementation,</li><li><strong>FFmpeg</strong> (LGPL) — audio decoding,</li><li><strong>libplist</strong>, <strong>OpenSSL</strong> (Apache-2.0),</li><li><strong>AndroidX, Jetpack Compose, Media3 (ExoPlayer), Oboe, Kotlin/kotlinx.coroutines</strong> (Apache-2.0).</li></ul>
+<p>The complete licence texts and copyright notices are available <strong>inside the app</strong>, under *Settings → About → Component licences*. No advertising, analytics, attribution or tracking SDK from any third party is included.</p>
+<hr>
+<h2>9. Children's privacy</h2>
+<p>The app is not directed at children and collects no personal data from anyone, including children.</p>
+<hr>
+<h2>10. Your rights</h2>
+<p>Privacy laws such as the GDPR (EU) and the CCPA/CPRA (California) give you rights over personal data held about you. The developer holds <strong>no personal data about you</strong>, so there is nothing to disclose, correct or erase on our side. Data created by the app is under your control on your own device, and section 4 explains how to delete it. If you have questions, contact us at the address below.</p>
+<hr>
+<h2>11. Changes to this policy</h2>
+<p>If this policy changes, the updated version is published at this address with a new effective date and document version. Material changes will also be noted in the app's release notes.</p>
+<hr>
+<h2>12. Contact</h2>
+<p><strong>Mahmut Enes Bozdoğan</strong> E-mail: <strong>alquariz@yandex.com</strong></p>
+<p>Apple, AirPlay, iPhone, iPad and Mac are trademarks of Apple Inc. This application is not affiliated with, endorsed by or sponsored by Apple Inc.</p>
+<footer>This page is the privacy policy for the Android TV application AirRelay Receiver
+(<code>com.airrelay.receiver</code>). It is served as plain HTML because Google Play does not accept
+PDF privacy policies.</footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_section">İzinler</string>
+    <string name="permission_step">Kurulum · %1$d / 4</string>
+    <string name="permission_welcome">TV’niz paylaşıma hazır olsun</string>
+    <string name="permission_intro">AirRelay’in ihtiyaç duyduğu izinleri birlikte ayarlayalım. Her adımda neye izin verdiğinizi görebilir, isterseniz o adımı atlayabilirsiniz.</string>
+    <string name="permission_network_title">Aynı ağda buluşun</string>
+    <string name="permission_network_body">TV’nizi aynı ağdaki iPhone, iPad ve Mac cihazlarında göstermek; görüntü ve sesi almak için yerel ağ bağlantısı kullanılır. TV’niz Wi-Fi veya Ethernet ile bağlı olabilir.</string>
+    <string name="permission_network_automatic">Android bu ağ izinlerini otomatik verir. Kamera, mikrofon ve fotoğraf arşivinize erişim istenmez.</string>
+    <string name="permission_notifications_title">Bağlantı durumu elinizin altında</string>
+    <string name="permission_notifications_body">Bildirimler, alıcı arka planda hazırken bağlantı durumunu görmenizi ve yayını durdurmanızı sağlar.</string>
+    <string name="permission_notifications_skip">İzin vermezseniz alıcı çalışır; durum bildirimini göremezsiniz.</string>
+    <string name="permission_notifications_grant">Bildirim iznini ver</string>
+    <string name="permission_notifications_label">Bildirimler</string>
+    <string name="permission_display_title">Yayın geldiğinde ekran açılsın</string>
+    <string name="permission_display_body">TV’nin ana ekranındayken bir cihaz bağlandığında AirRelay’i ve eşleştirme kodunu göstermek için “Diğer uygulamaların üzerinde göster” izni gerekir.</string>
+    <string name="permission_display_instruction">Açılan TV ayarlarında AirRelay’i bulun ve izni açın. Ardından Geri tuşuyla buraya dönün.</string>
+    <string name="permission_display_skip">İzin vermezseniz bağlanmadan önce AirRelay’i kendiniz açmanız gerekir.</string>
+    <string name="permission_display_grant">Ekrana getirme iznini ver</string>
+    <string name="permission_display_label">Otomatik ekrana getirme</string>
+    <string name="permission_ready_title">Nasıl başlasın?</string>
+    <string name="permission_ready_body">Tercihlerinizi seçin. İzinler ve başlangıç seçenekleri Ayarlar’dan değiştirilebilir.</string>
+    <string name="permission_automatic_body">Arka planda alıcıyı çalıştırma, TV açılışında başlatma ve bağlantı sırasında ekranı açık tutma için gereken sistem izinleri Android tarafından otomatik verilir. Bu özellikleri Başlangıç ve Bağlantı ayarlarından açıp kapatabilirsiniz.</string>
+    <string name="permission_allowed">İzin verildi</string>
+    <string name="permission_not_allowed">İzin verilmedi</string>
+    <string name="permission_continue">Devam</string>
+    <string name="permission_back">Geri</string>
+    <string name="permission_skip">Şimdilik atla</string>
+    <string name="permission_manage">TV ayarlarında değiştir</string>
+    <string name="permission_settings_unavailable">Bu TV izin ekranını açamadı. TV Ayarları → Uygulamalar → AirRelay bölümünden kontrol edin.</string>
+</resources>

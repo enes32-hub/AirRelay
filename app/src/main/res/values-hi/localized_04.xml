@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="setting_advertise_video">AirPlay वीडियो समर्थन घोषित करें</string>
+    <string name="setting_advertise_video_desc">बंद होने पर वीडियो का केवल ऑडियो कास्ट होता है</string>
+    <string name="setting_advertise_audio">AirPlay ऑडियो समर्थन घोषित करें</string>
+    <string name="setting_advertise_audio_desc">बंद होने पर डिवाइस केवल मिररिंग के लिए उपलब्ध होगा और मीडिया प्लेयर से छिपा रहेगा</string>
+    <string name="setting_alac">ALAC कोडेक घोषित करें</string>
+    <string name="setting_alac_desc">mDNS रिकॉर्ड में ALAC उपलब्ध कराएँ; संगीत स्ट्रीमिंग के लिए</string>
+    <string name="setting_aac">AAC कोडेक घोषित करें</string>
+    <string name="setting_aac_desc">mDNS रिकॉर्ड में AAC-ELD/AAC-LC उपलब्ध कराएँ; स्क्रीन मिररिंग की आवाज़ के लिए</string>
+    <string name="setting_launch_on_connect">आने वाली स्ट्रीम दिखाएँ</string>
+    <string name="setting_launch_on_connect_desc">नई स्ट्रीम शुरू होने पर ऐप सामने लाएँ। टीवी की अनुमतियाँ लागू होती हैं।</string>
+    <string name="setting_launch_on_connect_no_permission">अपने-आप दिखाने के लिए दूसरे ऐप के ऊपर दिखाने की अनुमति चाहिए।</string>
+    <string name="setting_resolution">रिज़ॉल्यूशन</string>
+    <string name="setting_resolution_desc">भेजने वाले डिवाइस को सुझाया गया अधिकतम तस्वीर आकार।</string>
+    <string name="setting_resolution_width">चौड़ाई</string>
+    <string name="setting_resolution_height">ऊँचाई</string>
+    <string name="setting_max_fps">अधिकतम FPS</string>
+    <string name="setting_max_fps_desc">1–%1$d FPS चुनें। इसे बदलने से कस्टम तस्वीर प्राथमिकता चुनी जाती है।</string>
+    <string name="setting_max_fps_placeholder">1–%1$d FPS</string>
+    <string name="setting_overscanned">ओवरस्कैन</string>
+    <string name="setting_overscanned_desc">पूरी स्क्रीन ओवरस्कैन डिस्प्ले के लिए पिक्सेल सीमा जोड़ें</string>
+    <string name="chip_custom">कस्टम</string>
+    <string name="chip_device_portrait">पोर्ट्रेट</string>
+    <string name="chip_device_landscape">लैंडस्केप</string>
+    <string name="setting_h265">H.265 (HEVC)</string>
+    <string name="setting_h265_desc">डिवाइस समर्थन दे तो H.265 वीडियो डिकोडिंग चालू करें</string>
+    <string name="setting_enforce_sdr">SDR रंग संगतता</string>
+    <string name="setting_enforce_sdr_desc">वीडियो को सीमित SDR चिह्नित करें; HDR स्रोत पास करने के लिए बंद करें</string>
+    <string name="setting_sw_alac">सॉफ़्टवेयर ALAC डिकोडर का इस्तेमाल अनिवार्य करें</string>
+    <string name="setting_sw_alac_desc">हार्डवेयर के बजाय हमेशा सॉफ़्टवेयर ALAC डिकोडर इस्तेमाल करें; ऑडियो विलंब पर असर पड़ सकता है</string>
+    <string name="setting_developer_options">अतिरिक्त तकनीकी विकल्प</string>
+    <string name="setting_developer_options_desc">ऑडियो बफ़रिंग, डिकोडिंग और सहायता लॉग।</string>
+    <string name="setting_key_allow_frame_drop">देरी वाले फ़्रेम छोड़ें</string>
+    <string name="setting_key_allow_frame_drop_desc">Android 10+ पर गति बनाए रखने के लिए वीडियो डिकोडर को अंदरूनी तौर पर फ़्रेम छोड़ने दें</string>
+    <string name="setting_realtime_decoder_priority">ऑडियो डिकोडिंग को प्राथमिकता दें</string>
+    <string name="setting_realtime_decoder_priority_desc">ऑडियो डिकोडर के लिए रियल-टाइम शेड्यूलिंग माँगें</string>
+    <string name="setting_operating_rate">डिकोडर की कार्य दर</string>
+    <string name="setting_operating_rate_desc">डिकोडर से अधिकतम कार्य दर माँगें</string>
+    <string name="chip_auto">अपने-आप</string>
+    <string name="chip_on">चालू</string>
+    <string name="chip_off">बंद</string>
+    <string name="setting_low_latency">कम विलंब</string>
+    <string name="setting_low_latency_desc">आउटपुट के लिए कम विलंब वाली ऑडियो डिकोडिंग इस्तेमाल करें; इससे ज़्यादा ऊर्जा और CPU लगता है</string>
+    <string name="setting_scheduled_output_buffer_release">समन्वित फ़्रेम समय</string>
+    <string name="setting_scheduled_output_buffer_release_desc">हर डिकोड किए फ़्रेम को उसके प्रस्तुति समय से मेल खाते VSYNC पर शेड्यूल करें</string>
+    <string name="setting_audio_delay">ऑडियो विलंब बदलें</string>
+    <string name="setting_audio_delay_desc">क्लाइंट को बताया जाने वाला कस्टम ऑडियो विलंब सेट करें</string>
+    <string name="audio_delay_value">%d मिलीसेकंड</string>
+    <string name="setting_audio_auto_buffer">सॉफ़्टवेयर ऑडियो बफ़र का स्वचालित आकार</string>
+    <string name="setting_audio_auto_buffer_desc">नेटवर्क और डिवाइस के प्रदर्शन के अनुसार सॉफ़्टवेयर ऑडियो बफ़र बदलें; स्लाइडर तय करता है कि बफ़र कितना जिटर सह सकता है</string>
+    <string name="audio_adaptive_value">%1$d%% (%2$s)</string>
+    <string-array name="audio_adaptive_step_names">
+        <item>न्यूनतम विलंब</item>
+        <item>कम विलंब</item>
+        <item>संतुलित</item>
+        <item>बेहतर स्थिरता</item>
+        <item>सर्वश्रेष्ठ स्थिरता</item>
+    </string-array>
+    <string name="setting_audio_cushion_ms">सॉफ़्टवेयर ऑडियो बफ़र (मिलीसेकंड)</string>
+    <string name="setting_audio_cushion_ms_desc">नेटवर्क और डिकोडर के जिटर को सँभालने वाला बफ़र: कम अवधि से कम विलंब, ज़्यादा अवधि से कम रुकावट</string>
+    <string name="setting_oboe_buffer_frames">हार्डवेयर आउटपुट बफ़र (फ़्रेम)</string>
+    <string name="setting_oboe_buffer_frames_desc">इस ऐप और ऑडियो डिवाइस के बीच बफ़र जो केवल CPU शेड्यूलिंग का जिटर सँभालता है। स्वचालित आकार के लिए 0 रखें।</string>
+    <string name="transition_live">लाइव</string>
+    <string name="transition_seek_hint">बाएँ/दाएँ: 10 सेकंड · OK: समय पर जाएँ · वापस: रद्द</string>
+    <string name="transition_playback_error">वीडियो नहीं चल सका (कोड %1$d)। फ़ोन की स्क्रीन पर लौटें या दूसरा वीडियो चुनें।</string>
+    <string name="transition_access_denied">वीडियो स्रोत ने पहुँच नहीं दी। प्लेबैक के तरीके से स्क्रीन मिरर करें आज़माएँ, या डिवाइस पर वीडियो दोबारा खोलें।</string>
+    <string name="subtitle_size_value">आकार: %1$d%%</string>
+    <string name="track_quality">गुणवत्ता</string>
+    <string name="track_subtitles">सबटाइटल</string>
+    <string name="track_audio">ऑडियो</string>
+    <string name="track_auto">अपने-आप</string>
+    <string name="track_off">बंद</string>
+    <string name="track_unavailable">इस वीडियो स्रोत में चुनने योग्य ट्रैक नहीं हैं।</string>
+    <string name="transition_transport_interrupted">वीडियो कनेक्शन टूट गया। देखें कि डिवाइस स्थानीय नेटवर्क पर टीवी तक पहुँच सकता है। VPN इस्तेमाल करते हैं तो स्थानीय नेटवर्क की पहुँच दें।</string>
+</resources>

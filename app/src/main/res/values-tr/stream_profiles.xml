@@ -1,0 +1,9 @@
+<resources>
+    <string name="stream_profile_title">Görüntü tercihi</string>
+    <string name="stream_profile_hint">İnternet videosu bağlantına göre uyarlanır. Ekran yansıtma hızı gönderici ve TV’ye bağlıdır. Yayın sürerken yapılan değişiklikler sonraki başlangıçta uygulanır.</string>
+    <string name="stream_profile_custom">Özel</string>
+    <string name="stream_profile_balanced">Dengeli</string>
+    <string name="stream_profile_quality">Görüntü kalitesi</string>
+    <string name="stream_profile_responsive">Düşük gecikme</string>
+    <string name="stream_profile_stable">Kararlılık</string>
+</resources>

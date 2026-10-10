@@ -1,0 +1,22 @@
+Native ABI coverage inside the shipped APK (extracted with zipfile, inspected with the
+NDK's llvm-readelf/llvm-nm).
+
+--- arm64-v8a: shipped-arm64-v8a-libairplay_native.so (1112128 bytes) ---
+  Class:                             ELF64
+  Type:                              DYN (Shared object file)
+  Machine:                           AArch64
+JNI symbols: 23
+  000000000007a5e4 T Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeDestroy
+  000000000007a570 T Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeEndCurrentStream
+  000000000007aa94 T Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeGetAirplayTxtRecords
+  000000000007aab0 T Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeGetRaopServiceName
+
+--- armeabi-v7a: shipped-armeabi-v7a-libairplay_native.so (849452 bytes) ---
+  Class:                             ELF32
+  Type:                              DYN (Shared object file)
+  Machine:                           ARM
+JNI symbols: 23
+  0004a714 T Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeDestroy
+  0004a6bc T Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeEndCurrentStream
+  0004aa50 T Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeGetAirplayTxtRecords
+  0004aa6a T Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeGetRaopServiceName

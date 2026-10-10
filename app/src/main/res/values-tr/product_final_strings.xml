@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="p_quit">Uygulamayı kapat</string>
+    <string name="p_quit_title">Uygulama kapatılsın mı?</string>
+    <string name="p_quit_body">Yayın sona erer ve alıcı arka planda çalışmaz. Tekrar kullanmak için uygulamayı aç.</string>
+    <string name="p_automatic_display_permission">Görüntüleme iznini aç</string>
+    <string name="p_port_conflict">Başka bir alıcı %1$s portunu kullanıyor. Diğer alıcıyı durdurup yeniden dene.</string>
+    <string name="notification_incoming_title">Yeni yayın hazır</string>
+    <string name="notification_incoming_text">Görüntüyü izlemek için AirRelay’i aç.</string>
+    <string name="setting_remote_bitrate">Tercih edilen video veri hızı</string>
+    <string name="setting_remote_bitrate_desc">İnternet videosunda kaynağın kalite seçeneklerine bağlıdır. Ekran yansıtmasını değiştirmez.</string>
+    <string name="p_about">Hakkında</string>
+    <string name="p_version">Sürüm %1$s</string>
+    <string name="p_about_body">Yerel ağında ekranını, videolarını ve sesini TV ile paylaş.</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad ve Mac, Apple Inc. markalarıdır.</string>
+    <string name="p_open_source_licenses">Bileşen lisansları</string>
+    <string name="p_licenses_unavailable">Lisans bilgileri açılamadı. Lütfen uygulama sağlayıcısına başvur.</string>
+    <string name="profile_balanced_detail">1080p ekran yansıtma. İnternet videosunda 8 Mbps’ye kadar kalite tercih edilir.</string>
+    <string name="profile_quality_detail">1080p ekran yansıtma. İnternet videosunda 12 Mbps’ye kadar daha yüksek kalite tercih edilir.</string>
+    <string name="profile_responsive_detail">720p ekran yansıtma ile daha düşük işlem yükü. İnternet videosunda 4 Mbps’ye kadar kalite tercih edilir.</string>
+    <string name="profile_custom_detail">Gelişmiş ayarlarda seçtiğin görüntü ve ses değerlerini kullanır.</string>
+    <string name="transition_picture_interrupted">Görüntü kesildi. Cihazında ana ekrana dön veya başka bir içerik seç; yeni görüntü geldiğinde yayın devam eder.</string>
+</resources>

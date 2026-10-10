@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="r2_hero">Mirror your screen</string>
+    <string name="r2_hero_body">Share your iPhone, iPad or Mac screen.</string>
+    <string name="r2_starting_body">Preparing the receiver. Its discoverable name will appear here when ready.</string>
+    <string name="r2_active_body">Your session is active. Returning here does not disconnect it.</string>
+    <string name="r2_connecting_body">A device is connecting. Complete pairing on the sending device.</string>
+    <string name="r2_audio_body">An audio session is active. Control it from your phone.</string>
+    <string name="r2_connection_guide">Connection guide</string>
+    <string name="r2_notice_dismiss">Dismiss</string>
+    <string name="r2_cannot_find">Cannot find your TV?</string>
+    <string name="r2_step1">Connect your device and TV to the same local network.</string>
+    <string name="r2_step2">Control Centre → Screen Mirroring.</string>
+    <string name="r2_step3">Choose the name shown here. Enter the TV code if asked.</string>
+    <string name="r2_settings_intro">Manage connection, picture and startup preferences.</string>
+    <string name="r2_pending_brief">Receiver settings take effect the next time the receiver starts.</string>
+    <string name="r2_discard_settings">Discard changes</string>
+    <string name="r2_settings_restarting">Restarting the receiver to apply your settings.</string>
+    <string name="r2_settings_blocked">This action is not available while the receiver is starting or a session is active.</string>
+    <string name="r2_settings_discarded">Pending changes discarded. Active settings are unchanged.</string>
+    <string name="r2_discovery_requested">Announcing the receiver again. Your stream continues.</string>
+    <string name="r2_retry_unavailable">Retry when the receiver is ready</string>
+    <string name="r2_takeover_title">Allow a new device to interrupt this stream?</string>
+    <string name="r2_takeover_body">A new connection attempt may end the current session. This change applies on the next receiver start and does not change PIN protection.</string>
+    <string name="r2_takeover_confirm">Allow</string>
+    <string name="r2_working">Preparing…</string>
+    <string name="r2_refresh_snapshot">Refresh snapshot</string>
+    <string name="r2_logs_live">LIVE · Automatic scrolling pauses while you read.</string>
+    <string name="r2_logs_frozen">READING MODE · New entries will not replace the lines you are reading.</string>
+    <string name="r2_pair_eyebrow">CONFIRM YOUR CONNECTION</string>
+    <string name="r2_invalid_number">Enter a number from %1$d to %2$d.</string>
+    <string name="r2_invalid_resolution">Width and height must each be between 16 and 16384.</string>
+</resources>

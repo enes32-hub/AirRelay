@@ -1,0 +1,103 @@
+REQ-ID,Açıklama,Öncelik,Uygulama modülü,Test-ID,Test sonucu,Kanıt dosyası,Kaynak bölüm,Kaynak satır,Kaynak metin
+REQ-P0-001,Android TV üzerinde çalışan alıcı uygulaması,P0,app-tv,P0-001,NOT_RUN,,3.1,122,- Android TV/Google TV üzerinde çalışan alıcı uygulaması
+REQ-P0-002,iPhone sistem Ekran Yansıtma seçicisinde alıcı adının görünmesi,P0,receiver-discovery,P0-002,NOT_RUN,,3.1,123,- iPhone/iPad sistem Ekran Yansıtma seçicisinde alıcı adının görünmesi
+REQ-P0-003,Aynı yerel ağdan güvenli bağlantı,P0,receiver-security,P0-003,NOT_RUN,,3.1,124,- Aynı yerel ağdan güvenli bağlantı
+REQ-P0-004,H.264 ekran yansıtma videosunun donanım hızlandırmalı çözülmesi,P0,media-video,P0-004,NOT_RUN,,3.1,125,- H.264 ekran yansıtma videosunun donanım hızlandırmalı çözülmesi
+REQ-P0-005,Göndericinin sunduğu desteklenen sesin oynatılması,P0,media-audio,P0-005,NOT_RUN,,3.1,126,- Göndericinin sunduğu desteklenen sesin oynatılması
+REQ-P0-006,AAC-ELD ve AAC-LC desteği,P0,media-audio,P0-006,NOT_RUN,,3.1,127,- AAC-ELD ve AAC-LC desteği
+REQ-P0-007,Gereken alıcı akışlarında ALAC desteği,P0,media-audio,P0-007,NOT_RUN,,3.1,128,- Gereken alıcı akışlarında ALAC desteği
+REQ-P0-008,"720p30, 1080p30 ve 1080p60 çalışma",P0,media-video,P0-008,NOT_RUN,,3.1,129,"- 720p30, 1080p30 ve 1080p60 çalışma"
+REQ-P0-009,Otomatik çözünürlük ve yön değişimi,P0,media-video,P0-009,NOT_RUN,,3.1,130,- Otomatik çözünürlük ve yön değişimi
+REQ-P0-010,Dikey ve yatay iPhone ekranının doğru oranla gösterilmesi,P0,media-video,P0-010,NOT_RUN,,3.1,131,- Dikey ve yatay iPhone ekranının doğru oranla gösterilmesi
+REQ-P0-011,PIN kodlu eşleştirme,P0,receiver-security,P0-011,NOT_RUN,,3.1,132,- PIN kodlu eşleştirme
+REQ-P0-012,Güvenilen cihazları unutma,P0,receiver-security,P0-012,NOT_RUN,,3.1,133,- Güvenilen cihazları unutma
+REQ-P0-013,Otomatik ve manuel alıcı başlatma,P0,receiver-service,P0-013,NOT_RUN,,3.1,134,- Otomatik ve manuel alıcı başlatma
+REQ-P0-014,D-pad/TV kumandasıyla tam kullanım,P0,app-tv,P0-014,NOT_RUN,,3.1,135,- D-pad/TV kumandasıyla tam kullanım
+REQ-P0-015,Tam ekran yansıtma,P0,app-tv,P0-015,NOT_RUN,,3.1,136,- Tam ekran yansıtma
+REQ-P0-016,"Fit, Fill ve 1:1 görüntü seçenekleri",P0,media-video,P0-016,NOT_RUN,,3.1,137,"- Fit, Fill ve 1:1 görüntü seçenekleri"
+REQ-P0-017,Ses aç/kapat,P0,media-audio,P0-017,NOT_RUN,,3.1,138,- Ses aç/kapat
+REQ-P0-018,Kullanıcı ayarlı ses gecikmesi düzeltmesi,P0,media-sync,P0-018,NOT_RUN,,3.1,139,- Kullanıcı ayarlı ses gecikmesi düzeltmesi
+REQ-P0-019,Ağ ve oynatma istatistikleri,P0,diagnostics,P0-019,NOT_RUN,,3.1,140,- Ağ ve oynatma istatistikleri
+REQ-P0-020,Hata teşhis ekranı,P0,diagnostics,P0-020,NOT_RUN,,3.1,141,- Hata teşhis ekranı
+REQ-P0-021,Yerel ağ izni yönetimi,P0,receiver-service,P0-021,NOT_RUN,,3.1,142,- Yerel ağ izni yönetimi
+REQ-P0-022,Android foreground service kurallarına uygun arka planda hazır bekleme,P0,receiver-service,P0-022,NOT_RUN,,3.1,143,- Android foreground service kurallarına uygun arka planda hazır bekleme
+REQ-P0-023,Uygulama kapandığında kaynakların eksiksiz bırakılması,P0,receiver-service,P0-023,NOT_RUN,,3.1,144,- Uygulama kapandığında kaynakların eksiksiz bırakılması
+REQ-P0-024,Uygulama yeniden açıldığında hizmetin güvenilir toparlanması,P0,receiver-service,P0-024,NOT_RUN,,3.1,145,- Uygulama yeniden açıldığında hizmetin güvenilir toparlanması
+REQ-P0-025,Gerçek cihaz kabul testleri,P0,benchmark,P0-025,NOT_RUN,,3.1,146,- Gerçek cihaz kabul testleri
+REQ-P0-026,Google Play için AAB,P0,app-tv,P0-026,NOT_RUN,,3.1,147,- Google Play için AAB
+REQ-P0-027,İmzalı evrensel test APK’sı,P0,app-tv,P0-027,NOT_RUN,,3.1,148,- İmzalı evrensel test APK’sı
+REQ-P0-028,32 ve 64 bit Android TV mimarileri,P0,receiver-native,P0-028,NOT_RUN,,3.1,149,- 32 ve 64 bit Android TV mimarileri
+REQ-P0-029,16 KB bellek sayfası uyumu,P0,receiver-native,P0-029,NOT_RUN,,3.1,150,- 16 KB bellek sayfası uyumu
+REQ-P0-030,Gizlilik politikası,P0,app-tv,P0-030,NOT_RUN,,3.1,151,- Gizlilik politikası
+REQ-P0-031,Açık kaynak bildirimleri,P0,receiver-native,P0-031,NOT_RUN,,3.1,152,- Açık kaynak bildirimleri
+REQ-P0-032,Yazılım malzeme listesi,P0,app-tv,P0-032,NOT_RUN,,3.1,153,- Yazılım malzeme listesi
+REQ-P0-033,Lisans denetim raporu,P0,receiver-native,P0-033,NOT_RUN,,3.1,154,- Lisans denetim raporu
+REQ-PERF-001,19.1. Referans ağ koşulu: iPhone ve TV aynı alt ağda,P0,benchmark,PERF-19-1,NOT_RUN,,19.1,1371,- iPhone ve TV aynı alt ağda
+REQ-PERF-002,19.1. Referans ağ koşulu: Televizyon Ethernet veya güçlü 5/6 GHz Wi‑Fi,P0,benchmark,PERF-19-1,NOT_RUN,,19.1,1372,- Televizyon Ethernet veya güçlü 5/6 GHz Wi‑Fi
+REQ-PERF-003,19.1. Referans ağ koşulu: iPhone güçlü 5/6 GHz Wi‑Fi,P0,benchmark,PERF-19-1,NOT_RUN,,19.1,1373,- iPhone güçlü 5/6 GHz Wi‑Fi
+REQ-PERF-004,19.1. Referans ağ koşulu: RSSI yaklaşık -60 dBm veya daha iyi,P0,benchmark,PERF-19-1,NOT_RUN,,19.1,1374,- RSSI yaklaşık -60 dBm veya daha iyi
+REQ-PERF-005,19.1. Referans ağ koşulu: Yerel kullanılabilir throughput en az 100 Mbps,P0,benchmark,PERF-19-1,NOT_RUN,,19.1,1375,- Yerel kullanılabilir throughput en az 100 Mbps
+REQ-PERF-006,"19.1. Referans ağ koşulu: Paket kaybı < %0,5",P0,benchmark,PERF-19-1,NOT_RUN,,19.1,1376,"- Paket kaybı < %0,5"
+REQ-PERF-007,19.1. Referans ağ koşulu: p95 jitter < 10 ms,P0,benchmark,PERF-19-1,NOT_RUN,,19.1,1377,- p95 jitter < 10 ms
+REQ-PERF-008,19.1. Referans ağ koşulu: AP isolation kapalı,P0,benchmark,PERF-19-1,NOT_RUN,,19.1,1378,- AP isolation kapalı
+REQ-PERF-009,19.1. Referans ağ koşulu: İnternet bağlantısı gerekmeksizin yerel ağ çalışır,P0,benchmark,PERF-19-1,NOT_RUN,,19.1,1379,- İnternet bağlantısı gerekmeksizin yerel ağ çalışır
+REQ-PERF-010,19.2. Keşif ve bağlantı: | Uygulama açılışından ilan hazır durumuna p95 | ≤ 5 s |,P0,benchmark,PERF-19-2,NOT_RUN,,19.2,1385,| Uygulama açılışından ilan hazır durumuna p95 | ≤ 5 s |
+REQ-PERF-011,19.2. Keşif ve bağlantı: | iPhone listesinde görünme p95 | ≤ 8 s |,P0,benchmark,PERF-19-2,NOT_RUN,,19.2,1386,| iPhone listesinde görünme p95 | ≤ 8 s |
+REQ-PERF-012,19.2. Keşif ve bağlantı: | Seçimden eşleştirme ekranına p95 | ≤ 3 s |,P0,benchmark,PERF-19-2,NOT_RUN,,19.2,1387,| Seçimden eşleştirme ekranına p95 | ≤ 3 s |
+REQ-PERF-013,19.2. Keşif ve bağlantı: | PIN sonrası oturum kurulumu p95 | ≤ 4 s |,P0,benchmark,PERF-19-2,NOT_RUN,,19.2,1388,| PIN sonrası oturum kurulumu p95 | ≤ 4 s |
+REQ-PERF-014,19.2. Keşif ve bağlantı: | İlk video karesi p50 | ≤ 2 s |,P0,benchmark,PERF-19-2,NOT_RUN,,19.2,1389,| İlk video karesi p50 | ≤ 2 s |
+REQ-PERF-015,19.2. Keşif ve bağlantı: | İlk video karesi p95 | ≤ 4 s |,P0,benchmark,PERF-19-2,NOT_RUN,,19.2,1390,| İlk video karesi p95 | ≤ 4 s |
+REQ-PERF-016,19.2. Keşif ve bağlantı: | İlk ses p95 | ≤ 4 s |,P0,benchmark,PERF-19-2,NOT_RUN,,19.2,1391,| İlk ses p95 | ≤ 4 s |
+REQ-PERF-017,19.3. Gecikme: | Düşük gecikme | uçtan uca p50 | ≤ 150 ms |,P0,benchmark,PERF-19-3,NOT_RUN,,19.3,1399,| Düşük gecikme | uçtan uca p50 | ≤ 150 ms |
+REQ-PERF-018,19.3. Gecikme: | Düşük gecikme | uçtan uca p95 | ≤ 250 ms |,P0,benchmark,PERF-19-3,NOT_RUN,,19.3,1400,| Düşük gecikme | uçtan uca p95 | ≤ 250 ms |
+REQ-PERF-019,19.3. Gecikme: | Otomatik | uçtan uca p95 | ≤ 350 ms |,P0,benchmark,PERF-19-3,NOT_RUN,,19.3,1401,| Otomatik | uçtan uca p95 | ≤ 350 ms |
+REQ-PERF-020,19.3. Gecikme: | Kararlı | uçtan uca p95 | ≤ 500 ms |,P0,benchmark,PERF-19-3,NOT_RUN,,19.3,1402,| Kararlı | uçtan uca p95 | ≤ 500 ms |
+REQ-PERF-021,19.4. Kare performansı: Ortalama işlenen fps ≥ 59,P0,benchmark,PERF-19-4,NOT_RUN,,19.4,1410,- Ortalama işlenen fps ≥ 59
+REQ-PERF-022,"19.4. Kare performansı: Kare kaybı < %0,5, 30 dakikalık testte",P0,benchmark,PERF-19-4,NOT_RUN,,19.4,1411,"- Kare kaybı < %0,5, 30 dakikalık testte"
+REQ-PERF-023,19.4. Kare performansı: 500 ms’den uzun görüntü donması: 0,P0,benchmark,PERF-19-4,NOT_RUN,,19.4,1412,- 500 ms’den uzun görüntü donması: 0
+REQ-PERF-024,19.4. Kare performansı: 250–500 ms arası donma: saat başına en fazla 1,P0,benchmark,PERF-19-4,NOT_RUN,,19.4,1413,- 250–500 ms arası donma: saat başına en fazla 1
+REQ-PERF-025,19.4. Kare performansı: Bozuk/makrobloklu gösterilen kare: 0; kayıp kareyi bırakmak bozuk kare göstermekten iyidir,P0,benchmark,PERF-19-4,NOT_RUN,,19.4,1414,- Bozuk/makrobloklu gösterilen kare: 0; kayıp kareyi bırakmak bozuk kare göstermekten iyidir
+REQ-PERF-026,19.4. Kare performansı: Yanlış en-boy oranı: 0,P0,benchmark,PERF-19-4,NOT_RUN,,19.4,1415,- Yanlış en-boy oranı: 0
+REQ-PERF-027,"19.4. Kare performansı: Yön değişiminden yeni doğru kareye p95 ≤ 1,5 s",P0,benchmark,PERF-19-4,NOT_RUN,,19.4,1416,"- Yön değişiminden yeni doğru kareye p95 ≤ 1,5 s"
+REQ-PERF-028,"19.4. Kare performansı: Ortalama işlenen fps ≥ 29,5",P0,benchmark,PERF-19-4,NOT_RUN,,19.4,1420,"- Ortalama işlenen fps ≥ 29,5"
+REQ-PERF-029,"19.4. Kare performansı: Kare kaybı < %0,25",P0,benchmark,PERF-19-4,NOT_RUN,,19.4,1421,"- Kare kaybı < %0,25"
+REQ-PERF-030,19.5. Ses-görüntü eşzamanı: p95 A/V farkı: ±50 ms içinde,P0,benchmark,PERF-19-5,NOT_RUN,,19.5,1425,- p95 A/V farkı: ±50 ms içinde
+REQ-PERF-031,19.5. Ses-görüntü eşzamanı: Kesin üst sınır: ±100 ms,P0,benchmark,PERF-19-5,NOT_RUN,,19.5,1426,- Kesin üst sınır: ±100 ms
+REQ-PERF-032,19.5. Ses-görüntü eşzamanı: 2 saat sonunda drift: ±50 ms içinde,P0,benchmark,PERF-19-5,NOT_RUN,,19.5,1427,- 2 saat sonunda drift: ±50 ms içinde
+REQ-PERF-033,"19.5. Ses-görüntü eşzamanı: Ses underrun: 30 dakikada 0 hedef, en fazla 1 kısa olay",P0,benchmark,PERF-19-5,NOT_RUN,,19.5,1428,"- Ses underrun: 30 dakikada 0 hedef, en fazla 1 kısa olay"
+REQ-PERF-034,"19.5. Ses-görüntü eşzamanı: Patlama, statik veya yüksek sesli bozuk PCM: 0",P0,benchmark,PERF-19-5,NOT_RUN,,19.5,1429,"- Patlama, statik veya yüksek sesli bozuk PCM: 0"
+REQ-PERF-035,19.6. Toparlanma: | 500 ms paket kesintisi sonrası hareketli görüntü | ≤ 2 s |,P0,benchmark,PERF-19-6,NOT_RUN,,19.6,1435,| 500 ms paket kesintisi sonrası hareketli görüntü | ≤ 2 s |
+REQ-PERF-036,19.6. Toparlanma: | Decoder stall sonrası otomatik iyileşme | ≤ 2 s |,P0,benchmark,PERF-19-6,NOT_RUN,,19.6,1436,| Decoder stall sonrası otomatik iyileşme | ≤ 2 s |
+REQ-PERF-037,"19.6. Toparlanma: | Yön değişimi | ≤ 1,5 s |",P0,benchmark,PERF-19-6,NOT_RUN,,19.6,1437,"| Yön değişimi | ≤ 1,5 s |"
+REQ-PERF-038,19.6. Toparlanma: | Surface yeniden oluşumu | ≤ 2 s |,P0,benchmark,PERF-19-6,NOT_RUN,,19.6,1438,| Surface yeniden oluşumu | ≤ 2 s |
+REQ-PERF-039,19.6. Toparlanma: | Kısa ağ roaming sonrası oturum | ≤ 8 s |,P0,benchmark,PERF-19-6,NOT_RUN,,19.6,1439,| Kısa ağ roaming sonrası oturum | ≤ 8 s |
+REQ-PERF-040,19.6. Toparlanma: | Uygulama hizmeti kontrollü yeniden başlatma | ≤ 5 s |,P0,benchmark,PERF-19-6,NOT_RUN,,19.6,1440,| Uygulama hizmeti kontrollü yeniden başlatma | ≤ 5 s |
+REQ-PERF-041,19.7. Uzun süreli dayanıklılık: Crash: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1446,- Crash: 0
+REQ-PERF-042,19.7. Uzun süreli dayanıklılık: ANR: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1447,- ANR: 0
+REQ-PERF-043,19.7. Uzun süreli dayanıklılık: Decoder kilitlenmesi: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1448,- Decoder kilitlenmesi: 0
+REQ-PERF-044,19.7. Uzun süreli dayanıklılık: Ses kayması üst sınır ihlali: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1449,- Ses kayması üst sınır ihlali: 0
+REQ-PERF-045,19.7. Uzun süreli dayanıklılık: Bellek büyümesi: başlangıç kararlı seviyesine göre <%10,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1450,- Bellek büyümesi: başlangıç kararlı seviyesine göre <%10
+REQ-PERF-046,19.7. Uzun süreli dayanıklılık: Native handle/fd sızıntısı: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1451,- Native handle/fd sızıntısı: 0
+REQ-PERF-047,19.7. Uzun süreli dayanıklılık: WakeLock sızıntısı: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1452,- WakeLock sızıntısı: 0
+REQ-PERF-048,19.7. Uzun süreli dayanıklılık: Crash: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1458,- Crash: 0
+REQ-PERF-049,19.7. Uzun süreli dayanıklılık: ANR: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1459,- ANR: 0
+REQ-PERF-050,19.7. Uzun süreli dayanıklılık: Sürekli bellek artışı: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1460,- Sürekli bellek artışı: 0
+REQ-PERF-051,19.7. Uzun süreli dayanıklılık: Oturum yeniden kurulamayacak bozulma: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1461,- Oturum yeniden kurulamayacak bozulma: 0
+REQ-PERF-052,19.7. Uzun süreli dayanıklılık: A/V drift üst sınır ihlali: 0,P0,benchmark,PERF-19-7,NOT_RUN,,19.7,1462,- A/V drift üst sınır ihlali: 0
+REQ-PERF-053,19.8. Termal davranış: 30 dakika 1080p60 sonrası cihaz termal throttling durumu kaydedilir.,P0,benchmark,PERF-19-8,NOT_RUN,,19.8,1466,- 30 dakika 1080p60 sonrası cihaz termal throttling durumu kaydedilir.
+REQ-PERF-054,19.8. Termal davranış: Uygulama cihazı sürekli severe thermal seviyesine itmemelidir.,P0,benchmark,PERF-19-8,NOT_RUN,,19.8,1467,- Uygulama cihazı sürekli severe thermal seviyesine itmemelidir.
+REQ-PERF-055,19.8. Termal davranış: Termal düşüşte 1080p30/720p uyumluluk moduna geçiş önerilebilir.,P0,benchmark,PERF-19-8,NOT_RUN,,19.8,1468,- Termal düşüşte 1080p30/720p uyumluluk moduna geçiş önerilebilir.
+REQ-PERF-056,19.8. Termal davranış: Termal olay kullanıcıya teknik olmayan mesajla gösterilir.,P0,benchmark,PERF-19-8,NOT_RUN,,19.8,1469,- Termal olay kullanıcıya teknik olmayan mesajla gösterilir.
+REQ-PERF-057,19.8. Termal davranış: Yazılım decoder nedeniyle sürdürülemez CPU yükü kabul edilmez.,P0,benchmark,PERF-19-8,NOT_RUN,,19.8,1470,- Yazılım decoder nedeniyle sürdürülemez CPU yükü kabul edilmez.
+REQ-PERF-058,19.9. Bellek: Low-RAM TV kalite sınırları aşılmayacaktır.,P0,benchmark,PERF-19-9,NOT_RUN,,19.9,1478,- Low-RAM TV kalite sınırları aşılmayacaktır.
+REQ-PERF-059,19.9. Bellek: Sınırsız paket tamponu olmayacaktır.,P0,benchmark,PERF-19-9,NOT_RUN,,19.9,1479,- Sınırsız paket tamponu olmayacaktır.
+REQ-PERF-060,19.9. Bellek: Büyük Bitmap kullanılmayacaktır.,P0,benchmark,PERF-19-9,NOT_RUN,,19.9,1480,- Büyük Bitmap kullanılmayacaktır.
+REQ-PERF-061,19.9. Bellek: Video kareleri Java heap’e kopyalanmayacaktır.,P0,benchmark,PERF-19-9,NOT_RUN,,19.9,1481,- Video kareleri Java heap’e kopyalanmayacaktır.
+REQ-PERF-062,"19.9. Bellek: Oturum kapandıktan sonra codec, Surface referansı, AudioTrack ve native buffer bırakılacaktır.",P0,benchmark,PERF-19-9,NOT_RUN,,19.9,1482,"- Oturum kapandıktan sonra codec, Surface referansı, AudioTrack ve native buffer bırakılacaktır."
+REQ-PERF-063,19.9. Bellek: 20 ardışık bağlan/ayrıl testinden sonra bellek başlangıç seviyesine dönmelidir.,P0,benchmark,PERF-19-9,NOT_RUN,,19.9,1483,- 20 ardışık bağlan/ayrıl testinden sonra bellek başlangıç seviyesine dönmelidir.
+REQ-PERF-064,"19.10. UI performansı: Hazır ekranı soğuk başlangıç p95 ≤ 2,5 s",P0,benchmark,PERF-19-10,NOT_RUN,,19.10,1487,"- Hazır ekranı soğuk başlangıç p95 ≤ 2,5 s"
+REQ-PERF-065,19.10. UI performansı: Kumanda odak hareketinde belirgin takılma yok,P0,benchmark,PERF-19-10,NOT_RUN,,19.10,1488,- Kumanda odak hareketinde belirgin takılma yok
+REQ-PERF-066,19.10. UI performansı: Jank oranı kritik akışlarda < %1,P0,benchmark,PERF-19-10,NOT_RUN,,19.10,1489,- Jank oranı kritik akışlarda < %1
+REQ-PERF-067,19.10. UI performansı: Baseline Profile bulunur,P0,benchmark,PERF-19-10,NOT_RUN,,19.10,1490,- Baseline Profile bulunur
+REQ-PERF-068,19.10. UI performansı: Macrobenchmark raporu teslim edilir,P0,benchmark,PERF-19-10,NOT_RUN,,19.10,1491,- Macrobenchmark raporu teslim edilir
+REQ-PERF-069,19.10. UI performansı: Yansıtma sırasında UI animasyonları medya thread’ini etkilemez,P0,benchmark,PERF-19-10,NOT_RUN,,19.10,1492,- Yansıtma sırasında UI animasyonları medya thread’ini etkilemez

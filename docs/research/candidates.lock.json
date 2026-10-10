@@ -1,0 +1,24 @@
+{
+  "review_date": "2026-08-31",
+  "purpose": "Research only. No candidate is approved, built, installed or integrated.",
+  "candidates": [
+    {
+      "id": "uxplay",
+      "repository": "FDH2/UxPlay",
+      "commit": "fd5192b06f0c2ab2f664b8ab778ac6f772e4d741",
+      "files": ["LICENSE", "lib/playfair/LICENSE.md", "lib/playfair/playfair.c", "lib/playfair/hand_garble.c", "lib/playfair/modified_md5.c", "lib/playfair/omg_hax.c", "lib/playfair/omg_hax.h", "lib/playfair/playfair.h", "lib/playfair/sap_hash.c"]
+    },
+    {
+      "id": "android-airplay-server",
+      "repository": "jqssun/android-airplay-server",
+      "commit": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "files": ["LICENSE", ".gitmodules", "app/src/main/cpp/CMakeLists.txt", "app/src/main/cpp/cmake/BuildFFmpeg.cmake"]
+    },
+    {
+      "id": "phairplay",
+      "repository": "mazer666/PhairPlay",
+      "commit": "4a3948c51d7f9d050d1f7437c0bd88877ef6db0f",
+      "files": ["LICENSE", "app/src/main/cpp/CMakeLists.txt", "app/src/main/cpp/playfair/playfair.c", "app/src/main/cpp/playfair/hand_garble.c", "app/src/main/cpp/playfair/modified_md5.c", "app/src/main/cpp/playfair/omg_hax.c", "app/src/main/cpp/playfair/omg_hax.h", "app/src/main/cpp/playfair/playfair.h", "app/src/main/cpp/playfair/sap_hash.c"]
+    }
+  ]
+}

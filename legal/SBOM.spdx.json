@@ -1,0 +1,683 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "AirRelay Receiver SBOM (1.0.0 (versionCode 76))",
+  "documentNamespace": "https://airrelay.local/spdx/1.0.0-(versionCode-76)/2026-10-10T21:47:31+00:00",
+  "creationInfo": {
+    "created": "2026-10-10T21:47:31+00:00",
+    "creators": [
+      "Tool: tools/generate_sbom.py",
+      "Organization: AirRelay"
+    ],
+    "comment": "Generated from declared dependency sources. Covers the direct Gradle dependencies and the pinned native components only."
+  },
+  "comment": "Scope: 24 declared Gradle dependencies and 8 pinned native components. This is NOT the transitive closure. Run `gradlew :app:dependencies --configuration releaseRuntimeClasspath` (or the equivalent for the shipped variant) and merge the result into this document to obtain the transitive Gradle closure; the native closure is produced by the CMake ExternalProject pins recorded in app/src/main/cpp. Components whose version could not be derived from the repository are listed with versionInfo NOASSERTION: androidx.compose.material:material-icons-extended, androidx.compose.material3:material3, androidx.compose.ui:ui, androidx.compose.ui:ui-graphics, androidx.compose.ui:ui-tooling, androidx.compose.ui:ui-tooling-preview. Licence values come from an explicit table in this generator; NOASSERTION means the claim must be verified before distribution.",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-AirRelay",
+      "name": "AirRelay Receiver",
+      "versionInfo": "1.0.0 (versionCode 76)",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0-only",
+      "licenseComments": "The receiver is distributed as a whole under GPL-3.0 because it links the GPL-3.0 UxPlay core; see legal/NOTICE.md.",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-001",
+      "name": "androidx.activity:activity-compose",
+      "versionInfo": "1.9.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.activity/activity-compose@1.9.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-002",
+      "name": "androidx.core:core-ktx",
+      "versionInfo": "1.15.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.core/core-ktx@1.15.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-003",
+      "name": "androidx.datastore:datastore-preferences",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.datastore/datastore-preferences@1.1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-004",
+      "name": "androidx.lifecycle:lifecycle-runtime-compose",
+      "versionInfo": "2.8.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-runtime-compose@2.8.7"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-005",
+      "name": "androidx.lifecycle:lifecycle-service",
+      "versionInfo": "2.8.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-service@2.8.7"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-006",
+      "name": "androidx.lifecycle:lifecycle-viewmodel-compose",
+      "versionInfo": "2.8.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-compose@2.8.7"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-007",
+      "name": "androidx.media:media",
+      "versionInfo": "1.7.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media/media@1.7.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-008",
+      "name": "androidx.compose:compose-bom",
+      "versionInfo": "2024.12.01",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose/compose-bom@2024.12.01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-009",
+      "name": "androidx.compose.material:material-icons-extended",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0; version resolved by the Compose BOM declared in gradle/libs.versions.toml",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.material/material-icons-extended"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-010",
+      "name": "androidx.compose.material3:material3",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0; version resolved by the Compose BOM declared in gradle/libs.versions.toml",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.material3/material3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-011",
+      "name": "androidx.compose.ui:ui",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0; version resolved by the Compose BOM declared in gradle/libs.versions.toml",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-012",
+      "name": "androidx.compose.ui:ui-graphics",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0; version resolved by the Compose BOM declared in gradle/libs.versions.toml",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-graphics"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-013",
+      "name": "androidx.compose.ui:ui-tooling",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0; version resolved by the Compose BOM declared in gradle/libs.versions.toml",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-tooling"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-014",
+      "name": "androidx.compose.ui:ui-tooling-preview",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0; version resolved by the Compose BOM declared in gradle/libs.versions.toml",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.compose.ui/ui-tooling-preview"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-015",
+      "name": "com.google.dagger:hilt-android",
+      "versionInfo": "2.53.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "Dagger/Hilt is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.dagger/hilt-android@2.53.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-016",
+      "name": "com.google.dagger:hilt-android-compiler",
+      "versionInfo": "2.53.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "Dagger/Hilt is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.dagger/hilt-android-compiler@2.53.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-017",
+      "name": "androidx.hilt:hilt-navigation-compose",
+      "versionInfo": "1.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.hilt/hilt-navigation-compose@1.2.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-018",
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-android",
+      "versionInfo": "1.9.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "Kotlin is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-android@1.9.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-019",
+      "name": "androidx.media3:media3-exoplayer",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-exoplayer@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-020",
+      "name": "androidx.media3:media3-exoplayer-hls",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-exoplayer-hls@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-021",
+      "name": "androidx.media3:media3-transformer",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-transformer@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-022",
+      "name": "androidx.media3:media3-ui",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-ui@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-023",
+      "name": "androidx.media3:media3-ui-compose-material3",
+      "versionInfo": "1.11.0-beta01",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "AndroidX is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/androidx.media3/media3-ui-compose-material3@1.11.0-beta01"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Maven-024",
+      "name": "com.google.oboe:oboe",
+      "versionInfo": "1.9.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "Oboe is published under the Apache License 2.0",
+      "supplier": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.oboe/oboe@1.9.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Native-001",
+      "name": "UxPlay",
+      "versionInfo": "462153392f2e30937424922039ff9f0cda5e7b1a",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0-only",
+      "licenseComments": "UxPlay is licensed under GPL-3.0; see OPEN_SOURCE_NOTICES.txt (source: docs/research/native-audit.lock.json (FDH2/UxPlay))",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-002",
+      "name": "libplist",
+      "versionInfo": "2.3.1 (commit f41b1ea67045)",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "LGPL-2.1-or-later",
+      "licenseComments": "libplist is licensed under LGPL-2.1-or-later (source: docs/research/native-audit.lock.json (libimobiledevice/libplist))",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-003",
+      "name": "FFmpeg",
+      "versionInfo": "8.1.2 (commit 38b88335f99e)",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "LGPL-2.1-or-later",
+      "licenseComments": "FFmpeg is built with the LGPL configuration recorded in legal/NOTICE.md (source: docs/research/native-audit.lock.json (FFmpeg/FFmpeg))",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-004",
+      "name": "OpenSSL",
+      "versionInfo": "3.4.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseComments": "OpenSSL 3.x is licensed under the Apache License 2.0 (source: app/src/main/cpp/CMakeLists.txt)",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-005",
+      "name": "openssl-cmake",
+      "versionInfo": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseComments": "CMake build wrapper; licence not recorded in this repository, verify before distribution (source: docs/research/native-audit.lock.json (viaduck/openssl-cmake))",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-006",
+      "name": "RPiPlay (playfair antecedent)",
+      "versionInfo": "64d0341ed3bef098c940c9ed0675948870a271f9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0-only",
+      "licenseComments": "Playfair's GPL-3.0 origin; see docs/research/native-audit.lock.json (source: docs/research/native-audit.lock.json (FD-/RPiPlay))",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-007",
+      "name": "playfair",
+      "versionInfo": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0-only",
+      "licenseComments": "Playfair's GPL-3.0 origin; see docs/research/native-audit.lock.json (source: docs/research/native-audit.lock.json (EstebanKubata/playfair))",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-008",
+      "name": "android-airplay-server (JNI wrapper)",
+      "versionInfo": "c8defdd70d7e6a04f4f1b71d353653682d594106",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0-only",
+      "licenseComments": "Integration candidate core; see legal/NOTICE.md (source: docs/research/native-audit.lock.json (jqssun/android-airplay-server))",
+      "supplier": "NOASSERTION"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Package-AirRelay"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-001"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-002"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-003"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-004"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-005"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-006"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-007"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-008"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-009"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-010"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-011"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-012"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-013"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-014"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-015"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-016"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-017"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-018"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-019"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-020"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-021"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-022"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-023"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Maven-024"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-001"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-002"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-003"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-004"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-005"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-006"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-007"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-008"
+    }
+  ]
+}
