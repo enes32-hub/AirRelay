@@ -27,9 +27,9 @@ writes a verified manifest into the archive (the export refuses to include signi
 **Publication channel — must be filled in before the first public binary is offered:**
 GPL-3.0 section 6 requires that recipients of a binary can obtain this source. Either publish the
 archive at a stable URL and record it here, or attach it to the distribution itself and offer it
-in writing for three years. Replace `<SOURCE-URL-NOT-SET>` below with the real address:
+in writing for three years. Replace `https://github.com/enes32-hub/AirRelay` below with the real address:
 
-    Corresponding source: <SOURCE-URL-NOT-SET>
+    Corresponding source: https://github.com/enes32-hub/AirRelay
 
 Until that address exists, `scripts/check_readiness.py --release` stays blocked (gate
 `G0-LICENSE`), which is the intended behaviour.

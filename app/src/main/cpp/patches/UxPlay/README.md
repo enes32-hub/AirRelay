@@ -6,7 +6,7 @@ three recorded steps.
 ## 1. Pinned upstream
 
 UxPlay at commit `462153392f2e30937424922039ff9f0cda5e7b1a` (the pin also appears in
-`docs/DEPENDENCY_AND_LICENSE_DECISION.md` and `docs/research/native-audit.lock.json`).
+`legal/SBOM.spdx.json` and `docs/research/native-audit.lock.json`).
 
 ## 2. `0001`–`0006`: upstream → 2026-09-07 delivery baseline
 

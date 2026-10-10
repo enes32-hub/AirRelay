@@ -41,16 +41,17 @@ note recording the rename; requirement identifiers and thresholds are unchanged.
 
 The full privacy policy is published at:
 
-- **English (use this URL in the Play Console):** <https://enes32-hub.github.io/AirRelay/legal/privacy.html>
-- **Türkçe:** <https://enes32-hub.github.io/AirRelay/legal/privacy-tr.html>
+- **English (use this URL in the Play Console):** <https://enes32-hub.github.io/AirRelay/privacy.html>
+- **Türkçe:** <https://enes32-hub.github.io/AirRelay/privacy-tr.html>
 
 It is also available inside the app under *Settings → About*.
 
 ## Build
 
 Requirements: **JDK 17**, **Android SDK** (platform 36, build-tools 36.0.0), **NDK 29.0.14206865**,
-**CMake 3.22.1**, **Python 3.13** and, on Windows, **MSYS2** for the FFmpeg/OpenSSL build.
-Details: [docs/BUILD_ENVIRONMENT.md](docs/BUILD_ENVIRONMENT.md).
+**CMake 3.22.1**, **Python 3.13** and, on Windows, **MSYS2** for the FFmpeg/OpenSSL build. The
+supported path is the build script below: it copies the sources to a short ASCII path first, because
+the MSYS2 FFmpeg/OpenSSL toolchain is unreliable under a Unicode working directory.
 
 Create `local.properties` with your own paths (see `local.properties.example`):
 

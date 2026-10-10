@@ -96,3 +96,22 @@ legal/REVIEW_REQUEST.md
 
 # Generated test output and the internal archive — not published
 artifacts/preparation-tests.json
+
+# Minimal public tree — these stay in the working copy only
+CHANGELOG.md
+docs/ARCHITECTURE.md
+docs/BUILD_ENVIRONMENT.md
+docs/CORE_SELECTION.md
+docs/DEPENDENCY_AND_LICENSE_DECISION.md
+docs/DEVICE_BLOCKLIST_PLAN.md
+docs/DEVICE_COMPATIBILITY.json
+docs/DEVICE_COMPATIBILITY.md
+docs/R40_UNUSED_STRINGS.txt
+docs/TEST_PLAN.md
+docs/archive/legal/SBOM-0.0.31-provisional.spdx.json
+docs/legal/README.md
+docs/productization/IMPLEMENTATION_STATUS.json
+docs/refinement2/PREVIOUS_DELIVERY_PROTECTED_SHA256.json
+docs/refinement2/SOURCE_CHANGE_INDEX.json
+docs/refinement2/STATUS.json
+docs/research/NATIVE_AUDIT_FINDINGS.md

@@ -11,7 +11,8 @@ import html
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
+LEGAL = ROOT / "legal"
 PAGES = {
     "PRIVACY.md": ("privacy.html", "privacy-tr.html", "en"),
     "PRIVACY.tr.md": ("privacy-tr.html", "privacy.html", "tr"),
@@ -188,7 +189,7 @@ Every statement about the application was verified against the 1.0.0 source tree
 
 def main() -> int:
     for source, (page, other, other_label) in PAGES.items():
-        markdown = (ROOT / source).read_text(encoding="utf-8")
+        markdown = (LEGAL / source).read_text(encoding="utf-8")
         label = "Türkçe" if other_label == "tr" else "English"
         rendered = convert(markdown, other, f"{label} version" if label == "English" else f"{label} sürüm")
         (ROOT / page).write_text(rendered, encoding="utf-8", newline="\n")
@@ -196,8 +197,8 @@ def main() -> int:
     (ROOT / "index.html").write_text(INDEX.format(style=STYLE), encoding="utf-8", newline="\n")
     print("  index.html")
     user = "USER"
-    (ROOT / "README.md").write_text(README.replace("{user}", user), encoding="utf-8", newline="\n")
-    print("  README.md")
+    (LEGAL / "README.md").write_text(README.replace("{user}", user), encoding="utf-8", newline="\n")
+    print("  legal/README.md")
     return 0
 
 

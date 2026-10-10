@@ -5,12 +5,11 @@ Android TV developed by **Mahmut Enes Bozdoğan**.
 
 | Page | URL |
 |---|---|
-| Privacy policy (English) | https://enes32-hub.github.io/AirRelay/legal/privacy.html |
-| Gizlilik politikası (Türkçe) | https://enes32-hub.github.io/AirRelay/legal/privacy-tr.html |
-| Landing page | https://enes32-hub.github.io/AirRelay/ |
+| Privacy policy (English) | https://USER.github.io/airrelay-legal/privacy.html |
+| Gizlilik politikası (Türkçe) | https://USER.github.io/airrelay-legal/privacy-tr.html |
+| Landing page | https://USER.github.io/airrelay-legal/ |
 
-The privacy-policy URL to enter in the Google Play Console store listing is the **English** page:
-`https://enes32-hub.github.io/AirRelay/legal/privacy.html`
+The privacy-policy URL to enter in the Google Play Console store listing is the **English** page.
 
 ## Sources
 
@@ -18,7 +17,7 @@ The privacy-policy URL to enter in the Google Play Console store listing is the 
 |---|---|
 | `PRIVACY.md` | English source (single source of truth) |
 | `PRIVACY.tr.md` | Turkish translation |
-| `build_site.py` | Renders the markdown above into `privacy.html`, `privacy-tr.html` |
+| `build_site.py` | Renders the markdown above into `privacy.html`, `privacy-tr.html`, `index.html` |
 
 Pages are plain HTML with inline CSS — no external stylesheet, no CDN, no JavaScript — because the
 Play Console requires the policy to be on an active, non-editable URL and rejects PDFs.
