@@ -14,8 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LEGAL = ROOT / "legal"
 PAGES = {
-    "PRIVACY.md": ("privacy.html", "privacy-tr.html", "en"),
-    "PRIVACY.tr.md": ("privacy-tr.html", "privacy.html", "tr"),
+    "PRIVACY.md": ("privacy.html", None, "en"),
 }
 
 STYLE = """
@@ -98,6 +97,7 @@ def convert(markdown: str, other_page: str, other_label: str) -> str:
         body.append("<p>" + inline(" ".join(paragraph)) + "</p>")
 
     title = next((re.sub(r"^#\s+", "", l) for l in lines if l.startswith("# ")), "Privacy Policy")
+    language_nav = f'<nav class="lang"><a href="{other_page}">{other_label}</a></nav>' if other_page else ""
     return f"""<!DOCTYPE html>
 <html lang="{'tr' if 'Gizlilik' in title else 'en'}">
 <head>
@@ -107,7 +107,7 @@ def convert(markdown: str, other_page: str, other_label: str) -> str:
 <style>{STYLE}</style>
 </head>
 <body>
-<nav class="lang"><a href="{other_page}">{other_label}</a></nav>
+{language_nav}
 {chr(10).join(body)}
 <footer>This page is the privacy policy for the Android TV application AirRelay Receiver
 (<code>com.airrelay.receiver</code>). It is served as plain HTML because Google Play does not accept
@@ -150,9 +150,8 @@ Android TV developed by **Mahmut Enes Bozdoğan**.
 
 | Page | URL |
 |---|---|
-| Privacy policy (English) | https://{user}.github.io/airrelay-legal/privacy.html |
-| Gizlilik politikası (Türkçe) | https://{user}.github.io/airrelay-legal/privacy-tr.html |
-| Landing page | https://{user}.github.io/airrelay-legal/ |
+| Privacy policy (English) | https://{user}.github.io/AirRelay/privacy.html |
+| Landing page | https://{user}.github.io/AirRelay/ |
 
 The privacy-policy URL to enter in the Google Play Console store listing is the **English** page.
 
@@ -190,8 +189,7 @@ Every statement about the application was verified against the 1.0.0 source tree
 def main() -> int:
     for source, (page, other, other_label) in PAGES.items():
         markdown = (LEGAL / source).read_text(encoding="utf-8")
-        label = "Türkçe" if other_label == "tr" else "English"
-        rendered = convert(markdown, other, f"{label} version" if label == "English" else f"{label} sürüm")
+        rendered = convert(markdown, other, "")
         (ROOT / page).write_text(rendered, encoding="utf-8", newline="\n")
         print(f"  {source} -> {page} ({len(rendered)} bytes)")
     (ROOT / "index.html").write_text(INDEX.format(style=STYLE), encoding="utf-8", newline="\n")

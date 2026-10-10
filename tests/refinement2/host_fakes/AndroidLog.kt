@@ -1,6 +1,0 @@
-package android.util
-object Log {
-    fun i(tag: String, value: String) = 0
-    fun e(tag: String, value: String) = 0
-    fun w(tag: String, value: String) = 0
-}

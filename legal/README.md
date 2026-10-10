@@ -5,9 +5,8 @@ Android TV developed by **Mahmut Enes Bozdoğan**.
 
 | Page | URL |
 |---|---|
-| Privacy policy (English) | https://USER.github.io/airrelay-legal/privacy.html |
-| Gizlilik politikası (Türkçe) | https://USER.github.io/airrelay-legal/privacy-tr.html |
-| Landing page | https://USER.github.io/airrelay-legal/ |
+| Privacy policy (English) | https://USER.github.io/AirRelay/privacy.html |
+| Landing page | https://USER.github.io/AirRelay/ |
 
 The privacy-policy URL to enter in the Google Play Console store listing is the **English** page.
 

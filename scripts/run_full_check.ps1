@@ -42,7 +42,11 @@ try {
     Invoke-Check 'Provenance and source checks' @('scripts/productization/check_source.py') | Out-Null
     Invoke-Check 'Acceptance bookkeeping (preparation)' @('scripts/check_readiness.py') | Out-Null
     Invoke-Check 'Generated SBOM is current' @('tools/generate_sbom.py', '--check') | Out-Null
-    Invoke-Check 'Unit tests' @('-m', 'unittest', 'discover', '-s', 'tests') | Out-Null
+    if (Test-Path -LiteralPath (Join-Path $PSScriptRoot '..\tests')) {
+        Invoke-Check 'Unit tests' @('-m', 'unittest', 'discover', '-s', 'tests') | Out-Null
+    } else {
+        Write-Host ("  {0,-40} SKIP (test suite is not part of this distribution)" -f 'Unit tests') -ForegroundColor Yellow
+    }
 
     if ($Release) {
         Invoke-Check 'Release gate (must pass)' @('scripts/check_readiness.py', '--release') | Out-Null

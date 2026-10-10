@@ -118,3 +118,8 @@ docs/research/NATIVE_AUDIT_FINDINGS.md
 
 # Built libraries are distributed as release assets, not in the source tree
 artifacts/evidence/*.so
+
+# Not part of the public distribution — kept in the working copy
+privacy-tr.html
+legal/PRIVACY.tr.md
+tests/
