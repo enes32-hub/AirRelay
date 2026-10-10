@@ -123,3 +123,6 @@ artifacts/evidence/*.so
 privacy-tr.html
 legal/PRIVACY.tr.md
 tests/
+
+# Local scratch directory
+.tmpcheck/
