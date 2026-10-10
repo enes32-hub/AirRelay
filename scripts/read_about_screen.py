@@ -10,8 +10,10 @@ import sys
 import time
 import xml.etree.ElementTree as ET
 
-ADB = r"C:\Users\ASUS\AppData\Local\Android\Sdk\platform-tools\adb.exe"
-SERIAL = "192.168.31.131:5555"
+import os
+
+ADB = os.environ.get("ADB", "adb")
+SERIAL = os.environ.get("AIRRELAY_TV", "<tv-serial-or-ip:5555>")
 PKG = "com.airrelay.receiver"
 
 

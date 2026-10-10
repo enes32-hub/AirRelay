@@ -13,7 +13,7 @@ import time
 import uuid
 
 ROOT = Path(__file__).resolve().parents[2]
-ADB = r'C:\Users\ASUS\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+ADB = r'adb\Local\Android\Sdk\platform-tools\adb.exe'
 SERIAL = 'emulator-5584'
 CONTROL, MEDIA = 38609, 38608
 

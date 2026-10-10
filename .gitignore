@@ -93,3 +93,6 @@ docs/refinement2/ETKILESIM_MATRISI.md
 docs/refinement2/KAYNAK_KANITLARI.md
 docs/research/ALTERNATIVE_CORES.md
 legal/REVIEW_REQUEST.md
+
+# Generated test output and the internal archive — not published
+artifacts/preparation-tests.json

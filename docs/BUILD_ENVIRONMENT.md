@@ -30,7 +30,7 @@ python scripts/environment_doctor.py --sdk "$env:LOCALAPPDATA\Android\Sdk"
 On this machine `python` resolves to the Windows Store alias. The working local interpreter:
 
 ```powershell
-& 'C:\Users\ASUS\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/environment_doctor.py
+& 'C:\Users\<user>\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/environment_doctor.py
 ```
 
 The tool does not install anything, does not accept the SDK license, does not connect to devices and does not install APKs. It does not write the identifiers from the ADB list into the report. The absence of a device connected to ADB does not mean there is no device at home; physical access has not yet been verified.

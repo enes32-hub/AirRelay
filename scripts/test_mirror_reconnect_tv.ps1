@@ -1,5 +1,5 @@
 param(
-    [string]$Serial='192.168.31.131:5555',
+    [string]$Serial=$env:AIRRELAY_TV,
     [string]$BuildRoot=(Join-Path $env:LOCALAPPDATA 'AirRelay-build'),
     [string]$NativeDir='',
     [string]$NdkVersion='29.0.14206865',

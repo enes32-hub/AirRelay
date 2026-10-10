@@ -6,6 +6,8 @@ import hashlib, json, os, plistlib, re, socket, subprocess, sys, time
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
+import os
+
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'artifacts/rc27-quality-access/python-deps'))
 from cryptography.hazmat.primitives.asymmetric import ed25519, x25519
@@ -13,7 +15,7 @@ from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 
-ADB = r'C:\Users\ASUS\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+ADB = os.environ.get('ADB', 'adb')
 def adb(*args):
     return subprocess.check_output([ADB, '-s', 'emulator-5584', *args])
 def raw(key): return key.public_bytes(serialization.Encoding.Raw, serialization.PublicFormat.Raw)
