@@ -1,31 +1,31 @@
-# AirPlay çekirdeği seçimi
+# AirPlay core selection
 
-## Seçilen entegrasyon adayı
+## Selected integration candidate
 
-- Depo: [`jqssun/android-airplay-server`](https://github.com/jqssun/android-airplay-server)
-- Sabit kaynak: `c8defdd70d7e6a04f4f1b71d353653682d594106`
-- Lisans: GPL-3.0
-- Hedef: Android TV'de iPhone'un yerleşik **Denetim Merkezi → Ekran Yansıtma** akışında görünen alıcı.
+- Repository: [`jqssun/android-airplay-server`](https://github.com/jqssun/android-airplay-server)
+- Pinned source: `c8defdd70d7e6a04f4f1b71d353653682d594106`
+- License: GPL-3.0
+- Target: a receiver that appears in the iPhone's built-in **Control Center → Screen Mirroring** flow on Android TV.
 
-Bu aday Android TV, JNI, UxPlay, MediaCodec/SurfaceView, ses ve PIN yapılarını içerdiğini beyan eder. Bu beyan henüz AynaTV'nin cihaz testi değildir. Apple TV uygulaması gibi DRM'li içerikler kabul kapsamı dışındadır.
+This candidate declares that it contains Android TV, JNI, UxPlay, MediaCodec/SurfaceView, audio and PIN structures. This declaration is not yet a device test by AirRelay. DRM-protected content such as the Apple TV app is outside the acceptance scope.
 
-## Dağıtım sonucu
+## Distribution outcome
 
-Ticari SDK veya ücretli lisans alınmayacak. AynaTV bu adaydan türetilerek dağıtılırsa GPL-3.0 şartları uygulanır: karşılık gelen kaynak kod, değişiklikler, üçüncü taraf bildirimleri ve yeniden üretim yönergeleri teslim paketine eklenir.
+No commercial SDK or paid license will be obtained. If AirRelay is distributed as a derivative of this candidate, the terms of GPL-3.0 apply: the corresponding source code, modifications, third-party notices and reproduction instructions are added to the delivery package.
 
-## 31 Ağustos 2026 doğrulama durumu
+## 31 August 2026 verification status
 
-- Kaynak ve alt modüller indirildi.
-- Android Gradle yapılandırması x86_64 emülatör için çalıştırıldı.
-- Windows yol kodlaması, Python ve patch araçları için yalnız araştırma/derleme kopyasında uyumluluk ayarları yapıldı.
-- Windows x86_64 spike'ı Gradle, CMake, UxPlay, libplist, FFmpeg ve OpenSSL ile tamamlandı. OpenSSL 3.4.4 arşivi resmi SHA-256 değeriyle doğrulandı; Windows/NDK r29 araç adı farkları yalnız geçici araştırma derleme kopyasında uyumlulaştırıldı.
-- `io.github.jqssun.airplay` hata ayıklama APK'sı üretildi; yalnız x86_64 emülatör ABI'sini içerir ve fiziksel TV için paket değildir.
-- APK, Android TV emülatörüne kuruldu. TV arayüzü açıldı; kumanda orta tuşuyla alıcı durdurulup yeniden başlatıldı. Ön plan hizmeti çalıştı, yerel alıcı başlatıldı ve AirPlay ile RAOP mDNS kayıtları yayımlandı. Çökme kaydı görülmedi.
-- Çalışan çekirdek ana AynaTV `app` modülüne taşındı. Eski gerçek işlevi olmayan başlangıç iskeleti `prototype/initial-skeleton/` altında korunur. Yüklenen AynaTV paket kimliği `com.aynatv.receiver` ve görünen adı AynaTV Receiver'dır.
-- Windows'la sınırlı native yapı uyarlamaları kaynak içinde belgelenmiştir. `scripts/build_receiver.ps1`, kaynakları ASCII geçici çalışma yoluna alır ve x86_64 emülatör APK'sını orada üretir; bu gereksinim ürün veya iPhone testi değildir.
-- Ana kaynak entegrasyonu, `com.aynatv.receiver` olarak emülatöre kuruldu. UxPlay, FFmpeg, OpenSSL, libplist ve JNI'den oluşan x86_64 native alıcı temiz kaynaklardan CMake/Ninja ile derlendi ve bu kütüphane APK'ya paketlendi. Arayüzde alıcı bekleme durumu ile D-pad orta tuşundaki durdur/başlat geçişi gözlendi; başlatmanın ardından 7000 portunda AirPlay ve RAOP mDNS kayıtları ilan edildi. ARM32/ARM64 ve 16 KB paketleri yine ayrı doğrulama kapısıdır.
-- WSL Ubuntu'da make var, ancak Java ve Android SDK kurulu değil. Bu nedenle bu oturumda doğal Linux derlemesi başlatılamadı.
-- iPhone 14 Pro → Xiaomi TV Box 4K kabul testi, kullanıcı tercihi gereği günlük emülatör çalışmalarından sonra tek final aşamasında yapılacak.
+- The source and submodules were downloaded.
+- The Android Gradle configuration was run for the x86_64 emulator.
+- Compatibility adjustments for Windows path encoding, Python and patch tools were made only in the research/build copy.
+- The Windows x86_64 spike was completed with Gradle, CMake, UxPlay, libplist, FFmpeg and OpenSSL. The OpenSSL 3.4.4 archive was verified with its official SHA-256 value; Windows/NDK r29 tool name differences were reconciled only in the temporary research build copy.
+- A debug APK of `io.github.jqssun.airplay` was produced; it contains only the x86_64 emulator ABI and is not a package for a physical TV.
+- The APK was installed on the Android TV emulator. The TV interface opened; the receiver was stopped and restarted with the remote's center button. The foreground service ran, the local receiver started, and AirPlay and RAOP mDNS records were published. No crash log was observed.
+- The working core was moved into the main AirRelay `app` module. The old initial skeleton with no real functionality is kept under `prototype/initial-skeleton/`. The installed AirRelay package ID is `com.aynatv.receiver` and its display name is AirRelay Receiver.
+- Windows-only native build adaptations are documented in the source. `scripts/build_receiver.ps1` copies the sources to an ASCII temporary working path and produces the x86_64 emulator APK there; this requirement is not a product or iPhone test.
+- The main source integration was installed on the emulator as `com.aynatv.receiver`. The x86_64 native receiver consisting of UxPlay, FFmpeg, OpenSSL, libplist and JNI was built from clean sources with CMake/Ninja and this library was packaged into the APK. In the interface, the receiver standby state and the stop/start toggle on the D-pad center button were observed; after starting, AirPlay and RAOP mDNS records were advertised on port 7000. ARM32/ARM64 and 16 KB packages are again a separate verification gate.
+- `make` is available in WSL Ubuntu, but Java and the Android SDK are not installed. Therefore a native Linux build could not be started in this session.
+- The iPhone 14 Pro → Xiaomi TV Box 4K acceptance test will be performed in a single final stage after the daily emulator work, as per the user's preference.
 
-Bu dosya bir seçim ve deneme kaydıdır; gerçek iPhone ekran yansıtma kanıtı değildir. iPhone 14 Pro → Xiaomi TV Box 4K kabul testi, video/ses/senkron ve bağlantı doğrulaması için zorunlu son kapıdır.
+This file is a record of selection and trials; it is not proof of real iPhone screen mirroring. The iPhone 14 Pro → Xiaomi TV Box 4K acceptance test is the mandatory final gate for video/audio/synchronization and connection verification.
 

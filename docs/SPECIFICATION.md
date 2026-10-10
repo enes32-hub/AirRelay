@@ -4,7 +4,7 @@
 > **Belge türü:** Bağlayıcı üretim şartnamesi  
 > **Hedef platform:** Yalnız Android TV — alıcı uygulama televizyona kurulacaktır.  
 > **Ana kullanım:** iPhone ekranını ve desteklenen sesi, iPhone'a ayrı uygulama kurmadan sistemin Ekran Yansıtma menüsünden AirPlay üzerinden aynı yerel ağdaki Android TV'ye yansıtmak.  
-> **Çalışma adı:** AynaTV Receiver  
+> **Çalışma adı:** AirRelay Receiver  
 > **Belge tarihi:** 31 Ağustos 2026  
 > **Sürüm numarası:** Kullanılmayacaktır  
 > **Ürün modeli:** Tamamen ücretsiz, reklamsız, hesapsız, bulutsuz ve izleyicisiz  
@@ -43,11 +43,11 @@ Bu belgedeki **ZORUNLU**, **YASAK**, **MUTLAKA**, **P0** ve **teslim kapısı** 
 
 # 1. ÜRÜNÜN KISA TANIMI
 
-AynaTV Receiver, Android TV veya Google TV cihazını yerel ağda bir iPhone/iPad ekran yansıtma alıcısına dönüştüren televizyon uygulamasıdır.
+AirRelay Receiver, Android TV veya Google TV cihazını yerel ağda bir iPhone/iPad ekran yansıtma alıcısına dönüştüren televizyon uygulamasıdır.
 
 Kullanıcı akışı:
 
-1. Kullanıcı televizyonunda AynaTV Receiver uygulamasını açar.
+1. Kullanıcı televizyonunda AirRelay Receiver uygulamasını açar.
 2. Uygulama ağ izinlerini ve alıcı hizmetini hazırlar.
 3. Televizyon, ağda seçilebilir bir ekran yansıtma alıcısı olarak ilan edilir.
 4. Kullanıcı iPhone/iPad Denetim Merkezi içindeki **Ekran Yansıtma** seçeneğini açar.
@@ -796,7 +796,7 @@ Uygulama:
 Varsayılan:
 
 ```text
-AynaTV — Salon
+AirRelay — Salon
 ```
 
 Kurallar:
@@ -1619,7 +1619,7 @@ Yansıtma için hazır
 iPhone'unuzda:
 1. Denetim Merkezi'ni açın
 2. Ekran Yansıtma'ya dokunun
-3. "AynaTV — Salon"u seçin
+3. "AirRelay — Salon"u seçin
 
 Ağ: İyi        PIN: Açık
 ```
@@ -2616,8 +2616,8 @@ diagnostics/
 
 Teslim:
 
-- `AynaTV-Receiver-release.aab`
-- `AynaTV-Receiver-universal-test.apk`
+- `AirRelay-release.aab`
+- `AirRelay-universal-test.apk`
 - Native debug symbols
 - Mapping file
 - Kaynak kodu
@@ -2963,7 +2963,7 @@ P0 eksikse ürün tamamlandı sayılmayacaktır.
 
 Uygulama içindeki “Hakkında / Uyumluluk” bölümünde aşağıdaki anlama gelen açık metin bulunacaktır:
 
-> AynaTV Receiver, iPhone ve iPad ekranını aynı yerel ağdaki Android TV’ye yansıtmak için tasarlanmıştır. Kalite; televizyon donanımı, Wi‑Fi koşulları ve yönlendirici ayarlarına bağlıdır. En iyi sonuç için televizyonu Ethernet’e, iPhone’u 5 GHz veya 6 GHz Wi‑Fi’a bağlayın. Netflix, Apple TV+ ve benzeri hizmetlerdeki DRM korumalı içerikler yansıtılamayabilir. Uygulama bu korumaları aşmaz. AynaTV Receiver, Apple Inc. veya AirScreen geliştiricisiyle bağlantılı değildir.
+> AirRelay Receiver, iPhone ve iPad ekranını aynı yerel ağdaki Android TV’ye yansıtmak için tasarlanmıştır. Kalite; televizyon donanımı, Wi‑Fi koşulları ve yönlendirici ayarlarına bağlıdır. En iyi sonuç için televizyonu Ethernet’e, iPhone’u 5 GHz veya 6 GHz Wi‑Fi’a bağlayın. Netflix, Apple TV+ ve benzeri hizmetlerdeki DRM korumalı içerikler yansıtılamayabilir. Uygulama bu korumaları aşmaz. AirRelay Receiver, Apple Inc. veya AirScreen geliştiricisiyle bağlantılı değildir.
 
 Metin hukuk denetiminde güncellenebilir; içerdiği gerçek sınırlar gizlenemez.
 
@@ -3080,3 +3080,11 @@ Bu ürünü yalnızca güzel görünen bir Android TV arayüzü olarak üretme.
 tam bir alıcı uygulamadır.
 
 Herhangi bir P0 maddeyi uygulamadan veya test etmeden “proje tamamlandı” deme.
+
+---
+
+**Naming note.** This is the original product specification. It was written while the project
+used the working name *AynaTV Receiver*; the shipped product name is **AirRelay Receiver**
+(package `com.airrelay.receiver`). Requirement identifiers, thresholds and acceptance criteria
+are unchanged by the rename. The note is appended at the end so that the source line numbers
+referenced by REQUIREMENTS_TRACEABILITY.csv stay valid.

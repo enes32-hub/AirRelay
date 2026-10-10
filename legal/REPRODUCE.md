@@ -16,10 +16,10 @@ This document records the current development build, not a release approval.
 
 ```powershell
 # Android TV emulator
-./scripts/build_receiver.ps1 -Abis x86_64 -BuildRoot C:\AynaTVBuild
+./scripts/build_receiver.ps1 -Abis x86_64 -BuildRoot C:\AirRelayBuild
 
 # Android TV hardware packages
-./scripts/build_receiver.ps1 -Abis arm64-v8a,armeabi-v7a -BuildRoot C:\AynaTVArmBuild
+./scripts/build_receiver.ps1 -Abis arm64-v8a,armeabi-v7a -BuildRoot C:\AirRelayArmBuild
 ```
 
 The native build compiles the checked-in UxPlay, FFmpeg, libplist and OpenSSL

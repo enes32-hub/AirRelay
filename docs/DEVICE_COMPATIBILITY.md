@@ -1,29 +1,29 @@
-# Fiziksel test cihazları
+# Physical test devices
 
-Kullanıcı 31 Ağustos 2026'da ilk test çiftini **iPhone 14 Pro** ve **Xiaomi TV Box 4K (son nesil olarak tarif edilen)** cihazları olarak belirtti.
+On 31 August 2026 the user specified the first test pair as an **iPhone 14 Pro** and a **Xiaomi TV Box 4K (described as the latest generation)**.
 
-Henüz iOS sürümü/build'i, Xiaomi'nin tam model numarası, Android sürümü/build'i ve fiziksel ADB erişimi doğrulanmadı. [Makine okunur kayıt](DEVICE_COMPATIBILITY.json) bu alanları bilinmiyor olarak tutar. Burada destek onayı verilmez.
+The iOS version/build, Xiaomi's exact model number, the Android version/build and physical ADB access have not been verified yet. The [machine-readable record](DEVICE_COMPATIBILITY.json) keeps these fields as unknown. No support approval is given here.
 
-TV kutusunun ürün etiketindeki tam model numarası ile Ayarlar → Cihaz tercihleri/Sistem → Hakkında bölümündeki model ve Android sürümü kullanılacak; menü adları cihaz sürümüne göre değişebilir. iPhone sürümü Ayarlar → Genel → Hakkında ekranından okunabilir. Cihaz seri numarası, hesap bilgisi, MAC adresi veya PIN paylaşılması gerekmez.
+The exact model number on the TV box's product label and the model and Android version in Settings → Device Preferences/System → About will be used; menu names may vary with the device version. The iPhone version can be read from the Settings → General → About screen. Device serial number, account information, MAC address or PIN do not need to be shared.
 
-İlk fiziksel deneme, iPhone'daki **Denetim Merkezi → Ekran Yansıtma** akışını kullanacak. iPhone'a yardımcı uygulama kurulmayacak. Xiaomi kutusunun Android TV tabanındaki arayüz markası, ayrıca başka platform uygulaması geliştireceğimiz anlamına gelmez.
+The first physical attempt will use the **Control Center → Screen Mirroring** flow on the iPhone. No helper application will be installed on the iPhone. The interface brand of the Xiaomi box on top of Android TV does not mean that we will also develop an application for another platform.
 
-Bir cihaz çiftinin geçmesi yalnız o model/OS/ağ birleşimini kanıtlar. Şartnamedeki daha geniş iPhone sürüm ve Android TV donanım matrisi, 2/8 saat dayanıklılık ve diğer kabul eşikleri ayrıca sağlanmalıdır.
+One device pair passing only proves that model/OS/network combination. The wider iPhone version and Android TV hardware matrix, the 2/8 hour endurance and the other acceptance thresholds in the specification must also be satisfied separately.
 
-## Test sırası
+## Test order
 
-Kullanıcının 31 Ağustos 2026 talimatı uyarınca, günlük geliştirme ve ara doğrulama Android TV emülatörlerinde yapılacaktır. Gerçek Xiaomi TV yalnız nihai fiziksel kabul aşamasında kullanılacak; bundan önce TV'de sürekli kurulum veya deneme istenmeyecektir. Emülatör sonuçları D-pad, arayüz, servis yaşam döngüsü ve temel paket kurulum kanıtıdır; iPhone keşfi, H.264 donanım çözme, ses/video kalitesi veya gerçek ağ davranışı kabulünün yerine geçmez.
+In line with the user's instruction of 31 August 2026, daily development and intermediate verification will be done on Android TV emulators. The real Xiaomi TV will be used only in the final physical acceptance stage; before that, no continuous installation or trial on the TV will be requested. Emulator results are evidence for the D-pad, the interface, the service life cycle and basic package installation; they do not replace acceptance of iPhone discovery, H.264 hardware decoding, audio/video quality or real network behaviour.
 
-## Bilgisayara test bağlantısı
+## Test connection to the computer
 
-Önce tam model ve Android sürümü doğrulanmalı. [Resmî ADB belgesi](https://developer.android.com/tools/adb) eşleştirme koduyla kablosuz hata ayıklama için TV'de Android 13+ koşulunu belirtiyor; telefondaki Android 11 sınırı TV'ye uygulanmamalı. Üreticinin menüsü bu özelliği sunmuyorsa modelin desteklediği bağlantı yolu ayrıca belirlenmeli. Rastgele IP taraması, port yönlendirme veya yetkilendirme atlama yapılmayacak.
+The exact model and Android version must be verified first. The [official ADB documentation](https://developer.android.com/tools/adb) states the Android 13+ requirement on the TV for wireless debugging with a pairing code; the Android 11 limit on phones should not be applied to the TV. If the manufacturer's menu does not offer this feature, the connection path supported by the model must be determined separately. No random IP scanning, port forwarding or authorisation bypass will be done.
 
-Güvenilir yerel ağda cihaz sahibi TV'nin geliştirici seçeneklerinden hata ayıklamayı açıp yalnız kendi bilgisayarını yetkilendirir. Kod gereken bağlantıda `adb pair IP:ESLESTIRME_PORTU` kullanılır; kod yerel terminaldeki isteme girilir, sohbete veya dosyaya yazılmaz. USB yolunda TV'deki RSA onayı cihaz sahibi tarafından verilir. Bu hazırlık TV'yi değiştirip uygulama kurmaz; test bitince hata ayıklama kapatılmalı ve bilgisayar yetkisi kaldırılmalıdır.
+On a trusted local network the device owner enables debugging from the TV's developer options and authorises only their own computer. For a connection that requires a code, `adb pair IP:PAIRING_PORT` is used; the code is entered at the prompt in the local terminal, it is not written into the chat or into a file. On the USB path the RSA confirmation on the TV is given by the device owner. This preparation does not modify the TV or install an application; debugging must be turned off and the computer's authorisation removed once the test is over.
 
-Bağlantı kurulduktan sonra yalnız seçilen TV'nin model, OS, ABI ve TV özelliklerini okumak için:
+After the connection is established, to read only the selected TV's model, OS, ABI and TV features:
 
 ```powershell
-python scripts/collect_tv_environment.py --serial 'ADB_LISTESINDEKI_TV'
+python scripts/collect_tv_environment.py --serial 'TV_IN_ADB_LIST'
 ```
 
-Araç otomatik eşleştirme/bağlantı yapmaz, uygulama kurmaz, bütün sistem özelliklerini veya logları toplamaz. ADB adresi/seri numarası rapora yazılmaz. Çıktı Git dışında tutulan `artifacts/local/tv-environment.json` dosyasındadır. Emülatörler reddedilir; sıfır çıkış kodu yalnız metadata okunduğunu belirtir, fiziksel cihaz kimliği ve yansıtma başarısını kanıtlamaz. Şu anda fiziksel Xiaomi erişimi doğrulanmış değildir.
+The tool does not do automatic pairing/connection, does not install an application, and does not collect all system properties or logs. The ADB address/serial number is not written into the report. The output is in the file `artifacts/local/tv-environment.json`, which is kept outside Git. Emulators are rejected; a zero exit code only indicates that metadata was read, it does not prove physical device identity or mirroring success. At present, physical Xiaomi access has not been verified.

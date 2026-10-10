@@ -13,6 +13,20 @@ cloud service.
 | Language | Kotlin + Jetpack Compose (Material 3), native C/C++ core |
 | Licence | GPL-3.0 (see [Licence](#licence-and-third-party-components)) |
 
+## Naming
+
+The project was developed under the working name **AynaTV Receiver** and ships as **AirRelay
+Receiver** (`com.airrelay.receiver`). Historical identifiers are kept where they are facts rather
+than branding:
+
+- the baseline source-archive filenames recorded in the protected-core hash manifests,
+- the backward-compatibility shims that migrate existing installations — `app/build.gradle.kts` still
+  accepts the old `aynatv.*` Gradle properties, and `ReceiverName.kt` renames an old default device
+  name to the current one.
+
+`docs/SPECIFICATION.md` is the original requirement specification, kept in Turkish, with an appended
+note recording the rename; requirement identifiers and thresholds are unchanged.
+
 ## Features
 
 - Screen mirroring with hardware video decoding (MediaCodec → SurfaceView, HEVC and H.264)

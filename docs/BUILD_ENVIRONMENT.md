@@ -1,48 +1,48 @@
-# Geliştirme ortamı
+# Development environment
 
-31 Ağustos 2026 incelemesi. [Makine denetimi](../artifacts/environment-report.json) ile resmî sürüm doğrulaması farklı kanıtlardır; kurulu klasör, çalışan toolchain kanıtı sayılmaz.
+31 August 2026 review. [Machine audit](../artifacts/environment-report.json) and official release verification are different kinds of evidence; an installed folder is not counted as proof of a working toolchain.
 
-| Bileşen | Araştırma tabanı | Kaynak / durum |
+| Component | Research baseline | Source / status |
 |---|---|---|
-| Android SDK | min 26 / compile 37 / target 37 | API 37.0 revision 2 ve android.jar bulundu |
-| AGP | 9.3.2 | [Resmî notlar](https://developer.android.com/build/releases/agp-9-3-0-release-notes); JDK 17 lint düzeltmesi içeriyor |
-| Gradle | 9.5.0 | Aynı AGP uyumluluk tablosu; projede wrapper henüz yok |
-| JDK | 17 | Microsoft JDK 17.0.20.1 çalıştırıldı |
-| Kotlin | 2.4.10 | [Kotlin sürümleri](https://kotlinlang.org/docs/releases.html) |
-| Compose for TV | tv-material 1.1.0 | [Kararlı sürüm tablosu](https://developer.android.com/jetpack/androidx/releases/tv) |
-| Media3 | 1.11.0 | [Resmî notlar](https://developer.android.com/jetpack/androidx/releases/media3); ham mirroring yolunun yerine ExoPlayer kullanılmayacak |
-| NDK | r29 / 29.0.14206865 | [Kararlı sürüm](https://developer.android.com/ndk/downloads); SDK Manager ile kurulum tamamlandı ve iki ARM ABI için gerçek derleme yapıldı |
-| CMake / Ninja | 3.22.1 / SDK ile gelen | Özgün `toolchain-probe` C hedefinde iki ARM ABI için çalıştırıldı; alıcı çekirdeği derlenmedi |
-| Build Tools | 37.0.0 | SDK içinde klasör bulundu; AAB/APK doğrulaması yapılmadı |
-| Android Studio | Quail 3 / 2026.1.3 Patch 1 | [Resmî sürüm](https://developer.android.com/studio/releases); IDE kurulumu bu denetimde doğrulanmadı |
-| Python | 3.12.13 | Bu aşamanın yalnız standart kütüphaneli araştırma/QA araçları için |
+| Android SDK | min 26 / compile 37 / target 37 | API 37.0 revision 2 and android.jar found |
+| AGP | 9.3.2 | [Official notes](https://developer.android.com/build/releases/agp-9-3-0-release-notes); includes the JDK 17 lint fix |
+| Gradle | 9.5.0 | Same AGP compatibility table; there is no wrapper in the project yet |
+| JDK | 17 | Microsoft JDK 17.0.20.1 was run |
+| Kotlin | 2.4.10 | [Kotlin releases](https://kotlinlang.org/docs/releases.html) |
+| Compose for TV | tv-material 1.1.0 | [Stable release table](https://developer.android.com/jetpack/androidx/releases/tv) |
+| Media3 | 1.11.0 | [Official notes](https://developer.android.com/jetpack/androidx/releases/media3); ExoPlayer will not be used in place of the raw mirroring path |
+| NDK | r29 / 29.0.14206865 | [Stable release](https://developer.android.com/ndk/downloads); installation with SDK Manager completed and a real build was performed for two ARM ABIs |
+| CMake / Ninja | 3.22.1 / bundled with the SDK | Run on the original `toolchain-probe` C target for two ARM ABIs; the receiver core was not built |
+| Build Tools | 37.0.0 | Folder found inside the SDK; AAB/APK verification was not performed |
+| Android Studio | Quail 3 / 2026.1.3 Patch 1 | [Official release](https://developer.android.com/studio/releases); the IDE installation was not verified in this audit |
+| Python | 3.12.13 | For this stage's research/QA tools with the standard library only |
 
-[libs.versions.toml](../libs.versions.toml) etkin bağımlılık grafiği değil, sabit araştırma tabanıdır. Lisans incelemesi yapılmadan uygulamaya kütüphane eklenmedi. AGP'nin yerleşik Kotlin desteğiyle seçilen Kotlin/Compose eklentisi uyumu Aşama 1'de resmî yönerge ve gerçek derlemeyle doğrulanacak.
+[libs.versions.toml](../libs.versions.toml) is a fixed research baseline, not the effective dependency graph. No library was added to the application without a license review. The compatibility of the selected Kotlin/Compose plugin with AGP's built-in Kotlin support will be verified in Stage 1 through official guidance and a real build.
 
-Android 17 hedefinde [ACCESS_LOCAL_NETWORK](https://developer.android.com/privacy-and-security/local-network-permission) izni verilmeden ağ iletişimi başlatılmayacak; API kontrolü ve izin iptali ayrı test edilecek. [16 KB sayfa uyumu](https://developer.android.com/guide/practices/page-sizes) NDK sürümüyle kendiliğinden onaylanmaz: ELF/ZIP hizalaması ve gerçek 16 KB çalışma testi gereklidir.
+On the Android 17 target, network communication will not start without the [ACCESS_LOCAL_NETWORK](https://developer.android.com/privacy-and-security/local-network-permission) permission being granted; the API check and permission revocation will be tested separately. [16 KB page compliance](https://developer.android.com/guide/practices/page-sizes) is not confirmed automatically by the NDK version: ELF/ZIP alignment and a real 16 KB run test are required.
 
-## Yeniden denetleme
+## Re-audit
 
 ```powershell
 python scripts/environment_doctor.py --sdk "$env:LOCALAPPDATA\Android\Sdk"
 ```
 
-Bu makinede `python` Windows Store takma adına gidiyor. Çalışan yerel yorumlayıcı:
+On this machine `python` resolves to the Windows Store alias. The working local interpreter:
 
 ```powershell
 & 'C:\Users\ASUS\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/environment_doctor.py
 ```
 
-Araç kurulum yapmaz, SDK lisansı kabul etmez, cihazlara bağlanmaz veya APK yüklemez. ADB listesindeki kimlikleri rapora yazmaz. ADB'ye bağlı cihaz olmaması evde cihaz olmadığı anlamına gelmez; fiziksel erişim henüz doğrulanmamıştır.
+The tool does not install anything, does not accept the SDK license, does not connect to devices and does not install APKs. It does not write the identifiers from the ADB list into the report. The absence of a device connected to ADB does not mean there is no device at home; physical access has not yet been verified.
 
-NDK r29 kurulumu tamamlandı. Aşama 1 öncesinde Gradle wrapper resmi dağıtım hash'iyle sabitlenecek, version catalog gerçek bağımlılıklara bağlanacak, dependency locking/verification metadata üretilecek. Bunlar henüz yapılmış gibi raporlanmadı.
+The NDK r29 installation is complete. Before Stage 1, the Gradle wrapper will be pinned with the official distribution hash, the version catalog will be bound to real dependencies, and dependency locking/verification metadata will be produced. These have not been reported as already done.
 
-## Native araç zinciri denemesi
+## Native toolchain trial
 
 ```powershell
 python scripts/probe_toolchain.py --sdk "$env:LOCALAPPDATA\Android\Sdk"
 ```
 
-[Gerçek komut sonuçları ve hashler](../artifacts/toolchain-probe.json): CMake/Ninja + NDK r29 ile `armeabi-v7a` ve `arm64-v8a` için özgün küçük C kitaplığı derlendi. Her iki ELF'te PT_LOAD hizalaması 16384; ZIP içindeki `.so` veri başlangıçları 16384 ve 32768. Sonuç ayrıca NDK `llvm-readelf` ve SDK `zipalign -c -P 16` ile çapraz kontrol edildi.
+[Real command results and hashes](../artifacts/toolchain-probe.json): the original small C library was compiled with CMake/Ninja + NDK r29 for `armeabi-v7a` and `arm64-v8a`. PT_LOAD alignment is 16384 in both ELFs; the `.so` data start offsets inside the ZIP are 16384 and 32768. The result was also cross-checked with the NDK `llvm-readelf` and the SDK `zipalign -c -P 16`.
 
-Deneme çıktısı `.research/toolchain-probe/` altındadır ve Git dışında tutulur. `layout-16kb.zip` kurulan bir APK değildir; manifest ve uygulama içermez. `verify_native.py` ELF/ZIP biçimini denetler; APK imzası, manifest, dinamik bağımlılıkların tamlığı, decoder işlevi veya gerçek 16 KB cihaz üzerinde çalışma kanıtı sağlamaz. Native runtime kabulü ve AynaTV release ikililerinin denetimi açık kalır.
+The trial output is under `.research/toolchain-probe/` and is kept outside Git. `layout-16kb.zip` is not an installable APK; it contains no manifest and no application. `verify_native.py` checks the ELF/ZIP format; it does not provide evidence of APK signature, manifest, completeness of dynamic dependencies, decoder function, or running on a real 16 KB device. Native runtime acceptance and the audit of AirRelay release binaries remain open.

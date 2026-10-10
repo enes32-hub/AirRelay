@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SPEC_NAME = "Android_TV_iPhone_Ekran_Yansitma_Alicisi_AI_Ajan_Ana_Sartnamesi.md"
+SPEC_NAME = "docs/SPECIFICATION.md"
 
 # Each entry maps the corresponding section 3.1 bullet to a concrete acceptance test.
 P0_TESTS = [

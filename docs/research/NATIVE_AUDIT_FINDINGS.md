@@ -1,44 +1,44 @@
-# Sabit native kaynak incelemesi
+# Pinned native source review
 
-31 Ağustos 2026. **Üretim çekirdeği onaylanmadı.** İnceleme kaynak envanteri ve köken sinyalleridir; hukuk görüşü, güvenlik taraması veya uyumluluk testi değildir.
+31 August 2026. **The production core was not approved.** The review covers source inventory and provenance signals; it is not a legal opinion, a security scan or a compliance test.
 
-## Kapsam ve kanıt
+## Scope and evidence
 
-[Araştırma kilidi](native-audit.lock.json), [JSON raporu](native-source-audit.json) ve [dosya envanteri](native-source-inventory.csv) birlikte okunmalıdır. `scripts/audit_native_sources.py` her dosyayı commit ağacındaki Git blob SHA-1 ile karşılaştırır ve ayrıca SHA-256 üretir. Kaynaklar yalnız bellekte okunur; üçüncü taraf kodu, tablolar ve anahtarlar çalışma ağacına kopyalanmaz veya çalıştırılmaz.
+The [research lock](native-audit.lock.json), the [JSON report](native-source-audit.json) and the [file inventory](native-source-inventory.csv) must be read together. `scripts/audit_native_sources.py` compares each file with its Git blob SHA-1 in the commit tree and also produces SHA-256. The sources are read only in memory; third-party code, tables and keys are not copied into the working tree or executed.
 
-| Kaynak | İncelenen dosya |
+| Source | Files reviewed |
 |---|---:|
-| Android uyarlamasının native dosyaları ve yapılandırması | 21 |
-| Uyarlamanın kullandığı UxPlay altmodülü | 72 |
-| RPiPlay köken referansı | 11 |
-| İlk playfair referansı | 10 |
-| libplist kapsamındaki kaynak/başlık/lisanslar | 57 |
-| openssl-cmake yapılandırması | 7 |
-| FFmpeg ALAC için seçilen kaynak/lisanslar | 7 |
-| **Toplam** | **185** |
+| Native files and configuration of the Android adaptation | 21 |
+| UxPlay submodule used by the adaptation | 72 |
+| RPiPlay provenance reference | 11 |
+| Initial playfair reference | 10 |
+| Sources/headers/licences under libplist | 57 |
+| openssl-cmake configuration | 7 |
+| Sources/licences selected for FFmpeg ALAC | 7 |
+| **Total** | **185** |
 
-Prefix kapsamı bazı kullanılmayan kaynakları da içerir; FFmpeg'in tüm transitif link grafiği incelenmiş değildir. Lisans başlığı sinyali lisans onayı değildir, bulunmaması da tek başına lisanssızlık hükmü değildir. Dosyaların hepsi `MANUAL_REVIEW_REQUIRED` durumundadır.
+The prefix scope also includes some unused sources; the full transitive link graph of FFmpeg has not been reviewed. A licence header signal is not licence approval, and its absence is not by itself a finding that there is no licence. All of the files are in the `MANUAL_REVIEW_REQUIRED` state.
 
-## Ana engel: upstream'in kendi belirsizlik beyanı
+## Main blocker: upstream's own statement of uncertainty
 
-Android uyarlaması `UxPlay@462153392f2e30937424922039ff9f0cda5e7b1a` kullanır. Bu commit'in [README satır 2486–2488 bölümü](https://github.com/FDH2/UxPlay/blob/462153392f2e30937424922039ff9f0cda5e7b1a/README.md#L2486), FairPlay bileşeninin hukuk durumunun belirsiz olduğunu söyler. [RPiPlay README](https://github.com/FD-/RPiPlay/blob/64d0341ed3bef098c940c9ed0675948870a271f9/README.md#L124) aynı belirsizliği içerir.
+The Android adaptation uses `UxPlay@462153392f2e30937424922039ff9f0cda5e7b1a`. [README lines 2486–2488 of this commit](https://github.com/FDH2/UxPlay/blob/462153392f2e30937424922039ff9f0cda5e7b1a/README.md#L2486) say that the legal status of the FairPlay component is uncertain. The [RPiPlay README](https://github.com/FD-/RPiPlay/blob/64d0341ed3bef098c940c9ed0675948870a271f9/README.md#L124) contains the same uncertainty.
 
-UxPlay'in atıf zinciri RPiPlay → AirplayServer/ShairPlay/playfair yönündedir. [İlk playfair deposunun README'si](https://github.com/EstebanKubata/playfair/blob/96c232ed7e65cccfbd1eae8e0d70e7179799290d/README.md) yalnız proje başlığı içerir; kriptografik sabitlerin bağımsız üretimini veya hak kaynağını açıklamaz. Git geçmişine ve GPL metnine erişmek bu boşluğu tek başına kapatmaz. Oturum şifrelemesi içerik DRM'iyle aynı şey değildir; buna rağmen şartname belirsiz materyal kullanımını ayrıca yasaklıyor.
+UxPlay's attribution chain runs RPiPlay → AirplayServer/ShairPlay/playfair. The [README of the initial playfair repository](https://github.com/EstebanKubata/playfair/blob/96c232ed7e65cccfbd1eae8e0d70e7179799290d/README.md) contains only a project title; it does not explain the independent production of the cryptographic constants or the source of the rights. Having access to the Git history and the GPL text does not by itself close this gap. Session encryption is not the same thing as content DRM; even so, the specification separately prohibits the use of uncertain material.
 
-**Karar:** yalnız GPL lisansını kabul ederek bu çekirdeği AynaTV'ye eklemek için yeterli kanıt yok. [İnceleme soruları](../../legal/REVIEW_REQUEST.md) çözülmeden veya şartnameye uygun farklı çekirdek sağlanmadan bu kapı geçmez. Bu sonuç bileşenin hukuka aykırı olduğuna ilişkin hüküm değildir.
+**Decision:** there is not enough evidence to add this core to AirRelay by accepting the GPL licence alone. This gate does not pass until the [review questions](../../legal/REVIEW_REQUEST.md) are resolved or a different core that meets the specification is provided. This result is not a finding that the component is unlawful.
 
-## Uyarlamayı olduğu gibi alamama nedenleri
+## Reasons for not taking the adaptation as it is
 
-- [Version catalog](https://github.com/jqssun/android-airplay-server/blob/c8defdd70d7e6a04f4f1b71d353653682d594106/gradle/libs.versions.toml) `media3 = 1.11.0-beta01` içerir. Şartnamedeki kararlı bağımlılık kuralına uymuyor; bizim `1.11.0` araştırma tabanımızla karıştırılmamalı.
-- [CMake](https://github.com/jqssun/android-airplay-server/blob/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/CMakeLists.txt) OpenSSL `3.4.4` seçiyor. [openssl-cmake BuildOpenSSL](https://github.com/viaduck/openssl-cmake/blob/4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8/cmake/BuildOpenSSL.cmake) hash doğrulamasını `OPENSSL_BUILD_HASH` verilmesine bağlıyor ve bir mirror URL kullanıyor. İncelenen üst CMake'de bu hash ataması yok. Tam yapılandırma ve indirilen kaynağın doğrulanmış hash'i olmadan bu bağımlılık alınamaz.
-- [FFmpeg yapılandırması](https://github.com/jqssun/android-airplay-server/blob/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/cmake/BuildFFmpeg.cmake) ağ desteğini kapatarak statik ALAC decoder hedefliyor. Bayrakların ve lisansların tam karşılık gelen çıktısı, gerçek build grafiği ve kaynak sunma yükümlülüğü ayrıca incelenmeli.
+- The [version catalog](https://github.com/jqssun/android-airplay-server/blob/c8defdd70d7e6a04f4f1b71d353653682d594106/gradle/libs.versions.toml) contains `media3 = 1.11.0-beta01`. It does not comply with the stable dependency rule in the specification; it must not be confused with our `1.11.0` research baseline.
+- The [CMake](https://github.com/jqssun/android-airplay-server/blob/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/CMakeLists.txt) selects OpenSSL `3.4.4`. [openssl-cmake BuildOpenSSL](https://github.com/viaduck/openssl-cmake/blob/4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8/cmake/BuildOpenSSL.cmake) makes hash verification depend on `OPENSSL_BUILD_HASH` being supplied and uses a mirror URL. In the parent CMake that was reviewed there is no such hash assignment. This dependency cannot be taken without the full configuration and the verified hash of the downloaded source.
+- The [FFmpeg configuration](https://github.com/jqssun/android-airplay-server/blob/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/cmake/BuildFFmpeg.cmake) aims at a static ALAC decoder with network support turned off. The exactly corresponding output of the flags and licences, the real build graph and the source provision obligation must be reviewed separately.
 
-Bu bulgular AynaTV'ye aktarılmış hatalar değildir: aday bağımlılıkları henüz eklenmedi. `contains_private_key_pem_marker=false` yalnız dar PEM işaret denetimidir; kriptografik tablo veya gömülü sır yokluğunu kanıtlamaz.
+These findings are not defects transferred into AirRelay: the candidate dependencies have not been added yet. `contains_private_key_pem_marker=false` is only a narrow PEM marker check; it does not prove the absence of a cryptographic table or an embedded secret.
 
-## Yeniden üretim
+## Reproduction
 
 ```powershell
 python scripts/audit_native_sources.py
 ```
 
-Sabit commit'ler değişmez; ağ hatası veya Git blob uyuşmazlığı sonuç üretimini durdurur. JSON ve CSV aynı koşudan oluşturulur. Araştırma indirmeleri gelecekteki yerel ağla sınırlı Android uygulamasının trafiği değildir.
+The pinned commits do not change; a network error or a Git blob mismatch stops result generation. The JSON and the CSV are produced from the same run. The research downloads are not the traffic of the future Android application, which is limited to the local network.

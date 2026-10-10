@@ -1,48 +1,48 @@
-# Çalışma kaydı
+# Work log
 
-## 6 Ekim 2026 — R39 yayın öncesi inceleme adayı
+## 6 October 2026 — R39 pre-release review candidate
 
-- Son kullanıcı marka varsayılanları, Compose örnekleri ve indirilen dosya adları AirRelay ile tutarlı hale getirildi; kalıcı paket/JNI/tercih kimlikleri korundu.
-- Mikrofon donanımı zorunluluğu kaldırıldı; kayıt sesi başlangıç hatasında kaynak sahipliği ve izin kontrolü düzeltildi.
-- Android 7–10 ağ izleme için API 30 öncesi NetworkRequest uyumluluğu eklendi; PiP ve kayıt remux API sınırları açıkça belirtildi.
-- Bildirim güncellemelerinde Android 13 izni gözetilir; medya oturumu istisnası korunur. Foreground servis başlangıç davranışı değiştirilmez.
-- Mevcut Media3 kararsız API kullanımları açık opt-in ile işaretlendi; oynatma çekirdeği değiştirilmedi.
-- Kayıt tarihleri Compose'un seçili dil yapılandırmasını izler. AAB dil bölme kapatılarak tüm 16 dilin çevrimdışı seçimde kalması sağlandı.
-- Bu aday test imzalıdır; gerçek iPhone/TV son kabulü ve üretim imzalı mağaza paketi ayrı adımlardır.
+- End-user branding defaults, Compose samples and downloaded file names were made consistent with AirRelay; persistent package/JNI/preference identifiers were preserved.
+- The microphone hardware requirement was removed; resource ownership and permission checking on recording audio startup failure were fixed.
+- Pre-API 30 NetworkRequest compatibility was added for Android 7–10 network monitoring; PiP and recording remux API limits were stated explicitly.
+- Android 13 permission is respected in notification updates; the media session exception is preserved. Foreground service startup behavior is not changed.
+- Existing Media3 unstable API usages were marked with explicit opt-in; the playback core was not changed.
+- Recording dates follow Compose's selected locale configuration. AAB language splitting was disabled so that all 16 languages remain in the offline selection.
+- This candidate is test-signed; the real iPhone/TV final acceptance and the production-signed store package are separate steps.
 
-## 1 Eylül 2026 — Windows prototipinden Android TV alıcısına aktarım
+## 1 September 2026 — Migration from the Windows prototype to the Android TV receiver
 
-- iPhone 14 Pro oturumunda doğrulanan hibrit oynatma modeli Android'e taşındı: MediaCodec video kareleri varsayılan olarak hemen yüzeye bırakılır, ses kendi NTP zaman çizelgesinde kalır.
-- AAC-ELD'nin üçlü/yedekli RTP akışında kayıp sıra numarası için 256 paket beklenmesi kaldırıldı; bu akışta eksik sıra atlanırken ALAC ve AAC-LC yeniden gönderim korumasını kullanmaya devam eder.
-- RAOP `audio_flush` artık boş bir geri çağırım değildir. Eski PCM'i atar, ses zamanını yeniden sabitler, jitter tamponunu yeniden doldurur ve etkin Oboe çıkışını güvenli biçimde yeniden açar.
-- Android TV için Oboe düşük gecikme modu yeni kurulumlarda varsayılan yapıldı. Kullanıcı ayarı geliştirici seçeneklerinden değiştirilebilir.
-- Emülatörde kontrol oturumu kurulup görüntü gelmemesine neden olan dinamik UxPlay medya portları sabitlendi; Android çekirdeği ile Windows köprüsü artık TCP `7000/7100` ve UDP `7011/6001/6000` üzerinde aynı sözleşmeyi kullanıyor.
-- Android TV ekranı canlı yansıtma odağıyla yenilendi. Müzik oynatıcısı, zaman çizgisi, sarma ve parça kontrolleri kaldırıldı; hazır/bağlanıyor/canlı durumları ve iPhone yönlendirmesi eklendi.
-- PIN penceresi eşleştirme tamamlanmadan kapatılamaz hale getirildi; açılış TV odağı yanlışlıkla `Stop` seçmeyecek şekilde `Overview` sekmesine taşındı.
-- x86_64 debug APK temiz ve artımlı derlemelerde başarıyla üretildi, yalnız `emulator-5584` üzerine yerinde kuruldu ve 44 regresyon testi geçti.
+- The hybrid playback model verified in the iPhone 14 Pro session was ported to Android: MediaCodec video frames are released to the surface immediately by default, while audio stays on its own NTP timeline.
+- Waiting for 256 packets on a missing sequence number in AAC-ELD's triple/redundant RTP stream was removed; in this stream the missing sequence is skipped, while ALAC and AAC-LC continue to use retransmission protection.
+- RAOP `audio_flush` is no longer an empty callback. It discards old PCM, re-anchors the audio time, refills the jitter buffer and safely reopens the active Oboe output.
+- Oboe low-latency mode was made the default for Android TV on new installations. The user setting can be changed from developer options.
+- The dynamic UxPlay media ports that caused a control session to be established on the emulator without video appearing were pinned; the Android core and the Windows bridge now use the same contract over TCP `7000/7100` and UDP `7011/6001/6000`.
+- The Android TV screen was renewed around the live mirroring focus. The music player, timeline, seeking and track controls were removed; ready/connecting/live states and iPhone guidance were added.
+- The PIN window can no longer be closed before pairing is complete; the initial TV focus was moved to the `Overview` tab so that it does not accidentally select `Stop`.
+- The x86_64 debug APK was successfully produced in clean and incremental builds, installed in place only on `emulator-5584`, and 44 regression tests passed.
 
-## 31 Ağustos 2026
+## 31 August 2026
 
-- Ana şartname okundu; kullanıcının yalnız Android TV alıcısı ve iPhone sistem AirPlay göndericisi kapsamı işlendi.
-- İlk hedef Aşama 0 araştırma/denetim başlangıç paketi olarak belirlendi.
-- Üç protokol adayı sabit commit'lerle ve kaynak dosyası hashleriyle incelendi; çekirdek seçimi açık bırakıldı.
-- Android TV mimarisi, araç zinciri, fiziksel spike ve performans ölçüm yöntemi belgelendi.
-- 33 üst seviye P0 + 69 performans/ağ kabul kaydı ve 58 test tanımı oluşturuldu. Hiçbir kabul sonucu PASS yapılmadı.
-- Ortam/provenance/kayıt tutarlılığı araçları ve 24 regresyon testi eklendi.
-- Hazırlık kayıt kontrolü geçti; yayın kontrolü eksik P0 ve Aşama 0 kapıları nedeniyle beklenen şekilde reddedildi.
-- Bu çalışma çalışan ekran yansıtma ürünü veya tamamlanmış Aşama 0 olarak sunulmadı.
+- The main specification was read; the user's scope of only an Android TV receiver and the iPhone system AirPlay sender was processed.
+- The first target was set as the Stage 0 research/audit starter package.
+- Three protocol candidates were examined with pinned commits and source file hashes; the core selection was left open.
+- The Android TV architecture, toolchain, physical spike and performance measurement method were documented.
+- 33 top-level P0 + 69 performance/network acceptance records and 58 test definitions were created. No acceptance result was set to PASS.
+- Environment/provenance/record consistency tools and 24 regression tests were added.
+- The preparation record check passed; the release check was rejected as expected due to missing P0 and Stage 0 gates.
+- This work was not presented as a working screen mirroring product or a completed Stage 0.
 
-## 31 Ağustos 2026 — Nihai hedefe devam
+## 31 August 2026 — Continuing toward the final objective
 
-- Etkin hedef nihai uygulama ve doğrulanmış teslim paketi olarak korundu; hazırlık hedefin yerine geçmiyor.
-- Kullanıcının iPhone 14 Pro ve Xiaomi TV Box 4K cihaz çifti kaydedildi; model/OS ayrıntıları varsayılmadı.
-- Yedi sabit upstream depodan 185 dosya hash ve lisans sinyalleriyle envantere alındı. UxPlay/RPiPlay kaynaklarının FairPlay hukuk belirsizliği beyanı doğrulandı.
-- NDK r29 kuruldu. Özgün C aracı iki ARM ABI için CMake/Ninja ile derlendi; 16 KB ELF/ZIP biçimi Python denetimi, llvm-readelf ve zipalign ile doğrulandı. Alıcı veya fiziksel cihaz testi yapılmış sayılmadı.
-- Native envanter ve ELF/ZIP denetim araçları eklendi; hazırlık regresyon testleri 44'e çıktı ve geçti.
-- Çekirdek kökeni, fiziksel bağlantı ve gerçek uygulama build/kabul kapıları açık kaldı. Hiçbir P0 ürün kaydı PASS yapılmadı.
-- İki ek açık depo ve iki ticari SDK'nın birincil belgeleri incelendi; özel modül ve belgelenmemiş kullanım hakları nedeniyle çekirdek seçilmedi. MFi audio kapsamının ekran yansıtma SDK erişimini kanıtlamadığı açıklandı.
-- Tek açıkça seçilmiş ADB cihazından sınırlı teknik bilgi okuyan araç ve TV bağlantı yönergesi eklendi. Araç emülatörü reddeder; otomatik bağlantı, uygulama kurulumu veya kabul sonucu üretmez.
-- Kullanıcının ücretli SDK kullanmama tercihi kaydedildi. Açık kaynak/GPL rota incelenmeye devam eder; ticari son kullanıcı uygulamalarından APK, kod veya varlık alınmayacak.
-- Android TV uygulama iskeleti eklendi: sabit Gradle wrapper, Leanback başlatıcı, D-pad ilk odağı, foreground ReceiverService ve yerel durum ekranı. Emülatörde debug APK kuruldu/açıldı; D-pad OK ile foreground servis doğrulandı. AirPlay çekirdeği veya iPhone akışı eklenmedi.
-- Alıcı oturumuna `SecureRandom` ile dört haneli PIN eklendi. PIN yalnız çalışmakta olan oturumda TV ekranında gösterilir; alıcı durduğunda bellekten temizlenir. Emülatörde başlatma/gösterim/durdurma akışı doğrulandı; PIN kanıt dosyasına yazılmadı.
-- MediaCodecList tabanlı H.264/AVC yetenek sorgusu eklendi. Uygulama uygun decoder'ın donanım ve düşük gecikme özelliklerini yalnız cihazın gerçek codec raporundan gösterir; video paketi veya yazılım fallback eklenmedi.
+- The active objective was preserved as the final application and verified delivery package; the preparation objective does not replace it.
+- The user's iPhone 14 Pro and Xiaomi TV Box 4K device pair was recorded; model/OS details were not assumed.
+- 185 files from seven pinned upstream repositories were inventoried with hashes and license signals. The FairPlay legal uncertainty declaration for the UxPlay/RPiPlay sources was verified.
+- NDK r29 was installed. The original C tool was compiled with CMake/Ninja for two ARM ABIs; the 16 KB ELF/ZIP format was verified with a Python check, llvm-readelf and zipalign. No receiver or physical device test was considered performed.
+- Native inventory and ELF/ZIP inspection tools were added; the preparation regression tests rose to 44 and passed.
+- Core provenance, physical connection and real application build/acceptance gates remained open. No P0 product record was set to PASS.
+- The primary documents of two additional open repositories and two commercial SDKs were examined; the core was not selected due to proprietary modules and undocumented usage rights. It was stated that MFi audio coverage does not prove screen mirroring SDK access.
+- A tool that reads limited technical information from a single explicitly selected ADB device and a TV connection guide were added. The tool rejects the emulator; it does not produce automatic connection, application installation or an acceptance result.
+- The user's preference not to use a paid SDK was recorded. The open source/GPL route continues to be examined; no APK, code or asset will be taken from commercial end-user applications.
+- An Android TV application skeleton was added: a pinned Gradle wrapper, Leanback launcher, D-pad initial focus, foreground ReceiverService and a local status screen. The debug APK was installed/launched on the emulator; the foreground service was verified with D-pad OK. No AirPlay core or iPhone stream was added.
+- A four-digit PIN was added to the receiver session with `SecureRandom`. The PIN is shown on the TV screen only in the running session; it is cleared from memory when the receiver stops. The start/display/stop flow was verified on the emulator; the PIN was not written to the evidence file.
+- A MediaCodecList-based H.264/AVC capability query was added. The application shows the hardware and low-latency features of the suitable decoder only from the device's real codec report; no video package or software fallback was added.

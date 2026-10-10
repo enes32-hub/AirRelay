@@ -1,63 +1,63 @@
-# Protokol çekirdeği ve bağımlılık kararı
+# Protocol core and dependency decision
 
-İnceleme: 31 Ağustos 2026. Etkin ürün: [yalnız iPhone → Android TV](SCOPE.md).
-**Karar: henüz üretim çekirdeği seçilmedi. Aşama 0 geçmedi.** Bu bir teknik ön incelemedir; hukuk görüşü, eksiksiz lisans denetimi veya cihaz uyumluluk raporu değildir.
+Review: 31 August 2026. Effective product: [iPhone → Android TV only](SCOPE.md).
+**Decision: no production core has been selected yet. Stage 0 has not passed.** This is a preliminary technical review; it is not a legal opinion, a complete licence audit or a device compatibility report.
 
-## Kullanıcının maliyet tercihi
+## The user's cost preference
 
-Kullanıcı 31 Ağustos 2026'da ücretli/ticari SDK lisansı bulunmadığını ve ürünün açık kaynakla yapılmasını istediğini belirtti. Bu nedenle ticari SDK satın alma veya satıcıyla görüşme proje kapsamında değildir. Bu tercih GPL gibi açık kaynak lisanslarını ortadan kaldırmaz: bu lisanslar ücretsiz olabilir, fakat kaynak kodu, değişiklikler ve gerekli bildirimlerle birlikte dağıtım yükümlülüğü getirir.
+On 31 August 2026 the user stated that no paid/commercial SDK licence is available and that the product should be built with open source. Commercial SDK purchase or vendor discussion is therefore outside the project scope. This preference does not eliminate open source licences such as the GPL: those licences may be free of charge, but they impose a distribution obligation together with the source code, the changes and the required notices.
 
-AirServer, Store'daki alıcılar ve benzeri son kullanıcı uygulamaları referans davranış sağlar; onların APK'ları veya tersine mühendislikle elde edilmiş protokol/varlıklar AynaTV'ye alınmayacaktır. Kullanıcının verdiği `uxplay-windows` örneği Windows'a yönelik bir UxPlay paketi olup Android TV çekirdeği değildir. Aynı UxPlay ailesindeki mevcut köken belirsizliği de bu örnekle çözülmez.
+AirServer, receivers on the Store and similar end-user applications provide reference behaviour; their APKs or reverse-engineered protocols/assets will not be brought into AirRelay. The `uxplay-windows` example the user provided is a UxPlay package aimed at Windows and is not an Android TV core. The existing provenance ambiguity within the same UxPlay family is not resolved by this example either.
 
-## İncelenen sabit kaynaklar
+## Reviewed pinned sources
 
-| Aday | İncelenen commit | Rota / mevcut karar |
+| Candidate | Reviewed commit | Route / current decision |
 |---|---|---|
-| [UxPlay](https://github.com/FDH2/UxPlay/tree/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741) | `fd5192b06f0c2ab2f664b8ab778ac6f772e4d741` | A, GPL; köken ve Android entegrasyonu incelemesi bekliyor |
-| [android-airplay-server](https://github.com/jqssun/android-airplay-server/tree/c8defdd70d7e6a04f4f1b71d353653682d594106) | `c8defdd70d7e6a04f4f1b71d353653682d594106` | A, GPL; Android fizibilitesi için ilk inceleme adayı, onay değil |
-| [PhairPlay](https://github.com/mazer666/PhairPlay/tree/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f) | `4a3948c51d7f9d050d1f7437c0bd88877ef6db0f` | B olarak kabul edilmedi; salt Apache/temiz oda varsayımı desteklenmiyor |
+| [UxPlay](https://github.com/FDH2/UxPlay/tree/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741) | `fd5192b06f0c2ab2f664b8ab778ac6f772e4d741` | A, GPL; awaiting provenance and Android integration review |
+| [android-airplay-server](https://github.com/jqssun/android-airplay-server/tree/c8defdd70d7e6a04f4f1b71d353653682d594106) | `c8defdd70d7e6a04f4f1b71d353653682d594106` | A, GPL; first review candidate for Android feasibility, not an approval |
+| [PhairPlay](https://github.com/mazer666/PhairPlay/tree/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f) | `4a3948c51d7f9d050d1f7437c0bd88877ef6db0f` | Not accepted as B; the Apache-only/clean room assumption is not supported |
 
-Araştırma kilidi: [candidates.lock.json](research/candidates.lock.json). Dosya hashleri ve karşılaştırma sonucu: [provenance-evidence.json](research/provenance-evidence.json). Araç kaynak dosyalarını yalnız bellekte okur; aday kodu, anahtar veya tablolar projeye kopyalanmaz, derlenmez, çalıştırılmaz.
+Research lock: [candidates.lock.json](research/candidates.lock.json). File hashes and comparison result: [provenance-evidence.json](research/provenance-evidence.json). The tool reads source files only in memory; candidate code, keys or tables are not copied into the project, compiled or executed.
 
-## Rota A
+## Route A
 
-UxPlay GPL-3.0 beyan eder ve [playfair alt dizininde GPLv3 lisansı](https://github.com/FDH2/UxPlay/blob/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/lib/playfair/LICENSE.md) taşır. Okunan master README deneysel geliştirmeyi de içeriyor; bu HEAD otomatik olarak kararlı P0 bağımlılığı seçilemez. Kararlı bir sürümün tam commit'i ayrıca değerlendirilecek.
+UxPlay declares GPL-3.0 and carries [a GPLv3 licence in the playfair subdirectory](https://github.com/FDH2/UxPlay/blob/fd5192b06f0c2ab2f664b8ab778ac6f772e4d741/lib/playfair/LICENSE.md). The master README that was read also includes experimental development; this HEAD cannot automatically be chosen as a stable P0 dependency. The exact commit of a stable release will be evaluated separately.
 
-Android uyarlamasının [CMake dosyası](https://github.com/jqssun/android-airplay-server/blob/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/CMakeLists.txt) UxPlay/playfair, libplist, OpenSSL, FFmpeg ve Oboe kullanır. README'deki MediaCodec/SurfaceView ve ses desteği aday seçimine yardımcı bir beyan; bizim cihaz testimiz değildir.
+The Android adaptation's [CMake file](https://github.com/jqssun/android-airplay-server/blob/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/CMakeLists.txt) uses UxPlay/playfair, libplist, OpenSSL, FFmpeg and Oboe. The MediaCodec/SurfaceView and audio support in the README is a statement that helps candidate selection; it is not our device test.
 
-[Git submodule kayıtları](https://github.com/jqssun/android-airplay-server/tree/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/third_party):
+[Git submodule records](https://github.com/jqssun/android-airplay-server/tree/c8defdd70d7e6a04f4f1b71d353653682d594106/app/src/main/cpp/third_party):
 
-| Bileşen | Sabit commit / yapılandırma | Eksik inceleme |
+| Component | Pinned commit / configuration | Missing review |
 |---|---|---|
-| UxPlay | `462153392f2e30937424922039ff9f0cda5e7b1a` | Araştırılan master'dan farklı; dosya ve kriptografik köken denetimi |
-| FFmpeg | `38b88335f99e76ed89ff3c93f877fdefce736c13` | Etkin codec/derleme bayrakları, LGPL/GPL yükümlülükleri |
-| libplist | `f41b1ea67045e0c09339974d83e389972d84f166` | Dosya bazlı lisanslar, statik bağlantı koşulları |
-| openssl-cmake | `4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8` | Wrapper lisansı, indirilen kaynak ve hash |
-| OpenSSL | CMake'de `3.4.4` | Bu sürüm AynaTV için seçilmedi; güvenlik ve kaynak denetimi |
-| Oboe ve Gradle bağımlılıkları | Henüz tam envanter çıkarılmadı | Transitive graph, sürüm kilitleri, kaynak ve lisans dosyaları |
+| UxPlay | `462153392f2e30937424922039ff9f0cda5e7b1a` | Different from the master that was researched; file and cryptographic provenance audit |
+| FFmpeg | `38b88335f99e76ed89ff3c93f877fdefce736c13` | Active codec/build flags, LGPL/GPL obligations |
+| libplist | `f41b1ea67045e0c09339974d83e389972d84f166` | Per-file licences, static linking conditions |
+| openssl-cmake | `4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8` | Wrapper licence, downloaded source and hash |
+| OpenSSL | `3.4.4` in CMake | This version was not selected for AirRelay; security and provenance review |
+| Oboe and Gradle dependencies | Full inventory not produced yet | Transitive graph, version locks, source and licence files |
 
-Rota A seçilirse tam karşılık gelen kaynak, değişiklik kayıtları, lisans/NOTICE dosyaları ve yeniden üretim talimatı dağıtım planına dahil edilecek. Bu yükümlülüklerin gerçekten karşılandığı dağıtım öncesi incelenecek. Ticari rakip kodu veya varlıkları alınmayacak. Ürün genel lisansı şu aşamada atanmadı.
+If Route A is chosen, the exactly corresponding source, change records, licence/NOTICE files and reproduction instructions will be included in the distribution plan. Whether these obligations are actually met will be reviewed before distribution. Commercial competitor code or assets will not be taken. The product's overall licence has not been assigned at this stage.
 
-## Rota B
+## Route B
 
-PhairPlay kök [LICENSE](https://github.com/mazer666/PhairPlay/blob/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/LICENSE) dosyası Apache 2.0 metni içeriyor. Buna karşılık [native CMake dosyası](https://github.com/mazer666/PhairPlay/blob/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/app/src/main/cpp/CMakeLists.txt) playfair'i RPiPlay kökenli olarak tanımlıyor ve bu kaynakları `libplayfair.so` içine derliyor. Bu dosyalar UxPlay'in GPLv3 playfair diziniyle hash üzerinden karşılaştırıldı. Yedi ortak kaynak dosyasından beşi (`playfair.c`, `hand_garble.c`, `omg_hax.c`, `omg_hax.h`, `playfair.h`) byte düzeyinde aynı SHA-256 değerine sahip; diğer ikisi farklı. Ayrıntılı sonuç kanıt JSON'undadır.
+The PhairPlay root [LICENSE](https://github.com/mazer666/PhairPlay/blob/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/LICENSE) file contains the Apache 2.0 text. In contrast, the [native CMake file](https://github.com/mazer666/PhairPlay/blob/4a3948c51d7f9d050d1f7437c0bd88877ef6db0f/app/src/main/cpp/CMakeLists.txt) identifies playfair as RPiPlay-derived and compiles these sources into `libplayfair.so`. These files were compared against UxPlay's GPLv3 playfair directory by hash. Five of the seven shared source files (`playfair.c`, `hand_garble.c`, `omg_hax.c`, `omg_hax.h`, `playfair.h`) have the same SHA-256 value at byte level; the other two differ. The detailed result is in the evidence JSON.
 
-**Çıkarım:** kök Apache metni tüm paketin izin verici lisansla ve temiz oda yöntemiyle üretildiğini kanıtlamıyor. Bu, mahkeme kararı veya bütün projeye yönelik ihlal hükmü değildir; AynaTV'nin şartname 5.2 kapısını geçmek için kanıt yetersizdir. Aday bu haliyle Rota B'ye alınmayacak. Anahtar ve tabloların hukuken temiz kökeni ayrıca belgelenmedikçe kullanılmayacak.
+**Inference:** the root Apache text does not prove that the whole package was produced under a permissive licence and by a clean room method. This is not a court ruling or a finding of infringement against the entire project; the evidence is insufficient for AirRelay to pass specification gate 5.2. The candidate will not be taken into Route B in this state. The keys and tables will not be used unless their legally clean provenance is documented separately.
 
-Temiz oda alternatifi protokolü tahmin ederek yazmak anlamına gelmez. Bağımsız kaynak geçmişi, belgelenmiş protokol ve hukuken kullanılabilir kriptografik bileşen gerekir. Mevcut araştırma bunları sağlamıyor. [Ek aday incelemesi](research/ALTERNATIVE_CORES.md) iki başka açık depo ve iki ticari SDK rotasını ele alır; hiçbiri onaylanmadı. Apple MFi SSS'de belirtilen AirPlay audio kapsamı, Android ekran yansıtma SDK'sına erişim bulunduğunu kanıtlamaz. Üyelik, sertifika veya sözleşme bulunduğu varsayılmadı.
+A clean room alternative does not mean writing the protocol by guessing. It requires an independent source history, a documented protocol and a legally usable cryptographic component. The current research does not provide these. [Additional candidate review](research/ALTERNATIVE_CORES.md) covers two other open repositories and two commercial SDK routes; none of them was approved. The AirPlay audio scope stated in the Apple MFi FAQ does not prove that access to an Android screen mirroring SDK exists. Membership, certification or a contract was not assumed to exist.
 
-## Teknik puanlama ve geçiş şartı
+## Technical scoring and gate condition
 
-| Ölçüt | Ağırlık | Tüm adayların AynaTV test sonucu |
+| Criterion | Weight | AirRelay test result for all candidates |
 |---|---:|---|
-| Gerçek iPhone bağlantısı | 25 | Ölçülmedi |
-| 1080p60 kararlılık | 20 | Ölçülmedi |
-| A/V eşzamanı | 15 | Ölçülmedi |
-| Güncel iOS uyumluluğu | 15 | Ölçülmedi |
-| Lisans ve kod kökeni | 15 | Hiçbir aday kapıyı geçmedi |
-| Android TV entegrasyon maliyeti | 5 | Derlenmiş spike yok |
-| Bakım yapılabilirlik | 5 | Yalnız ön inceleme |
+| Real iPhone connection | 25 | Not measured |
+| 1080p60 stability | 20 | Not measured |
+| A/V synchronisation | 15 | Not measured |
+| Current iOS compatibility | 15 | Not measured |
+| Licence and code provenance | 15 | No candidate passed the gate |
+| Android TV integration cost | 5 | No compiled spike |
+| Maintainability | 5 | Preliminary review only |
 
-Puanlar tahminle doldurulmadı. Lisans/köken kapısı başarısız veya bekleyen adaya ağırlıklı toplamla onay verilemez. Android uyarlaması yalnız inceleme sırasının ilk adayıdır; ana uygulama için seçilmiş çekirdek değildir.
+The scores were not filled in by estimation. A candidate that fails or is pending on the licence/provenance gate cannot be approved by a weighted total. The Android adaptation is only the first candidate in the review order; it is not the core selected for the main application.
 
-Bir sonraki çekirdek kararı için: sabit kararlı kaynak → tam dosya/submodule lisans envanteri → kriptografik köken incelemesi → bağımlılık/hash doğrulaması → izole fiziksel iPhone/Android TV spike → ölçüm → yazılı karar. Bu kapılardan önce AynaTV adına işlevsel APK veya hazır mDNS alıcısı ilan edilmeyecek.
+For the next core decision: pinned stable source → complete file/submodule licence inventory → cryptographic provenance review → dependency/hash verification → isolated physical iPhone/Android TV spike → measurement → written decision. Before these gates, no functional APK or ready mDNS receiver will be declared on behalf of AirRelay.
