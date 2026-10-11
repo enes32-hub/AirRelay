@@ -63,6 +63,7 @@
     <string name="playback_choice_title">Воспроизведение</string>
     <string name="playback_mirror">Повтор экрана</string>
     <string name="playback_direct">Воспроизводить напрямую</string>
+    <string name="playback_to_mirror">Перейти к зеркалированию экрана</string>
     <string name="playback_mirror_description">Воспроизводите видео на устройстве и передавайте изображение и звук на телевизор.</string>
     <string name="playback_direct_description">Выберите этот телевизор в меню AirPlay видео. Поддерживаемые видео воспроизводятся на телевизоре с управлением с вашего устройства. Текущий повтор экрана может не переключиться автоматически.</string>
     <string name="playback_actual_direct">Трансляция: Прямое видео</string>

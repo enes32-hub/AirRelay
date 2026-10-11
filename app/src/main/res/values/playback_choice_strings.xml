@@ -6,6 +6,7 @@
     <string name="playback_choice_title">Playback</string>
     <string name="playback_mirror">Mirror screen</string>
     <string name="playback_direct">Play directly</string>
+    <string name="playback_to_mirror">Switch to screen mirroring</string>
     <string name="playback_mirror_description">Play videos on your device and mirror their picture and sound to the TV.</string>
     <string name="playback_direct_description">Select this TV in the video’s AirPlay menu. Supported videos play on the TV and can be controlled from your device. An existing screen mirroring stream may not switch automatically.</string>
     <string name="playback_actual_direct">Stream: Direct video</string>

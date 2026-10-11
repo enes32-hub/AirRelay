@@ -5,15 +5,15 @@
 | Item | Value |
 |---|---|
 | Application id | `com.airrelay.receiver` (frozen; changing it orphans every installation) |
-| Current public release | versionCode 5, versionName `1.0.4` |
+| Current public release | versionCode 6, versionName `1.0.5` |
 | First release-signed build (internal, never published) | versionCode 75, versionName `0.1.0-rc40-test` |
 | Keystore | `keystore/airrelay-release.jks` (gitignored), alias `airrelay`, RSA 4096, validity 10000 days |
 | Certificate DN | `CN=AirRelay, OU=Receiver, O=AirRelay, C=TR` |
 | **Certificate SHA-256** | `c24b1ae32c1b12ad7461728a4d24675a41cda63a464f13eb3cbd7adfb7c77ef2` |
 | Certificate SHA-1 | `e4ce9bd3fe78ca3aa80f46181c3303f410d16517` |
 | First release-signed universal APK (internal) | 17.27 MB, SHA-256 `4C9160B291D2DA3552751E36F590DEF12ED109E226396167E5452A07DA56196B` |
-| Current universal APK (1.0.4) | 17.28 MB, SHA-256 `20463d5db6cf99a1ec7481de5e35fbe54d1ea7352c2d877b28fd812452617f5f` |
-| Current App Bundle (1.0.4) | 18.38 MB, SHA-256 `a6ec9b336ba121e0371779d70f373450b657923a32b2519a72c29426e1005e27` |
+| Current universal APK (1.0.5) | 17.29 MB, SHA-256 `74d991cb8cd4c92f9ae359794feda23944833ea812da27f534895eb8ae39a961` |
+| Current App Bundle (1.0.5) | 18.38 MB, SHA-256 `d2585723099c77e9670f390790f21cee7831d99d50ddaad4ec8161db38bd19f2` |
 
 Verify every future artifact against the fingerprint above:
 
@@ -118,6 +118,6 @@ Do not make it pass by editing records: `REQUIREMENTS_TRACEABILITY.csv` starts e
 * **Source offer**: `legal/NOTICE.md` still carries `<SOURCE-URL-NOT-SET>`.
 * **Acceptance evidence**: 102 requirements at `NOT_RUN`; `G0-LICENSE`, `G0-SPIKE`,
   `G0-TOOLCHAIN`, `G0-SELECTION` unresolved.
-* **Version naming**: `1.0.4` / versionCode 5 is the current build (1.0.0, 1.0.1 and 1.0.2 were never published). Keep `versionCode` strictly
+* **Version naming**: `1.0.5` / versionCode 6 is the current build (1.0.0, 1.0.1 and 1.0.2 were never published). Keep `versionCode` strictly
   increasing: a device only accepts an update whose code is higher than the installed one.
   before the first published build, and keep `versionCode` strictly increasing.

@@ -6,6 +6,7 @@
     <string name="playback_choice_title">Oynatma şekli</string>
     <string name="playback_mirror">Ekrandan yansıt</string>
     <string name="playback_direct">Doğrudan oynat</string>
+    <string name="playback_to_mirror">Ekran yansıtmaya geç</string>
     <string name="playback_mirror_description">Videoları cihazınızda oynatın; görüntü ve sesi TV’ye yansıtın.</string>
     <string name="playback_direct_description">Videonun AirPlay menüsünden bu TV’yi seçin. Desteklenen videolar TV’de açılır; cihazınızdan kontrol edebilirsiniz. Devam eden ekran yansıtma bu seçimle otomatik olarak değişmeyebilir.</string>
     <string name="playback_actual_direct">Aktarım: Doğrudan video</string>

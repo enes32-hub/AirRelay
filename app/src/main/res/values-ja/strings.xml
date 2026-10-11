@@ -63,6 +63,7 @@
     <string name="playback_choice_title">再生</string>
     <string name="playback_mirror">画面ミラーリング</string>
     <string name="playback_direct">直接再生</string>
+    <string name="playback_to_mirror">画面ミラーリングに切り替え</string>
     <string name="playback_mirror_description">デバイスで動画を再生し、映像と音声をテレビに映します。</string>
     <string name="playback_direct_description">動画の AirPlay メニューでこのテレビを選択してください。対応する動画はテレビで再生され、デバイスから操作できます。既存の画面ミラーリングは自動的に切り替わらない場合があります。</string>
     <string name="playback_actual_direct">ストリーム：直接再生</string>

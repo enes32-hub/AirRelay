@@ -63,6 +63,7 @@
     <string name="playback_choice_title">Phát</string>
     <string name="playback_mirror">Phản chiếu màn hình</string>
     <string name="playback_direct">Phát trực tiếp</string>
+    <string name="playback_to_mirror">Chuyển sang phản chiếu màn hình</string>
     <string name="playback_mirror_description">Phát video trên thiết bị rồi phản chiếu hình ảnh và âm thanh lên TV.</string>
     <string name="playback_direct_description">Chọn TV này trong menu AirPlay của video. Video được hỗ trợ sẽ phát trên TV và có thể điều khiển từ thiết bị. Luồng phản chiếu màn hình đang có có thể không tự động chuyển đổi.</string>
     <string name="playback_actual_direct">Luồng: Video trực tiếp</string>

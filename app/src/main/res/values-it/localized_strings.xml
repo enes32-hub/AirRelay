@@ -63,6 +63,7 @@
     <string name="playback_choice_title">Riproduzione</string>
     <string name="playback_mirror">Duplica schermo</string>
     <string name="playback_direct">Riproduci direttamente</string>
+    <string name="playback_to_mirror">Passa alla duplicazione schermo</string>
     <string name="playback_mirror_description">Riproduci i video sul dispositivo e duplicane immagine e audio sulla TV.</string>
     <string name="playback_direct_description">Seleziona questa TV nel menu AirPlay del video. I video supportati vengono riprodotti sulla TV e controllati dal dispositivo. Una duplicazione attiva potrebbe non cambiare automaticamente.</string>
     <string name="playback_actual_direct">Flusso: Video diretto</string>

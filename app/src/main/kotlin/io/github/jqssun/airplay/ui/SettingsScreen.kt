@@ -45,7 +45,6 @@ fun SettingsScreen(viewModel: MainViewModel) {
     val alacEnabled by viewModel.alacEnabled.collectAsStateWithLifecycle()
     val aacEnabled by viewModel.aacEnabled.collectAsStateWithLifecycle()
     val resolution by viewModel.resolution.collectAsStateWithLifecycle()
-    val advertiseVideo by viewModel.advertiseVideo.collectAsStateWithLifecycle()
     val advertiseAudio by viewModel.advertiseAudio.collectAsStateWithLifecycle()
     val launchOnConnect by viewModel.launchOnConnect.collectAsStateWithLifecycle()
     val maxFps by viewModel.maxFps.collectAsStateWithLifecycle()
@@ -153,14 +152,6 @@ fun SettingsScreen(viewModel: MainViewModel) {
         if (developerOptions) {
 
 
-
-            SettingSwitch(
-                title = stringResource(R.string.setting_advertise_video),
-                focusKey = "setting_advertise_video",
-                description = stringResource(R.string.setting_advertise_video_desc),
-                checked = advertiseVideo,
-                onCheckedChange = { viewModel.setAdvertiseVideo(it) }
-            )
 
             SettingSwitch(
                 title = stringResource(R.string.setting_advertise_audio),

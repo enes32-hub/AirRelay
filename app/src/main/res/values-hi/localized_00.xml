@@ -63,6 +63,7 @@
     <string name="playback_choice_title">प्लेबैक</string>
     <string name="playback_mirror">स्क्रीन मिरर करें</string>
     <string name="playback_direct">सीधे चलाएँ</string>
+    <string name="playback_to_mirror">स्क्रीन मिररिंग पर स्विच करें</string>
     <string name="playback_mirror_description">वीडियो अपने डिवाइस पर चलाएँ और उसकी तस्वीर व आवाज़ टीवी पर दिखाएँ।</string>
     <string name="playback_direct_description">वीडियो के AirPlay मेनू में यह टीवी चुनें। समर्थित वीडियो टीवी पर चलते हैं और डिवाइस से नियंत्रित किए जा सकते हैं। मौजूदा स्क्रीन मिररिंग अपने-आप नहीं बदल सकती।</string>
     <string name="playback_actual_direct">स्ट्रीम: सीधा वीडियो</string>

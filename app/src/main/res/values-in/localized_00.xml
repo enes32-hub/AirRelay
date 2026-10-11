@@ -63,6 +63,7 @@
     <string name="playback_choice_title">Pemutaran</string>
     <string name="playback_mirror">Cerminkan layar</string>
     <string name="playback_direct">Putar langsung</string>
+    <string name="playback_to_mirror">Beralih ke cermin layar</string>
     <string name="playback_mirror_description">Putar video di perangkat Anda dan cerminkan gambar serta suaranya ke TV.</string>
     <string name="playback_direct_description">Pilih TV ini di menu AirPlay video. Video yang didukung diputar di TV dan dapat dikendalikan dari perangkat. Pencerminan layar yang sedang berlangsung mungkin tidak beralih otomatis.</string>
     <string name="playback_actual_direct">Siaran: Video langsung</string>

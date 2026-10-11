@@ -63,6 +63,7 @@
     <string name="playback_choice_title">播放</string>
     <string name="playback_mirror">屏幕镜像</string>
     <string name="playback_direct">直接播放</string>
+    <string name="playback_to_mirror">切换到屏幕镜像</string>
     <string name="playback_mirror_description">在设备上播放视频，并将画面和声音镜像到电视。</string>
     <string name="playback_direct_description">在视频的 AirPlay 菜单中选择此电视。支持的视频将在电视上播放，并可用设备控制。现有屏幕镜像串流可能不会自动切换。</string>
     <string name="playback_actual_direct">串流：直接视频</string>

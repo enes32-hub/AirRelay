@@ -63,6 +63,7 @@
     <string name="playback_choice_title">Wiedergabe</string>
     <string name="playback_mirror">Bildschirm spiegeln</string>
     <string name="playback_direct">Direkt wiedergeben</string>
+    <string name="playback_to_mirror">Zu Bildschirmspiegelung wechseln</string>
     <string name="playback_mirror_description">Spiele Videos auf deinem Gerät ab und spiegle Bild und Ton auf den Fernseher.</string>
     <string name="playback_direct_description">Wähle diesen Fernseher im AirPlay-Menü des Videos. Unterstützte Videos laufen auf dem Fernseher und lassen sich vom Gerät steuern. Eine laufende Bildschirmsynchronisierung wechselt möglicherweise nicht automatisch.</string>
     <string name="playback_actual_direct">Übertragung: Direktvideo</string>

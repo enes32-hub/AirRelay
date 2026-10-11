@@ -63,6 +63,7 @@
     <string name="playback_choice_title">Reprodução</string>
     <string name="playback_mirror">Espelhar tela</string>
     <string name="playback_direct">Reproduzir diretamente</string>
+    <string name="playback_to_mirror">Mudar para espelhamento de tela</string>
     <string name="playback_mirror_description">Reproduza vídeos no dispositivo e espelhe imagem e som na TV.</string>
     <string name="playback_direct_description">Selecione esta TV no menu AirPlay do vídeo. Vídeos compatíveis são reproduzidos na TV e controlados pelo dispositivo. Um espelhamento ativo pode não mudar automaticamente.</string>
     <string name="playback_actual_direct">Transmissão: Vídeo direto</string>

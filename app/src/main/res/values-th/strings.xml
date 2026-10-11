@@ -63,6 +63,7 @@
     <string name="playback_choice_title">การเล่น</string>
     <string name="playback_mirror">สะท้อนหน้าจอ</string>
     <string name="playback_direct">เล่นโดยตรง</string>
+    <string name="playback_to_mirror">สลับไปที่การสะท้อนหน้าจอ</string>
     <string name="playback_mirror_description">เล่นวิดีโอบนอุปกรณ์แล้วสะท้อนภาพและเสียงไปยังทีวี</string>
     <string name="playback_direct_description">เลือกทีวีนี้ในเมนู AirPlay ของวิดีโอ วิดีโอที่รองรับจะเล่นบนทีวีและควบคุมจากอุปกรณ์ได้ สตรีมสะท้อนหน้าจอที่กำลังใช้อาจไม่เปลี่ยนโดยอัตโนมัติ</string>
     <string name="playback_actual_direct">สตรีม: วิดีโอโดยตรง</string>

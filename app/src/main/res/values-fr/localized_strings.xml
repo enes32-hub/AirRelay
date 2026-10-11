@@ -63,6 +63,7 @@
     <string name="playback_choice_title">Lecture</string>
     <string name="playback_mirror">Recopier l’écran</string>
     <string name="playback_direct">Lire directement</string>
+    <string name="playback_to_mirror">Passer en duplication d\'écran</string>
     <string name="playback_mirror_description">Lisez les vidéos sur votre appareil et recopiez leur image et leur son sur le téléviseur.</string>
     <string name="playback_direct_description">Sélectionnez ce téléviseur dans le menu AirPlay de la vidéo. Les vidéos compatibles sont lues sur le téléviseur et contrôlées depuis votre appareil. Une recopie en cours peut ne pas basculer automatiquement.</string>
     <string name="playback_actual_direct">Flux : Vidéo directe</string>

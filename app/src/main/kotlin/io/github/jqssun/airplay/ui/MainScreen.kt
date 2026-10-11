@@ -259,8 +259,8 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
                         confirmButton = { TvAction(stringResource(R.string.rec_close), { showRecordings = false }) },
                         dismissButton = {})
                 }
-                confirmMode -> PlaybackChoiceDialog(remoteVideoEnabled,
-                    onChoose = { if (viewModel.setPlaybackPreference(it)) confirmMode = false },
+                confirmMode -> MirrorSwitchDialog(
+                    onConfirm = { if (viewModel.setPlaybackPreference(false)) confirmMode = false },
                     onDismiss = { confirmMode = false })
                 confirmQuit -> ConfirmReceiverAction(stringResource(R.string.p_quit_title),
                     stringResource(R.string.p_quit_body), stringResource(R.string.p_quit),
@@ -467,9 +467,17 @@ private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isM
                     val fontScale = LocalDensity.current.fontScale.coerceAtLeast(1f)
                     Row(if (isMedia) Modifier.width((if (onPip != null) 388.dp else 324.dp) * fontScale) else Modifier,
                         verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                        CapsuleAction(stringResource(R.string.playback_choice_title), onMode, Icons.Rounded.Cast,
+                        // One-way control: while direct playback is offered, one click asks for
+                        // confirmation and moves the receiver to screen mirroring. Once mirroring is
+                        // chosen the chip only reports that state; there is no path back to direct,
+                        // because a live mirror session cannot be renegotiated into direct playback.
+                        CapsuleAction(
+                            stringResource(if (remoteVideoEnabled) R.string.playback_to_mirror
+                                else R.string.p_state_mirroring),
+                            { if (remoteVideoEnabled) onMode() },
+                            if (remoteVideoEnabled) Icons.Rounded.Cast else Icons.Rounded.CheckCircle,
                             Modifier.focusRequester(modeAction).onFocusChanged { modeFocused = it.isFocused },
-                            selected = modeHint, wide = true, focusId = "player.mode")
+                            selected = modeHint || !remoteVideoEnabled, wide = true, focusId = "player.mode")
                         CapsuleAction(stringResource(when (pictureFit) {
                             PictureFit.FIT -> R.string.scale_best_fit
                             PictureFit.FILL -> R.string.scale_fill
@@ -590,22 +598,18 @@ private fun PlaybackHelpDialog(onDismiss: () -> Unit) = DialogInputScope {
 }
 
 @Composable
-private fun PlaybackChoiceDialog(direct: Boolean, onChoose: (Boolean) -> Unit, onDismiss: () -> Unit) = DialogInputScope {
+private fun MirrorSwitchDialog(onConfirm: () -> Unit, onDismiss: () -> Unit) = DialogInputScope {
     ProductAlertDialog(onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.playback_choice_title)) },
+        title = { Text(stringResource(R.string.playback_to_mirror)) },
         text = {
-            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                listOf(false, true).forEach { value ->
-                    Column(Modifier.fillMaxWidth().background(AirRelayColors.Panel, RoundedCornerShape(16.dp)).padding(12.dp),
-                        verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                        TvAction(stringResource(if (value) R.string.playback_direct else R.string.playback_mirror),
-                            { onChoose(value) }, Modifier.fillMaxWidth(), selected = direct == value,
-                            icon = if (direct == value) Icons.Rounded.CheckCircle else Icons.Rounded.Cast)
-                        Text(stringResource(if (value) R.string.playback_direct_description else R.string.playback_mirror_description),
-                            style = MaterialTheme.typography.bodyMedium, color = AirRelayColors.Muted)
-                    }
-                }
-                Text(stringResource(R.string.playback_switch_hint), style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Muted)
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Text(stringResource(R.string.playback_mirror_description),
+                    style = MaterialTheme.typography.bodyMedium)
+                Text(stringResource(R.string.playback_switch_hint),
+                    style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Muted)
             }
-        }, confirmButton = {}, dismissButton = { TvAction(stringResource(R.string.p_cancel), onDismiss) })
+        },
+        confirmButton = { TvAction(stringResource(R.string.playback_to_mirror), onConfirm, compact = true) },
+        dismissButton = { TvAction(stringResource(R.string.p_cancel), onDismiss, compact = true) })
 }
+

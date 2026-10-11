@@ -63,6 +63,7 @@
     <string name="playback_choice_title">재생</string>
     <string name="playback_mirror">화면 미러링</string>
     <string name="playback_direct">직접 재생</string>
+    <string name="playback_to_mirror">화면 미러링으로 전환</string>
     <string name="playback_mirror_description">기기에서 동영상을 재생하고 영상과 소리를 TV에 미러링합니다.</string>
     <string name="playback_direct_description">동영상의 AirPlay 메뉴에서 이 TV를 선택하세요. 지원되는 동영상은 TV에서 재생되며 기기에서 제어할 수 있습니다. 기존 화면 미러링 스트림은 자동으로 전환되지 않을 수 있습니다.</string>
     <string name="playback_actual_direct">스트림: 직접 동영상 재생</string>

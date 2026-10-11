@@ -521,7 +521,6 @@ class MainViewModel @Inject constructor(app: Application) : AndroidViewModel(app
         notifyPendingSettings()
         return true
     }
-    fun setAdvertiseVideo(v: Boolean) { if (queueSetting(Prefs.ADVERTISE_VIDEO, v)) _advertiseVideo.value = v }
     fun setAdvertiseAudio(v: Boolean) { if (queueSetting(Prefs.ADVERTISE_AUDIO, v)) _advertiseAudio.value = v }
     fun setLaunchOnConnect(v: Boolean) { _launchOnConnect.value = v; prefs.edit().putBoolean(Prefs.LAUNCH_ON_CONNECT, v).apply() }
     fun setDebugEnabled(v: Boolean) { _debugEnabled.value = v; prefs.edit().putBoolean(Prefs.DEBUG_ENABLED, v).apply() }

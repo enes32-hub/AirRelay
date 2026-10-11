@@ -63,6 +63,7 @@
     <string name="playback_choice_title">التشغيل</string>
     <string name="playback_mirror">انعكاس الشاشة</string>
     <string name="playback_direct">تشغيل مباشر</string>
+    <string name="playback_to_mirror">التبديل إلى عكس الشاشة</string>
     <string name="playback_mirror_description">شغّل الفيديوهات على جهازك واعكس صورتها وصوتها على التلفزيون.</string>
     <string name="playback_direct_description">اختر هذا التلفزيون من قائمة AirPlay للفيديو. تُشغّل الفيديوهات المدعومة على التلفزيون ويمكن التحكم بها من جهازك. قد لا يتحول انعكاس الشاشة القائم تلقائيًا.</string>
     <string name="playback_actual_direct">البث: فيديو مباشر</string>
