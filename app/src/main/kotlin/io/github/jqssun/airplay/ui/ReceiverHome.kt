@@ -31,17 +31,21 @@ fun ReceiverHome(state: ReceiverUiState, savedName: String, bound: Boolean,
     modifier: Modifier = Modifier, primaryFocus: FocusRequester = remember { FocusRequester() }, onDismissNotice: () -> Unit = {}) {
     val helpFocus = remember { FocusRequester() }
     BoxWithConstraints(modifier.fillMaxSize()) {
-        val wide = maxWidth >= 680.dp && LocalDensity.current.fontScale < 1.5f
-        val compactGuide = maxHeight < 380.dp
         val showClassicScene = maxWidth >= 640.dp && LocalDensity.current.fontScale < 1.2f
-                    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(24.dp)) {
-                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(18.dp)) {
-                    HomeIdentity(state, savedName, bound, onStart, onStop, onShowMirror, onHelp,
-                        onDismissNotice, primaryFocus, helpFocus, Modifier.weight(1f))
-                    if (showClassicScene)
-                        ReceiverScene(Modifier.width(230.dp).height(200.dp).padding(top = 60.dp))
-                }
-                androidx.compose.material3.HorizontalDivider(color = AirRelayColors.Border)
+        // The title, the receiver identity and the primary actions stay fixed. The page is a few
+        // pixels taller than a 1080p viewport in longer translations, and scrolling the whole page
+        // brought the focused element into view, which sliced the title off the top edge. Only the
+        // guide steps scroll, so the title can never be clipped.
+        Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(18.dp)) {
+                HomeIdentity(state, savedName, bound, onStart, onStop, onShowMirror, onHelp,
+                    onDismissNotice, primaryFocus, helpFocus, Modifier.weight(1f))
+                if (showClassicScene)
+                    ReceiverScene(Modifier.width(230.dp).height(200.dp).padding(top = 60.dp))
+            }
+            androidx.compose.material3.HorizontalDivider(color = AirRelayColors.Border)
+            Column(Modifier.weight(1f).verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 if (LocalDensity.current.fontScale < 1.2f) Row(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
                     Box(Modifier.weight(1f)) { GuideStep("1", R.string.p_step1, R.string.r2_step1) }
                     Box(Modifier.weight(1f)) { GuideStep("2", R.string.p_step2, R.string.r2_step2) }
@@ -54,6 +58,7 @@ fun ReceiverHome(state: ReceiverUiState, savedName: String, bound: Boolean,
                 TvAction(stringResource(R.string.r2_cannot_find), onHelp, compact = true,
                     modifier = Modifier.focusRequester(helpFocus), focusId = "home.help")
             }
+        }
         
     }
 }
@@ -64,14 +69,14 @@ private fun HomeIdentity(state: ReceiverUiState, savedName: String, bound: Boole
     onStart: () -> Unit, onStop: () -> Unit, onShowMirror: () -> Unit, onHelp: () -> Unit,
     onDismissNotice: () -> Unit, primaryFocus: FocusRequester, helpFocus: FocusRequester, modifier: Modifier = Modifier) {
     val largerText = LocalDensity.current.fontScale >= 1.2f
-    Column(modifier.padding(4.dp), verticalArrangement = Arrangement.spacedBy(if (largerText) 12.dp else 16.dp)) {
-        Column(verticalArrangement = Arrangement.spacedBy(7.dp)) {
+    Column(modifier.padding(4.dp), verticalArrangement = Arrangement.spacedBy(if (largerText) 10.dp else 12.dp)) {
+        Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(stringResource(R.string.r2_hero), style = MaterialTheme.typography.headlineLarge)
             Text(stringResource(R.string.r2_hero_body), style = MaterialTheme.typography.bodyMedium, color = AirRelayColors.Muted)
         }
-        Column(Modifier.fillMaxWidth().padding(vertical = 8.dp)
+        Column(Modifier.fillMaxWidth().padding(vertical = 4.dp)
             .border(1.dp, AirRelayColors.Border.copy(alpha = .75f), RoundedCornerShape(22.dp))
-            .padding(horizontal = 20.dp, vertical = if (largerText) 16.dp else 20.dp),
+            .padding(horizontal = 20.dp, vertical = if (largerText) 12.dp else 14.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(stringResource(if (state.running) R.string.p_pick_name else R.string.p_name_when_started),
                 style = MaterialTheme.typography.labelSmall, color = AirRelayColors.Muted)

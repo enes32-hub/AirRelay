@@ -68,8 +68,8 @@ android {
         applicationId = "com.airrelay.receiver"
         minSdk = 24
         targetSdk = 36
-        versionCode = 3
-        versionName = "1.0.2"
+        versionCode = 4
+        versionName = "1.0.3"
         testInstrumentationRunner = "io.github.jqssun.airplay.IntegrationInstrumentation"
 
         externalNativeBuild {

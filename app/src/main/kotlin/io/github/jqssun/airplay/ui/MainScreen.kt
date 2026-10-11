@@ -302,7 +302,7 @@ private fun ReceiverShell(page: ReceiverPage, onPage: (ReceiverPage) -> Unit, on
         }
         
         Column(Modifier.weight(1f).fillMaxHeight().padding(start = 28.dp, end = 32.dp,
-            top = 32.dp, bottom = 18.dp)) {
+            top = 20.dp, bottom = 16.dp)) {
             
             key("receiver-pages") { content() }
         }
