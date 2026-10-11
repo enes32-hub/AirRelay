@@ -180,7 +180,7 @@
     <string name="p_keep_screen">Bildschirm bei Verbindung eingeschaltet lassen</string>
     <string name="p_keep_screen_desc">Verhindert den Ruhezustand bei verbundenem Gerät.</string>
     <string name="p_language">Sprache der Oberfläche</string>
-    <string name="p_language_system">Systemsprache</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">Bewegung reduzieren</string>
     <string name="p_reduce_motion_desc">Fokusanimationen ausschalten, deutliche Fokusumrandung beibehalten.</string>
     <string name="p_large_text">Größerer Text</string>

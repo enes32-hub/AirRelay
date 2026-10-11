@@ -180,7 +180,7 @@
     <string name="p_keep_screen">Garder l’écran allumé pendant la connexion</string>
     <string name="p_keep_screen_desc">Empêche la veille lorsqu’un appareil est connecté.</string>
     <string name="p_language">Langue de l’interface</string>
-    <string name="p_language_system">Langue du système</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">Réduire les animations</string>
     <string name="p_reduce_motion_desc">Désactiver les animations de focus tout en gardant un contour net.</string>
     <string name="p_large_text">Texte plus grand</string>

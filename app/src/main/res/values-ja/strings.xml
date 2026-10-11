@@ -180,7 +180,7 @@
     <string name="p_keep_screen">接続中は画面を点灯</string>
     <string name="p_keep_screen_desc">デバイスの接続中に画面がスリープするのを防ぎます。</string>
     <string name="p_language">表示言語</string>
-    <string name="p_language_system">システムの言語</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">動きを減らす</string>
     <string name="p_reduce_motion_desc">フォーカスの枠線を残し、フォーカスのアニメーションをオフにします。</string>
     <string name="p_large_text">文字を大きくする</string>

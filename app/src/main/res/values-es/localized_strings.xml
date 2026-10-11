@@ -180,7 +180,7 @@
     <string name="p_keep_screen">Mantener la pantalla encendida al conectar</string>
     <string name="p_keep_screen_desc">Evita el reposo con un dispositivo conectado.</string>
     <string name="p_language">Idioma de la interfaz</string>
-    <string name="p_language_system">Idioma del sistema</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">Reducir movimiento</string>
     <string name="p_reduce_motion_desc">Desactivar animaciones del foco manteniendo un contorno claro.</string>
     <string name="p_large_text">Texto más grande</string>

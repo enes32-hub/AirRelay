@@ -2,7 +2,7 @@
 <resources>
     <string name="p_keep_screen_desc">Предотвращать сон экрана, пока устройство подключено.</string>
     <string name="p_language">Язык интерфейса</string>
-    <string name="p_language_system">Язык системы</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">Уменьшить движение</string>
     <string name="p_reduce_motion_desc">Отключить анимацию фокуса, сохранив чёткую рамку выделения.</string>
     <string name="p_large_text">Крупный текст</string>

@@ -180,7 +180,7 @@
     <string name="p_keep_screen">连接时保持屏幕常亮</string>
     <string name="p_keep_screen_desc">设备连接时防止屏幕休眠。</string>
     <string name="p_language">界面语言</string>
-    <string name="p_language_system">系统语言</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">减少动态效果</string>
     <string name="p_reduce_motion_desc">关闭焦点动画，同时保留清晰的焦点边框。</string>
     <string name="p_large_text">放大文字</string>

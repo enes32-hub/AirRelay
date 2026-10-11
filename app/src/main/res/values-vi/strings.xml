@@ -180,7 +180,7 @@
     <string name="p_keep_screen">Giữ màn hình sáng khi kết nối</string>
     <string name="p_keep_screen_desc">Ngăn màn hình ngủ khi có thiết bị đang kết nối.</string>
     <string name="p_language">Ngôn ngữ giao diện</string>
-    <string name="p_language_system">Ngôn ngữ hệ thống</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">Giảm chuyển động</string>
     <string name="p_reduce_motion_desc">Tắt hiệu ứng chuyển động khi lấy nét nhưng vẫn giữ đường viền rõ ràng.</string>
     <string name="p_large_text">Chữ lớn hơn</string>

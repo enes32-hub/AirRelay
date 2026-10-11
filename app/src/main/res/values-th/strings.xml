@@ -180,7 +180,7 @@
     <string name="p_keep_screen">เปิดหน้าจอไว้ขณะเชื่อมต่อ</string>
     <string name="p_keep_screen_desc">ป้องกันหน้าจอพักขณะที่อุปกรณ์เชื่อมต่ออยู่</string>
     <string name="p_language">ภาษาอินเทอร์เฟซ</string>
-    <string name="p_language_system">ภาษาระบบ</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">ลดการเคลื่อนไหว</string>
     <string name="p_reduce_motion_desc">ปิดภาพเคลื่อนไหวของโฟกัส โดยยังแสดงเส้นขอบโฟกัสชัดเจน</string>
     <string name="p_large_text">ข้อความขนาดใหญ่ขึ้น</string>

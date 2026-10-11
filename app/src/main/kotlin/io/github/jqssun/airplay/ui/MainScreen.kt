@@ -61,7 +61,7 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
     var observedFailureId by rememberSaveable { mutableLongStateOf(0L) }
     var showPlaybackHelp by rememberSaveable { mutableStateOf(false) }
     val savedName by viewModel.serverName.collectAsStateWithLifecycle()
-    val remoteVideoEnabled by viewModel.advertiseVideo.collectAsStateWithLifecycle()
+    val remoteVideoEnabled = state.directPlayback
     val quickRecording = rememberQuickRecording()
     val homePrimary = remember { FocusRequester() }
     var showRecordings by remember { mutableStateOf(false) }

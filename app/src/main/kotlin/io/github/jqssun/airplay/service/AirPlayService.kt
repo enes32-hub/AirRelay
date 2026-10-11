@@ -671,9 +671,11 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
         videoRenderer.scheduledOutputBufferRelease = prefs.getBoolean(Prefs.SCHEDULED_OUTPUT_BUFFER_RELEASE, Prefs.DEF_SCHEDULED_OUTPUT_BUFFER_RELEASE)
         NativeBridge.nativeSetH265Enabled(nativeHandle, h265)
         NativeBridge.nativeSetCodecs(nativeHandle, alac, aac)
-        val advertiseVideo = prefs.getBoolean(Prefs.ADVERTISE_VIDEO, Prefs.DEF_ADVERTISE_VIDEO)
+        // Screen mirroring is a per-stream choice: every receiver start advertises direct
+        // playback again, and only an in-stream switch turns mirroring on for that stream.
+        prefs.edit().putBoolean(Prefs.ADVERTISE_VIDEO, true).apply()
         val advertiseAudio = prefs.getBoolean(Prefs.ADVERTISE_AUDIO, Prefs.DEF_ADVERTISE_AUDIO)
-        NativeBridge.nativeSetHlsEnabled(nativeHandle, advertiseVideo)
+        NativeBridge.nativeSetHlsEnabled(nativeHandle, true)
         NativeBridge.nativeSetLang(nativeHandle, "", "", resources.configuration.locales.toLanguageTags().replace(',', ':'))
         NativeBridge.nativeSetAudioEnabled(nativeHandle, advertiseAudio)
         NativeBridge.nativeSetPlist(nativeHandle, "maxFPS", maxFps)
@@ -915,9 +917,28 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
         airPlayVideoPlayer.seekBy(deltaMs)
     }
 
+    /**
+     * Ending a stream returns the receiver to direct playback so the next connection is direct
+     * again. Within a stream the choice stays one-way: a live mirror session is never switched
+     * back, because the sender fixes the mode when it negotiates the session.
+     */
+    private fun resetPlaybackModeToDirect(reason: String) {
+        val alreadyDirect = prefs.getBoolean(Prefs.ADVERTISE_VIDEO, Prefs.DEF_ADVERTISE_VIDEO)
+        if (!alreadyDirect) {
+            prefs.edit().putBoolean(Prefs.ADVERTISE_VIDEO, true).apply()
+            if (nativeHandle != 0L && !stopping) {
+                NativeBridge.nativeSetHlsEnabled(nativeHandle, true)
+                refreshDiscoveryRegistration()
+            }
+            log("Direct playback restored after $reason")
+        }
+        _receiverState.update { if (it.directPlayback) it else it.copy(directPlayback = true) }
+    }
+
     fun setRemoteVideoPlaybackEnabled(enabled: Boolean): Boolean {
         if (_receiverState.value.starting) return false
         prefs.edit().putBoolean(Prefs.ADVERTISE_VIDEO, enabled).apply()
+        _receiverState.update { it.copy(directPlayback = enabled) }
         if (nativeHandle != 0L && !stopping) {
             NativeBridge.nativeSetHlsEnabled(nativeHandle, enabled)
             if (!enabled) {
@@ -968,6 +989,7 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
                 airplay = state.airplay, raop = state.raop, connections = _connectionCount.value)
         }
         mediaSession?.isActive = false
+        resetPlaybackModeToDirect("stream ended locally")
         log("Current stream ended; receiver remains available")
     }
 
@@ -1295,6 +1317,8 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
             }
             // clients may drop without POST /stop; must run before the poll-state reset
             _endVideoPlayback("AirPlay Video stopped (disconnect)")
+            // The stream is over: the next connection starts from direct playback again.
+            resetPlaybackModeToDirect("last client disconnected")
             // last client gone: release audio output devices to save power
             audioRenderer.stop()
             _audioOnly.value = false

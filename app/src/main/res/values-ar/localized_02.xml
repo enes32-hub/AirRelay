@@ -2,7 +2,7 @@
 <resources>
     <string name="p_keep_screen_desc">منع سكون الشاشة أثناء اتصال جهاز.</string>
     <string name="p_language">لغة الواجهة</string>
-    <string name="p_language_system">لغة النظام</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">تقليل الحركة</string>
     <string name="p_reduce_motion_desc">إيقاف حركات التركيز مع الإبقاء على إطار تركيز واضح.</string>
     <string name="p_large_text">نص أكبر</string>

@@ -180,7 +180,7 @@
     <string name="p_keep_screen">연결 중 화면 켜짐 유지</string>
     <string name="p_keep_screen_desc">기기가 연결된 동안 화면이 절전 모드로 전환되지 않도록 합니다.</string>
     <string name="p_language">인터페이스 언어</string>
-    <string name="p_language_system">시스템 언어</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">동작 줄이기</string>
     <string name="p_reduce_motion_desc">초점 윤곽선은 유지하면서 초점 애니메이션을 끕니다.</string>
     <string name="p_large_text">더 큰 글자</string>

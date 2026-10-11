@@ -2,7 +2,7 @@
 <resources>
     <string name="p_keep_screen_desc">डिवाइस कनेक्ट होने पर स्क्रीन को स्लीप में जाने से रोकें।</string>
     <string name="p_language">इंटरफ़ेस की भाषा</string>
-    <string name="p_language_system">सिस्टम की भाषा</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">गति कम करें</string>
     <string name="p_reduce_motion_desc">चयन का साफ़ बॉर्डर रखते हुए फ़ोकस ऐनिमेशन बंद करें।</string>
     <string name="p_large_text">बड़ा टेक्स्ट</string>

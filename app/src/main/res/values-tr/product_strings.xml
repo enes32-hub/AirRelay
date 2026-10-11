@@ -91,7 +91,7 @@
     <string name="p_keep_screen">Bağlantı sırasında ekran açık kalsın</string>
     <string name="p_keep_screen_desc">Bir cihaz bağlıyken ekranın uyumasını önle.</string>
     <string name="p_language">Arayüz dili</string>
-    <string name="p_language_system">Sistem dili</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">Hareketi azalt</string>
     <string name="p_reduce_motion_desc">Odak animasyonlarını kapat; belirgin odak çerçevesini koru.</string>
     <string name="p_large_text">Daha büyük yazı</string>

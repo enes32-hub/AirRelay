@@ -17,6 +17,8 @@ data class ReceiverUiState(
     val network: LocalNetwork = LocalNetwork.UNKNOWN,
     val airplay: Advertisement = Advertisement.IDLE,
     val raop: Advertisement = Advertisement.IDLE,
+    /** True while the receiver advertises direct playback; screen mirroring is per stream. */
+    val directPlayback: Boolean = true,
     val discoveryErrorCode: Int? = null,
     val portConflict: String? = null,
     val connections: Int = 0,

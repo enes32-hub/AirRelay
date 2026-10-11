@@ -180,7 +180,7 @@
     <string name="p_keep_screen">Mantieni lo schermo acceso durante la connessione</string>
     <string name="p_keep_screen_desc">Impedisce la sospensione con un dispositivo connesso.</string>
     <string name="p_language">Lingua dell’interfaccia</string>
-    <string name="p_language_system">Lingua di sistema</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">Riduci movimento</string>
     <string name="p_reduce_motion_desc">Disattiva le animazioni di selezione mantenendo un contorno chiaro.</string>
     <string name="p_large_text">Testo più grande</string>

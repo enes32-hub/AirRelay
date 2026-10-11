@@ -91,7 +91,7 @@
     <string name="p_keep_screen">Keep the screen on while connected</string>
     <string name="p_keep_screen_desc">Prevent display sleep while a device is connected.</string>
     <string name="p_language">Interface language</string>
-    <string name="p_language_system">System language</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">Reduce motion</string>
     <string name="p_reduce_motion_desc">Turn off focus animations while keeping a clear focus outline.</string>
     <string name="p_large_text">Larger text</string>

@@ -2,7 +2,7 @@
 <resources>
     <string name="p_keep_screen_desc">Cegah layar tidur selama perangkat tersambung.</string>
     <string name="p_language">Bahasa antarmuka</string>
-    <string name="p_language_system">Bahasa sistem</string>
+    <string name="p_language_system">System default</string>
     <string name="p_reduce_motion">Kurangi gerakan</string>
     <string name="p_reduce_motion_desc">Matikan animasi fokus dengan tetap menampilkan garis fokus yang jelas.</string>
     <string name="p_large_text">Teks lebih besar</string>

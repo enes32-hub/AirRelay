@@ -14,8 +14,9 @@
     "NativeBridge.nativeSetDisplaySize(nativeHandle,w,h,effectiveMirrorFps())",
     "NativeBridge.nativeSetDisplaySize(nativeHandle,w,h,maxFps)",
     "NativeBridge.nativeSetH265Enabled(nativeHandle,h265)",
-    "NativeBridge.nativeSetHlsEnabled(nativeHandle,advertiseVideo)",
     "NativeBridge.nativeSetHlsEnabled(nativeHandle,enabled)",
+    "NativeBridge.nativeSetHlsEnabled(nativeHandle,true)",
+    "NativeBridge.nativeSetHlsEnabled(nativeHandle,true)",
     "NativeBridge.nativeSetLang(nativeHandle,\"\",\"\",resources.configuration.locales.toLanguageTags().replace(',',':'))",
     "NativeBridge.nativeSetPlist(nativeHandle,\"audio_delay_micros\",audioLatencyMs*1000)",
     "NativeBridge.nativeSetPlist(nativeHandle,\"maxFPS\",maxFps)",
@@ -24,6 +25,6 @@
     "NativeBridge.nativeStop(retiredHandle)",
     "NativeBridge.nativeUpdatePlaybackInfo(nativeHandle,snapshot.position,snapshot.duration,snapshot.rate,snapshot.ready)"
   ],
-  "regenerated_at": "2026-10-10T15:21:36.462710+00:00",
-  "regenerated_for": "JNI call expressions of the current reviewed AirPlayService: nativeDestroy/nativeStop now receive the retired handle, add nativeEndCurrentStream and nativeSetHlsEnabled, and the display size uses effectiveMirrorFps(). No native symbol was renamed."
+  "regenerated_at": "2026-10-11T12:19:44.139110+00:00",
+  "regenerated_for": "JNI call expressions after the per-stream playback mode: the receiver start now passes the constant true to nativeSetHlsEnabled (direct playback is re-armed for each stream) and resetPlaybackModeToDirect adds one more call to the same reviewed function. No native function, signature or return contract changed."
 }
