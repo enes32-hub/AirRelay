@@ -1,5 +1,6 @@
 package io.github.jqssun.airplay.ui
 
+import io.github.jqssun.airplay.ui.theme.AirRelayColors
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -24,7 +25,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-internal val CapsuleMint = Color(0xFFE5F4E9)
 internal val LocalCapsuleFocused = compositionLocalOf<(FocusRequester) -> Unit> { {} }
 
 /** Only the icon is filled: labels sit outside the circular hit-target artwork. */
@@ -55,8 +55,8 @@ internal fun CapsuleAction(text: String, onClick: () -> Unit, icon: ImageVector,
         verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterVertically)) {
         Box(Modifier.size(size)
             .background(when {
-                active && destructive -> Color(0xFFF2CBBF)
-                active -> CapsuleMint
+                active && destructive -> AirRelayColors.Danger
+                active -> AirRelayColors.Accent
                 pressed -> Color.White.copy(alpha = .25f)
                 prominent -> Color.White.copy(alpha = .17f)
                 else -> Color.White.copy(alpha = .055f)
@@ -64,14 +64,14 @@ internal fun CapsuleAction(text: String, onClick: () -> Unit, icon: ImageVector,
             .border(1.dp, Color.White.copy(alpha = if (active) .75f else .09f), CircleShape),
             contentAlignment = Alignment.Center) {
             Icon(icon, null, Modifier.size(if (prominent) 29.dp else 23.dp), tint = when {
-                active && destructive -> Color(0xFF5A2925)
-                active -> Color(0xFF142B2C)
-                destructive -> Color(0xFFE5B7A8)
-                else -> Color(0xFFE6EFE8)
+                active && destructive -> AirRelayColors.OnAccent
+                active -> AirRelayColors.OnAccent
+                destructive -> AirRelayColors.Danger
+                else -> AirRelayColors.Text
             })
         }
         Text(text, style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp,
             lineHeight = 12.sp, letterSpacing = 0.sp),
-            color = if (active) Color.White else Color(0xFFCBD9D2), textAlign = TextAlign.Center)
+            color = if (active) AirRelayColors.Text else AirRelayColors.Muted, textAlign = TextAlign.Center)
     }
 }

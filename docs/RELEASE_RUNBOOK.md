@@ -5,15 +5,15 @@
 | Item | Value |
 |---|---|
 | Application id | `com.airrelay.receiver` (frozen; changing it orphans every installation) |
-| Current public release | versionCode 2, versionName `1.0.1` |
+| Current public release | versionCode 3, versionName `1.0.2` |
 | First release-signed build (internal, never published) | versionCode 75, versionName `0.1.0-rc40-test` |
 | Keystore | `keystore/airrelay-release.jks` (gitignored), alias `airrelay`, RSA 4096, validity 10000 days |
 | Certificate DN | `CN=AirRelay, OU=Receiver, O=AirRelay, C=TR` |
 | **Certificate SHA-256** | `c24b1ae32c1b12ad7461728a4d24675a41cda63a464f13eb3cbd7adfb7c77ef2` |
 | Certificate SHA-1 | `e4ce9bd3fe78ca3aa80f46181c3303f410d16517` |
 | First release-signed universal APK (internal) | 17.27 MB, SHA-256 `4C9160B291D2DA3552751E36F590DEF12ED109E226396167E5452A07DA56196B` |
-| Current universal APK (1.0.1) | 17.28 MB, SHA-256 `7ef8b2f18667048448da91b68851c6e911410bc72ca8b8af834185efa4f2b56b` |
-| Current App Bundle (1.0.1) | 18.38 MB, SHA-256 `40ac0b07108b7201c729095e2c27fa25d118b61fd22f890d0d3892bbedaac52a` |
+| Current universal APK (1.0.2) | 17.28 MB, SHA-256 `e97a7f5cd94a583b73efcd03d94a7eee8d1d871258e3b39469c662307a1ca1b9` |
+| Current App Bundle (1.0.2) | 18.37 MB, SHA-256 `523bc4ee4a61a6e6f4f7d4326d27dc8d0c3e2408efa3a64cf9da69df7b2d4c44` |
 
 Verify every future artifact against the fingerprint above:
 
@@ -118,6 +118,6 @@ Do not make it pass by editing records: `REQUIREMENTS_TRACEABILITY.csv` starts e
 * **Source offer**: `legal/NOTICE.md` still carries `<SOURCE-URL-NOT-SET>`.
 * **Acceptance evidence**: 102 requirements at `NOT_RUN`; `G0-LICENSE`, `G0-SPIKE`,
   `G0-TOOLCHAIN`, `G0-SELECTION` unresolved.
-* **Version naming**: `1.0.1` / versionCode 2 is the first public release. Keep `versionCode` strictly
+* **Version naming**: `1.0.2` / versionCode 3 is the current build (1.0.0, 1.0.1 and 1.0.2 were never published). Keep `versionCode` strictly
   increasing: a device only accepts an update whose code is higher than the installed one.
   before the first published build, and keep `versionCode` strictly increasing.

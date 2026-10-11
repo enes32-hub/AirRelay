@@ -1,5 +1,6 @@
 package io.github.jqssun.airplay.ui
 
+import io.github.jqssun.airplay.ui.theme.AirRelayColors
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -38,8 +39,8 @@ fun StreamMetrics(input: DebugInfo, remote: Boolean, media: VideoPlaybackInfo, m
             stringResource(R.string.metrics_dropped, input.droppedFrames),
             input.audioCodec.takeIf { it.isNotBlank() })
     }
-    Column(modifier.widthIn(max = 330.dp).background(Color(0xDB101214), RoundedCornerShape(10.dp))
+    Column(modifier.widthIn(max = 330.dp).background(AirRelayColors.Panel.copy(alpha = .86f), RoundedCornerShape(10.dp))
         .padding(12.dp), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-        rows.forEach { Text(it, color = Color.White, style = MaterialTheme.typography.bodySmall) }
+        rows.forEach { Text(it, color = AirRelayColors.Text, style = MaterialTheme.typography.bodySmall) }
     }
 }

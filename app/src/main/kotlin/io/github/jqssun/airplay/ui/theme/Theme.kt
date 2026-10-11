@@ -14,7 +14,9 @@ data class ReceiverPalette(val Background: Color, val Panel: Color, val Elevated
     val AccentSoft: Color, val Danger: Color, val Warning: Color, val OnAccent: Color,
     val Focus: Color = Text, val Hover: Color = Accent, val Link: Color = Accent,
     val Success: Color = Accent, val SelectedFill: Color = AccentSoft,
-    val SelectedInk: Color = Accent, val ButtonSurface: Color = Panel)
+    val SelectedInk: Color = Accent, val ButtonSurface: Color = Panel,
+    /** Navigation rail surface: slightly apart from [Background] so the rail reads as its own region. */
+    val Rail: Color = Background)
 
 // One brand palette family for every theme: the same indigo accent and the same semantic roles,
 // with only the surface tones changing. Previously the light theme carried a green accent, the dark
@@ -25,7 +27,8 @@ private val classic = ReceiverPalette(Color(0xFF17191B), Color(0xFF222629), Colo
     Color(0xFF343A5C), Color(0xFFE9ACA3), Color(0xFFE6CCA2), Color(0xFF222335),
     Focus = Color(0xFFF0EEE5), Hover = Color(0xFFE1DFFB), Link = Color(0xFFC7C4F8),
     Success = Color(0xFFAED5BA), SelectedFill = Color(0xFF3A3F66),
-    SelectedInk = Color(0xFFF3F2EE), ButtonSurface = Color(0xFF222629))
+    SelectedInk = Color(0xFFF3F2EE), ButtonSurface = Color(0xFF222629),
+    Rail = Color(0xFF121416))
 
 // Light counterpart of `classic`: identical roles and accent hue, surfaces inverted. The accent is
 // the same indigo darkened until it carries enough contrast for text and icons on white.
@@ -34,9 +37,9 @@ private val light = ReceiverPalette(Color(0xFFF7F7F5), Color(0xFFFFFFFF), Color(
     Color(0xFFE7E5F6), Color(0xFFA92724), Color(0xFF825B0A), Color(0xFFFFFFFF),
     Focus = Color(0xFF4A46A8), Hover = Color(0xFFDAD7F1), Link = Color(0xFF4A46A8),
     Success = Color(0xFF2F6B4C), SelectedFill = Color(0xFFDCD9F3),
-    SelectedInk = Color(0xFF2C2A63), ButtonSurface = Color(0xFFFFFFFF))
+    SelectedInk = Color(0xFF2C2A63), ButtonSurface = Color(0xFFFFFFFF),
+    Rail = Color(0xFFEFEFEC))
 
-val LocalClassicDesign = staticCompositionLocalOf { true }
 val LocalReceiverPalette = staticCompositionLocalOf { classic }
 // Media surfaces: the `classic` family, deepened so the picture sits on a calmer background.
 private val playback = ReceiverPalette(
@@ -45,7 +48,8 @@ private val playback = ReceiverPalette(
     Color(0xFF2F3560), Color(0xFFE9ACA3), Color(0xFFE6CCA2), Color(0xFF1B1D2A),
     Focus = Color(0xFFF0EEE5), Hover = Color(0xFFE1DFFB), Link = Color(0xFFC7C4F8),
     Success = Color(0xFFAED5BA), SelectedFill = Color(0xFF363C63),
-    SelectedInk = Color(0xFFF3F2EE), ButtonSurface = Color(0xFF1A1E21))
+    SelectedInk = Color(0xFFF3F2EE), ButtonSurface = Color(0xFF1A1E21),
+    Rail = Color(0xFF0A0D0F))
 
 /** Playback-only colors; inherit the existing typography, shapes and sizing. */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -71,6 +75,9 @@ object AirRelayColors {
     val Panel: Color @Composable get() = LocalReceiverPalette.current.Panel
     val Elevated: Color @Composable get() = LocalReceiverPalette.current.Elevated
     val Accent: Color @Composable get() = LocalReceiverPalette.current.Accent
+    /** Ink that stays readable on top of [Accent] and [Focus]: dark in the dark palette, white in the light one. */
+    val OnAccent: Color @Composable get() = LocalReceiverPalette.current.OnAccent
+    val Rail: Color @Composable get() = LocalReceiverPalette.current.Rail
     val Text: Color @Composable get() = LocalReceiverPalette.current.Text
     val Muted: Color @Composable get() = LocalReceiverPalette.current.Muted
     val Border: Color @Composable get() = LocalReceiverPalette.current.Border
@@ -112,7 +119,7 @@ fun AirPlayTheme(selected: String = "classic", content: @Composable () -> Unit) 
     val effective = AppearancePolicy.resolve(selected)
     val colors = if (effective == "light") light else classic
     val material = remember(colors) { scheme(colors, effective == "light") }
-    CompositionLocalProvider(LocalReceiverPalette provides colors, LocalClassicDesign provides (effective == "classic")) {
+    CompositionLocalProvider(LocalReceiverPalette provides colors) {
         MaterialTheme(colorScheme = material, typography = type) {
             CompositionLocalProvider(LocalContentColor provides colors.Text,
                 LocalRippleConfiguration provides null, content = content)

@@ -30,13 +30,11 @@ fun ReceiverHome(state: ReceiverUiState, savedName: String, bound: Boolean,
     onStart: () -> Unit, onStop: () -> Unit, onShowMirror: () -> Unit, onHelp: () -> Unit,
     modifier: Modifier = Modifier, primaryFocus: FocusRequester = remember { FocusRequester() }, onDismissNotice: () -> Unit = {}) {
     val helpFocus = remember { FocusRequester() }
-    val classic = io.github.jqssun.airplay.ui.theme.LocalClassicDesign.current
     BoxWithConstraints(modifier.fillMaxSize()) {
         val wide = maxWidth >= 680.dp && LocalDensity.current.fontScale < 1.5f
         val compactGuide = maxHeight < 380.dp
         val showClassicScene = maxWidth >= 640.dp && LocalDensity.current.fontScale < 1.2f
-        if (classic) {
-            Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(24.dp)) {
+                    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(24.dp)) {
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(18.dp)) {
                     HomeIdentity(state, savedName, bound, onStart, onStop, onShowMirror, onHelp,
                         onDismissNotice, primaryFocus, helpFocus, Modifier.weight(1f))
@@ -56,19 +54,7 @@ fun ReceiverHome(state: ReceiverUiState, savedName: String, bound: Boolean,
                 TvAction(stringResource(R.string.r2_cannot_find), onHelp, compact = true,
                     modifier = Modifier.focusRequester(helpFocus), focusId = "home.help")
             }
-        } else if (wide) {
-            Row(Modifier.fillMaxSize(), horizontalArrangement = Arrangement.spacedBy(28.dp)) {
-                HomeIdentity(state, savedName, bound, onStart, onStop, onShowMirror, onHelp,
-                    onDismissNotice, primaryFocus, helpFocus, Modifier.weight(1.07f).fillMaxHeight().verticalScroll(rememberScrollState()))
-                ConnectionGuide(onHelp, helpFocus, Modifier.weight(1f).fillMaxHeight(), compact = compactGuide)
-            }
-        } else {
-            Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(4.dp),
-                verticalArrangement = Arrangement.spacedBy(22.dp)) {
-                HomeIdentity(state, savedName, bound, onStart, onStop, onShowMirror, onHelp, onDismissNotice, primaryFocus, helpFocus)
-                ConnectionGuide(onHelp, helpFocus, Modifier.fillMaxWidth(), compact = true, scrollable = false)
-            }
-        }
+        
     }
 }
 
@@ -83,7 +69,7 @@ private fun HomeIdentity(state: ReceiverUiState, savedName: String, bound: Boole
             Text(stringResource(R.string.r2_hero), style = MaterialTheme.typography.headlineLarge)
             Text(stringResource(R.string.r2_hero_body), style = MaterialTheme.typography.bodyMedium, color = AirRelayColors.Muted)
         }
-        Column(if (io.github.jqssun.airplay.ui.theme.LocalClassicDesign.current) Modifier.fillMaxWidth().padding(vertical = 8.dp) else Modifier.fillMaxWidth().background(AirRelayColors.Panel, RoundedCornerShape(22.dp))
+        Column(Modifier.fillMaxWidth().padding(vertical = 8.dp)
             .border(1.dp, AirRelayColors.Border.copy(alpha = .75f), RoundedCornerShape(22.dp))
             .padding(horizontal = 20.dp, vertical = if (largerText) 16.dp else 20.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -142,22 +128,6 @@ private fun HomeIdentity(state: ReceiverUiState, savedName: String, bound: Boole
             style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Accent)
         if (state.raop == Advertisement.FAILED) Text(stringResource(R.string.p_audio_warning),
             style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Warning)
-    }
-}
-
-@Composable
-private fun ConnectionGuide(onHelp: () -> Unit, helpFocus: FocusRequester, modifier: Modifier = Modifier, compact: Boolean, scrollable: Boolean = true) {
-    Column(modifier.background(Brush.verticalGradient(listOf(AirRelayColors.Elevated.copy(alpha = .8f), AirRelayColors.Panel)),
-        RoundedCornerShape(26.dp)).border(1.dp, AirRelayColors.Border.copy(alpha = .65f), RoundedCornerShape(26.dp))
-        .then(if (scrollable) Modifier.verticalScroll(rememberScrollState()) else Modifier).padding(horizontal = 20.dp, vertical = 14.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        ReceiverScene(Modifier.fillMaxWidth().height(if (compact) 56.dp else 90.dp))
-        Text(stringResource(R.string.p_connect_steps), style = MaterialTheme.typography.titleMedium)
-        GuideStep("1", R.string.p_step1, R.string.r2_step1)
-        GuideStep("2", R.string.p_step2, R.string.r2_step2)
-        GuideStep("3", R.string.p_step3, R.string.r2_step3)
-        TvAction(stringResource(R.string.r2_cannot_find), onHelp, compact = true,
-            modifier = Modifier.fillMaxWidth().focusRequester(helpFocus), focusId = "home.help")
     }
 }
 

@@ -7,7 +7,7 @@ cloud service.
 | | |
 |---|---|
 | Application ID | `com.airrelay.receiver` |
-| Version | `1.0.1` (versionCode 2) |
+| Version | `1.0.2` (versionCode 3) |
 | Platform | Android TV, Android 7.0+ (API 24+), landscape, D-pad remote |
 | Architectures | `arm64-v8a`, `armeabi-v7a` |
 | Language | Kotlin + Jetpack Compose (Material 3), native C/C++ core |
@@ -112,7 +112,7 @@ dependency sources in this checkout.
 
 ## Verification status
 
-Honest state of the 1.0.1 build:
+Honest state of the 1.0.2 build:
 
 - Verified: signed release APK and AAB (release key, not debuggable, both ABIs, 16 KB page alignment),
   a real iPhone mirroring session on a Xiaomi MiTV-AFMU0 (Android 14) with hardware HEVC decoding,

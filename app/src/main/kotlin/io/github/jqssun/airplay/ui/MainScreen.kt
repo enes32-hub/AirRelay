@@ -282,10 +282,8 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
 @Composable
 private fun ReceiverShell(page: ReceiverPage, onPage: (ReceiverPage) -> Unit, onQuit: () -> Unit,
     homePrimary: FocusRequester, content: @Composable ColumnScope.() -> Unit) {
-    val classic = io.github.jqssun.airplay.ui.theme.LocalClassicDesign.current
     Row(Modifier.fillMaxSize().background(AirRelayColors.Background)) {
-        if (classic) {
-        Column(Modifier.width(194.dp).fillMaxHeight().background(Color(0xFF121416))
+                Column(Modifier.width(194.dp).fillMaxHeight().background(AirRelayColors.Rail)
             .padding(horizontal = 18.dp, vertical = 24.dp).verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(10.dp)) {
             ReceiverBrand(Modifier.fillMaxWidth())
@@ -302,48 +300,11 @@ private fun ReceiverShell(page: ReceiverPage, onPage: (ReceiverPage) -> Unit, on
             TvAction(stringResource(R.string.p_quit), onQuit, Modifier.fillMaxWidth(),
                 icon = Icons.Rounded.PowerSettingsNew, compact = true, focusId = "nav.quit")
         }
-        }
-        Column(Modifier.weight(1f).fillMaxHeight().padding(start = 28.dp, end = if (classic) 32.dp else 28.dp,
-            top = if (classic) 32.dp else 18.dp, bottom = 18.dp)) {
-            if (!classic) {
-                ReceiverTopBar(page, onPage, onQuit, homePrimary)
-                Spacer(Modifier.height(16.dp))
-            }
+        
+        Column(Modifier.weight(1f).fillMaxHeight().padding(start = 28.dp, end = 32.dp,
+            top = 32.dp, bottom = 18.dp)) {
+            
             key("receiver-pages") { content() }
-        }
-    }
-}
-
-@Composable
-private fun ReceiverTopBar(page: ReceiverPage, onPage: (ReceiverPage) -> Unit, onQuit: () -> Unit, homePrimary: FocusRequester) {
-    Row(Modifier.fillMaxWidth().onPreviewKeyEvent { event ->
-        if (page == ReceiverPage.HOME && event.nativeKeyEvent.keyCode == AndroidKey.KEYCODE_DPAD_DOWN &&
-            event.type == KeyEventType.KeyDown) {
-            // Consume the key only when focus actually moved. Consuming it unconditionally
-            // trapped focus in the top bar whenever the primary action was disabled
-            // (for example for the whole STARTING phase).
-            runCatching { homePrimary.requestFocus() }.getOrDefault(false)
-        } else false
-    }, verticalAlignment = Alignment.CenterVertically) {
-        ReceiverBrand()
-        Spacer(Modifier.width(18.dp))
-        Spacer(Modifier.weight(1f))
-        Row(Modifier.widthIn(max = 600.dp).horizontalScroll(rememberScrollState()).focusGroup().padding(3.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            if (page != page.tab) TvAction(stringResource(R.string.p_back), { onPage(page.parent) }, compact = true,
-                icon = Icons.Rounded.ArrowBack)
-            TvAction(stringResource(R.string.p_home), { onPage(ReceiverPage.HOME) }, icon = Icons.Rounded.Cast,
-                selected = page.tab == ReceiverPage.HOME, compact = true)
-            TvAction(stringResource(R.string.rec_title), { onPage(ReceiverPage.RECORDINGS) }, icon = Icons.Rounded.VideoLibrary,
-                selected = page.tab == ReceiverPage.RECORDINGS, compact = true, focusId = "nav.recordings")
-            TvAction(stringResource(R.string.tab_logs), { onPage(ReceiverPage.LOGS) }, icon = Icons.Rounded.Description,
-                selected = page.tab == ReceiverPage.LOGS, compact = true, focusId = "nav.logs")
-            TvAction(stringResource(R.string.p_help), { onPage(ReceiverPage.HELP) }, icon = Icons.Rounded.HelpOutline,
-                selected = page.tab == ReceiverPage.HELP, compact = true)
-            TvAction(stringResource(R.string.p_settings), { onPage(ReceiverPage.SETTINGS) }, icon = Icons.Rounded.Settings,
-                selected = page.tab == ReceiverPage.SETTINGS, compact = true)
-            TvAction(stringResource(R.string.p_quit), onQuit, icon = Icons.Rounded.PowerSettingsNew,
-                compact = true, focusId = "nav.quit")
         }
     }
 }
@@ -477,7 +438,7 @@ private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isM
             LocalControlPressed provides { pressed = it }, LocalTvInputEnabled provides !modalOpen,
             LocalCapsuleFocused provides { lastAction = it }) {
             Column(Modifier.align(Alignment.BottomCenter).fillMaxWidth()
-                .background(Brush.verticalGradient(listOf(Color.Transparent, Color(0xFF020A0E).copy(alpha = .78f))))
+                .background(Brush.verticalGradient(listOf(Color.Transparent, AirRelayColors.Background.copy(alpha = .78f))))
                 .padding(horizontal = 24.dp, vertical = 28.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 if (isMedia && details.seekable && details.seekEndMs > details.seekStartMs) {
                     ReceiverSeekBar(details, onSeek, { seeking = it; interaction++ }, enabled = !modalOpen,
@@ -487,9 +448,9 @@ private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isM
                 }
                 if (networkMissing) Text(stringResource(R.string.p_network_note), color = AirRelayColors.Warning)
                 Column(Modifier.align(Alignment.CenterHorizontally).widthIn(max = 1100.dp)
-                    .background(Brush.linearGradient(listOf(Color(0xFF96B0AC).copy(alpha = .16f),
-                        Color(0xFF1D2E30).copy(alpha = .60f))), RoundedCornerShape(52.dp))
-                    .border(1.dp, Color(0xFFEAFBF4).copy(alpha = .20f), RoundedCornerShape(52.dp))
+                    .background(Brush.linearGradient(listOf(AirRelayColors.Muted.copy(alpha = .16f),
+                        AirRelayColors.Panel.copy(alpha = .60f))), RoundedCornerShape(52.dp))
+                    .border(1.dp, AirRelayColors.Border.copy(alpha = .20f), RoundedCornerShape(52.dp))
                     .padding(horizontal = 18.dp, vertical = 6.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Row(Modifier.align(Alignment.CenterHorizontally)
                     .horizontalScroll(rememberScrollState()).focusGroup()
@@ -602,13 +563,13 @@ private fun ReceiverSeekBar(details: io.github.jqssun.airplay.service.VideoPlayb
         }
         .focusable(enabled)
         .border(2.dp, if (focused) AirRelayColors.Accent else Color.Transparent)
-        .background(if (draft != null) Color.DarkGray else Color.Transparent).padding(12.dp)) {
+        .background(if (draft != null) AirRelayColors.Elevated else Color.Transparent).padding(12.dp)) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-            Text(playbackTime(position), color = Color(0xFFE7F1E9))
-            Text(if (details.live) stringResource(R.string.transition_live) else playbackTime(end), color = Color(0xFFE7F1E9))
+            Text(playbackTime(position), color = AirRelayColors.Text)
+            Text(if (details.live) stringResource(R.string.transition_live) else playbackTime(end), color = AirRelayColors.Text)
         }
         LinearProgressIndicator(progress = { (position - start).toFloat() / (end - start).coerceAtLeast(1) },
-            modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp), color = CapsuleMint,
+            modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp), color = AirRelayColors.Accent,
             trackColor = Color.White.copy(alpha = .24f))
         if (focused) Text(stringResource(R.string.transition_seek_hint), style = MaterialTheme.typography.bodySmall, color = Color.White)
     }

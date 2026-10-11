@@ -63,9 +63,8 @@ fun TvAction(text: String, onClick: () -> Unit, modifier: Modifier = Modifier,
         else -> 1f
     }, tween(if (reduced) 0 else if (pressed) 70 else 130), label = "action feedback")
     val shape = RoundedCornerShape(if (compact) 12.dp else 16.dp)
-    val classic = io.github.jqssun.airplay.ui.theme.LocalClassicDesign.current
     val fill = when {
-        classic && focused -> AirRelayColors.Focus
+        focused -> AirRelayColors.Focus
         (primary || selected) && hovered -> AirRelayColors.Hover
         primary -> AirRelayColors.Accent
         selected -> AirRelayColors.SelectedFill
@@ -73,7 +72,7 @@ fun TvAction(text: String, onClick: () -> Unit, modifier: Modifier = Modifier,
         else -> AirRelayColors.ButtonSurface
     }
     val ink = when {
-        classic && focused -> Color(0xFF222335)
+        focused -> AirRelayColors.OnAccent
         primary -> MaterialTheme.colorScheme.onPrimary
         destructive -> AirRelayColors.Danger
         selected -> AirRelayColors.SelectedInk
