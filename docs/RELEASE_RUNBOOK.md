@@ -5,12 +5,15 @@
 | Item | Value |
 |---|---|
 | Application id | `com.airrelay.receiver` (frozen; changing it orphans every installation) |
-| Version at first release-signed build | versionCode 75, versionName `0.1.0-rc40-test` |
+| Current public release | versionCode 2, versionName `1.0.1` |
+| First release-signed build (internal, never published) | versionCode 75, versionName `0.1.0-rc40-test` |
 | Keystore | `keystore/airrelay-release.jks` (gitignored), alias `airrelay`, RSA 4096, validity 10000 days |
 | Certificate DN | `CN=AirRelay, OU=Receiver, O=AirRelay, C=TR` |
 | **Certificate SHA-256** | `c24b1ae32c1b12ad7461728a4d24675a41cda63a464f13eb3cbd7adfb7c77ef2` |
 | Certificate SHA-1 | `e4ce9bd3fe78ca3aa80f46181c3303f410d16517` |
-| First release-signed universal APK | 17.27 MB, SHA-256 `4C9160B291D2DA3552751E36F590DEF12ED109E226396167E5452A07DA56196B` |
+| First release-signed universal APK (internal) | 17.27 MB, SHA-256 `4C9160B291D2DA3552751E36F590DEF12ED109E226396167E5452A07DA56196B` |
+| Current universal APK (1.0.1) | 17.28 MB, SHA-256 `7ef8b2f18667048448da91b68851c6e911410bc72ca8b8af834185efa4f2b56b` |
+| Current App Bundle (1.0.1) | 18.38 MB, SHA-256 `40ac0b07108b7201c729095e2c27fa25d118b61fd22f890d0d3892bbedaac52a` |
 
 Verify every future artifact against the fingerprint above:
 
@@ -21,8 +24,8 @@ Verify every future artifact against the fingerprint above:
 
 A different digest means the wrong key was used — stop and fix it before publishing. The keystore
 and its password exist in exactly one place today (this machine and `local.properties`); back both
-up, or a disk failure makes future updates impossible. See `legal/NOTICE.md` for the source-offer
-obligation that must be filled in before the first public binary.
+up, or a disk failure makes future updates impossible. The source offer required by GPL-3.0 section 6
+is recorded in `legal/NOTICE.md` and points at the public repository.
 
 Everything a release needs, in the order it must happen. Steps marked **irreversible** decide the
 identity of the application and cannot be undone later.
@@ -115,5 +118,6 @@ Do not make it pass by editing records: `REQUIREMENTS_TRACEABILITY.csv` starts e
 * **Source offer**: `legal/NOTICE.md` still carries `<SOURCE-URL-NOT-SET>`.
 * **Acceptance evidence**: 102 requirements at `NOT_RUN`; `G0-LICENSE`, `G0-SPIKE`,
   `G0-TOOLCHAIN`, `G0-SELECTION` unresolved.
-* **Version naming**: the version string still ends in `-test`. Freeze the public version scheme
+* **Version naming**: `1.0.1` / versionCode 2 is the first public release. Keep `versionCode` strictly
+  increasing: a device only accepts an update whose code is higher than the installed one.
   before the first published build, and keep `versionCode` strictly increasing.

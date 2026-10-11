@@ -29,7 +29,7 @@ python build_site.py
 
 ## Content basis
 
-Every statement about the application was verified against the 1.0.0 source tree, in particular:
+Every statement about the application was verified against the 1.0.1 source tree, in particular:
 
 - no analytics, advertising or crash-reporting SDK is present,
 - the app contains no hard-coded internet address and contacts no developer or third-party server,
