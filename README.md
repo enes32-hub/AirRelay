@@ -30,10 +30,17 @@ note recording the rename; requirement identifiers and thresholds are unchanged.
 ## Features
 
 - Screen mirroring with hardware video decoding (MediaCodec → SurfaceView, HEVC and H.264)
+- Direct playback of HLS video sent by an app's AirPlay button, with the sender's own transport
+  controls; a stream that is being mirrored can be left alone or, from the TV, switched over once
 - Audio playback with A/V synchronisation (AAC-LC, AAC-ELD, ALAC)
 - PIN-protected pairing, trusted-device list, per-device access control
-- Optional recording of the incoming stream, stored locally on the TV
+- Optional recording of the incoming stream, playable on the TV and exportable as MP4 to
+  `Movies/AirRelay`
 - Fit / Fill / 1:1 picture modes, user-adjustable audio delay, network and playback statistics
+- Two themes — Classic (dark) and Light — that share one layout, and a 16-language interface
+- **Publishes its own Bonjour records** (`_airplay._tcp`, `_raop._tcp`) instead of relying on
+  Android's NSD service, which some Android TV boxes hand to a Wi-Fi mDNS offload engine that never
+  puts the records on the network: the receiver would look ready while no phone could find it
 - **Privacy-first:** no ads, no analytics, no telemetry, no developer server — everything stays on
   your local network
 
@@ -41,8 +48,7 @@ note recording the rename; requirement identifiers and thresholds are unchanged.
 
 The full privacy policy is published at:
 
-- **English (use this URL in the Play Console):** <https://enes32-hub.github.io/AirRelay/privacy.html>
-- **Türkçe:** <https://enes32-hub.github.io/AirRelay/privacy-tr.html>
+- <https://enes32-hub.github.io/AirRelay/privacy.html>
 
 It is also available inside the app under *Settings → About*.
 
@@ -117,6 +123,12 @@ Honest state of the 1.0.6 build:
 - Verified: signed release APK and AAB (release key, not debuggable, both ABIs, 16 KB page alignment),
   a real iPhone mirroring session on a Xiaomi MiTV-AFMU0 (Android 14) with hardware HEVC decoding,
   audio/video start, and a 20-cycle connect/disconnect resource-leak measurement.
+- Verified: the receiver's Bonjour records were measured from another host on the same LAN — PTR,
+  SRV, TXT and A records for both `_airplay._tcp` and `_raop._tcp` answer with port 7000 and the
+  receiver address, an iPhone on that network browsed the receiver and was answered, and the home
+  screen no longer reports readiness until the announcement has actually left the process.
+- Verified: both themes render the same layout on a 1080p TV (screenshots), and the playback-mode
+  switch applies per stream: ending a stream returns the next connection to direct playback.
 - **Not yet verified:** the physical acceptance items listed in
   [REQUIREMENTS_TRACEABILITY.csv](REQUIREMENTS_TRACEABILITY.csv) are all `NOT_RUN` — PIN flows,
   30-minute 720p/1080p sessions and the §19 performance thresholds, resolution/rotation measurements,

@@ -132,7 +132,6 @@ INDEX = """<!DOCTYPE html>
 <h2>Privacy policy</h2>
 <ul>
   <li><a href="privacy.html">English — Privacy Policy</a></li>
-  <li><a href="privacy-tr.html">Türkçe — Gizlilik Politikası</a></li>
 </ul>
 <h2>Contact</h2>
 <p>E-mail: <a href="mailto:alquariz@yandex.com">alquariz@yandex.com</a></p>
@@ -160,8 +159,7 @@ The privacy-policy URL to enter in the Google Play Console store listing is the 
 | File | Purpose |
 |---|---|
 | `PRIVACY.md` | English source (single source of truth) |
-| `PRIVACY.tr.md` | Turkish translation |
-| `build_site.py` | Renders the markdown above into `privacy.html`, `privacy-tr.html`, `index.html` |
+| `build_site.py` | Renders the markdown above into `privacy.html` and `index.html` |
 
 Pages are plain HTML with inline CSS — no external stylesheet, no CDN, no JavaScript — because the
 Play Console requires the policy to be on an active, non-editable URL and rejects PDFs.
@@ -194,7 +192,7 @@ def main() -> int:
         print(f"  {source} -> {page} ({len(rendered)} bytes)")
     (ROOT / "index.html").write_text(INDEX.format(style=STYLE), encoding="utf-8", newline="\n")
     print("  index.html")
-    user = "USER"
+    user = "enes32-hub"
     (LEGAL / "README.md").write_text(README.replace("{user}", user), encoding="utf-8", newline="\n")
     print("  legal/README.md")
     return 0
