@@ -7,11 +7,11 @@ measurement or review it records.
 
 ## Rules the gate enforces
 
-1. **Location.** `Kanıt dosyası` in `REQUIREMENTS_TRACEABILITY.csv` must be a repository-relative
+1. **Location.** The evidence column of the project's acceptance matrix must name a repository-relative
    POSIX path that resolves inside `artifacts/evidence/`. No backslashes, no drive letters.
 2. **Match.** The record's `test_id`, `kind` and `status` must equal the row's test id, the
    catalog's test kind and `PASS`, and its `spec_sha256` must equal the hash of the specification
-   file recorded in `docs/TEST_CATALOG.json`.
+   file recorded in the project's test catalog.
 3. **Attribution.** `observed_at` and `reviewer` are required.
 4. **Build linkage.** `build_sha256` must be a 64-character lowercase hex digest of the tested
    build. For `kind: physical` the record must also carry the device identity:
@@ -31,7 +31,7 @@ measurement or review it records.
   "test_id": "P0-001",
   "kind": "physical",
   "status": "PASS",
-  "spec_sha256": "<from docs/TEST_CATALOG.json>",
+  "spec_sha256": "<from the project test catalog>",
   "observed_at": "2026-10-10T20:00:00Z",
   "reviewer": "<who measured it>",
   "build_sha256": "<sha256 of the tested APK>",
@@ -51,6 +51,6 @@ measurement or review it records.
 
 ## Current state
 
-This directory is intentionally empty of PASS records. `REQUIREMENTS_TRACEABILITY.csv` is seeded
+This directory is intentionally empty of PASS records. The acceptance matrix is seeded
 with every requirement at `NOT_RUN`, so the preparation gate passes on record consistency while
 the release gate stays blocked.

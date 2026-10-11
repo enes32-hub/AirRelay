@@ -24,8 +24,10 @@ than branding:
   accepts the old `aynatv.*` Gradle properties, and `ReceiverName.kt` renames an old default device
   name to the current one.
 
-`docs/SPECIFICATION.md` is the original requirement specification, kept in Turkish, with an appended
-note recording the rename; requirement identifiers and thresholds are unchanged.
+The original requirement specification, the acceptance matrix and the test catalog are maintained
+with the project rather than published here, because they are written in the language of that
+specification; an appended note records the rename and the requirement identifiers and thresholds
+are unchanged by it.
 
 ## Features
 
@@ -90,7 +92,7 @@ pwsh -File scripts/run_full_check.ps1
 
 This runs source/provenance verification, acceptance bookkeeping, SBOM currency and the unit tests.
 `python scripts/check_readiness.py --release` is expected to exit `2` (fail-closed) until the physical
-acceptance work recorded in [REQUIREMENTS_TRACEABILITY.csv](REQUIREMENTS_TRACEABILITY.csv) is complete.
+acceptance work recorded in the project's acceptance matrix is complete.
 
 ## Licence and third-party components
 
@@ -130,7 +132,7 @@ Honest state of the 1.0.6 build:
 - Verified: both themes render the same layout on a 1080p TV (screenshots), and the playback-mode
   switch applies per stream: ending a stream returns the next connection to direct playback.
 - **Not yet verified:** the physical acceptance items listed in
-  [REQUIREMENTS_TRACEABILITY.csv](REQUIREMENTS_TRACEABILITY.csv) are all `NOT_RUN` — PIN flows,
+  the project's acceptance matrix are all `NOT_RUN` — PIN flows,
   30-minute 720p/1080p sessions and the §19 performance thresholds, resolution/rotation measurements,
   discovery latency, running on a 16 KB page device, and the per-iPhone-version / per-TV-model matrix.
 - The `arm64-v8a` slice is verified structurally (ELF64/AArch64, complete JNI symbols, alignment) but

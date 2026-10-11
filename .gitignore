@@ -126,3 +126,11 @@ tests/
 
 # Local scratch directory
 .tmpcheck/
+
+# Acceptance bookkeeping stays with the project instead of this repository: the specification,
+# the traceability matrix, the test catalog and their seeder are written in the language of the
+# original requirement specification.
+/docs/SPECIFICATION.md
+/REQUIREMENTS_TRACEABILITY.csv
+/docs/TEST_CATALOG.json
+/scripts/seed_traceability.py

@@ -108,7 +108,7 @@ python scripts/check_readiness.py --release    # must exit 0, not 2
 ```
 
 `--release` exiting 2 is the correct, fail-closed result until the acceptance evidence exists.
-Do not make it pass by editing records: `REQUIREMENTS_TRACEABILITY.csv` starts every requirement at
+Do not make it pass by editing records: the acceptance matrix starts every requirement at
 `NOT_RUN`, and a `PASS` row needs a hashed evidence record under `artifacts/evidence/`
 (see the contract in `artifacts/evidence/README.md`).
 
