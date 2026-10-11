@@ -7,7 +7,7 @@ cloud service.
 | | |
 |---|---|
 | Application ID | `com.airrelay.receiver` |
-| Version | `1.0.6` (versionCode 7) |
+| Version | `1.0.7` (versionCode 8) |
 | Platform | Android TV, Android 7.0+ (API 24+), landscape, D-pad remote |
 | Architectures | `arm64-v8a`, `armeabi-v7a` |
 | Language | Kotlin + Jetpack Compose (Material 3), native C/C++ core |
@@ -120,7 +120,7 @@ dependency sources in this checkout.
 
 ## Verification status
 
-Honest state of the 1.0.6 build — the full record, including what has not been measured, is in
+Honest state of the 1.0.7 build — the full record, including what has not been measured, is in
 [ACCEPTANCE.md](ACCEPTANCE.md):
 
 - Verified: signed release APK and AAB (release key, not debuggable, both ABIs, 16 KB page alignment),

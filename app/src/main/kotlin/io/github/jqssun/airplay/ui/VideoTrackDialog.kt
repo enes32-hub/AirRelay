@@ -45,9 +45,18 @@ internal fun positionedSubtitle(cue: Cue): Cue = cue.buildUpon().clearWindowColo
             // not move these explicitly positioned WebVTT subtitles.
             if (cue.line == Cue.DIMEN_UNSET ||
                 (cue.lineType == Cue.LINE_TYPE_NUMBER && cue.line < 0f) ||
-                (cue.lineType == Cue.LINE_TYPE_FRACTION && cue.line > .82f))
-                setLine(.82f, Cue.LINE_TYPE_FRACTION).setLineAnchor(Cue.ANCHOR_TYPE_END)
+                (cue.lineType == Cue.LINE_TYPE_FRACTION && cue.line > SUBTITLE_LINE_FRACTION))
+                setLine(SUBTITLE_LINE_FRACTION, Cue.LINE_TYPE_FRACTION).setLineAnchor(Cue.ANCHOR_TYPE_END)
         }.build()
+
+/**
+ * Where an unpositioned subtitle sits, as a fraction of the view height: half way between the
+ * previous 0.82 default and the bottom edge. A cue the sender positioned higher up keeps its own
+ * line; anything unset, counted from the bottom, or placed lower is normalised to this one. Note
+ * that [androidx.media3.ui.SubtitleView.setBottomPaddingFraction] only applies to cues without an
+ * explicit line, so this value is what the viewer actually sees.
+ */
+private const val SUBTITLE_LINE_FRACTION = .91f
 
 @Composable
 private fun subtitleSize(): Pair<Int, (Int) -> Unit> {

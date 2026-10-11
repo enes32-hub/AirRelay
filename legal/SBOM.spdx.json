@@ -2,10 +2,10 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "name": "AirRelay Receiver SBOM (1.0.6 (versionCode 7))",
-  "documentNamespace": "https://airrelay.local/spdx/1.0.6-(versionCode-7)/2026-10-11T12:18:21+00:00",
+  "name": "AirRelay Receiver SBOM (1.0.7 (versionCode 8))",
+  "documentNamespace": "https://airrelay.local/spdx/1.0.7-(versionCode-8)/2026-10-11T13:19:36+00:00",
   "creationInfo": {
-    "created": "2026-10-11T12:18:21+00:00",
+    "created": "2026-10-11T13:19:36+00:00",
     "creators": [
       "Tool: tools/generate_sbom.py",
       "Organization: AirRelay"
@@ -17,7 +17,7 @@
     {
       "SPDXID": "SPDXRef-Package-AirRelay",
       "name": "AirRelay Receiver",
-      "versionInfo": "1.0.6 (versionCode 7)",
+      "versionInfo": "1.0.7 (versionCode 8)",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
       "licenseDeclared": "GPL-3.0-only",
