@@ -120,7 +120,8 @@ dependency sources in this checkout.
 
 ## Verification status
 
-Honest state of the 1.0.6 build:
+Honest state of the 1.0.6 build — the full record, including what has not been measured, is in
+[ACCEPTANCE.md](ACCEPTANCE.md):
 
 - Verified: signed release APK and AAB (release key, not debuggable, both ABIs, 16 KB page alignment),
   a real iPhone mirroring session on a Xiaomi MiTV-AFMU0 (Android 14) with hardware HEVC decoding,
