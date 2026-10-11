@@ -10,7 +10,7 @@
     <string name="setting_remote_bitrate">Tercih edilen video veri hızı</string>
     <string name="setting_remote_bitrate_desc">İnternet videosunda kaynağın kalite seçeneklerine bağlıdır. Ekran yansıtmasını değiştirmez.</string>
     <string name="p_about">Hakkında</string>
-    <string name="p_version">Sürüm %1$s</string>
+    <string name="p_version">Sürüm %1$s (%2$d)</string>
     <string name="p_about_body">Yerel ağında ekranını, videolarını ve sesini TV ile paylaş.</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad ve Mac, Apple Inc. markalarıdır.</string>
     <string name="p_open_source_licenses">Bileşen lisansları</string>
@@ -20,4 +20,9 @@
     <string name="profile_responsive_detail">720p ekran yansıtma ile daha düşük işlem yükü. İnternet videosunda 4 Mbps’ye kadar kalite tercih edilir.</string>
     <string name="profile_custom_detail">Gelişmiş ayarlarda seçtiğin görüntü ve ses değerlerini kullanır.</string>
     <string name="transition_picture_interrupted">Görüntü kesildi. Cihazında ana ekrana dön veya başka bir içerik seç; yeni görüntü geldiğinde yayın devam eder.</string>
+    <string name="p_privacy_policy">Gizlilik politikası</string>
+    <string name="p_privacy_unavailable">Gizlilik politikası açılamadı. Lütfen uygulama sağlayıcısına başvurun.</string>
+    <string name="p_contact_line">İletişim: alquariz@yandex.com</string>
+    <string name="p_source_line">Kaynak kodu: https://github.com/enes32-hub/AirRelay</string>
+    <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
 </resources>

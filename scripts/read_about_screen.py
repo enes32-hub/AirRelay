@@ -1,29 +1,30 @@
-"""Read the About section of the installed receiver from the device UI.
+"""Open Settings -> About on the device, expand the privacy policy and verify the text renders.
 
-Dumps the accessibility tree, navigates to Settings, walks down the list until the version
-line appears, then reports every visible string plus the state of the licence toggle.
+Usage:  python scripts/read_about_screen.py
+Environment: ADB (adb path, default "adb"), AIRRELAY_TV (device serial, e.g. 192.168.0.10:5555)
 """
 
+import os
 import re
 import subprocess
 import sys
 import time
 import xml.etree.ElementTree as ET
 
-import os
-
 ADB = os.environ.get("ADB", "adb")
-SERIAL = os.environ.get("AIRRELAY_TV", "<tv-serial-or-ip:5555>")
+SERIAL = os.environ.get("AIRRELAY_TV", "")
 PKG = "com.airrelay.receiver"
 
 
 def adb(*args: str, timeout: int = 60) -> str:
-    done = subprocess.run([ADB, "-s", SERIAL, *args], capture_output=True, text=True,
-                          errors="replace", timeout=timeout)
+    cmd = [ADB] + (["-s", SERIAL] if SERIAL else []) + list(args)
+    # uiautomator writes UTF-8; decoding with the Windows locale (cp1254 here) turned
+    # "Hakkında" into "HakkÄ±nda" and broke every text lookup.
+    done = subprocess.run(cmd, capture_output=True, encoding="utf-8", errors="replace", timeout=timeout)
     return (done.stdout or "") + (done.stderr or "")
 
 
-def dump() -> list[tuple[str, str, tuple[int, int, int, int]]]:
+def dump() -> list[tuple[str, tuple[int, int, int, int]]]:
     adb("shell", "uiautomator", "dump", "/sdcard/ui.xml")
     xml = adb("shell", "cat", "/sdcard/ui.xml")
     start = xml.find("<?xml")
@@ -35,85 +36,88 @@ def dump() -> list[tuple[str, str, tuple[int, int, int, int]]]:
         return []
     nodes = []
     for node in root.iter("node"):
-        text = node.get("text") or node.get("content-desc") or ""
+        text = (node.get("text") or node.get("content-desc") or "").strip()
         bounds = re.findall(r"\d+", node.get("bounds", ""))
-        if text.strip() and len(bounds) == 4:
-            nodes.append((text.strip(), node.get("class", ""),
-                          tuple(int(v) for v in bounds)))
+        if text and len(bounds) == 4:
+            nodes.append((text, tuple(int(v) for v in bounds)))
     return nodes
 
 
 def tap(bounds) -> None:
-    x = (bounds[0] + bounds[2]) // 2
-    y = (bounds[1] + bounds[3]) // 2
-    adb("shell", "input", "tap", str(x), str(y))
+    adb("shell", "input", "tap", str((bounds[0] + bounds[2]) // 2), str((bounds[1] + bounds[3]) // 2))
 
 
-def texts(nodes) -> list[str]:
-    return [n[0] for n in nodes]
+def find(nodes, *labels):
+    for text, bounds in nodes:
+        if text in labels:
+            return text, bounds
+    return None, None
 
 
 def main() -> int:
-    print("== uygulama aciliyor ==")
     adb("shell", "input", "keyevent", "KEYCODE_WAKEUP")
     adb("shell", "am", "start", "-n", f"{PKG}/io.github.jqssun.airplay.MainActivity")
     time.sleep(8)
-    nodes = dump()
-    print("  ana ekran:", " | ".join(texts(nodes))[:160])
 
-    settings = next((n for n in nodes if n[0] in ("Ayarlar", "Settings")), None)
-    if settings is None:
-        print("  !! Ayarlar ogesi bulunamadi")
+    nodes = dump()
+    print("  ana ekran:", " | ".join(t for t, _ in nodes)[:120])
+
+    label, bounds = find(nodes, "Ayarlar", "Settings")
+    if bounds is None:
+        print("  !! Ayarlar bulunamadi")
         return 1
-    tap(settings[2])
+    tap(bounds)
     time.sleep(4)
-    nodes = dump()
-    print(f"  ayarlar ekrani ({len(nodes)} oge):", " | ".join(texts(nodes))[:200])
 
-    print("== Hakkinda basligi araniyor (liste odakla kaydirilir) ==")
-    about = None
-    for step in range(25):
-        about = next((n for n in nodes if n[0] in ("Hakkında", "About")), None)
-        if about is not None:
+    print("== Hakkinda bolumu aciliyor ==")
+    bounds = None
+    for step in range(20):
+        nodes = dump()
+        label, bounds = find(nodes, "Hakkında", "About")
+        if bounds is not None:
             print(f"  {step} adimda bulundu")
             break
         adb("shell", "input", "keyevent", "KEYCODE_DPAD_DOWN")
         time.sleep(0.6)
-        nodes = dump()
-    if about is None:
-        print("  !! bulunamadi; son ekranda gorunenler:")
-        for text in texts(nodes):
-            print("    · " + text[:80])
+    if bounds is None:
+        print("  !! Hakkinda bulunamadi; gorunenler:")
+        for t, _ in dump():
+            print("    · " + t[:70])
         return 1
-
-    tap(about[2])
-    time.sleep(1)
-    adb("shell", "input", "keyevent", "KEYCODE_DPAD_CENTER")
+    tap(bounds)
     time.sleep(3)
     nodes = dump()
 
-    print("== EKRANDA GORUNENLER ==")
-    for text in texts(nodes):
-        print(f"  · {text}")
+    print("== Hakkinda icerigi ==")
+    for text, _ in nodes:
+        print("  · " + text[:110])
 
-    version = [t for t in texts(nodes) if t.startswith(("Version", "Sürüm"))]
-    print("  SURUM SATIRI:", version[0] if version else "!! BULUNAMADI")
+    version = [t for t, _ in nodes if t.startswith(("Version", "Sürüm"))]
+    print("  SURUM SATIRI:", version[0] if version else "!! yok")
 
-    toggle = next((n for n in nodes if n[0] in ("Bileşen lisansları", "Component licences")), None)
-    if toggle:
-        print("== lisans listesi aciliyor ==")
-        tap(toggle[2])
-        time.sleep(5)
-        after = dump()
-        fresh = [t for t in texts(after) if t not in texts(nodes)]
-        print(f"  {len(fresh)} yeni satir geldi; ilk 6:")
-        for text in fresh[:6]:
-            print("    · " + text[:120])
-        missing = [t for t in fresh if "could not be opened" in t or "açılamadı" in t]
-        print("  HATA MESAJI:" , "VAR -> " + missing[0] if missing else "yok (lisanslar yuklendi)")
-    else:
-        print("  !! lisans dugmesi bulunamadi")
-    return 0
+    print("== Gizlilik politikasi aciliyor ==")
+    label, bounds = find(nodes, "Gizlilik politikası", "Privacy policy")
+    if bounds is None:
+        print("  !! gizlilik dugmesi yok")
+        return 1
+    tap(bounds)
+    time.sleep(4)
+    after = dump()
+    previous = [x for x, _ in nodes]
+    fresh = [t for t, _ in after if t not in previous]
+    print(f"  {len(fresh)} yeni satir geldi")
+    for text in fresh[:4]:
+        print("    · " + text[:100])
+    joined = " ".join(fresh)
+    checks = {
+        "politika metni geldi": "PRIVACY POLICY" in joined or "does not collect" in joined,
+        "hata mesaji yok": "açılamadı" not in joined and "could not be opened" not in joined,
+        "mikrofon beyani var": "microphone" in joined.lower(),
+        "RECORD_AUDIO var": "RECORD_AUDIO" in joined,
+    }
+    for name, ok in checks.items():
+        print(f"  {name:<24} {'EVET' if ok else 'HAYIR'}")
+    return 0 if all(checks.values()) else 1
 
 
 if __name__ == "__main__":

@@ -79,7 +79,7 @@
     <string name="setting_remote_bitrate">선호 동영상 비트레이트</string>
     <string name="setting_remote_bitrate_desc">인터넷 동영상에서 제공하는 화질 옵션에 따라 달라집니다. 화면 미러링에는 영향을 주지 않습니다.</string>
     <string name="p_about">정보</string>
-    <string name="p_version">버전 %1$s</string>
+    <string name="p_version">버전 %1$s (%2$d)</string>
     <string name="p_about_body">로컬 네트워크를 통해 화면, 동영상, 오디오를 TV와 공유합니다.</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad, Mac은 Apple Inc.의 상표입니다.</string>
     <string name="p_open_source_licenses">구성 요소 라이선스</string>
@@ -379,4 +379,9 @@
     <string name="track_off">끄기</string>
     <string name="track_unavailable">이 동영상 소스에는 선택할 수 있는 트랙이 없습니다.</string>
     <string name="transition_transport_interrupted">동영상 연결이 끊어졌습니다. 기기에서 로컬 네트워크를 통해 TV에 접근할 수 있는지 확인하세요. VPN을 사용한다면 로컬 네트워크 접근을 허용하세요.</string>
+    <string name="p_privacy_policy">개인정보 처리방침</string>
+    <string name="p_privacy_unavailable">개인정보 처리방침을 열 수 없습니다. 앱 제공자에게 문의하세요.</string>
+    <string name="p_contact_line">문의: alquariz@yandex.com</string>
+    <string name="p_source_line">소스 코드: https://github.com/enes32-hub/AirRelay</string>
+    <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
 </resources>

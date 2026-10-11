@@ -79,7 +79,7 @@
     <string name="setting_remote_bitrate">Предпочитаемый битрейт видео</string>
     <string name="setting_remote_bitrate_desc">Зависит от доступных вариантов качества интернет-видео. Не влияет на повтор экрана.</string>
     <string name="p_about">О приложении</string>
-    <string name="p_version">Версия %1$s</string>
+    <string name="p_version">Версия %1$s (%2$d)</string>
     <string name="p_about_body">Передавайте экран, видео и звук на телевизор по локальной сети.</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad и Mac — товарные знаки Apple Inc.</string>
     <string name="p_open_source_licenses">Лицензии компонентов</string>
@@ -93,4 +93,9 @@
     <string name="p_help">Помощь</string>
     <string name="p_settings">Настройки</string>
     <string name="p_back">Назад</string>
+    <string name="p_privacy_policy">Политика конфиденциальности</string>
+    <string name="p_privacy_unavailable">Не удалось открыть политику конфиденциальности. Обратитесь к поставщику приложения.</string>
+    <string name="p_contact_line">Контакты: alquariz@yandex.com</string>
+    <string name="p_source_line">Исходный код: https://github.com/enes32-hub/AirRelay</string>
+    <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
 </resources>

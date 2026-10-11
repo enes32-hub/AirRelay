@@ -79,7 +79,7 @@
     <string name="setting_remote_bitrate">Bevorzugte Video-Bitrate</string>
     <string name="setting_remote_bitrate_desc">Abhängig von den Qualitätsoptionen des Internetvideos. Ändert die Bildschirmsynchronisierung nicht.</string>
     <string name="p_about">Über</string>
-    <string name="p_version">Version %1$s</string>
+    <string name="p_version">Version %1$s (%2$d)</string>
     <string name="p_about_body">Teile Bildschirm, Videos und Audio über dein lokales Netzwerk mit dem Fernseher.</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad und Mac sind Marken von Apple Inc.</string>
     <string name="p_open_source_licenses">Komponentenlizenzen</string>
@@ -379,4 +379,9 @@
     <string name="track_off">Aus</string>
     <string name="track_unavailable">Diese Videoquelle bietet keine auswählbaren Spuren.</string>
     <string name="transition_transport_interrupted">Videoverbindung verloren. Prüfe, ob dein Gerät den Fernseher im lokalen Netzwerk erreicht. Erlaube bei VPN-Nutzung den lokalen Netzwerkzugriff.</string>
+    <string name="p_privacy_policy">Datenschutzerklärung</string>
+    <string name="p_privacy_unavailable">Die Datenschutzerklärung konnte nicht geöffnet werden. Bitte wenden Sie sich an den App-Anbieter.</string>
+    <string name="p_contact_line">Kontakt: alquariz@yandex.com</string>
+    <string name="p_source_line">Quellcode: https://github.com/enes32-hub/AirRelay</string>
+    <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
 </resources>

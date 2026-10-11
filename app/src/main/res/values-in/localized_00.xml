@@ -79,7 +79,7 @@
     <string name="setting_remote_bitrate">Bitrate video pilihan</string>
     <string name="setting_remote_bitrate_desc">Bergantung pada pilihan kualitas video internet yang tersedia. Tidak mengubah pencerminan layar.</string>
     <string name="p_about">Tentang</string>
-    <string name="p_version">Versi %1$s</string>
+    <string name="p_version">Versi %1$s (%2$d)</string>
     <string name="p_about_body">Bagikan layar, video, dan audio ke TV melalui jaringan lokal.</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad, dan Mac adalah merek dagang Apple Inc.</string>
     <string name="p_open_source_licenses">Lisensi komponen</string>
@@ -93,4 +93,9 @@
     <string name="p_help">Bantuan</string>
     <string name="p_settings">Pengaturan</string>
     <string name="p_back">Kembali</string>
+    <string name="p_privacy_policy">Kebijakan privasi</string>
+    <string name="p_privacy_unavailable">Kebijakan privasi tidak dapat dibuka. Silakan hubungi penyedia aplikasi.</string>
+    <string name="p_contact_line">Kontak: alquariz@yandex.com</string>
+    <string name="p_source_line">Kode sumber: https://github.com/enes32-hub/AirRelay</string>
+    <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
 </resources>

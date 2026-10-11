@@ -79,7 +79,7 @@
     <string name="setting_remote_bitrate">पसंदीदा वीडियो बिटरेट</string>
     <string name="setting_remote_bitrate_desc">इंटरनेट वीडियो में उपलब्ध गुणवत्ता विकल्पों पर निर्भर है। स्क्रीन मिररिंग नहीं बदलती।</string>
     <string name="p_about">परिचय</string>
-    <string name="p_version">वर्शन %1$s</string>
+    <string name="p_version">संस्करण %1$s (%2$d)</string>
     <string name="p_about_body">स्थानीय नेटवर्क पर अपनी स्क्रीन, वीडियो और ऑडियो टीवी पर शेयर करें।</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad और Mac, Apple Inc. के ट्रेडमार्क हैं।</string>
     <string name="p_open_source_licenses">घटकों के लाइसेंस</string>
@@ -93,4 +93,9 @@
     <string name="p_help">मदद</string>
     <string name="p_settings">सेटिंग</string>
     <string name="p_back">वापस</string>
+    <string name="p_privacy_policy">गोपनीयता नीति</string>
+    <string name="p_privacy_unavailable">गोपनीयता नीति खोली नहीं जा सकी। कृपया ऐप प्रदाता से संपर्क करें।</string>
+    <string name="p_contact_line">संपर्क: alquariz@yandex.com</string>
+    <string name="p_source_line">स्रोत कोड: https://github.com/enes32-hub/AirRelay</string>
+    <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
 </resources>

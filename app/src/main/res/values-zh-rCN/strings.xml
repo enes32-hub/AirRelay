@@ -79,7 +79,7 @@
     <string name="setting_remote_bitrate">首选视频码率</string>
     <string name="setting_remote_bitrate_desc">取决于互联网视频提供的画质选项。不影响屏幕镜像。</string>
     <string name="p_about">关于</string>
-    <string name="p_version">版本 %1$s</string>
+    <string name="p_version">版本 %1$s (%2$d)</string>
     <string name="p_about_body">通过本地网络将屏幕、视频和音频分享到电视。</string>
     <string name="p_trademark_notice">AirPlay、iPhone、iPad 和 Mac 是 Apple Inc. 的商标。</string>
     <string name="p_open_source_licenses">组件许可证</string>
@@ -379,4 +379,9 @@
     <string name="track_off">关闭</string>
     <string name="track_unavailable">此视频来源没有可选轨道。</string>
     <string name="transition_transport_interrupted">视频连接已断开。请检查设备是否可通过本地网络访问电视。如果使用 VPN，请允许本地网络访问。</string>
+    <string name="p_privacy_policy">隐私政策</string>
+    <string name="p_privacy_unavailable">无法打开隐私政策。请联系应用提供方。</string>
+    <string name="p_contact_line">联系: alquariz@yandex.com</string>
+    <string name="p_source_line">源代码: https://github.com/enes32-hub/AirRelay</string>
+    <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
 </resources>
