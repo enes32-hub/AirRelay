@@ -1,0 +1,21 @@
+AirPlay/RAOP publication, measured from another host on the same LAN (192.168.31.32).
+
+Records answered by the receiver when asked for _airplay._tcp.local and _raop._tcp.local:
+
+  PTR  _airplay._tcp.local                     -> AirRelay-4BBD7345._airplay._tcp.local   [192.168.31.131]
+  SRV  AirRelay-4BBD7345._airplay._tcp.local   -> airrelay-4bbd7345.local:7000           [192.168.31.131]
+  TXT  AirRelay-4BBD7345._airplay._tcp.local   -> vv=2 | features=0x5A7FFEF7,0x400 | pw=true | flags=0x4
+  A    airrelay-4bbd7345.local                 -> 192.168.31.131
+  PTR  _raop._tcp.local                        -> 5ADAD44AEAEB@AirRelay-4BBD7345._raop._tcp.local
+  SRV  5ADAD44AEAEB@AirRelay-4BBD7345._raop._tcp.local -> airrelay-4bbd7345.local:7000    [192.168.31.131]
+
+Receiver log while answering those queries:
+
+  MdnsResponder: answered _airplay._tcp.local from 192.168.31.32
+  MdnsResponder: answered _raop._tcp.local from 192.168.31.32
+  NsdServiceManager: AIRPLAY confirmed by a network query
+  NsdServiceManager: RAOP confirmed by a network query
+
+A phone on the same network (192.168.31.50) also queried AirRelay-4BBD7345._airplay._tcp.local and
+was answered, which is the browse an iOS device performs before showing the receiver in Screen
+Mirroring.

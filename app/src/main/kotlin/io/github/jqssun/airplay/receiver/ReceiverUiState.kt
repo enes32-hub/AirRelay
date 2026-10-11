@@ -4,7 +4,9 @@ package io.github.jqssun.airplay.receiver
 enum class ReceiverPhase { STOPPED, STARTING, NETWORK_WAIT, DISCOVERY_WAIT, DISCOVERY_ERROR,
     READY, CONNECTING, PAIRING, WAITING_VIDEO, MIRRORING, AUDIO_CONNECTED, MEDIA_PLAYING, ERROR }
 enum class LocalNetwork { UNKNOWN, WIFI, ETHERNET, UNAVAILABLE, PERMISSION_DENIED }
-enum class Advertisement { IDLE, REGISTERING, REGISTERED, FAILED, NOT_REQUESTED }
+enum class Advertisement { IDLE, REGISTERING, REGISTERED, FAILED, NOT_REQUESTED,
+    /** A device on the network asked for the record and we answered: publishing is proven. */
+    CONFIRMED }
 enum class ReceiverNotice { NONE, CONNECTION_LOST, CONNECTION_RESET, PAIRING_CANCELLED,
     PAIRING_EXPIRED, START_FAILED, SETTINGS_DEFERRED, NETWORK_CHANGED, DISCOVERY_FAILED }
 
@@ -56,7 +58,8 @@ data class ReceiverUiState(
         presentationHeld -> ReceiverPhase.WAITING_VIDEO
         connections > 0 || mediaPending -> ReceiverPhase.CONNECTING
         airplay == Advertisement.FAILED -> ReceiverPhase.DISCOVERY_ERROR
-        airplay != Advertisement.REGISTERED -> ReceiverPhase.DISCOVERY_WAIT
+        airplay != Advertisement.REGISTERED && airplay != Advertisement.CONFIRMED ->
+            ReceiverPhase.DISCOVERY_WAIT
         else -> ReceiverPhase.READY
     }
 
