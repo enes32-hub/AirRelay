@@ -4,7 +4,6 @@
     <string name="appearance_theme">Тема</string>
     <string name="theme_classic">Классическая</string>
     <string name="theme_light">Белая</string>
-    <string name="theme_dark">Тёмная</string>
     <string name="stream_metrics">Показывать параметры трансляции</string>
     <string name="stream_metrics_desc">Показывать разрешение, кодек и сведения о трансляции при воспроизведении.</string>
     <string name="metrics_live">Прямое видео</string>

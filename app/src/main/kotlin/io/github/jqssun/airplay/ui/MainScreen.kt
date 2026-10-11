@@ -166,7 +166,9 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
         }
         if (!isInPip) {
             if (showVideo) {
-                io.github.jqssun.airplay.ui.theme.AirPlayTheme(selected = "dark") {
+                // The player overlay stays on the dark brand palette while a picture is playing, so the
+                // controls never glare over video; it is the same palette family as the rest of the app.
+                io.github.jqssun.airplay.ui.theme.AirPlayTheme(selected = "classic") {
                 ReceiverPlayerOverlay(
                     waiting = state.mediaErrorCode == null && (state.remotePreparing || if (mediaActive) mediaBuffering || !mediaDetails.firstFrame else !state.firstFrameSubmitted),
                     pictureFit = pictureFit, onPictureFit = { pictureFit = it },

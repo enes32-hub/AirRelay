@@ -4,7 +4,6 @@
     <string name="appearance_theme">Design</string>
     <string name="theme_classic">Klassisch</string>
     <string name="theme_light">Weiß</string>
-    <string name="theme_dark">Dunkel</string>
     <string name="stream_metrics">Übertragungsdaten anzeigen</string>
     <string name="stream_metrics_desc">Auflösung, Codec und Übertragungsdaten während der Wiedergabe anzeigen.</string>
     <string name="metrics_live">Livevideo</string>

@@ -4,7 +4,6 @@
     <string name="appearance_theme">Tema</string>
     <string name="theme_classic">Klasik</string>
     <string name="theme_light">Putih</string>
-    <string name="theme_dark">Gelap</string>
     <string name="stream_metrics">Tampilkan metrik siaran</string>
     <string name="stream_metrics_desc">Tampilkan resolusi, codec, dan informasi siaran selama pemutaran.</string>
     <string name="metrics_live">Video langsung</string>

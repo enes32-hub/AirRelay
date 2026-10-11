@@ -1,9 +1,9 @@
-Artifact: C:\AirRelayReleaseGate\app\build\outputs\apk\release\app-release.apk
-Size: 18113784 bytes
-SHA-256: 2f37abc0be62cca9d6b17be41a3fa108ccba500506ea13256afbcf9eb65fa2f4
+Artifact: AirRelay-1.0.1-universal-arm64+v7a.apk
+Size: 18123915 bytes
+SHA-256: 7ef8b2f18667048448da91b68851c6e911410bc72ca8b8af834185efa4f2b56b
 
 $ aapt2 dump badging
-package: name='com.airrelay.receiver' versionCode='75' versionName='0.1.0-rc40-test' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+package: name='com.airrelay.receiver' versionCode='2' versionName='1.0.1' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
 targetSdkVersion:'36'
 application-label:'AirRelay'
 application-label-af:'AirRelay'
@@ -99,17 +99,10 @@ Signer #1 certificate SHA-256 digest: c24b1ae32c1b12ad7461728a4d24675a41cda63a46
 Signer #1 certificate SHA-1 digest: e4ce9bd3fe78ca3aa80f46181c3303f410d16517
 Signer #1 certificate MD5 digest: 51587be4567aaab86e87bcae16047c73
 
-
 $ zipalign -c -P 16 -v 4
-16212411 res/vO.xml (OK - compressed)
-16213023 res/vv.xml (OK - compressed)
-16213584 res/wN.9.png (OK)
-16213849 res/x3.xml (OK - compressed)
-16214416 res/x4.xml (OK - compressed)
-16215190 res/xN.xml (OK - compressed)
-16216024 res/xa.9.png (OK)
-16216288 res/z-.9.png (OK)
-16216549 res/zZ.xml (OK - compressed)
-16216852 res/zb.xml (OK - compressed)
-16217200 resources.arsc (OK)
+16219712 res/xa.9.png (OK)
+16219976 res/z-.9.png (OK)
+16220237 res/zZ.xml (OK - compressed)
+16220540 res/zb.xml (OK - compressed)
+16220888 resources.arsc (OK)
 Verification successful

@@ -4,7 +4,6 @@
     <string name="appearance_theme">主题</string>
     <string name="theme_classic">经典</string>
     <string name="theme_light">白色</string>
-    <string name="theme_dark">深色</string>
     <string name="stream_metrics">显示串流指标</string>
     <string name="stream_metrics_desc">播放时显示分辨率、编解码器和串流信息。</string>
     <string name="metrics_live">实时视频</string>

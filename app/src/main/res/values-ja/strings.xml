@@ -4,7 +4,6 @@
     <string name="appearance_theme">テーマ</string>
     <string name="theme_classic">クラシック</string>
     <string name="theme_light">ホワイト</string>
-    <string name="theme_dark">ダーク</string>
     <string name="stream_metrics">ストリーム情報を表示</string>
     <string name="stream_metrics_desc">再生中に解像度、コーデック、ストリーム情報を表示します。</string>
     <string name="metrics_live">ライブ映像</string>

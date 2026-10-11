@@ -4,7 +4,6 @@
     <string name="appearance_theme">테마</string>
     <string name="theme_classic">클래식</string>
     <string name="theme_light">흰색</string>
-    <string name="theme_dark">어둡게</string>
     <string name="stream_metrics">스트림 지표 표시</string>
     <string name="stream_metrics_desc">재생 중 해상도, 코덱, 스트림 정보를 표시합니다.</string>
     <string name="metrics_live">실시간 영상</string>

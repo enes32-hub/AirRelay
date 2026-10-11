@@ -4,7 +4,6 @@
     <string name="appearance_theme">ธีม</string>
     <string name="theme_classic">คลาสสิก</string>
     <string name="theme_light">ขาว</string>
-    <string name="theme_dark">มืด</string>
     <string name="stream_metrics">แสดงสถิติการสตรีม</string>
     <string name="stream_metrics_desc">แสดงความละเอียด ตัวแปลงสัญญาณ และข้อมูลสตรีมระหว่างเล่น</string>
     <string name="metrics_live">วิดีโอสด</string>

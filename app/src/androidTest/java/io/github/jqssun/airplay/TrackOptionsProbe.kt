@@ -36,7 +36,7 @@ object TrackOptionsProbe {
         val activity = test.startActivitySync(Intent(test.targetContext, MainActivity::class.java)
             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) as MainActivity
         test.runOnMainSync { activity.setContent {
-            AirPlayTheme(selected = "dark") {
+            AirPlayTheme(selected = "classic") {
                 Box(Modifier.fillMaxSize().background(Color.Black)) { DirectVideoSubtitles(displayedCues.value) }
                 menu.value?.let { type -> VideoTrackDialog(type, displayedTracks.value,
                     onChoose = { chosen.set(it); menu.value = null }, onDismiss = { menu.value = null }) }

@@ -4,7 +4,6 @@
     <string name="appearance_theme">المظهر</string>
     <string name="theme_classic">كلاسيكي</string>
     <string name="theme_light">أبيض</string>
-    <string name="theme_dark">داكن</string>
     <string name="stream_metrics">عرض معلومات البث</string>
     <string name="stream_metrics_desc">عرض الدقة والترميز ومعلومات البث أثناء التشغيل.</string>
     <string name="metrics_live">فيديو مباشر</string>

@@ -4,7 +4,6 @@
     <string name="appearance_theme">Thème</string>
     <string name="theme_classic">Classique</string>
     <string name="theme_light">Blanc</string>
-    <string name="theme_dark">Sombre</string>
     <string name="stream_metrics">Afficher les données du flux</string>
     <string name="stream_metrics_desc">Afficher la résolution, le codec et les données du flux pendant la lecture.</string>
     <string name="metrics_live">Vidéo en direct</string>

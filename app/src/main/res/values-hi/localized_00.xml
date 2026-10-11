@@ -4,7 +4,6 @@
     <string name="appearance_theme">थीम</string>
     <string name="theme_classic">क्लासिक</string>
     <string name="theme_light">सफ़ेद</string>
-    <string name="theme_dark">गहरा</string>
     <string name="stream_metrics">स्ट्रीम की जानकारी दिखाएँ</string>
     <string name="stream_metrics_desc">चलाते समय रिज़ॉल्यूशन, कोडेक और स्ट्रीम की जानकारी दिखाएँ।</string>
     <string name="metrics_live">लाइव वीडियो</string>

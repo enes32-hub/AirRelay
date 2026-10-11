@@ -4,7 +4,6 @@
     <string name="appearance_theme">Tema</string>
     <string name="theme_classic">Klasik</string>
     <string name="theme_light">Beyaz</string>
-    <string name="theme_dark">Karanlık</string>
     <string name="stream_metrics">Yayın metriklerini göster</string>
     <string name="stream_metrics_desc">Yayın sırasında çözünürlük, kodek ve akış bilgilerini göster.</string>
     <string name="metrics_live">Canlı video</string>

@@ -277,13 +277,13 @@ class IntegrationInstrumentation : Instrumentation() {
                 check(!receiver.receiverState.value.running && !receiver.receiverState.value.starting)
                 startReceiver()
             }
-            scenario("three AirRelay themes and popup selection") {
+            scenario("two AirRelay themes and popup selection") {
                 val handleBefore = nativeHandle()
                 clickText(label(R.string.p_settings))
                 clickText(label(R.string.p_section_appearance))
-                val themes = listOf(Triple("classic", R.string.theme_classic, 0xFF121416.toInt()),
-                    Triple("light", R.string.theme_light, 0xFFF7F7F5.toInt()),
-                    Triple("dark", R.string.theme_dark, 0xFF090A0B.toInt()))
+                // Two shipping themes: the dark brand palette and its light counterpart.
+                val themes = listOf(Triple("classic", R.string.theme_classic, 0xFF17191B.toInt()),
+                    Triple("light", R.string.theme_light, 0xFFF7F7F5.toInt()))
                 for ((key, labelId, color) in themes) {
                     val current = io.github.jqssun.airplay.receiver.AppearancePolicy.resolve(experience.getString(UserExperiencePrefs.THEME, "classic") ?: "classic")
                     val row = label(R.string.appearance_theme) + ": " + label(themes.first { it.first == current }.second)
@@ -291,7 +291,7 @@ class IntegrationInstrumentation : Instrumentation() {
                     revealText(row)
                     check(!hasText(label(R.string.theme_light))) { "Theme choices leaked into the settings page" }
                     clickText(row)
-                    awaitUi { hasText(label(R.string.theme_classic)) && hasText(label(R.string.theme_light)) && hasText(label(R.string.theme_dark)) }
+                    awaitUi { hasText(label(R.string.theme_classic)) && hasText(label(R.string.theme_light)) }
                     check(!hasText("Amber"))
                     screenshot("airrelay-theme-dialog-$key")
                     revealText(label(labelId))

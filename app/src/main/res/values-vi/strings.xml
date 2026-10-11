@@ -4,7 +4,6 @@
     <string name="appearance_theme">Giao diện</string>
     <string name="theme_classic">Cổ điển</string>
     <string name="theme_light">Trắng</string>
-    <string name="theme_dark">Tối</string>
     <string name="stream_metrics">Hiện thông số luồng phát</string>
     <string name="stream_metrics_desc">Hiện độ phân giải, bộ mã hóa và thông tin luồng trong khi phát.</string>
     <string name="metrics_live">Video trực tiếp</string>

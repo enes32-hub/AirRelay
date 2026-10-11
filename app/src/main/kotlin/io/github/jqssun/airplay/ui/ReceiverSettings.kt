@@ -237,11 +237,8 @@ fun ReceiverSettings(viewModel: MainViewModel, onAdvanced: () -> Unit, onModalCh
                         SettingsCategory.APPEARANCE -> {
                             item(key = "themes") {
                                 val effective = io.github.jqssun.airplay.receiver.AppearancePolicy.resolve(theme)
-                                val currentLabel = when (effective) {
-                                    "classic" -> R.string.theme_classic
-                                    "light" -> R.string.theme_light
-                                    else -> R.string.theme_dark
-                                }
+                                val currentLabel = if (effective == "light") R.string.theme_light
+                                    else R.string.theme_classic
                                 TvAction("${stringResource(R.string.appearance_theme)}: ${stringResource(currentLabel)}",
                                     { themePicker = true }, Modifier.fillMaxWidth().focusRequester(themeFocus), selected = true,
                                     compact = false, focusId = "settings.theme")
@@ -318,7 +315,6 @@ private fun ThemePicker(current: String, onSelect: (String) -> Unit, onCancel: (
     val choices = listOf(
         "classic" to R.string.theme_classic,
         "light" to R.string.theme_light,
-        "dark" to R.string.theme_dark,
     )
     ProductAlertDialog(
         onDismissRequest = onCancel,
