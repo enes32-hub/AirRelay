@@ -78,6 +78,11 @@ SECRET = re.compile(
 EMAIL = re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b")
 EMAIL_ALLOW = {PUBLIC_CONTACT}
 
+# The rule sheet has to quote the very patterns it forbids (a home-directory path, a TODO
+# marker, a fill-in placeholder), so it is the one file exempt from the pattern scan. It is still
+# an English document and is reviewed by hand when the rules change.
+EXEMPT_FILES = {"docs/PUBLICATION_POLICY.md"}
+
 HARMLESS_IPV4 = {"127.0.0.1", "0.0.0.0", "255.255.255.255"}
 
 NOASSERTION_FILES = (
@@ -167,6 +172,8 @@ def main() -> int:
     files = published_files()
     problems: list[str] = []
     for relative in files:
+        if relative in EXEMPT_FILES:
+            continue
         try:
             text = (ROOT / relative).read_text(encoding="utf-8-sig")
         except (UnicodeDecodeError, OSError):

@@ -33,7 +33,7 @@
     <string name="p_clear_confirm">साफ़ करें</string>
     <string name="p_technical_metrics">इनपुट आँकड़े; स्क्रीन की फ़्रेम दर या विलंब का माप नहीं।</string>
     <string name="p_follow_logs">नई घटनाएँ देखें</string>
-    <string name="p_setup_before_apply">रिसीवर सेटिंग लागू करने से पहले कनेक्ट करें से शुरुआती सेटअप पूरा करें।</string>
+    <string name="p_setup_before_apply">रिसीवर सेटिंग लागू करने से पहले «कनेक्ट करें» स्क्रीन से शुरुआती सेटअप पूरा करें।</string>
     <string name="rec_title">रिकॉर्डिंग</string>
     <string name="rec_description">केवल स्ट्रीम की तस्वीर और आवाज़ रिकॉर्ड होती है, AirRelay के मेनू या नियंत्रण नहीं। ऑडियो अनुमति ऐप की आवाज़ रिकॉर्ड करती है, माइक्रोफ़ोन नहीं। Android 10 से पुराने वर्शन में रिकॉर्डिंग बिना आवाज़ की होती है। सुरक्षित सामग्री रिकॉर्ड नहीं हो सकती। हर रिकॉर्डिंग की सीमा 1 घंटा या 2 GB है; मिटाने तक फ़ाइलें रहती हैं।</string>
     <string name="rec_start">रिकॉर्डिंग शुरू करें</string>
@@ -80,7 +80,7 @@
     <string name="r2_discovery_requested">रिसीवर की उपलब्धता फिर घोषित हो रही है। आपकी स्ट्रीम जारी है।</string>
     <string name="r2_retry_unavailable">रिसीवर तैयार होने पर फिर कोशिश करें</string>
     <string name="r2_takeover_title">नए डिवाइस को यह स्ट्रीम रोकने दें?</string>
-    <string name="r2_takeover_body">नए कनेक्शन की कोशिश मौजूदा सत्र समाप्त कर सकती है। बदलाव रिसीवर के अगले शुरू होने पर लागू होगा और PIN सुरक्षा नहीं बदलेगा।</string>
+    <string name="r2_takeover_body">नए कनेक्शन की कोशिश मौजूदा सत्र समाप्त कर सकती है। बदलाव रिसीवर के अगले शुरू होने पर लागू होगा और PIN सुरक्षा नहीं बदलेगी।</string>
     <string name="r2_takeover_confirm">अनुमति दें</string>
     <string name="r2_working">तैयार हो रहा है…</string>
     <string name="r2_refresh_snapshot">स्थिति का स्नैपशॉट रीफ़्रेश करें</string>

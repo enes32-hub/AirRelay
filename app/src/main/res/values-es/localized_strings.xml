@@ -63,7 +63,7 @@
     <string name="playback_choice_title">Reproducción</string>
     <string name="playback_mirror">Duplicar pantalla</string>
     <string name="playback_direct">Reproducir directamente</string>
-    <string name="playback_to_mirror">Cambiar a duplicación de pantalla</string>
+    <string name="playback_to_mirror">Cambiar a duplicar pantalla</string>
     <string name="playback_mirror_description">Reproduce vídeos en tu dispositivo y duplica su imagen y sonido en el televisor.</string>
     <string name="playback_direct_description">Selecciona este televisor en el menú AirPlay del vídeo. Los vídeos compatibles se reproducen en el televisor y se controlan desde tu dispositivo. Una duplicación activa puede no cambiar automáticamente.</string>
     <string name="playback_actual_direct">Transmisión: Vídeo directo</string>
@@ -380,7 +380,7 @@
     <string name="track_unavailable">Esta fuente de vídeo no ofrece pistas seleccionables.</string>
     <string name="transition_transport_interrupted">Se perdió la conexión de vídeo. Comprueba que tu dispositivo puede acceder al televisor en la red local. Si usas VPN, permite acceso a la red local.</string>
     <string name="p_privacy_policy">Política de privacidad</string>
-    <string name="p_privacy_unavailable">No se pudo abrir la política de privacidad. Póngase en contacto con el proveedor de la aplicación.</string>
+    <string name="p_privacy_unavailable">No se pudo abrir la política de privacidad. Contacta con el proveedor de la app.</string>
     <string name="p_contact_line">Contacto: alquariz@yandex.com</string>
     <string name="p_source_line">Código fuente: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>

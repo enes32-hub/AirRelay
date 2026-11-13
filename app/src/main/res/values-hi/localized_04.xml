@@ -43,7 +43,7 @@
     <string name="setting_low_latency">कम विलंब</string>
     <string name="setting_low_latency_desc">आउटपुट के लिए कम विलंब वाली ऑडियो डिकोडिंग इस्तेमाल करें; इससे ज़्यादा ऊर्जा और CPU लगता है</string>
     <string name="setting_scheduled_output_buffer_release">समन्वित फ़्रेम समय</string>
-    <string name="setting_scheduled_output_buffer_release_desc">हर डिकोड किए फ़्रेम को उसके प्रस्तुति समय से मेल खाते VSYNC पर शेड्यूल करें</string>
+    <string name="setting_scheduled_output_buffer_release_desc">हर डिकोड किए गए फ़्रेम को उसके प्रस्तुति समय से मेल खाते VSYNC पर शेड्यूल करें</string>
     <string name="setting_audio_delay">ऑडियो विलंब बदलें</string>
     <string name="setting_audio_delay_desc">क्लाइंट को बताया जाने वाला कस्टम ऑडियो विलंब सेट करें</string>
     <string name="audio_delay_value">%d मिलीसेकंड</string>

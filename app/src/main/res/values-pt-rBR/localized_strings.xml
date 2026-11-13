@@ -33,7 +33,7 @@
     <string name="permission_step">Configuração — %1$d / 4</string>
     <string name="permission_welcome">Prepare sua TV para compartilhar</string>
     <string name="permission_intro">Configure as permissões necessárias ao AirRelay. Cada etapa explica o que você permite. Você pode pular as permissões opcionais.</string>
-    <string name="permission_network_title">Conecte à mesma rede</string>
+    <string name="permission_network_title">Conecte-se à mesma rede</string>
     <string name="permission_network_body">O AirRelay usa a rede local para aparecer no iPhone, iPad e Mac e receber vídeo e áudio. A TV pode usar Wi-Fi ou Ethernet.</string>
     <string name="permission_network_automatic">O Android concede essas permissões de rede automaticamente. A captura de áudio só é solicitada ao iniciar uma gravação e captura o som de reprodução deste app; o microfone, a câmera e as fotos nunca são lidos.</string>
     <string name="permission_notifications_title">Veja facilmente o status da conexão</string>
@@ -63,7 +63,7 @@
     <string name="playback_choice_title">Reprodução</string>
     <string name="playback_mirror">Espelhar tela</string>
     <string name="playback_direct">Reproduzir diretamente</string>
-    <string name="playback_to_mirror">Mudar para espelhamento de tela</string>
+    <string name="playback_to_mirror">Mudar para espelhar tela</string>
     <string name="playback_mirror_description">Reproduza vídeos no dispositivo e espelhe imagem e som na TV.</string>
     <string name="playback_direct_description">Selecione esta TV no menu AirPlay do vídeo. Vídeos compatíveis são reproduzidos na TV e controlados pelo dispositivo. Um espelhamento ativo pode não mudar automaticamente.</string>
     <string name="playback_actual_direct">Transmissão: Vídeo direto</string>
@@ -192,7 +192,7 @@
     <string name="p_help_find">Meu dispositivo não encontra a TV</string>
     <string name="p_help_find_body">Confira se a TV e o dispositivo estão na mesma rede local. Ethernet funciona na TV. Redes de convidados ou isolamento de dispositivos podem bloquear a descoberta. Reabra Espelhamento de Tela. Se o receptor estiver ativo, anuncie-o novamente abaixo.</string>
     <string name="p_help_pin">Pareamento preso na tela do código</string>
-    <string name="p_help_pin_body">Digite o código no dispositivo, não com o controle da TV. Cancelar para o receptor. Inicie-o para tentar novamente.</string>
+    <string name="p_help_pin_body">Digite o código no dispositivo, não com o controle da TV. Cancelar também interrompe o receptor. Inicie-o para tentar novamente.</string>
     <string name="p_help_sound">Há imagem, mas não há som</string>
     <string name="p_help_sound_body">Confira o volume do dispositivo e da TV. Verifique se o conteúdo tem som e se outra saída, como fones Bluetooth, não está selecionada.</string>
     <string name="p_open_network_settings">Abrir configurações de rede da TV</string>

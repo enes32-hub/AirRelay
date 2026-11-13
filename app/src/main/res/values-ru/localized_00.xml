@@ -35,7 +35,7 @@
     <string name="permission_intro">Настроим разрешения, необходимые AirRelay. На каждом шаге объясняется, что вы разрешаете. Необязательные разрешения можно пропустить.</string>
     <string name="permission_network_title">Подключитесь к одной сети</string>
     <string name="permission_network_body">AirRelay использует локальную сеть, чтобы отображаться на iPhone, iPad и Mac и принимать видео и звук. Телевизор может использовать Wi-Fi или Ethernet.</string>
-    <string name="permission_network_automatic">Android выдаёт эти сетевые разрешения автоматически. Разрешение на захват звука запрашивается только при запуске записи и захватывает собственный звук воспроизведения приложения; микрофон, камера и фототека никогда не читаются.</string>
+    <string name="permission_network_automatic">Android выдаёт эти сетевые разрешения автоматически. Захват звука запрашивается только при запуске записи и записывает собственный звук воспроизведения приложения; микрофон, камера и фототека никогда не читаются.</string>
     <string name="permission_notifications_title">Следите за состоянием подключения</string>
     <string name="permission_notifications_body">Уведомления показывают состояние подключения, когда приёмник работает в фоне, и позволяют остановить трансляцию.</string>
     <string name="permission_notifications_skip">Без этого разрешения приёмник работает, но уведомление о его состоянии скрыто.</string>
@@ -63,7 +63,7 @@
     <string name="playback_choice_title">Воспроизведение</string>
     <string name="playback_mirror">Повтор экрана</string>
     <string name="playback_direct">Воспроизводить напрямую</string>
-    <string name="playback_to_mirror">Перейти к зеркалированию экрана</string>
+    <string name="playback_to_mirror">Перейти к повтору экрана</string>
     <string name="playback_mirror_description">Воспроизводите видео на устройстве и передавайте изображение и звук на телевизор.</string>
     <string name="playback_direct_description">Выберите этот телевизор в меню AirPlay видео. Поддерживаемые видео воспроизводятся на телевизоре с управлением с вашего устройства. Текущий повтор экрана может не переключиться автоматически.</string>
     <string name="playback_actual_direct">Трансляция: Прямое видео</string>

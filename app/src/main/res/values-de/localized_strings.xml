@@ -63,7 +63,7 @@
     <string name="playback_choice_title">Wiedergabe</string>
     <string name="playback_mirror">Bildschirm spiegeln</string>
     <string name="playback_direct">Direkt wiedergeben</string>
-    <string name="playback_to_mirror">Zu Bildschirmspiegelung wechseln</string>
+    <string name="playback_to_mirror">Zu Bildschirmsynchronisierung wechseln</string>
     <string name="playback_mirror_description">Spiele Videos auf deinem Gerät ab und spiegle Bild und Ton auf den Fernseher.</string>
     <string name="playback_direct_description">Wähle diesen Fernseher im AirPlay-Menü des Videos. Unterstützte Videos laufen auf dem Fernseher und lassen sich vom Gerät steuern. Eine laufende Bildschirmsynchronisierung wechselt möglicherweise nicht automatisch.</string>
     <string name="playback_actual_direct">Übertragung: Direktvideo</string>
@@ -380,7 +380,7 @@
     <string name="track_unavailable">Diese Videoquelle bietet keine auswählbaren Spuren.</string>
     <string name="transition_transport_interrupted">Videoverbindung verloren. Prüfe, ob dein Gerät den Fernseher im lokalen Netzwerk erreicht. Erlaube bei VPN-Nutzung den lokalen Netzwerkzugriff.</string>
     <string name="p_privacy_policy">Datenschutzerklärung</string>
-    <string name="p_privacy_unavailable">Die Datenschutzerklärung konnte nicht geöffnet werden. Bitte wenden Sie sich an den App-Anbieter.</string>
+    <string name="p_privacy_unavailable">Die Datenschutzerklärung konnte nicht geöffnet werden. Wende dich an den App-Anbieter.</string>
     <string name="p_contact_line">Kontakt: alquariz@yandex.com</string>
     <string name="p_source_line">Quellcode: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
