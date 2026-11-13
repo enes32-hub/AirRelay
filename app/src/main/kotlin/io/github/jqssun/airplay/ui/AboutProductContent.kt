@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusProperties
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.input.key.KeyEventType
 import androidx.compose.ui.input.key.onPreviewKeyEvent
@@ -51,17 +52,29 @@ fun AboutProductContent(onModalChange: (Boolean) -> Unit = {}) {
     val privacyUnavailable = stringResource(R.string.p_privacy_unavailable)
     val licensesUnavailable = stringResource(R.string.p_licenses_unavailable)
     var openDoc by rememberSaveable { mutableStateOf<String?>(null) }
+    var returnDoc by rememberSaveable { mutableStateOf<String?>(null) }
+    val privacyFocus = remember { FocusRequester() }
+    val licensesFocus = remember { FocusRequester() }
     val blocked = LocalBlockingOverlay.current
+    val inputEnabled = LocalTvInputEnabled.current
     SideEffect { onModalChange(openDoc != null && !blocked) }
     DisposableEffect(Unit) { onDispose { onModalChange(false) } }
+    LaunchedEffect(openDoc, returnDoc, blocked, inputEnabled) {
+        if (openDoc == null && returnDoc != null && !blocked && inputEnabled) {
+            val target = if (returnDoc == "privacy") privacyFocus else licensesFocus
+            target.requestFocusUntilLanded()
+            returnDoc = null
+        }
+    }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Column(
             Modifier
                 .fillMaxWidth()
                 .background(AirRelayColors.Panel, RoundedCornerShape(18.dp))
+                .border(1.dp, AirRelayColors.Border.copy(alpha = .6f), RoundedCornerShape(18.dp))
                 .focusRing(RoundedCornerShape(18.dp))
-                .focusable()
+                .focusable(enabled = inputEnabled)
                 .padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
@@ -98,7 +111,7 @@ fun AboutProductContent(onModalChange: (Boolean) -> Unit = {}) {
             TvAction(
                 privacy,
                 { openDoc = "privacy" },
-                Modifier.weight(1f),
+                Modifier.weight(1f).focusRequester(privacyFocus),
                 selected = openDoc == "privacy",
                 focusId = "settings.privacy",
                 compact = true,
@@ -106,7 +119,7 @@ fun AboutProductContent(onModalChange: (Boolean) -> Unit = {}) {
             TvAction(
                 licenses,
                 { openDoc = "licenses" },
-                Modifier.weight(1f),
+                Modifier.weight(1f).focusRequester(licensesFocus),
                 selected = openDoc == "licenses",
                 focusId = "settings.licenses",
                 compact = true,
@@ -115,14 +128,18 @@ fun AboutProductContent(onModalChange: (Boolean) -> Unit = {}) {
     }
 
     if (openDoc != null && !blocked) {
-        val isPrivacy = openDoc == "privacy"
+        val current = openDoc!!
+        val isPrivacy = current == "privacy"
         LegalDocumentDialog(
             title = if (isPrivacy) privacy else licenses,
             focusId = if (isPrivacy) "settings.privacy" else "settings.licenses",
             asset = if (isPrivacy) "PRIVACY_POLICY.txt" else "OPEN_SOURCE_NOTICES.txt",
             fallback = if (isPrivacy) privacyUnavailable else licensesUnavailable,
             context = context,
-            onDismiss = { openDoc = null },
+            onDismiss = {
+                returnDoc = current
+                openDoc = null
+            },
         )
     }
 }
@@ -194,7 +211,7 @@ private fun LegalDocumentDialog(
                     TvAction(
                         stringResource(R.string.access_close),
                         onDismiss,
-                        Modifier.focusRequester(closeFocus),
+                        Modifier.focusRequester(closeFocus).focusProperties { down = contentFocus },
                         compact = true,
                         focusId = "$focusId.close",
                     )

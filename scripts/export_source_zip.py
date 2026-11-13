@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import subprocess
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,7 +19,34 @@ SKIP_SUFFIXES = {'.pyc', '.pyo', '.jks', '.keystore', '.p12', '.pfx', '.pem', '.
 ARTIFACT_SUFFIXES = {'.py', '.ps1', '.sh', '.cmd', '.bat', '.json'}
 
 
+def _allowed(path: Path, relative: str) -> bool:
+    name = path.name
+    if path.is_symlink() or not path.is_file():
+        return False
+    if name == 'local.properties' or name == '.env' or name.startswith('.env.'):
+        return False
+    if path.suffix.lower() in SKIP_SUFFIXES or relative.startswith(SKIP_PREFIXES):
+        return False
+    if relative.startswith('artifacts/') and path.suffix.lower() not in ARTIFACT_SUFFIXES:
+        return False
+    if name in {'gst-registry.bin', '.ninja_log', '.ninja_deps', 'CMakeCache.txt'}:
+        return False
+    return True
+
+
 def files():
+    # In a Git checkout, export strictly the tracked public tree so gitignored local notes,
+    # scratch scripts and private acceptance files never leak into a published source archive.
+    if (ROOT / '.git').exists():
+        done = subprocess.run(['git', 'ls-files', '-z'], cwd=ROOT, capture_output=True, check=True)
+        tracked = sorted(entry.replace('\\', '/') for entry in done.stdout.decode('utf-8').split('\0') if entry)
+        for relative in tracked:
+            if any(part in SKIP_DIRS for part in relative.split('/')[:-1]):
+                continue
+            path = ROOT / relative
+            if _allowed(path, relative):
+                yield path, relative
+        return
     for current, dirs, names in os.walk(ROOT, followlinks=False):
         dirs[:] = sorted(d for d in dirs if d not in SKIP_DIRS
                          and not Path(current, d).is_symlink()
@@ -26,15 +54,8 @@ def files():
         for name in sorted(names):
             path = Path(current, name)
             relative = path.relative_to(ROOT).as_posix()
-            if path.is_symlink() or name == 'local.properties' or name == '.env' or name.startswith('.env.'):
-                continue
-            if path.suffix.lower() in SKIP_SUFFIXES or relative.startswith(SKIP_PREFIXES):
-                continue
-            if relative.startswith('artifacts/') and path.suffix.lower() not in ARTIFACT_SUFFIXES:
-                continue
-            if name in {'gst-registry.bin', '.ninja_log', '.ninja_deps', 'CMakeCache.txt'}:
-                continue
-            yield path, relative
+            if _allowed(path, relative):
+                yield path, relative
 
 
 def main():

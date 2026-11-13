@@ -207,7 +207,11 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
                                                 onStart = { if (setupComplete) viewModel.startServer() else showSetup = true },
                                                 onStop = requestStop, onShowMirror = { fullScreen = true },
                                                 primaryFocus = homePrimary, onHelp = { choosePage(ReceiverPage.HELP) }, onDismissNotice = viewModel::dismissNotice)
-                                            ReceiverPage.RECORDINGS -> Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
+                                            ReceiverPage.RECORDINGS -> Column(
+                                                Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+                                                verticalArrangement = Arrangement.spacedBy(12.dp),
+                                            ) {
+                                                PageHeading(stringResource(R.string.rec_title), stringResource(R.string.rec_description))
                                                 RecordingPanel(canRecord = false, canPlay = !state.sessionBusy && !mediaActive,
                                                     onModalChange = { pageModal = it })
                                             }

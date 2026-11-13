@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="playback_help_title">Try another way to watch</string>
-    <string name="playback_help_body">Some videos cannot play directly on the TV. Open the Playback control at the left of the bottom bar and choose Switch to screen mirroring. Then reopen the video on your device.</string>
+    <string name="playback_help_body">Some videos cannot play directly on the TV. Choose Switch to screen mirroring at the left of the bottom control bar, then reopen the video on your device.</string>
     <string name="playback_help_confirm">Got it</string>
     <string name="playback_choice_title">Playback</string>
     <string name="playback_mirror">Mirror screen</string>

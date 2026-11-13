@@ -58,7 +58,7 @@
     <string name="permission_manage">テレビの設定で変更</string>
     <string name="permission_settings_unavailable">このテレビでは権限画面を開けませんでした。テレビの設定 → アプリ → AirRelay を確認してください。</string>
     <string name="playback_help_title">別の視聴方法をお試しください</string>
-    <string name="playback_help_body">テレビで直接再生できない動画があります。下部バー左側の「再生」コントロールを開き、「画面ミラーリングに切り替え」を選んでください。その後、デバイスで動画を開き直してください。</string>
+    <string name="playback_help_body">テレビで直接再生できない動画があります。下部の操作バー左側にある「画面ミラーリングに切り替え」を選び、デバイスで動画を開き直してください。</string>
     <string name="playback_help_confirm">確認しました</string>
     <string name="playback_choice_title">再生</string>
     <string name="playback_mirror">画面ミラーリング</string>
@@ -269,7 +269,7 @@
     <string name="r2_invalid_resolution">幅と高さはそれぞれ 16 から 16384 の範囲にしてください。</string>
     <string name="settings_playback">映像と再生</string>
     <string name="help_modes_title">動画はどのように再生されますか？</string>
-    <string name="help_modes_body">画面ミラーリングは iPhone、iPad、Mac の画面を表示します。直接再生は送信アプリが対応している場合にテレビのプレーヤーを使用します。ストリーム中、「再生」は「画面ミラーリングに切り替え」を提供し、元には戻しません。開いている動画が自動で切り替わらない場合は、デバイスで閉じて開き直してください。</string>
+    <string name="help_modes_body">直接再生は送信アプリが対応している場合にテレビのプレーヤーを使用します。画面ミラーリングは iPhone、iPad、Mac の画面を表示します。ストリーム中に必要な場合は操作バーで「画面ミラーリングに切り替え」を選んでください。次のストリームでは自動的に直接再生に戻ります。開いている動画が自動で切り替わらない場合は、デバイスで閉じて開き直してください。</string>
     <string name="help_video_title">動画が再生されない、または画面が黒い</string>
     <string name="help_video_body">ソースがアクセスを拒否した場合は、ストリーム操作で「画面ミラーリングに切り替え」を選んでください。デバイスで AirPlay の動画画面を閉じて動画を開き直してください。一部の保護されたコンテンツはミラーリングできません。デバイスの画面も映らない場合は、デバイス側でミラーリングを停止して再接続してください。</string>
     <string name="help_network_title">フリーズ、遅延、VPN</string>

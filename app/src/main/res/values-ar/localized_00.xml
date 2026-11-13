@@ -58,7 +58,7 @@
     <string name="permission_manage">تغيير في إعدادات التلفزيون</string>
     <string name="permission_settings_unavailable">تعذر فتح شاشة الأذونات على هذا التلفزيون. راجع إعدادات التلفزيون ← التطبيقات ← AirRelay.</string>
     <string name="playback_help_title">جرّب طريقة أخرى للمشاهدة</string>
-    <string name="playback_help_body">لا يمكن تشغيل بعض الفيديوهات مباشرة على التلفزيون. افتح عنصر التحكم «التشغيل» يسار الشريط السفلي واختر «التبديل إلى انعكاس الشاشة»، ثم أعد فتح الفيديو على جهازك.</string>
+    <string name="playback_help_body">لا يمكن تشغيل بعض الفيديوهات مباشرة على التلفزيون. اختر «التبديل إلى انعكاس الشاشة» يسار شريط التحكم السفلي، ثم أعد فتح الفيديو على جهازك.</string>
     <string name="playback_help_confirm">فهمت</string>
     <string name="playback_choice_title">التشغيل</string>
     <string name="playback_mirror">انعكاس الشاشة</string>

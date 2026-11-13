@@ -58,7 +58,7 @@
     <string name="permission_manage">Alterar nas configurações da TV</string>
     <string name="permission_settings_unavailable">Não foi possível abrir as permissões. Veja Configurações da TV → Apps → AirRelay.</string>
     <string name="playback_help_title">Tente outra forma de assistir</string>
-    <string name="playback_help_body">Alguns vídeos não reproduzem diretamente na TV. Abra o controle Reprodução à esquerda da barra inferior e escolha Mudar para espelhar tela. Depois, reabra o vídeo no dispositivo.</string>
+    <string name="playback_help_body">Alguns vídeos não reproduzem diretamente na TV. Escolha Mudar para espelhar tela à esquerda da barra inferior e depois reabra o vídeo no dispositivo.</string>
     <string name="playback_help_confirm">Entendi</string>
     <string name="playback_choice_title">Reprodução</string>
     <string name="playback_mirror">Espelhar tela</string>
@@ -269,7 +269,7 @@
     <string name="r2_invalid_resolution">A largura e a altura devem estar entre 16 e 16384.</string>
     <string name="settings_playback">Imagem e reprodução</string>
     <string name="help_modes_title">Como os vídeos são reproduzidos?</string>
-    <string name="help_modes_body">O espelhamento mostra a tela do iPhone, iPad ou Mac. A reprodução direta usa o player da TV se o app de origem aceitar. Durante uma transmissão, Reprodução oferece Mudar para espelhar tela e não volta atrás. Um vídeo aberto pode não mudar automaticamente; feche e reabra no dispositivo.</string>
+    <string name="help_modes_body">A reprodução direta usa o player da TV se o app de origem aceitar. O espelhamento mostra a tela do iPhone, iPad ou Mac. Durante uma transmissão, escolha Mudar para espelhar tela nos controles quando necessário; a reprodução direta volta automaticamente na próxima transmissão. Um vídeo aberto pode não mudar automaticamente; feche e reabra no dispositivo.</string>
     <string name="help_video_title">O vídeo não reproduz ou a tela fica preta</string>
     <string name="help_video_body">Se a origem negar acesso, escolha Mudar para espelhar tela nos controles da transmissão. Saia da tela de vídeo AirPlay e reabra o vídeo. Alguns conteúdos protegidos não podem ser espelhados. Se a tela do dispositivo também não aparecer, pare o espelhamento no dispositivo e reconecte.</string>
     <string name="help_network_title">Travamentos, atraso ou VPN</string>

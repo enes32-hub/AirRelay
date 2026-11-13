@@ -58,7 +58,7 @@
     <string name="permission_manage">Изменить в настройках телевизора</string>
     <string name="permission_settings_unavailable">Не удалось открыть экран разрешений. Проверьте: Настройки телевизора → Приложения → AirRelay.</string>
     <string name="playback_help_title">Попробуйте другой способ просмотра</string>
-    <string name="playback_help_body">Некоторые видео нельзя воспроизвести на телевизоре напрямую. Откройте элемент управления «Воспроизведение» слева на нижней панели и выберите «Перейти к повтору экрана». Затем заново откройте видео на устройстве.</string>
+    <string name="playback_help_body">Некоторые видео нельзя воспроизвести на телевизоре напрямую. Выберите «Перейти к повтору экрана» слева на нижней панели управления и заново откройте видео на устройстве.</string>
     <string name="playback_help_confirm">Понятно</string>
     <string name="playback_choice_title">Воспроизведение</string>
     <string name="playback_mirror">Повтор экрана</string>

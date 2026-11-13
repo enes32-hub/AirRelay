@@ -58,7 +58,7 @@
     <string name="permission_manage">Modifica nelle impostazioni della TV</string>
     <string name="permission_settings_unavailable">Impossibile aprire le autorizzazioni. Controlla Impostazioni TV → App → AirRelay.</string>
     <string name="playback_help_title">Prova un altro modo di guardare</string>
-    <string name="playback_help_body">Alcuni video non si riproducono direttamente sulla TV. Apri il controllo Riproduzione a sinistra della barra inferiore e scegli Passa alla duplicazione schermo. Poi riapri il video sul dispositivo.</string>
+    <string name="playback_help_body">Alcuni video non si riproducono direttamente sulla TV. Scegli Passa alla duplicazione schermo a sinistra della barra inferiore, poi riapri il video sul dispositivo.</string>
     <string name="playback_help_confirm">Ho capito</string>
     <string name="playback_choice_title">Riproduzione</string>
     <string name="playback_mirror">Duplica schermo</string>
@@ -269,7 +269,7 @@
     <string name="r2_invalid_resolution">Larghezza e altezza devono essere tra 16 e 16384.</string>
     <string name="settings_playback">Immagine e riproduzione</string>
     <string name="help_modes_title">Come vengono riprodotti i video?</string>
-    <string name="help_modes_body">La duplicazione mostra lo schermo di iPhone, iPad o Mac. La riproduzione diretta usa il lettore TV se l’app mittente lo supporta. Durante la riproduzione, Riproduzione offre Passa alla duplicazione schermo e non torna indietro. Un video aperto potrebbe non cambiare automaticamente: chiudilo e riaprilo sul dispositivo.</string>
+    <string name="help_modes_body">La riproduzione diretta usa il lettore TV se l’app mittente lo supporta. La duplicazione mostra lo schermo di iPhone, iPad o Mac. Durante la riproduzione, scegli Passa alla duplicazione schermo nei comandi se necessario; la riproduzione diretta torna automaticamente al flusso successivo. Un video aperto potrebbe non cambiare automaticamente: chiudilo e riaprilo sul dispositivo.</string>
     <string name="help_video_title">Il video non parte o lo schermo è nero</string>
     <string name="help_video_body">Se la sorgente nega l’accesso, scegli Passa alla duplicazione schermo nei comandi della riproduzione. Esci dalla schermata video AirPlay e riapri il video. Alcuni contenuti protetti non si possono duplicare. Se manca anche lo schermo del dispositivo, interrompi la duplicazione sul dispositivo e riconnetti.</string>
     <string name="help_network_title">Blocchi, ritardi o VPN</string>

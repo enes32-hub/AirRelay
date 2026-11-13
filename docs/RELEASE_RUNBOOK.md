@@ -10,8 +10,8 @@
 | Certificate DN | `CN=AirRelay, OU=Receiver, O=AirRelay, C=TR` |
 | **Certificate SHA-256** | `c24b1ae32c1b12ad7461728a4d24675a41cda63a464f13eb3cbd7adfb7c77ef2` |
 | Certificate SHA-1 | `e4ce9bd3fe78ca3aa80f46181c3303f410d16517` |
-| Current universal APK (1.0.8) | 17.27 MB, SHA-256 `face463f2f494ee581881905a726944ea188aeb77147ac8b139c2207f6db6f6e` |
-| Current App Bundle (1.0.8) | 18.38 MB, SHA-256 `92513efcd05a1a84b601e369367e6ba4a68b78a8cbc8db9537df62337b874df9` |
+| Current universal APK (1.0.8) | 17.29 MB, SHA-256 `bd07368a3b8582bb110641d397a09cb34ad668109e72bbac6824f67772da461c` |
+| Current App Bundle (1.0.8) | 18.38 MB, SHA-256 `fca09bf7bbb9ec9554f6072afd73d11c30d2f0929251e901f27522bfebda2d4c` |
 
 Verify every future artifact against the fingerprint above:
 

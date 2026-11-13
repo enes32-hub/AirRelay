@@ -4,7 +4,7 @@
     <string name="r2_invalid_resolution">Lebar dan tinggi masing-masing harus antara 16 dan 16384.</string>
     <string name="settings_playback">Gambar dan pemutaran</string>
     <string name="help_modes_title">Bagaimana video diputar?</string>
-    <string name="help_modes_body">Pencerminan layar menampilkan layar iPhone, iPad, atau Mac. Pemutaran langsung memakai pemutar TV jika aplikasi pengirim mendukungnya. Selama siaran, Pemutaran menawarkan Beralih ke pencerminan layar dan tidak beralih kembali. Video yang terbuka mungkin tidak berganti otomatis; tutup dan buka kembali di perangkat.</string>
+    <string name="help_modes_body">Pemutaran langsung memakai pemutar TV jika aplikasi pengirim mendukungnya, sedangkan pencerminan layar menampilkan layar iPhone, iPad, atau Mac. Selama siaran, pilih Beralih ke pencerminan layar di kontrol siaran bila perlu; siaran berikutnya otomatis kembali ke pemutaran langsung. Video yang terbuka mungkin tidak berganti otomatis; tutup dan buka kembali di perangkat.</string>
     <string name="help_video_title">Video tidak diputar atau layar hitam</string>
     <string name="help_video_body">Jika sumber menolak akses, pilih Beralih ke pencerminan layar di kontrol siaran. Keluar dari layar video AirPlay di perangkat lalu buka kembali video. Sebagian konten terlindungi tidak dapat dicerminkan. Jika layar perangkat juga tidak muncul, hentikan pencerminan di perangkat dan sambungkan kembali.</string>
     <string name="help_network_title">Macet, jeda, atau VPN</string>

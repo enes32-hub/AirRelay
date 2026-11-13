@@ -58,7 +58,7 @@
     <string name="permission_manage">टीवी की सेटिंग में बदलें</string>
     <string name="permission_settings_unavailable">इस टीवी पर अनुमति स्क्रीन नहीं खुल सकी। टीवी की सेटिंग → ऐप → AirRelay देखें।</string>
     <string name="playback_help_title">देखने का दूसरा तरीका आज़माएँ</string>
-    <string name="playback_help_body">कुछ वीडियो टीवी पर सीधे नहीं चल सकते। नीचे की पट्टी के बाईं ओर «प्लेबैक» नियंत्रण खोलें और «स्क्रीन मिररिंग पर जाएँ» चुनें। फिर डिवाइस पर वीडियो दोबारा खोलें।</string>
+    <string name="playback_help_body">कुछ वीडियो टीवी पर सीधे नहीं चल सकते। नीचे की नियंत्रण पट्टी के बाईं ओर «स्क्रीन मिररिंग पर जाएँ» चुनें, फिर डिवाइस पर वीडियो दोबारा खोलें।</string>
     <string name="playback_help_confirm">समझ गया</string>
     <string name="playback_choice_title">प्लेबैक</string>
     <string name="playback_mirror">स्क्रीन मिरर करें</string>

@@ -1,7 +1,7 @@
 <resources>
 <string name="settings_playback">Görüntü ve oynatma</string>
 <string name="help_modes_title">Video nasıl oynatılır?</string>
-<string name="help_modes_body">Ekrandan yansıt, iPhone, iPad veya Mac ekranını gösterir. Doğrudan oynat, gönderen uygulama destekliyorsa TV oynatıcısını kullanır. Yayın sırasında Oynatma şekli, Ekran yansıtmaya geç seçeneğini sunar ve geri dönüş yapmaz. Açık video otomatik geçmeyebilir; cihazında kapatıp yeniden aç.</string>
+<string name="help_modes_body">Doğrudan oynat, gönderen uygulama destekliyorsa TV oynatıcısını kullanır. Ekrandan yansıt ise iPhone, iPad veya Mac ekranını gösterir. Yayın sırasında gerekirse yayın kontrollerinden Ekran yansıtmaya geç düğmesini seç; yayın bittiğinde sonraki bağlantı otomatik olarak doğrudan oynatmayla başlar. Açık video otomatik geçmeyebilir; cihazında kapatıp yeniden aç.</string>
 <string name="help_video_title">Video açılmıyor veya ekran siyah</string>
 <string name="help_video_body">Kaynak erişimi reddederse yayın kontrollerinden Ekran yansıtmaya geç seçeneğini seç. Cihazındaki AirPlay video ekranından çıkıp videoyu yeniden aç. Bazı korumalı içerikler yansıtılamaz. Cihaz ekranı da gelmiyorsa ekran yansıtmayı cihazından durdurup yeniden bağlan.</string>
 <string name="help_network_title">Donma, gecikme veya VPN</string>

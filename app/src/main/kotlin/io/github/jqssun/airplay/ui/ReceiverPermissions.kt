@@ -2,6 +2,7 @@ package io.github.jqssun.airplay.ui
 
 import android.os.Build
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -47,7 +48,8 @@ internal fun PermissionStatus(allowed: Boolean) {
 
 @Composable
 internal fun PermissionManagementCard(title: String, body: String, allowed: Boolean, focusId: String, onManage: () -> Unit) {
-    Column(Modifier.fillMaxWidth().background(AirRelayColors.Panel, RoundedCornerShape(18.dp)).padding(18.dp),
+    Column(Modifier.fillMaxWidth().background(AirRelayColors.Panel, RoundedCornerShape(18.dp))
+        .border(1.dp, AirRelayColors.Border.copy(alpha = .6f), RoundedCornerShape(18.dp)).padding(18.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(title, style = MaterialTheme.typography.titleMedium)
         Text(body, style = MaterialTheme.typography.bodyMedium, color = AirRelayColors.Muted)
@@ -58,7 +60,8 @@ internal fun PermissionManagementCard(title: String, body: String, allowed: Bool
 
 @Composable
 internal fun PermissionNetworkNote() {
-    Column(Modifier.fillMaxWidth().background(AirRelayColors.Panel, RoundedCornerShape(18.dp)).padding(18.dp),
+    Column(Modifier.fillMaxWidth().background(AirRelayColors.Panel, RoundedCornerShape(18.dp))
+        .border(1.dp, AirRelayColors.Border.copy(alpha = .6f), RoundedCornerShape(18.dp)).padding(18.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text(stringResource(R.string.permission_network_title), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.permission_network_body), style = MaterialTheme.typography.bodyMedium, color = AirRelayColors.Muted)

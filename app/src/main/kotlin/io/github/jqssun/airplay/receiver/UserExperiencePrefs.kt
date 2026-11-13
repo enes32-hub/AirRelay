@@ -8,6 +8,7 @@ object UserExperiencePrefs {
     const val LANGUAGE = "language"
     const val REDUCE_MOTION = "reduce_motion"
     const val NOTIFICATION_PROMPTED = "notification_prompted"
+    const val AUDIO_PROMPTED = "audio_prompted"
     const val LARGE_TEXT = "large_text"
     const val THEME = "theme"
     const val SHOW_STREAM_METRICS = "show_stream_metrics"

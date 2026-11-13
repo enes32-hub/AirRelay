@@ -1,7 +1,7 @@
 <resources>
 <string name="settings_playback">Picture and playback</string>
 <string name="help_modes_title">How are videos played?</string>
-<string name="help_modes_body">Screen mirroring shows your iPhone, iPad or Mac screen. Direct playback uses the TV player when the sending app supports it. During a stream, Playback offers Switch to screen mirroring and does not switch back. An open video may not change automatically; close and reopen it on your device.</string>
+<string name="help_modes_body">Direct playback uses the TV player when the sending app supports it. Screen mirroring shows your iPhone, iPad or Mac screen. During a stream, choose Switch to screen mirroring in the stream controls when needed; direct playback returns automatically on the next stream. An open video may not switch automatically; close and reopen it on your device.</string>
 <string name="help_video_title">Video will not play or the screen is black</string>
 <string name="help_video_body">If the source denies access, choose Switch to screen mirroring in the stream controls. Leave the AirPlay video screen on your device and reopen the video. Some protected content cannot be mirrored. If the device screen is also missing, stop screen mirroring on your device and reconnect.</string>
 <string name="help_network_title">Freezing, delay or VPN</string>

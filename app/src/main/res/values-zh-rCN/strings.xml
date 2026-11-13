@@ -58,7 +58,7 @@
     <string name="permission_manage">在电视设置中更改</string>
     <string name="permission_settings_unavailable">此电视无法打开权限页面。请检查电视设置 → 应用 → AirRelay。</string>
     <string name="playback_help_title">试试其他观看方式</string>
-    <string name="playback_help_body">部分视频无法在电视上直接播放。请打开底部栏左侧的“播放”控件并选择“切换到屏幕镜像”，然后在设备上重新打开视频。</string>
+    <string name="playback_help_body">部分视频无法在电视上直接播放。请选择底部控制栏左侧的“切换到屏幕镜像”，然后在设备上重新打开视频。</string>
     <string name="playback_help_confirm">知道了</string>
     <string name="playback_choice_title">播放</string>
     <string name="playback_mirror">屏幕镜像</string>
@@ -269,7 +269,7 @@
     <string name="r2_invalid_resolution">宽度和高度必须分别在 16 到 16384 之间。</string>
     <string name="settings_playback">画面和播放</string>
     <string name="help_modes_title">视频如何播放？</string>
-    <string name="help_modes_body">屏幕镜像显示 iPhone、iPad 或 Mac 的屏幕。如果发送应用支持，直接播放会使用电视播放器。串流期间，“播放”提供“切换到屏幕镜像”，且不会切回。已打开的视频可能不会自动切换；请在设备上关闭并重新打开。</string>
+    <string name="help_modes_body">如果发送应用支持，直接播放会使用电视播放器；屏幕镜像则显示 iPhone、iPad 或 Mac 的屏幕。串流期间如需切换，请在控制栏中选择“切换到屏幕镜像”；下一次串流会自动恢复直接播放。已打开的视频可能不会自动切换；请在设备上关闭并重新打开。</string>
     <string name="help_video_title">视频无法播放或出现黑屏</string>
     <string name="help_video_body">如果来源拒绝访问，请在串流控制栏中选择“切换到屏幕镜像”。在设备上退出 AirPlay 视频画面并重新打开视频。部分受保护内容无法镜像。如果设备画面也未显示，请在设备上停止屏幕镜像后重新连接。</string>
     <string name="help_network_title">卡顿、延迟或 VPN</string>

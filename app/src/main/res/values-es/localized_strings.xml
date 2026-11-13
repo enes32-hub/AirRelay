@@ -58,7 +58,7 @@
     <string name="permission_manage">Cambiar en los ajustes del televisor</string>
     <string name="permission_settings_unavailable">No se pudo abrir la pantalla de permisos. Ve a Ajustes del televisor → Apps → AirRelay.</string>
     <string name="playback_help_title">Prueba otra forma de ver</string>
-    <string name="playback_help_body">Algunos vídeos no se reproducen directamente en el televisor. Abre el control Reproducción a la izquierda de la barra inferior y elige Cambiar a duplicar pantalla. Después, vuelve a abrir el vídeo en tu dispositivo.</string>
+    <string name="playback_help_body">Algunos vídeos no se reproducen directamente en el televisor. Elige Cambiar a duplicar pantalla a la izquierda de la barra inferior y vuelve a abrir el vídeo en tu dispositivo.</string>
     <string name="playback_help_confirm">Entendido</string>
     <string name="playback_choice_title">Reproducción</string>
     <string name="playback_mirror">Duplicar pantalla</string>
@@ -269,7 +269,7 @@
     <string name="r2_invalid_resolution">El ancho y el alto deben estar entre 16 y 16384.</string>
     <string name="settings_playback">Imagen y reproducción</string>
     <string name="help_modes_title">¿Cómo se reproducen los vídeos?</string>
-    <string name="help_modes_body">La duplicación muestra la pantalla del iPhone, iPad o Mac. La reproducción directa usa el reproductor del televisor si la app emisora lo admite. Durante un flujo, Reproducción ofrece Cambiar a duplicar pantalla y no vuelve atrás. Un vídeo abierto puede no cambiar automáticamente; ciérralo y ábrelo de nuevo en tu dispositivo.</string>
+    <string name="help_modes_body">La reproducción directa usa el reproductor del televisor si la app emisora lo admite. La duplicación muestra la pantalla del iPhone, iPad o Mac. Durante un flujo, elige Cambiar a duplicar pantalla en los controles si es necesario; la reproducción directa vuelve automáticamente en la siguiente transmisión. Un vídeo abierto puede no cambiar automáticamente; ciérralo y ábrelo de nuevo en tu dispositivo.</string>
     <string name="help_video_title">El vídeo no se reproduce o la pantalla está negra</string>
     <string name="help_video_body">Si la fuente deniega el acceso, elige Cambiar a duplicar pantalla en los controles del flujo. Sal de la pantalla de vídeo AirPlay y abre el vídeo otra vez. Algunos contenidos protegidos no pueden duplicarse. Si tampoco aparece la pantalla del dispositivo, detén la duplicación en él y reconecta.</string>
     <string name="help_network_title">Bloqueos, retraso o VPN</string>

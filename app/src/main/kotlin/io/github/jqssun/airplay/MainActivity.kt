@@ -160,7 +160,16 @@ class MainActivity : ComponentActivity() {
         Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED
 
     fun requestAudioCapturePermission() {
-        audioPermission.launch(Manifest.permission.RECORD_AUDIO)
+        val experience = getSharedPreferences(UserExperiencePrefs.NAME, MODE_PRIVATE)
+        val prompted = experience.getBoolean(UserExperiencePrefs.AUDIO_PROMPTED, false)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q &&
+            ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED &&
+            (!prompted || shouldShowRequestPermissionRationale(Manifest.permission.RECORD_AUDIO))) {
+            experience.edit().putBoolean(UserExperiencePrefs.AUDIO_PROMPTED, true).apply()
+            audioPermission.launch(Manifest.permission.RECORD_AUDIO)
+        } else {
+            openApplicationSettings()
+        }
     }
 
     fun openApplicationSettings() = openPermissionSettings(

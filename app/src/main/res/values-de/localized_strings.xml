@@ -58,7 +58,7 @@
     <string name="permission_manage">In TV-Einstellungen ändern</string>
     <string name="permission_settings_unavailable">Der Berechtigungsbildschirm ließ sich nicht öffnen. Prüfe TV-Einstellungen → Apps → AirRelay.</string>
     <string name="playback_help_title">Andere Wiedergabemethode versuchen</string>
-    <string name="playback_help_body">Manche Videos lassen sich nicht direkt auf dem Fernseher abspielen. Öffne die Wiedergabe-Steuerung links in der unteren Leiste und wähle „Zu Bildschirmsynchronisierung wechseln“. Öffne das Video danach erneut auf deinem Gerät.</string>
+    <string name="playback_help_body">Manche Videos lassen sich nicht direkt auf dem Fernseher abspielen. Wähle links in der unteren Steuerleiste „Zu Bildschirmsynchronisierung wechseln“ und öffne das Video danach erneut auf deinem Gerät.</string>
     <string name="playback_help_confirm">Verstanden</string>
     <string name="playback_choice_title">Wiedergabe</string>
     <string name="playback_mirror">Bildschirm spiegeln</string>
@@ -269,7 +269,7 @@
     <string name="r2_invalid_resolution">Breite und Höhe müssen jeweils zwischen 16 und 16384 liegen.</string>
     <string name="settings_playback">Bild und Wiedergabe</string>
     <string name="help_modes_title">Wie werden Videos wiedergegeben?</string>
-    <string name="help_modes_body">Bildschirmsynchronisierung zeigt deinen iPhone-, iPad- oder Mac-Bildschirm. Direkte Wiedergabe nutzt den TV-Player, wenn die sendende App dies unterstützt. Während einer Übertragung bietet Wiedergabe „Zu Bildschirmsynchronisierung wechseln“ an und schaltet nicht zurück. Offene Videos wechseln möglicherweise nicht automatisch; schließe und öffne sie auf deinem Gerät erneut.</string>
+    <string name="help_modes_body">Direkte Wiedergabe nutzt den TV-Player, wenn die sendende App dies unterstützt. Bildschirmsynchronisierung zeigt deinen iPhone-, iPad- oder Mac-Bildschirm. Wähle während einer Übertragung bei Bedarf „Zu Bildschirmsynchronisierung wechseln“ in der Steuerung; beim nächsten Stream wird automatisch wieder die direkte Wiedergabe aktiviert. Offene Videos wechseln möglicherweise nicht automatisch; schließe und öffne sie auf deinem Gerät erneut.</string>
     <string name="help_video_title">Video läuft nicht oder Bildschirm bleibt schwarz</string>
     <string name="help_video_body">Verweigert die Quelle den Zugriff, wähle in der Übertragungssteuerung „Zu Bildschirmsynchronisierung wechseln“. Verlasse die AirPlay-Videoansicht und öffne das Video erneut. Manche geschützten Inhalte lassen sich nicht spiegeln. Fehlt auch der Gerätebildschirm, beende die Synchronisierung auf deinem Gerät und verbinde erneut.</string>
     <string name="help_network_title">Standbilder, Verzögerung oder VPN</string>

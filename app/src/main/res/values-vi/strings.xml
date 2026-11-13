@@ -58,7 +58,7 @@
     <string name="permission_manage">Đổi trong cài đặt TV</string>
     <string name="permission_settings_unavailable">Không mở được màn hình cấp quyền trên TV này. Hãy kiểm tra Cài đặt TV → Ứng dụng → AirRelay.</string>
     <string name="playback_help_title">Thử cách xem khác</string>
-    <string name="playback_help_body">Một số video không thể phát trực tiếp trên TV. Mở mục điều khiển Phát ở bên trái thanh dưới và chọn Chuyển sang phản chiếu màn hình. Sau đó mở lại video trên thiết bị.</string>
+    <string name="playback_help_body">Một số video không thể phát trực tiếp trên TV. Chọn Chuyển sang phản chiếu màn hình ở bên trái thanh điều khiển dưới cùng, sau đó mở lại video trên thiết bị.</string>
     <string name="playback_help_confirm">Đã hiểu</string>
     <string name="playback_choice_title">Phát</string>
     <string name="playback_mirror">Phản chiếu màn hình</string>
@@ -269,7 +269,7 @@
     <string name="r2_invalid_resolution">Chiều rộng và chiều cao đều phải từ 16 đến 16384.</string>
     <string name="settings_playback">Hình ảnh và phát</string>
     <string name="help_modes_title">Video được phát như thế nào?</string>
-    <string name="help_modes_body">Phản chiếu màn hình hiển thị màn hình iPhone, iPad hoặc Mac. Phát trực tiếp dùng trình phát của TV khi ứng dụng gửi hỗ trợ. Trong khi phát, mục Phát cung cấp Chuyển sang phản chiếu màn hình và không chuyển ngược lại. Video đang mở có thể không tự chuyển; hãy đóng và mở lại trên thiết bị.</string>
+    <string name="help_modes_body">Phát trực tiếp dùng trình phát của TV khi ứng dụng gửi hỗ trợ; phản chiếu màn hình hiển thị màn hình iPhone, iPad hoặc Mac. Trong khi phát, chọn Chuyển sang phản chiếu màn hình trên thanh điều khiển khi cần; luồng tiếp theo sẽ tự động quay lại phát trực tiếp. Video đang mở có thể không tự chuyển; hãy đóng và mở lại trên thiết bị.</string>
     <string name="help_video_title">Không phát được video hoặc màn hình đen</string>
     <string name="help_video_body">Nếu nguồn từ chối truy cập, chọn Chuyển sang phản chiếu màn hình trong điều khiển luồng. Thoát màn hình video AirPlay trên thiết bị rồi mở lại video. Một số nội dung được bảo vệ không thể phản chiếu. Nếu cả màn hình thiết bị cũng không hiện, hãy dừng phản chiếu trên thiết bị rồi kết nối lại.</string>
     <string name="help_network_title">Đơ, trễ hoặc VPN</string>

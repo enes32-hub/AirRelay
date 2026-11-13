@@ -58,7 +58,7 @@
     <string name="permission_manage">Modifier dans les réglages du téléviseur</string>
     <string name="permission_settings_unavailable">Impossible d’ouvrir les autorisations. Consultez Réglages du téléviseur → Apps → AirRelay.</string>
     <string name="playback_help_title">Essayez une autre façon de regarder</string>
-    <string name="playback_help_body">Certaines vidéos ne se lisent pas directement sur le téléviseur. Ouvrez la commande Lecture à gauche de la barre inférieure et choisissez Passer à la recopie d’écran. Rouvrez ensuite la vidéo sur votre appareil.</string>
+    <string name="playback_help_body">Certaines vidéos ne se lisent pas directement sur le téléviseur. Choisissez Passer à la recopie d’écran à gauche de la barre de commandes inférieure, puis rouvrez la vidéo sur votre appareil.</string>
     <string name="playback_help_confirm">Compris</string>
     <string name="playback_choice_title">Lecture</string>
     <string name="playback_mirror">Recopier l’écran</string>
@@ -269,7 +269,7 @@
     <string name="r2_invalid_resolution">La largeur et la hauteur doivent être comprises entre 16 et 16384.</string>
     <string name="settings_playback">Image et lecture</string>
     <string name="help_modes_title">Comment les vidéos sont-elles lues ?</string>
-    <string name="help_modes_body">La recopie affiche l’écran de votre iPhone, iPad ou Mac. La lecture directe utilise le lecteur du téléviseur si l’app émettrice le permet. Pendant un flux, Lecture propose Passer à la recopie d’écran et ne revient pas en arrière. Une vidéo ouverte peut ne pas basculer automatiquement ; fermez-la et rouvrez-la sur votre appareil.</string>
+    <string name="help_modes_body">La lecture directe utilise le lecteur du téléviseur si l’app émettrice le permet. La recopie affiche l’écran de votre iPhone, iPad ou Mac. Pendant un flux, choisissez Passer à la recopie d’écran dans les commandes si nécessaire ; la lecture directe revient automatiquement au flux suivant. Une vidéo ouverte peut ne pas basculer automatiquement ; fermez-la et rouvrez-la sur votre appareil.</string>
     <string name="help_video_title">Vidéo illisible ou écran noir</string>
     <string name="help_video_body">Si la source refuse l’accès, choisissez Passer à la recopie d’écran dans les commandes du flux. Quittez l’écran vidéo AirPlay et rouvrez la vidéo. Certains contenus protégés ne peuvent pas être recopiés. Si l’écran de l’appareil manque aussi, arrêtez la recopie sur votre appareil puis reconnectez-la.</string>
     <string name="help_network_title">Blocages, retard ou VPN</string>

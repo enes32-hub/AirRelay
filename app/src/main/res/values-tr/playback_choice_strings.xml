@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="playback_help_title">Videoyu başka bir şekilde izleyin</string>
-    <string name="playback_help_body">Bazı videolar TV’de doğrudan oynatılamaz. Alt çubuğun solundaki Oynatma şekli kontrolünü aç ve Ekran yansıtmaya geç seçeneğini dene. Ardından videoyu cihazında yeniden aç.</string>
+    <string name="playback_help_body">Bazı videolar TV’de doğrudan oynatılamaz. Alt kontrol çubuğunun solundaki Ekran yansıtmaya geç düğmesini seç, ardından videoyu cihazında yeniden aç.</string>
     <string name="playback_help_confirm">Anladım</string>
     <string name="playback_choice_title">Oynatma şekli</string>
     <string name="playback_mirror">Ekrandan yansıt</string>

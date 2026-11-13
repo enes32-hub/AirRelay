@@ -58,7 +58,7 @@
     <string name="permission_manage">Ubah di pengaturan TV</string>
     <string name="permission_settings_unavailable">TV ini tidak dapat membuka layar izin. Periksa Pengaturan TV → Aplikasi → AirRelay.</string>
     <string name="playback_help_title">Coba cara menonton lainnya</string>
-    <string name="playback_help_body">Beberapa video tidak dapat diputar langsung di TV. Buka kontrol Pemutaran di kiri bilah bawah dan pilih Beralih ke pencerminan layar. Lalu buka kembali video di perangkat.</string>
+    <string name="playback_help_body">Beberapa video tidak dapat diputar langsung di TV. Pilih Beralih ke pencerminan layar di kiri bilah kontrol bawah, lalu buka kembali video di perangkat.</string>
     <string name="playback_help_confirm">Mengerti</string>
     <string name="playback_choice_title">Pemutaran</string>
     <string name="playback_mirror">Cerminkan layar</string>

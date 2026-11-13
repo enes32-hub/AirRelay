@@ -7,6 +7,7 @@ import android.media.projection.MediaProjectionManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -72,6 +73,7 @@ fun RecordingQualitySetting() {
         Modifier
             .fillMaxWidth()
             .background(AirRelayColors.Panel, RoundedCornerShape(18.dp))
+            .border(1.dp, AirRelayColors.Border.copy(alpha = .6f), RoundedCornerShape(18.dp))
             .padding(18.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {
