@@ -3,9 +3,9 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "AirRelay Receiver SBOM (1.0.7 (versionCode 8))",
-  "documentNamespace": "https://airrelay.local/spdx/1.0.7-(versionCode-8)/2026-10-11T13:19:36+00:00",
+  "documentNamespace": "https://airrelay.local/spdx/1.0.7-(versionCode-8)/2026-11-13T20:01:56+00:00",
   "creationInfo": {
-    "created": "2026-10-11T13:19:36+00:00",
+    "created": "2026-11-13T20:01:56+00:00",
     "creators": [
       "Tool: tools/generate_sbom.py",
       "Organization: AirRelay"

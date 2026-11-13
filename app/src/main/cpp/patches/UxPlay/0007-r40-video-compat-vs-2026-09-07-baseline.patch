@@ -224,8 +224,8 @@ new file mode 100644
 --- /dev/null
 +++ b/lib/fcup_response.h
 @@ -0,0 +1,24 @@
-+#ifndef AYNATV_FCUP_RESPONSE_H
-+#define AYNATV_FCUP_RESPONSE_H
++#ifndef AIRRELAY_FCUP_RESPONSE_H
++#define AIRRELAY_FCUP_RESPONSE_H
 +#include <stdbool.h>
 +#include <stddef.h>
 +#include <string.h>

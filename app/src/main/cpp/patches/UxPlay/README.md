@@ -47,10 +47,9 @@ git apply patches/UxPlay/0006-deliver-volume-while-audio-stream-paused.patch
 git apply patches/UxPlay/0007-r40-video-compat-vs-2026-09-07-baseline.patch
 ```
 
-`0007` must be applied last. It was verified mechanically: applying it to the baseline
-archive `AynaTV-Kaynak-Kod-ve-Devir-2026-09-07.zip` (extracted under
-`app/src/main/cpp/third_party/UxPlay/`) reproduces the current tree byte-for-byte
-(LF-normalised; 0 content differences, 0 missing, 0 extra files).
+`0007` must be applied last. It was verified mechanically: applying it to the 2026-09-07
+baseline snapshot (extracted under `app/src/main/cpp/third_party/UxPlay/`) reproduces the
+current tree byte-for-byte (LF-normalised; 0 content differences, 0 missing, 0 extra files).
 
 Because the build compiles the vendored tree directly and never applies these patches,
 they are a change record and a reproduction path, not a build step.
@@ -58,7 +57,6 @@ they are a change record and a reproduction path, not a build step.
 ## Provenance status
 
 `0001`–`0006` map upstream to the 2026-09-07 baseline. The step from the pinned upstream
-commit to that baseline is asserted by the earlier delivery's hashes
-(`docs/refinement2/PREVIOUS_DELIVERY_PROTECTED_SHA256.json`); no pristine upstream copy is
-present in this checkout to re-derive it offline. `0007` is fully verified against the
-baseline archive.
+commit to that baseline is asserted by the project-held baseline hash manifest; no pristine
+upstream copy is present in this checkout to re-derive it offline. `0007` is fully verified
+against the baseline snapshot.

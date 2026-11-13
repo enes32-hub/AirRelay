@@ -13,22 +13,6 @@ cloud service.
 | Language | Kotlin + Jetpack Compose (Material 3), native C/C++ core |
 | Licence | GPL-3.0 (see [Licence](#licence-and-third-party-components)) |
 
-## Naming
-
-The project was developed under the working name **AynaTV Receiver** and ships as **AirRelay
-Receiver** (`com.airrelay.receiver`). Historical identifiers are kept where they are facts rather
-than branding:
-
-- the baseline source-archive filenames recorded in the protected-core hash manifests,
-- the backward-compatibility shims that migrate existing installations — `app/build.gradle.kts` still
-  accepts the old `aynatv.*` Gradle properties, and `ReceiverName.kt` renames an old default device
-  name to the current one.
-
-The original requirement specification, the acceptance matrix and the test catalog are maintained
-with the project rather than published here, because they are written in the language of that
-specification; an appended note records the rename and the requirement identifiers and thresholds
-are unchanged by it.
-
 ## Features
 
 - Screen mirroring with hardware video decoding (MediaCodec → SurfaceView, HEVC and H.264)
@@ -124,7 +108,7 @@ Honest state of the 1.0.7 build — the full record, including what has not been
 [ACCEPTANCE.md](ACCEPTANCE.md):
 
 - Verified: signed release APK and AAB (release key, not debuggable, both ABIs, 16 KB page alignment),
-  a real iPhone mirroring session on a Xiaomi MiTV-AFMU0 (Android 14) with hardware HEVC decoding,
+  a real iPhone mirroring session on an Android 14 TV (`armeabi-v7a`) with hardware HEVC decoding,
   audio/video start, and a 20-cycle connect/disconnect resource-leak measurement.
 - Verified: the receiver's Bonjour records were measured from another host on the same LAN — PTR,
   SRV, TXT and A records for both `_airplay._tcp` and `_raop._tcp` answer with port 7000 and the

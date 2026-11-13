@@ -12,13 +12,11 @@ val localProps = Properties().apply {
     rootProject.file("local.properties").takeIf { it.exists() }?.inputStream()?.use(::load)
 }
 
-// Brand-consistent property names. The legacy aynatv.* keys are still accepted for
-// one release so existing local.properties files and build scripts keep working.
 fun gradleProp(name: String): Provider<String> =
-    providers.gradleProperty("airrelay.$name").orElse(providers.gradleProperty("aynatv.$name"))
+    providers.gradleProperty("airrelay.$name")
 
 fun localProp(name: String): String? =
-    localProps.getProperty("airrelay.$name") ?: localProps.getProperty("aynatv.$name")
+    localProps.getProperty("airrelay.$name")
 
 // The normal development target is the Android TV emulator. A release build selects its real-TV
 // ABIs explicitly, e.g. -Pairrelay.abis=arm64-v8a,armeabi-v7a.

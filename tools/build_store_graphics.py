@@ -14,12 +14,14 @@ Output: 09-MAGAZA-GORSELLERI/
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-PACKAGE = Path(r"C:\Users\ASUS\Desktop\AirRelay")
-DESIGN = Path(r"C:\Users\ASUS\Documents\AirRelay\design\airrelay-monogram\approved-preview.png")
+ROOT = Path(__file__).resolve().parents[1]
+PACKAGE = Path(os.environ.get("AIRRELAY_PACKAGE_DIR", str(ROOT / "build" / "store-package")))
+DESIGN = ROOT / "design" / "airrelay-monogram" / "approved-preview.png"
 SHOTS = PACKAGE / "06-EKRAN-GORUNTULERI"
 OUT = PACKAGE / "09-MAGAZA-GORSELLERI"
 

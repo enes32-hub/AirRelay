@@ -162,7 +162,7 @@ class NsdServiceManager(
 
     /**
      * Stable, unique-on-the-LAN host label for the SRV target of both services. RAOP names carry a
-     * device prefix ("5ADA...@AirRelay-4BBD7345"), so the prefix is dropped: both services then
+     * device prefix ("0200...@AirRelay-A1B2C3D4"), so the prefix is dropped: both services then
      * share one clean hostname instead of embedding the device address twice.
      */
     private fun hostLabel(serviceName: String): String {

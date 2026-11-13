@@ -85,12 +85,9 @@ docs/USER_POLISH_RC2_2026-09-10.md
 docs/VELORA_CAST_USER_GUIDE.md
 docs/WINDOWS_DIRECT_2026-09-10.md
 docs/YAPILACAK_GELISTIRMELER.md
-docs/archive/INDEX.md
-docs/archive/README-dev-history.md
+docs/archive/
 docs/productization/UYGULAMA_NOTLARI.md
-docs/refinement2/ELESTIRI_VE_TESLIM.md
-docs/refinement2/ETKILESIM_MATRISI.md
-docs/refinement2/KAYNAK_KANITLARI.md
+docs/refinement2/
 docs/research/ALTERNATIVE_CORES.md
 legal/REVIEW_REQUEST.md
 
@@ -134,3 +131,10 @@ tests/
 /REQUIREMENTS_TRACEABILITY.csv
 /docs/TEST_CATALOG.json
 /scripts/seed_traceability.py
+
+# Local device-automation and legacy milestone helpers — kept locally, not published
+/scripts/capture_themes.py
+/scripts/capture_theme_layouts.py
+/scripts/read_about_screen.py
+/scripts/stop_revision2_bridge.ps1
+/scripts/refinement2/

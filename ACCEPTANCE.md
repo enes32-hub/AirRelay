@@ -35,7 +35,7 @@ the release gate still refuses to run.
 
 Also observed on real hardware and recorded with the delivery package rather than in this repository:
 
-- a real iPhone mirroring session on a Xiaomi MiTV-AFMU0 (Android 14) using the hardware HEVC
+- a real iPhone mirroring session on an Android 14 TV (`armeabi-v7a`) using the hardware HEVC
   decoder, with the first frame submitted and no audio underrun, crash or ANR,
 - a 20-cycle connect/disconnect resource-leak measurement (a graphics texture/program leak was found
   and fixed),

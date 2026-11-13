@@ -14,7 +14,3 @@ sdk.dir=C:/Users/YOUR_USER/AppData/Local/Android/Sdk
 # storePassword=CHANGE_ME
 # keyAlias=airrelay
 # keyPassword=CHANGE_ME
-
-# Legacy property names (aynatv.python, aynatv.cmake.command, aynatv.msys.root) are
-# still accepted for one release and take effect only when the airrelay.* keys above
-# are absent.

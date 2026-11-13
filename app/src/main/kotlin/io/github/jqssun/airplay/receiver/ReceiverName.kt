@@ -19,10 +19,9 @@ object ReceiverName {
         return prefix.toString().trimEnd() + end
     }
 
-    // The legacy names are functional migration constants, not branding: a receiver
-    // that still advertises an old default name is recognized and regenerated as
-    // "AirRelay-<id>". Removing them would strand those installations on the old name.
+    // Recognise an unset or upstream placeholder default name and regenerate it as
+    // "AirRelay-<id>", while preserving any custom name chosen by the user.
     fun needsDefault(current: String?, previousGenerated: String? = null): Boolean =
-        current.isNullOrBlank() || current in setOf("AynaTV Receiver", "AynaTV", "AirPlay Receiver") ||
+        current.isNullOrBlank() || current == "AirPlay Receiver" ||
             (previousGenerated != null && current == previousGenerated)
 }

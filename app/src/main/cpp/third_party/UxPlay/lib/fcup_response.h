@@ -1,5 +1,5 @@
-#ifndef AYNATV_FCUP_RESPONSE_H
-#define AYNATV_FCUP_RESPONSE_H
+#ifndef AIRRELAY_FCUP_RESPONSE_H
+#define AIRRELAY_FCUP_RESPONSE_H
 #include <stdbool.h>
 #include <stddef.h>
 #include <string.h>
