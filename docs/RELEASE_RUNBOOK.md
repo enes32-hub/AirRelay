@@ -6,12 +6,10 @@
 |---|---|
 | Application id | `com.airrelay.receiver` (frozen; changing it orphans every installation) |
 | Current public release | versionCode 8, versionName `1.0.7` |
-| First release-signed build (internal, never published) | versionCode 75, versionName `0.1.0-rc40-test` |
 | Keystore | `keystore/airrelay-release.jks` (gitignored), alias `airrelay`, RSA 4096, validity 10000 days |
 | Certificate DN | `CN=AirRelay, OU=Receiver, O=AirRelay, C=TR` |
 | **Certificate SHA-256** | `c24b1ae32c1b12ad7461728a4d24675a41cda63a464f13eb3cbd7adfb7c77ef2` |
 | Certificate SHA-1 | `e4ce9bd3fe78ca3aa80f46181c3303f410d16517` |
-| First release-signed universal APK (internal) | 17.27 MB, SHA-256 `4C9160B291D2DA3552751E36F590DEF12ED109E226396167E5452A07DA56196B` |
 | Current universal APK (1.0.7) | 17.29 MB, SHA-256 `29c113a4669d7c8d91ec709fedd84aa4a32511a86f2d1696465b8ab8e05289ed` |
 | Current App Bundle (1.0.7) | 18.38 MB, SHA-256 `38597b4c6961cb211dcdca44c84bec9612063a4c21c51dcc76dba43719538ce6` |
 
@@ -22,10 +20,10 @@ Verify every future artifact against the fingerprint above:
     Select-String 'SHA-256 digest'
 ```
 
-A different digest means the wrong key was used — stop and fix it before publishing. The keystore
-and its password exist in exactly one place today (this machine and `local.properties`); back both
-up, or a disk failure makes future updates impossible. The source offer required by GPL-3.0 section 6
-is recorded in `legal/NOTICE.md` and points at the public repository.
+A different digest means the wrong key was used — stop and fix it before publishing. Keep the
+release keystore and its password backed up offline (`local.properties` is gitignored); losing either
+makes future updates to existing installations impossible. The source offer required by GPL-3.0
+section 6 is recorded in `legal/NOTICE.md` and points at the public repository.
 
 Everything a release needs, in the order it must happen. Steps marked **irreversible** decide the
 identity of the application and cannot be undone later.
@@ -112,12 +110,11 @@ Do not make it pass by editing records: the acceptance matrix starts every requi
 `NOT_RUN`, and a `PASS` row needs a hashed evidence record under `artifacts/evidence/`
 (see the contract in `artifacts/evidence/README.md`).
 
-## 6. Known blockers as of this revision
+## 6. Remaining acceptance items
 
-* **Signing**: no keystore yet — `G0-TOOLCHAIN` stays blocked until a release-signed artifact exists.
-* **Source offer**: `legal/NOTICE.md` still carries `<SOURCE-URL-NOT-SET>`.
-* **Acceptance evidence**: 102 requirements at `NOT_RUN`; `G0-LICENSE`, `G0-SPIKE`,
-  `G0-TOOLCHAIN`, `G0-SELECTION` unresolved.
-* **Version naming**: `1.0.7` / versionCode 8 is the current build (1.0.0, 1.0.1 and 1.0.2 were never published). Keep `versionCode` strictly
-  increasing: a device only accepts an update whose code is higher than the installed one.
-  before the first published build, and keep `versionCode` strictly increasing.
+* **Acceptance evidence**: 102 requirements in the project-held matrix remain at `NOT_RUN` (see
+  `ACCEPTANCE.md`).
+* **64-bit device execution**: the `arm64-v8a` slice is verified structurally (ELF64/AArch64,
+  JNI symbol set, 16 KB page alignment) and awaits execution on a physical 64-bit Android TV.
+* **Version numbering**: `1.0.7` (`versionCode 8`) is the current release. Keep `versionCode`
+  strictly increasing on every future build so existing installations can update cleanly.

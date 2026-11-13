@@ -4,7 +4,7 @@ This document is a test plan; it is not a measurement result. The effective chai
 
 ## Experiment record
 
-On every run the receiver build/core commit and APK SHA-256, iPhone model/iOS build, Android TV model/OS build/ABI, decoder name, audio format, network type and test duration are recorded. Real IP, MAC, PIN, private key, SSID or personal content do not go into the report. Unprotected test content on the device is used instead of the user's personal screen; a screen/audio recording feature is not added to the receiver.
+On every run the receiver build/core commit and APK SHA-256, iPhone model/iOS build, Android TV model/OS build/ABI, decoder name, audio format, network type and test duration are recorded. Real IP, MAC, PIN, private key, SSID or personal content do not go into the report. Dedicated non-personal test media on the sender device is used instead of personal screen content.
 
 Reference network: the same subnet, TV on Ethernet or strong 5/6 GHz Wi-Fi, iPhone on strong 5/6 GHz, RSSI of about -60 dBm or better, at least 100 Mbps local throughput, loss <0.5%, jitter p95 <10 ms and AP isolation off. The local network must keep working even if the internet is cut. A user-owned controlled laboratory is used for network measurement; no speed test is sent to an external service.
 

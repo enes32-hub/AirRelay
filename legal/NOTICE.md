@@ -20,19 +20,15 @@ writes a verified manifest into the archive (the export refuses to include signi
 | Item | Value |
 |---|---|
 | How to produce | `python scripts/export_source_zip.py <output.zip>` — run it for every published build |
-| Contents | the whole checkout: `app/` integration source, vendored UxPlay, FFmpeg and libplist sources, the OpenSSL build wrapper, all seven UxPlay patches, build scripts, `legal/`, the specification and `gradle/libs.versions.toml` |
+| Contents | the whole checkout: `app/` integration source, vendored UxPlay, FFmpeg and libplist sources, the OpenSSL build wrapper, all seven UxPlay patches, build scripts, `legal/` and `gradle/libs.versions.toml` |
 | Integrity | the archive contains `EXPORT_MANIFEST.json`, listing every file with its size and SHA-256; the tool re-reads the archive and refuses to report success unless every entry verifies |
 | Archive hash | printed by the tool on completion. Record it in the release notes beside the published binary — **not in this file**: this notice travels inside the archive, so a hash written here could never match the archive that contains it |
 
-**Publication channel — must be filled in before the first public binary is offered:**
-GPL-3.0 section 6 requires that recipients of a binary can obtain this source. Either publish the
-archive at a stable URL and record it here, or attach it to the distribution itself and offer it
-in writing for three years. Replace `https://github.com/enes32-hub/AirRelay` below with the real address:
+**Publication channel:**
+GPL-3.0 section 6 requires that recipients of a binary can obtain this corresponding source. The
+public repository and corresponding-source channel for distributed builds is:
 
     Corresponding source: https://github.com/enes32-hub/AirRelay
-
-Until that address exists, `scripts/check_readiness.py --release` stays blocked (gate
-`G0-LICENSE`), which is the intended behaviour.
 
 ## Native source components
 

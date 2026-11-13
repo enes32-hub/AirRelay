@@ -9,8 +9,8 @@ This document records the current development build, not a release approval.
 - A local Python interpreter. `scripts/build_receiver.ps1` resolves the user
   Python installation under `%LOCALAPPDATA%\Programs\Python` when no path is
   supplied.
-- An ASCII-only temporary build path. The project directory itself may contain
-  Turkish characters.
+- An ASCII-only temporary build path (MSYS2 configure scripts do not handle non-ASCII
+  working directories reliably).
 
 ## Build
 

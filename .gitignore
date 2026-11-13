@@ -130,6 +130,7 @@ tests/
 /docs/SPECIFICATION.md
 /REQUIREMENTS_TRACEABILITY.csv
 /docs/TEST_CATALOG.json
+/docs/PHASE0_STATUS.json
 /scripts/seed_traceability.py
 
 # Local device-automation and legacy milestone helpers — kept locally, not published
