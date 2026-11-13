@@ -5,13 +5,13 @@
 | Item | Value |
 |---|---|
 | Application id | `com.airrelay.receiver` (frozen; changing it orphans every installation) |
-| Current public release | versionCode 8, versionName `1.0.7` |
+| Current public release | versionCode 9, versionName `1.0.8` |
 | Keystore | `keystore/airrelay-release.jks` (gitignored), alias `airrelay`, RSA 4096, validity 10000 days |
 | Certificate DN | `CN=AirRelay, OU=Receiver, O=AirRelay, C=TR` |
 | **Certificate SHA-256** | `c24b1ae32c1b12ad7461728a4d24675a41cda63a464f13eb3cbd7adfb7c77ef2` |
 | Certificate SHA-1 | `e4ce9bd3fe78ca3aa80f46181c3303f410d16517` |
-| Current universal APK (1.0.7) | 17.29 MB, SHA-256 `29c113a4669d7c8d91ec709fedd84aa4a32511a86f2d1696465b8ab8e05289ed` |
-| Current App Bundle (1.0.7) | 18.38 MB, SHA-256 `38597b4c6961cb211dcdca44c84bec9612063a4c21c51dcc76dba43719538ce6` |
+| Current universal APK (1.0.8) | 17.27 MB, SHA-256 `face463f2f494ee581881905a726944ea188aeb77147ac8b139c2207f6db6f6e` |
+| Current App Bundle (1.0.8) | 18.38 MB, SHA-256 `92513efcd05a1a84b601e369367e6ba4a68b78a8cbc8db9537df62337b874df9` |
 
 Verify every future artifact against the fingerprint above:
 
@@ -116,5 +116,5 @@ Do not make it pass by editing records: the acceptance matrix starts every requi
   `ACCEPTANCE.md`).
 * **64-bit device execution**: the `arm64-v8a` slice is verified structurally (ELF64/AArch64,
   JNI symbol set, 16 KB page alignment) and awaits execution on a physical 64-bit Android TV.
-* **Version numbering**: `1.0.7` (`versionCode 8`) is the current release. Keep `versionCode`
+* **Version numbering**: `1.0.8` (`versionCode 9`) is the current release. Keep `versionCode`
   strictly increasing on every future build so existing installations can update cleanly.

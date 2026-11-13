@@ -2,22 +2,22 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "name": "AirRelay Receiver SBOM (1.0.7 (versionCode 8))",
-  "documentNamespace": "https://airrelay.local/spdx/1.0.7-(versionCode-8)/2026-11-13T20:01:56+00:00",
+  "name": "AirRelay Receiver SBOM (1.0.8 (versionCode 9))",
+  "documentNamespace": "https://airrelay.local/spdx/1.0.8-(versionCode-9)/2026-11-13T21:21:29+00:00",
   "creationInfo": {
-    "created": "2026-11-13T20:01:56+00:00",
+    "created": "2026-11-13T21:21:29+00:00",
     "creators": [
       "Tool: tools/generate_sbom.py",
       "Organization: AirRelay"
     ],
     "comment": "Generated from declared dependency sources. Covers the direct Gradle dependencies and the pinned native components only."
   },
-  "comment": "Scope: 24 declared Gradle dependencies and 8 pinned native components. This is NOT the transitive closure. Run `gradlew :app:dependencies --configuration releaseRuntimeClasspath` (or the equivalent for the shipped variant) and merge the result into this document to obtain the transitive Gradle closure; the native closure is produced by the CMake ExternalProject pins recorded in app/src/main/cpp. Components whose version could not be derived from the repository are listed with versionInfo NOASSERTION: androidx.compose.material:material-icons-extended, androidx.compose.material3:material3, androidx.compose.ui:ui, androidx.compose.ui:ui-graphics, androidx.compose.ui:ui-tooling, androidx.compose.ui:ui-tooling-preview. Licence values come from an explicit table in this generator; NOASSERTION means the claim must be verified before distribution.",
+  "comment": "Scope: 24 declared Gradle dependencies and 13 pinned native components. This is NOT the transitive closure. Run `gradlew :app:dependencies --configuration releaseRuntimeClasspath` (or the equivalent for the shipped variant) and merge the result into this document to obtain the transitive Gradle closure; the native closure is produced by the CMake ExternalProject pins recorded in app/src/main/cpp. Components whose version could not be derived from the repository are listed with versionInfo NOASSERTION: androidx.compose.material:material-icons-extended, androidx.compose.material3:material3, androidx.compose.ui:ui, androidx.compose.ui:ui-graphics, androidx.compose.ui:ui-tooling, androidx.compose.ui:ui-tooling-preview, csrp (UxPlay lib/srp.c), jsmn (libplist src/jsmn.c), time64 (libplist src/time64.c), TargetArch.cmake (openssl-cmake). Licence values come from an explicit table in this generator; NOASSERTION means the claim must be verified before distribution.",
   "packages": [
     {
       "SPDXID": "SPDXRef-Package-AirRelay",
       "name": "AirRelay Receiver",
-      "versionInfo": "1.0.7 (versionCode 8)",
+      "versionInfo": "1.0.8 (versionCode 9)",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
       "licenseDeclared": "GPL-3.0-only",
@@ -478,12 +478,62 @@
       "versionInfo": "4edd36a8dab5f85a8f92650b5bdf6e0cab13aab8",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
-      "licenseDeclared": "NOASSERTION",
-      "licenseComments": "CMake build wrapper; licence not recorded in this repository, verify before distribution (source: docs/research/native-audit.lock.json (viaduck/openssl-cmake))",
+      "licenseDeclared": "MIT",
+      "licenseComments": "CMake build wrapper; Copyright (c) 2015-2024 The ViaDuck Project; see OPEN_SOURCE_NOTICES.txt (source: docs/research/native-audit.lock.json (viaduck/openssl-cmake))",
       "supplier": "NOASSERTION"
     },
     {
       "SPDXID": "SPDXRef-Native-006",
+      "name": "llhttp",
+      "versionInfo": "9.4.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "licenseComments": "Embedded HTTP parser; Copyright Fedor Indutny, 2018; see OPEN_SOURCE_NOTICES.txt (source: app/src/main/cpp/CMakeLists.txt)",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-007",
+      "name": "csrp (UxPlay lib/srp.c)",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "licenseComments": "SRP-6a implementation; Copyright (c) 2010-2014 Tom Cocagne; see OPEN_SOURCE_NOTICES.txt (source: app/src/main/cpp/CMakeLists.txt)",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-008",
+      "name": "jsmn (libplist src/jsmn.c)",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "licenseComments": "JSON tokenizer; Copyright (c) 2010 Serge A. Zaitsev; see OPEN_SOURCE_NOTICES.txt (source: app/src/main/cpp/CMakeLists.txt)",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-009",
+      "name": "time64 (libplist src/time64.c)",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "licenseComments": "64-bit time helpers; Copyright (c) 2007-2010 Michael G Schwern; see OPEN_SOURCE_NOTICES.txt (source: app/src/main/cpp/CMakeLists.txt)",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-010",
+      "name": "TargetArch.cmake (openssl-cmake)",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseDeclared": "BSD-2-Clause",
+      "licenseComments": "CMake architecture detection; Copyright (c) 2012 Petroules Corporation; see OPEN_SOURCE_NOTICES.txt (source: app/src/main/cpp/CMakeLists.txt)",
+      "supplier": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef-Native-011",
       "name": "RPiPlay (playfair antecedent)",
       "versionInfo": "64d0341ed3bef098c940c9ed0675948870a271f9",
       "downloadLocation": "NOASSERTION",
@@ -493,7 +543,7 @@
       "supplier": "NOASSERTION"
     },
     {
-      "SPDXID": "SPDXRef-Native-007",
+      "SPDXID": "SPDXRef-Native-012",
       "name": "playfair",
       "versionInfo": "96c232ed7e65cccfbd1eae8e0d70e7179799290d",
       "downloadLocation": "NOASSERTION",
@@ -503,7 +553,7 @@
       "supplier": "NOASSERTION"
     },
     {
-      "SPDXID": "SPDXRef-Native-008",
+      "SPDXID": "SPDXRef-Native-013",
       "name": "android-airplay-server (JNI wrapper)",
       "versionInfo": "c8defdd70d7e6a04f4f1b71d353653682d594106",
       "downloadLocation": "NOASSERTION",
@@ -678,6 +728,31 @@
       "spdxElementId": "SPDXRef-Package-AirRelay",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-Native-008"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-009"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-010"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-011"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-012"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-AirRelay",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Native-013"
     }
   ]
 }

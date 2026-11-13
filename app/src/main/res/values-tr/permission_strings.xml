@@ -6,7 +6,7 @@
     <string name="permission_intro">AirRelay’in ihtiyaç duyduğu izinleri birlikte ayarlayalım. Her adımda neye izin verdiğinizi görebilir, isterseniz o adımı atlayabilirsiniz.</string>
     <string name="permission_network_title">Aynı ağda buluşun</string>
     <string name="permission_network_body">TV’nizi aynı ağdaki iPhone, iPad ve Mac cihazlarında göstermek; görüntü ve sesi almak için yerel ağ bağlantısı kullanılır. TV’niz Wi-Fi veya Ethernet ile bağlı olabilir.</string>
-    <string name="permission_network_automatic">Android bu ağ izinlerini otomatik verir. Kamera, mikrofon ve fotoğraf arşivinize erişim istenmez.</string>
+    <string name="permission_network_automatic">Android bu ağ izinlerini otomatik verir. Ses yakalama izni yalnızca kayıt başlattığında istenir ve uygulamanın kendi oynatma sesini alır; mikrofon, kamera ve fotoğraf arşivi hiçbir zaman okunmaz.</string>
     <string name="permission_notifications_title">Bağlantı durumu elinizin altında</string>
     <string name="permission_notifications_body">Bildirimler, alıcı arka planda hazırken bağlantı durumunu görmenizi ve yayını durdurmanızı sağlar.</string>
     <string name="permission_notifications_skip">İzin vermezseniz alıcı çalışır; durum bildirimini göremezsiniz.</string>
@@ -28,4 +28,6 @@
     <string name="permission_skip">Şimdilik atla</string>
     <string name="permission_manage">TV ayarlarında değiştir</string>
     <string name="permission_settings_unavailable">Bu TV izin ekranını açamadı. TV Ayarları → Uygulamalar → AirRelay bölümünden kontrol edin.</string>
+    <string name="permission_audio_capture_label">Kayıt sesi yakalama</string>
+    <string name="permission_audio_capture_body">Yalnızca kayıt başlattığında, uygulamanın kendi oynatma sesini almak için istenir. Mikrofon hiçbir zaman okunmaz.</string>
 </resources>

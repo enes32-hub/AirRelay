@@ -85,5 +85,5 @@
     <string name="transition_live">Canlı</string>
     <string name="transition_seek_hint">Sol/sağ: 10 saniye · OK: sar · Geri: iptal</string>
     <string name="transition_playback_error">Video oynatılamadı (kod %1$d). Telefon ekranına dönün veya başka bir video seçin.</string>
-    <string name="transition_access_denied">Video kaynağı erişimi reddetti. Oynatma şekli düğmesinden Ekrandan yansıt seçeneğini deneyebilir veya videoyu cihazınızda yeniden açabilirsiniz.</string>
+    <string name="transition_access_denied">Video kaynağı erişimi reddetti. Yayın kontrollerinden Ekran yansıtmaya geç seçeneğini seç veya videoyu cihazında yeniden aç.</string>
 </resources>

@@ -35,7 +35,7 @@
     <string name="permission_intro">Настроим разрешения, необходимые AirRelay. На каждом шаге объясняется, что вы разрешаете. Необязательные разрешения можно пропустить.</string>
     <string name="permission_network_title">Подключитесь к одной сети</string>
     <string name="permission_network_body">AirRelay использует локальную сеть, чтобы отображаться на iPhone, iPad и Mac и принимать видео и звук. Телевизор может использовать Wi-Fi или Ethernet.</string>
-    <string name="permission_network_automatic">Android выдаёт эти сетевые разрешения автоматически. Доступ к камере, микрофону или фототеке не запрашивается.</string>
+    <string name="permission_network_automatic">Android выдаёт эти сетевые разрешения автоматически. Разрешение на захват звука запрашивается только при запуске записи и захватывает собственный звук воспроизведения приложения; микрофон, камера и фототека никогда не читаются.</string>
     <string name="permission_notifications_title">Следите за состоянием подключения</string>
     <string name="permission_notifications_body">Уведомления показывают состояние подключения, когда приёмник работает в фоне, и позволяют остановить трансляцию.</string>
     <string name="permission_notifications_skip">Без этого разрешения приёмник работает, но уведомление о его состоянии скрыто.</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">Изменить в настройках телевизора</string>
     <string name="permission_settings_unavailable">Не удалось открыть экран разрешений. Проверьте: Настройки телевизора → Приложения → AirRelay.</string>
     <string name="playback_help_title">Попробуйте другой способ просмотра</string>
-    <string name="playback_help_body">Некоторые видео нельзя воспроизвести на телевизоре напрямую. Откройте «Воспроизведение» слева на нижней панели и выберите «Повтор экрана». Затем заново откройте видео на устройстве.</string>
+    <string name="playback_help_body">Некоторые видео нельзя воспроизвести на телевизоре напрямую. Откройте элемент управления «Воспроизведение» слева на нижней панели и выберите «Перейти к повтору экрана». Затем заново откройте видео на устройстве.</string>
     <string name="playback_help_confirm">Понятно</string>
     <string name="playback_choice_title">Воспроизведение</string>
     <string name="playback_mirror">Повтор экрана</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">Воспроизводите видео на устройстве и передавайте изображение и звук на телевизор.</string>
     <string name="playback_direct_description">Выберите этот телевизор в меню AirPlay видео. Поддерживаемые видео воспроизводятся на телевизоре с управлением с вашего устройства. Текущий повтор экрана может не переключиться автоматически.</string>
     <string name="playback_actual_direct">Трансляция: Прямое видео</string>
-    <string name="playback_switch_hint">Приёмник продолжает работать. Если изображение не появилось, заново откройте видео на устройстве. Некоторые приложения требуют повторного подключения.</string>
+    <string name="playback_switch_hint">Приёмник продолжает работать. Переключение для текущей трансляции одностороннее: заново откройте видео на устройстве, чтобы смотреть его там, и подключите повтор экрана заново, если изображения нет.</string>
     <string name="playback_return_to_screen">Выбран повтор экрана. Выйдите из экрана видео AirPlay на устройстве и откройте видео снова. Если изображения нет, подключите повтор экрана заново.</string>
     <string name="p_quit">Выйти из приложения</string>
     <string name="p_quit_title">Выйти из приложения?</string>
@@ -81,7 +81,7 @@
     <string name="p_about">О приложении</string>
     <string name="p_version">Версия %1$s (%2$d)</string>
     <string name="p_about_body">Передавайте экран, видео и звук на телевизор по локальной сети.</string>
-    <string name="p_trademark_notice">AirPlay, iPhone, iPad и Mac — товарные знаки Apple Inc.</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad и Mac — товарные знаки Apple Inc. Это приложение не связано с Apple Inc. и не одобрено и не спонсируется ею.</string>
     <string name="p_open_source_licenses">Лицензии компонентов</string>
     <string name="p_licenses_unavailable">Не удалось открыть сведения о лицензиях. Обратитесь к поставщику приложения.</string>
     <string name="profile_balanced_detail">Повтор экрана 1080p. Для интернет-видео предпочтительно качество до 8 Мбит/с.</string>
@@ -98,4 +98,6 @@
     <string name="p_contact_line">Контакты: alquariz@yandex.com</string>
     <string name="p_source_line">Исходный код: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">Захват звука при записи</string>
+    <string name="permission_audio_capture_body">Запрашивается только при запуске записи, чтобы захватить собственный звук воспроизведения приложения. Микрофон никогда не читается.</string>
 </resources>

@@ -70,6 +70,10 @@ class MainActivity : ComponentActivity() {
         ActivityResultContracts.RequestPermission()
     ) { permissionRevision.value++ }
 
+    private val audioPermission = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { permissionRevision.value++ }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -145,6 +149,22 @@ class MainActivity : ComponentActivity() {
     fun automaticDisplayAllowed(): Boolean = ReceiverPresentation.automaticDisplayAllowed(this)
 
     fun notificationsAllowed(): Boolean = NotificationManagerCompat.from(this).areNotificationsEnabled()
+
+    /**
+     * Android 10+ needs RECORD_AUDIO for the audio-playback-capture API that records the app's own
+     * sound. Requesting it up front is optional: the recording flow asks for it on first use. The
+     * Settings card exists so the permission is visible instead of only appearing mid-recording.
+     */
+    @androidx.annotation.RequiresApi(Build.VERSION_CODES.Q)
+    fun audioCaptureAllowed(): Boolean = ContextCompat.checkSelfPermission(this,
+        Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED
+
+    fun requestAudioCapturePermission() {
+        audioPermission.launch(Manifest.permission.RECORD_AUDIO)
+    }
+
+    fun openApplicationSettings() = openPermissionSettings(
+        Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:$packageName")))
 
     override fun onResume() {
         super.onResume()

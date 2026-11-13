@@ -7,7 +7,7 @@ cloud service.
 | | |
 |---|---|
 | Application ID | `com.airrelay.receiver` |
-| Version | `1.0.7` (versionCode 8) |
+| Version | `1.0.8` (versionCode 9) |
 | Platform | Android TV, Android 7.0+ (API 24+), landscape, D-pad remote |
 | Architectures | `arm64-v8a`, `armeabi-v7a` |
 | Language | Kotlin + Jetpack Compose (Material 3), native C/C++ core |
@@ -84,13 +84,16 @@ This application includes free and open-source software:
 
 | Component | Licence |
 |---|---|
-| [UxPlay](https://github.com/FDH2/UxPlay) and android-airplay-server | GPL-3.0 |
-| FFmpeg (audio decoding) | LGPL |
-| libplist | LGPL |
+| [UxPlay](https://github.com/FDH2/UxPlay), playfair/RPiPlay and android-airplay-server | GPL-3.0 |
+| FFmpeg (minimal static build, ALAC decoder only) | LGPL-2.1-or-later |
+| libplist and libcnary | LGPL-2.1-or-later |
 | OpenSSL | Apache-2.0 |
-| AndroidX, Jetpack Compose, Media3, Oboe, Kotlin, kotlinx.coroutines | Apache-2.0 |
+| AndroidX, Jetpack Compose, Media3, Material, Dagger/Hilt, Oboe, Kotlin, kotlinx.coroutines | Apache-2.0 |
+| llhttp, csrp, jsmn, time64, openssl-cmake | MIT |
+| TargetArch.cmake (openssl-cmake) | BSD-2-Clause |
 
-Full licence texts and notices: [`legal/`](legal/), [`app/src/main/assets/OPEN_SOURCE_NOTICES.txt`](app/src/main/assets/OPEN_SOURCE_NOTICES.txt),
+Full licence texts and notices: [`legal/`](legal/), [`app/src/main/assets/OPEN_SOURCE_NOTICES.txt`](app/src/main/assets/OPEN_SOURCE_NOTICES.txt)
+(regenerated from the pinned licence files by [`tools/build_open_source_notices.py`](tools/build_open_source_notices.py)),
 and inside the app under *Settings → About → Component licences*.
 
 **Corresponding source.** The GPL-3.0 components are vendored in this repository together with the
@@ -104,7 +107,7 @@ dependency sources in this checkout.
 
 ## Verification status
 
-Honest state of the 1.0.7 build — the full record, including what has not been measured, is in
+Honest state of the 1.0.8 build — the full record, including what has not been measured, is in
 [ACCEPTANCE.md](ACCEPTANCE.md):
 
 - Verified: signed release APK and AAB (release key, not debuggable, both ABIs, 16 KB page alignment),

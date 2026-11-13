@@ -4,9 +4,9 @@
     <string name="r2_invalid_resolution">Lebar dan tinggi masing-masing harus antara 16 dan 16384.</string>
     <string name="settings_playback">Gambar dan pemutaran</string>
     <string name="help_modes_title">Bagaimana video diputar?</string>
-    <string name="help_modes_body">Pencerminan layar menampilkan layar iPhone, iPad, atau Mac. Pemutaran langsung memakai pemutar TV jika didukung aplikasi pengirim. Ubah Pemutaran di kontrol siaran. Video yang terbuka mungkin tidak beralih otomatis; tutup dan buka kembali di perangkat Anda.</string>
+    <string name="help_modes_body">Pencerminan layar menampilkan layar iPhone, iPad, atau Mac. Pemutaran langsung memakai pemutar TV jika aplikasi pengirim mendukungnya. Selama siaran, Pemutaran menawarkan Beralih ke pencerminan layar dan tidak beralih kembali. Video yang terbuka mungkin tidak berganti otomatis; tutup dan buka kembali di perangkat.</string>
     <string name="help_video_title">Video tidak diputar atau layar hitam</string>
-    <string name="help_video_body">Jika sumber menolak akses, pilih Pencerminan layar di Pemutaran. Keluar dari layar video AirPlay di perangkat lalu buka kembali video. Sebagian konten terlindungi tidak dapat dicerminkan. Jika layar perangkat juga tidak muncul, hentikan pencerminan di perangkat dan sambungkan kembali.</string>
+    <string name="help_video_body">Jika sumber menolak akses, pilih Beralih ke pencerminan layar di kontrol siaran. Keluar dari layar video AirPlay di perangkat lalu buka kembali video. Sebagian konten terlindungi tidak dapat dicerminkan. Jika layar perangkat juga tidak muncul, hentikan pencerminan di perangkat dan sambungkan kembali.</string>
     <string name="help_network_title">Macet, jeda, atau VPN</string>
     <string name="help_network_body">Pastikan TV dan pengirim berada di jaringan lokal yang sama. Jaringan tamu dan isolasi klien dapat memblokir akses. VPN dapat mengubah akses lokal atau rute koneksi. Izinkan jaringan lokal jika VPN mendukungnya; bandingkan dengan VPN dimatikan bila perlu. Untuk tersendat, coba profil latensi rendah di Gambar dan pemutaran.</string>
     <string name="help_record_title">Merekam dan menonton rekaman</string>

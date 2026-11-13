@@ -64,7 +64,7 @@
     <string name="transition_live">مباشر</string>
     <string name="transition_seek_hint">يسار/يمين: 10 ثوانٍ · OK: انتقال · رجوع: إلغاء</string>
     <string name="transition_playback_error">تعذر تشغيل الفيديو (الرمز %1$d). عُد إلى شاشة هاتفك أو اختر فيديو آخر.</string>
-    <string name="transition_access_denied">رفض مصدر الفيديو الوصول. جرّب انعكاس الشاشة من طريقة التشغيل، أو أعد فتح الفيديو على جهازك.</string>
+    <string name="transition_access_denied">رفض مصدر الفيديو الوصول. اختر «التبديل إلى انعكاس الشاشة» في عناصر تحكم البث، أو أعد فتح الفيديو على جهازك.</string>
     <string name="subtitle_size_value">الحجم: %1$d%%</string>
     <string name="track_quality">الجودة</string>
     <string name="track_subtitles">الترجمة</string>

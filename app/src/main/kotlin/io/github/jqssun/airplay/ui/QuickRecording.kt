@@ -6,11 +6,25 @@ import android.content.Intent
 import android.media.projection.MediaProjectionManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.jqssun.airplay.R
 import io.github.jqssun.airplay.recording.RecordingService
+import io.github.jqssun.airplay.ui.theme.AirRelayColors
 
 /** Starts with saved quality. Android's audio-capture consent remains mandatory. */
 @Composable
@@ -53,10 +67,27 @@ fun RecordingQualitySetting() {
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("recording_options", Context.MODE_PRIVATE) }
     var quality by remember { mutableIntStateOf(prefs.getInt("quality", 720)) }
-    androidx.compose.material3.Text(androidx.compose.ui.res.stringResource(R.string.rec_options_title))
-    androidx.compose.foundation.layout.Row(horizontalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(androidx.compose.ui.unit.Dp(12f))) {
-        listOf(720, 1080).forEach { value ->
-            TvAction("${value}p", { quality = value; prefs.edit().putInt("quality", value).apply() }, selected = quality == value, compact = true)
+    val state by RecordingService.status.collectAsStateWithLifecycle()
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .background(AirRelayColors.Panel, RoundedCornerShape(18.dp))
+            .padding(18.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        Text(stringResource(R.string.rec_options_title), style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(R.string.rec_description), style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Muted)
+        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            listOf(720, 1080).forEach { value ->
+                TvAction(
+                    "${value}p",
+                    { quality = value; prefs.edit().putInt("quality", value).apply() },
+                    selected = quality == value,
+                    enabled = !state.active,
+                    compact = true,
+                    focusId = "settings.recording.$value",
+                )
+            }
         }
     }
 }

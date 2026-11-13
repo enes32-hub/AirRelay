@@ -64,7 +64,7 @@
     <string name="transition_live">लाइव</string>
     <string name="transition_seek_hint">बाएँ/दाएँ: 10 सेकंड · OK: समय पर जाएँ · वापस: रद्द</string>
     <string name="transition_playback_error">वीडियो नहीं चल सका (कोड %1$d)। फ़ोन की स्क्रीन पर लौटें या दूसरा वीडियो चुनें।</string>
-    <string name="transition_access_denied">वीडियो स्रोत ने पहुँच नहीं दी। प्लेबैक के तरीके से स्क्रीन मिरर करें आज़माएँ, या डिवाइस पर वीडियो दोबारा खोलें।</string>
+    <string name="transition_access_denied">वीडियो स्रोत ने पहुँच नहीं दी। स्ट्रीम नियंत्रण में «स्क्रीन मिररिंग पर जाएँ» चुनें, या डिवाइस पर वीडियो दोबारा खोलें।</string>
     <string name="subtitle_size_value">आकार: %1$d%%</string>
     <string name="track_quality">गुणवत्ता</string>
     <string name="track_subtitles">सबटाइटल</string>

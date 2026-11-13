@@ -12,7 +12,7 @@
     <string name="p_about">Hakkında</string>
     <string name="p_version">Sürüm %1$s (%2$d)</string>
     <string name="p_about_body">Yerel ağında ekranını, videolarını ve sesini TV ile paylaş.</string>
-    <string name="p_trademark_notice">AirPlay, iPhone, iPad ve Mac, Apple Inc. markalarıdır.</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad ve Mac, Apple Inc. markalarıdır. Bu uygulama Apple Inc. ile bağlantılı değildir; Apple tarafından onaylanmamış veya desteklenmemiştir.</string>
     <string name="p_open_source_licenses">Bileşen lisansları</string>
     <string name="p_licenses_unavailable">Lisans bilgileri açılamadı. Lütfen uygulama sağlayıcısına başvur.</string>
     <string name="profile_balanced_detail">1080p ekran yansıtma. İnternet videosunda 8 Mbps’ye kadar kalite tercih edilir.</string>

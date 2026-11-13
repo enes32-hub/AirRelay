@@ -42,6 +42,9 @@ try {
     Invoke-Check 'Provenance and source checks' @('scripts/productization/check_source.py') | Out-Null
     Invoke-Check 'Acceptance bookkeeping (preparation)' @('scripts/check_readiness.py') | Out-Null
     Invoke-Check 'Generated SBOM is current' @('tools/generate_sbom.py', '--check') | Out-Null
+    Invoke-Check 'In-app privacy policy is current' @('tools/render_privacy_asset.py', '--check') | Out-Null
+    Invoke-Check 'In-app component licences are current' @('tools/build_open_source_notices.py', '--check') | Out-Null
+    Invoke-Check 'Published legal pages are current' @('legal/build_site.py', '--check') | Out-Null
     if (Test-Path -LiteralPath (Join-Path $PSScriptRoot '..\tests')) {
         Invoke-Check 'Unit tests' @('-m', 'unittest', 'discover', '-s', 'tests') | Out-Null
     } else {

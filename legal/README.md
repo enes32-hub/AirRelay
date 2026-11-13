@@ -23,17 +23,19 @@ Play Console requires the policy to be on an active, non-editable URL and reject
 Rebuild after editing the markdown:
 
 ```bash
-python build_site.py
+python build_site.py          # regenerate privacy.html, index.html and this README
+python build_site.py --check  # fail if any generated page is stale (run by scripts/run_full_check.ps1)
 ```
 
 ## Content basis
 
-Every statement about the application was verified against the 1.0.7 source tree, in particular:
+Every statement about the application was verified against the 1.0.8 source tree, in particular:
 
 - no analytics, advertising or crash-reporting SDK is present,
 - the app contains no hard-coded internet address and contacts no developer or third-party server,
 - `RECORD_AUDIO` is required only as the prerequisite of Android's audio-playback-capture API, and
   capture is restricted to the application's own audio output (its own UID); the microphone is never
   read,
-- recordings, saved videos, settings and support logs are stored on the device, with
-  `android:allowBackup="false"`.
+- recordings, app settings and support logs are stored on the device, with
+  `android:allowBackup="false"`,
+- the licence list in section 8 matches the components compiled into the shipped binary.

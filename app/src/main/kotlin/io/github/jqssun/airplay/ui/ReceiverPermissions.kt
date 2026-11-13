@@ -17,7 +17,8 @@ import io.github.jqssun.airplay.MainActivity
 import io.github.jqssun.airplay.R
 import io.github.jqssun.airplay.ui.theme.AirRelayColors
 
-internal data class PermissionAccess(val activity: MainActivity?, val notifications: Boolean, val display: Boolean)
+internal data class PermissionAccess(val activity: MainActivity?, val notifications: Boolean,
+    val display: Boolean, val audio: Boolean)
 
 @Composable
 internal fun permissionAccess(): PermissionAccess {
@@ -25,9 +26,14 @@ internal fun permissionAccess(): PermissionAccess {
     // Snapshot-state read subscribes both setup and Settings to actual OS permission changes.
     val revision = activity?.permissionRevision?.value
     return remember(activity, revision) {
-        PermissionAccess(activity, activity?.notificationsAllowed() == true, activity?.automaticDisplayAllowed() == true)
+        PermissionAccess(activity, activity?.notificationsAllowed() == true,
+            activity?.automaticDisplayAllowed() == true, activity?.audioCaptureState() == true)
     }
 }
+
+/** Null when this Android version never asks for the recording permission. */
+private fun MainActivity?.audioCaptureState(): Boolean? =
+    if (this == null || Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) null else audioCaptureAllowed()
 
 @Composable
 internal fun PermissionStatus(allowed: Boolean) {
@@ -61,3 +67,4 @@ internal fun PermissionNetworkNote() {
 }
 
 internal val needsDisplayPermission: Boolean get() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+internal val needsAudioCapturePermission: Boolean get() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q

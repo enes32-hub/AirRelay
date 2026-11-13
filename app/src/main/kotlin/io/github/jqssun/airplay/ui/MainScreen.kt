@@ -216,8 +216,12 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
                                                 onAdvanced = { choosePage(ReceiverPage.ADVANCED) }, onModalChange = { pageModal = it })
                                             ReceiverPage.LOGS -> LogsScreen(viewModel, onModalChange = { pageModal = it })
                                             ReceiverPage.ADVANCED -> Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                                                Text(stringResource(R.string.p_advanced_warning),
-                                                    style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Warning)
+                                                Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
+                                                    Text(stringResource(R.string.p_advanced),
+                                                        style = MaterialTheme.typography.headlineMedium)
+                                                    Text(stringResource(R.string.p_advanced_warning),
+                                                        style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Warning)
+                                                }
                                                 PendingSettingsPanel(viewModel) { pageModal = it }
                                                 Box(Modifier.weight(1f)) { SettingsScreen(viewModel) }
                                             }

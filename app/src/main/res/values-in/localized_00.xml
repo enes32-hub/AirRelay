@@ -35,7 +35,7 @@
     <string name="permission_intro">Mari siapkan izin yang diperlukan AirRelay. Setiap langkah menjelaskan akses yang Anda berikan. Izin opsional dapat dilewati.</string>
     <string name="permission_network_title">Hubungkan ke jaringan yang sama</string>
     <string name="permission_network_body">AirRelay menggunakan jaringan lokal agar terlihat di iPhone, iPad, dan Mac serta menerima video dan audio. TV dapat memakai Wi-Fi atau Ethernet.</string>
-    <string name="permission_network_automatic">Android memberikan izin jaringan ini secara otomatis. Akses kamera, mikrofon, atau koleksi foto tidak diminta.</string>
+    <string name="permission_network_automatic">Android memberikan izin jaringan ini secara otomatis. Penangkapan audio hanya diminta saat mulai merekam dan mengambil suara pemutaran aplikasi ini sendiri; kamera, mikrofon, dan koleksi foto tidak pernah dibaca.</string>
     <string name="permission_notifications_title">Pantau status koneksi dengan mudah</string>
     <string name="permission_notifications_body">Notifikasi menunjukkan status koneksi saat penerima siap di latar belakang dan memungkinkan Anda menghentikan siaran.</string>
     <string name="permission_notifications_skip">Tanpa izin ini, penerima tetap bekerja, tetapi notifikasi statusnya disembunyikan.</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">Ubah di pengaturan TV</string>
     <string name="permission_settings_unavailable">TV ini tidak dapat membuka layar izin. Periksa Pengaturan TV → Aplikasi → AirRelay.</string>
     <string name="playback_help_title">Coba cara menonton lainnya</string>
-    <string name="playback_help_body">Beberapa video tidak dapat diputar langsung di TV. Buka Pemutaran di kiri bilah kontrol bawah dan coba Cerminkan layar. Lalu buka kembali video di perangkat Anda.</string>
+    <string name="playback_help_body">Beberapa video tidak dapat diputar langsung di TV. Buka kontrol Pemutaran di kiri bilah bawah dan pilih Beralih ke pencerminan layar. Lalu buka kembali video di perangkat.</string>
     <string name="playback_help_confirm">Mengerti</string>
     <string name="playback_choice_title">Pemutaran</string>
     <string name="playback_mirror">Cerminkan layar</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">Putar video di perangkat Anda dan cerminkan gambar serta suaranya ke TV.</string>
     <string name="playback_direct_description">Pilih TV ini di menu AirPlay video. Video yang didukung diputar di TV dan dapat dikendalikan dari perangkat. Pencerminan layar yang sedang berlangsung mungkin tidak beralih otomatis.</string>
     <string name="playback_actual_direct">Siaran: Video langsung</string>
-    <string name="playback_switch_hint">Penerima tetap berjalan. Jika gambar tidak kembali, buka ulang video di perangkat. Beberapa aplikasi mungkin perlu disambungkan kembali.</string>
+    <string name="playback_switch_hint">Penerima tetap berjalan. Peralihan ini satu arah untuk siaran saat ini: buka kembali video di perangkat untuk menontonnya di sana, dan sambungkan kembali pencerminan layar jika gambar tidak muncul.</string>
     <string name="playback_return_to_screen">Pencerminan layar dipilih. Keluar dari layar video AirPlay di perangkat dan buka ulang video. Jika gambar tidak muncul, sambungkan ulang pencerminan layar.</string>
     <string name="p_quit">Keluar dari aplikasi</string>
     <string name="p_quit_title">Keluar dari aplikasi ini?</string>
@@ -81,7 +81,7 @@
     <string name="p_about">Tentang</string>
     <string name="p_version">Versi %1$s (%2$d)</string>
     <string name="p_about_body">Bagikan layar, video, dan audio ke TV melalui jaringan lokal.</string>
-    <string name="p_trademark_notice">AirPlay, iPhone, iPad, dan Mac adalah merek dagang Apple Inc.</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad, dan Mac adalah merek dagang Apple Inc. Aplikasi ini tidak berafiliasi dengan, tidak didukung, dan tidak disponsori oleh Apple Inc.</string>
     <string name="p_open_source_licenses">Lisensi komponen</string>
     <string name="p_licenses_unavailable">Informasi lisensi tidak dapat dibuka. Hubungi penyedia aplikasi.</string>
     <string name="profile_balanced_detail">Pencerminan layar 1080p. Video internet mengutamakan kualitas hingga 8 Mbps.</string>
@@ -98,4 +98,6 @@
     <string name="p_contact_line">Kontak: alquariz@yandex.com</string>
     <string name="p_source_line">Kode sumber: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">Penangkapan audio saat merekam</string>
+    <string name="permission_audio_capture_body">Diminta hanya saat mulai merekam, untuk mengambil suara pemutaran aplikasi ini sendiri. Mikrofon tidak pernah dibaca.</string>
 </resources>

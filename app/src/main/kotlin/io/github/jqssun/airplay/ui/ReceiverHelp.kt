@@ -62,14 +62,16 @@ fun ReceiverHelp(viewModel: MainViewModel) {
             }
         }
         item {
-            TvAction(stringResource(R.string.p_open_network_settings), {
-                settingsFailed = runCatching {
-                    context.startActivity(Intent(Settings.ACTION_WIRELESS_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
-                }.recoverCatching {
-                    context.startActivity(Intent(Settings.ACTION_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
-                }.isFailure
-            }, icon = Icons.Rounded.SettingsEthernet, focusId = "help.network")
-            if (settingsFailed) InfoPanel(stringResource(R.string.p_network_settings_failed), warning = true)
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                TvAction(stringResource(R.string.p_open_network_settings), {
+                    settingsFailed = runCatching {
+                        context.startActivity(Intent(Settings.ACTION_WIRELESS_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+                    }.recoverCatching {
+                        context.startActivity(Intent(Settings.ACTION_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+                    }.isFailure
+                }, icon = Icons.Rounded.SettingsEthernet, focusId = "help.network")
+                if (settingsFailed) InfoPanel(stringResource(R.string.p_network_settings_failed), warning = true)
+            }
         }
 
     }

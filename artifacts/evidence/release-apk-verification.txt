@@ -1,10 +1,25 @@
-Artifact: AirRelay-1.0.7-universal-arm64+v7a.apk
-Size: 18124875 bytes
-SHA-256: 29c113a4669d7c8d91ec709fedd84aa4a32511a86f2d1696465b8ab8e05289ed
+Artifact: AirRelay-1.0.8-universal-arm64+v7a.apk
+Size: 18113523 bytes
+SHA-256: face463f2f494ee581881905a726944ea188aeb77147ac8b139c2207f6db6f6e
 
 $ aapt2 dump badging
-package: name='com.airrelay.receiver' versionCode='8' versionName='1.0.7' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+package: name='com.airrelay.receiver' versionCode='9' versionName='1.0.8' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+minSdkVersion:'24'
 targetSdkVersion:'36'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.RECORD_AUDIO'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+uses-permission: name='android.permission.ACCESS_WIFI_STATE'
+uses-permission: name='android.permission.CHANGE_WIFI_MULTICAST_STATE'
+uses-permission: name='android.permission.WAKE_LOCK'
+uses-permission: name='android.permission.RECEIVE_BOOT_COMPLETED'
+uses-permission: name='android.permission.FOREGROUND_SERVICE'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK'
+uses-permission: name='android.permission.POST_NOTIFICATIONS'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='com.airrelay.receiver.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
 application-label:'AirRelay'
 application-label-af:'AirRelay'
 application-label-am:'AirRelay'
@@ -91,6 +106,32 @@ application-label-zh-CN:'AirRelay'
 application-label-zh-HK:'AirRelay'
 application-label-zh-TW:'AirRelay'
 application-label-zu:'AirRelay'
+application-icon-160:'res/BW.xml'
+application-icon-240:'res/BW.xml'
+application-icon-320:'res/BW.xml'
+application-icon-65534:'res/BW.xml'
+application: label='AirRelay' icon='res/BW.xml' banner='res/7y.xml'
+launchable-activity: name='io.github.jqssun.airplay.MainActivity'  label='' icon=''
+leanback-launchable-activity: name='io.github.jqssun.airplay.MainActivity'  label='' icon='' banner=''
+uses-library-not-required:'androidx.window.extensions'
+uses-library-not-required:'androidx.window.sidecar'
+feature-group: label=''
+  uses-feature-not-required: name='android.hardware.camera'
+  uses-feature-not-required: name='android.hardware.faketouch'
+  uses-feature-not-required: name='android.hardware.location.gps'
+  uses-feature-not-required: name='android.hardware.microphone'
+  uses-feature-not-required: name='android.hardware.telephony'
+  uses-feature-not-required: name='android.hardware.touchscreen'
+  uses-feature-not-required: name='android.hardware.wifi'
+  uses-feature: name='android.software.leanback'
+main
+other-activities
+other-receivers
+other-services
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '65534'
 native-code: 'arm64-v8a' 'armeabi-v7a'
 
 $ apksigner verify --print-certs
@@ -100,9 +141,5 @@ Signer #1 certificate SHA-1 digest: e4ce9bd3fe78ca3aa80f46181c3303f410d16517
 Signer #1 certificate MD5 digest: 51587be4567aaab86e87bcae16047c73
 
 $ zipalign -c -P 16 -v 4
-16219712 res/xa.9.png (OK)
-16219976 res/z-.9.png (OK)
-16220237 res/zZ.xml (OK - compressed)
-16220540 res/zb.xml (OK - compressed)
-16220888 resources.arsc (OK)
+16198152 resources.arsc (OK)
 Verification successful

@@ -35,7 +35,7 @@
     <string name="permission_intro">لنضبط الأذونات التي يحتاجها AirRelay. تشرح كل خطوة ما تسمح به، ويمكنك تخطي أي إذن اختياري.</string>
     <string name="permission_network_title">اتصل بالشبكة نفسها</string>
     <string name="permission_network_body">يستخدم AirRelay الشبكة المحلية للظهور على iPhone وiPad وMac واستقبال الفيديو والصوت. يمكن للتلفزيون استخدام Wi-Fi أو Ethernet.</string>
-    <string name="permission_network_automatic">يمنح Android أذونات الشبكة هذه تلقائيًا. لا يُطلب الوصول إلى الكاميرا أو الميكروفون أو مكتبة الصور.</string>
+    <string name="permission_network_automatic">يمنح Android أذونات الشبكة هذه تلقائيًا. يُطلب التقاط الصوت فقط عند بدء التسجيل، ويلتقط صوت تشغيل هذا التطبيق نفسه؛ ولا يُقرأ الميكروفون أو الكاميرا أو مكتبة الصور أبدًا.</string>
     <string name="permission_notifications_title">تابع حالة الاتصال بسهولة</string>
     <string name="permission_notifications_body">تعرض الإشعارات حالة الاتصال عندما يكون المستقبل جاهزًا في الخلفية، وتتيح لك إيقاف البث.</string>
     <string name="permission_notifications_skip">يعمل المستقبل دون هذا الإذن، لكن إشعار حالته يبقى مخفيًا.</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">تغيير في إعدادات التلفزيون</string>
     <string name="permission_settings_unavailable">تعذر فتح شاشة الأذونات على هذا التلفزيون. راجع إعدادات التلفزيون ← التطبيقات ← AirRelay.</string>
     <string name="playback_help_title">جرّب طريقة أخرى للمشاهدة</string>
-    <string name="playback_help_body">لا يمكن تشغيل بعض الفيديوهات مباشرة على التلفزيون. افتح «التشغيل» يسار شريط التحكم السفلي وجرّب «انعكاس الشاشة»، ثم أعد فتح الفيديو على جهازك.</string>
+    <string name="playback_help_body">لا يمكن تشغيل بعض الفيديوهات مباشرة على التلفزيون. افتح عنصر التحكم «التشغيل» يسار الشريط السفلي واختر «التبديل إلى انعكاس الشاشة»، ثم أعد فتح الفيديو على جهازك.</string>
     <string name="playback_help_confirm">فهمت</string>
     <string name="playback_choice_title">التشغيل</string>
     <string name="playback_mirror">انعكاس الشاشة</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">شغّل الفيديوهات على جهازك واعكس صورتها وصوتها على التلفزيون.</string>
     <string name="playback_direct_description">اختر هذا التلفزيون من قائمة AirPlay للفيديو. تُشغّل الفيديوهات المدعومة على التلفزيون ويمكن التحكم بها من جهازك. قد لا يتحول انعكاس الشاشة القائم تلقائيًا.</string>
     <string name="playback_actual_direct">البث: فيديو مباشر</string>
-    <string name="playback_switch_hint">يبقى المستقبل قيد التشغيل. إن لم تعد الصورة، أعد فتح الفيديو على جهازك. قد تتطلب بعض التطبيقات إعادة الاتصال.</string>
+    <string name="playback_switch_hint">يبقى المستقبل قيد التشغيل. التبديل أحادي الاتجاه لهذا البث: أعد فتح الفيديو على جهازك لمشاهدته هناك، وأعد توصيل انعكاس الشاشة إن لم تظهر الصورة.</string>
     <string name="playback_return_to_screen">تم اختيار انعكاس الشاشة. اخرج من شاشة فيديو AirPlay على جهازك وأعد فتح الفيديو. إن لم تظهر الصورة، أعد توصيل انعكاس الشاشة.</string>
     <string name="p_quit">إنهاء التطبيق</string>
     <string name="p_quit_title">هل تريد إنهاء التطبيق؟</string>
@@ -81,7 +81,7 @@
     <string name="p_about">حول التطبيق</string>
     <string name="p_version">الإصدار %1$s (%2$d)</string>
     <string name="p_about_body">شارك شاشتك والفيديو والصوت مع التلفزيون عبر شبكتك المحلية.</string>
-    <string name="p_trademark_notice">AirPlay وiPhone وiPad وMac علامات تجارية لشركة Apple Inc.</string>
+    <string name="p_trademark_notice">AirPlay وiPhone وiPad وMac علامات تجارية لشركة Apple Inc. هذا التطبيق غير تابع لشركة Apple Inc. ولا معتمد أو مدعوم منها.</string>
     <string name="p_open_source_licenses">تراخيص المكوّنات</string>
     <string name="p_licenses_unavailable">تعذر فتح معلومات الترخيص. يُرجى التواصل مع موفّر التطبيق.</string>
     <string name="profile_balanced_detail">انعكاس الشاشة بدقة 1080p. يُفضّل فيديو الإنترنت جودة تصل إلى 8 ميغابت/ث.</string>
@@ -98,4 +98,6 @@
     <string name="p_contact_line">التواصل: alquariz@yandex.com</string>
     <string name="p_source_line">الشيفرة المصدرية: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">التقاط الصوت عند التسجيل</string>
+    <string name="permission_audio_capture_body">يُطلب فقط عند بدء التسجيل لالتقاط صوت تشغيل هذا التطبيق نفسه. لا يُقرأ الميكروفون أبدًا.</string>
 </resources>

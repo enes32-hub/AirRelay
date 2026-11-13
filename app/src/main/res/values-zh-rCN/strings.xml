@@ -35,7 +35,7 @@
     <string name="permission_intro">让我们设置 AirRelay 所需的权限。每一步都会说明授权内容，可跳过任何可选权限。</string>
     <string name="permission_network_title">连接同一网络</string>
     <string name="permission_network_body">AirRelay 使用本地网络在 iPhone、iPad 和 Mac 上显示，并接收视频和音频。电视可使用 Wi-Fi 或以太网。</string>
-    <string name="permission_network_automatic">Android 会自动授予这些网络权限。无需访问摄像头、麦克风或照片图库。</string>
+    <string name="permission_network_automatic">Android 会自动授予这些网络权限。只有在开始录制时才会请求音频捕获，用于采集本应用自身的播放声音；绝不会读取麦克风、摄像头或照片图库。</string>
     <string name="permission_notifications_title">随时查看连接状态</string>
     <string name="permission_notifications_body">接收器在后台就绪时，通知会显示连接状态，并可让您停止投屏。</string>
     <string name="permission_notifications_skip">不授予此权限，接收器仍可使用，但不会显示状态通知。</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">在电视设置中更改</string>
     <string name="permission_settings_unavailable">此电视无法打开权限页面。请检查电视设置 → 应用 → AirRelay。</string>
     <string name="playback_help_title">试试其他观看方式</string>
-    <string name="playback_help_body">部分视频无法在电视上直接播放。请打开底部控制栏左侧的“播放”，尝试“屏幕镜像”，然后在设备上重新打开视频。</string>
+    <string name="playback_help_body">部分视频无法在电视上直接播放。请打开底部栏左侧的“播放”控件并选择“切换到屏幕镜像”，然后在设备上重新打开视频。</string>
     <string name="playback_help_confirm">知道了</string>
     <string name="playback_choice_title">播放</string>
     <string name="playback_mirror">屏幕镜像</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">在设备上播放视频，并将画面和声音镜像到电视。</string>
     <string name="playback_direct_description">在视频的 AirPlay 菜单中选择此电视。支持的视频将在电视上播放，并可用设备控制。现有屏幕镜像串流可能不会自动切换。</string>
     <string name="playback_actual_direct">串流：直接视频</string>
-    <string name="playback_switch_hint">接收器会继续运行。如果画面未恢复，请在设备上重新打开视频。部分应用可能需要重新连接。</string>
+    <string name="playback_switch_hint">接收器会继续运行。此切换对当前串流是单向的：请在设备上重新打开视频在该处观看；如果没有画面，请重新连接屏幕镜像。</string>
     <string name="playback_return_to_screen">已选择屏幕镜像。请在设备上退出 AirPlay 视频画面并重新打开视频。如果没有画面，请重新连接屏幕镜像。</string>
     <string name="p_quit">退出应用</string>
     <string name="p_quit_title">退出此应用？</string>
@@ -81,7 +81,7 @@
     <string name="p_about">关于</string>
     <string name="p_version">版本 %1$s (%2$d)</string>
     <string name="p_about_body">通过本地网络将屏幕、视频和音频分享到电视。</string>
-    <string name="p_trademark_notice">AirPlay、iPhone、iPad 和 Mac 是 Apple Inc. 的商标。</string>
+    <string name="p_trademark_notice">AirPlay、iPhone、iPad 和 Mac 是 Apple Inc. 的商标。本应用与 Apple Inc. 无关联，也未获其认可或赞助。</string>
     <string name="p_open_source_licenses">组件许可证</string>
     <string name="p_licenses_unavailable">无法打开许可证信息。请联系应用提供方。</string>
     <string name="profile_balanced_detail">1080p 屏幕镜像。互联网视频优先使用最高 8 Mbps 的画质。</string>
@@ -269,9 +269,9 @@
     <string name="r2_invalid_resolution">宽度和高度必须分别在 16 到 16384 之间。</string>
     <string name="settings_playback">画面和播放</string>
     <string name="help_modes_title">视频如何播放？</string>
-    <string name="help_modes_body">屏幕镜像显示 iPhone、iPad 或 Mac 的屏幕。如果发送应用支持，直接播放会使用电视播放器。可在串流控制栏的“播放”中更改。已打开的视频可能不会自动切换；请在设备上关闭并重新打开。</string>
+    <string name="help_modes_body">屏幕镜像显示 iPhone、iPad 或 Mac 的屏幕。如果发送应用支持，直接播放会使用电视播放器。串流期间，“播放”提供“切换到屏幕镜像”，且不会切回。已打开的视频可能不会自动切换；请在设备上关闭并重新打开。</string>
     <string name="help_video_title">视频无法播放或出现黑屏</string>
-    <string name="help_video_body">如果来源拒绝访问，请在“播放”中选择“屏幕镜像”。在设备上退出 AirPlay 视频画面并重新打开视频。部分受保护内容无法镜像。如果设备画面也未显示，请在设备上停止屏幕镜像后重新连接。</string>
+    <string name="help_video_body">如果来源拒绝访问，请在串流控制栏中选择“切换到屏幕镜像”。在设备上退出 AirPlay 视频画面并重新打开视频。部分受保护内容无法镜像。如果设备画面也未显示，请在设备上停止屏幕镜像后重新连接。</string>
     <string name="help_network_title">卡顿、延迟或 VPN</string>
     <string name="help_network_body">电视与发送设备应连接同一本地网络。访客网络和客户端隔离可能阻止访问。VPN 可能改变本地访问权限或现有连接路径。如果 VPN 提供本地网络访问选项，请允许；必要时关闭 VPN 进行对比。卡顿时可尝试“画面和播放”中的低延迟配置。</string>
     <string name="help_record_title">录制和观看录制</string>
@@ -370,7 +370,7 @@
     <string name="transition_live">实时</string>
     <string name="transition_seek_hint">左右键：10 秒 · 确定：跳转 · 返回：取消</string>
     <string name="transition_playback_error">无法播放视频（代码 %1$d）。请返回手机屏幕或选择其他视频。</string>
-    <string name="transition_access_denied">视频来源拒绝访问。请在播放方式中尝试“屏幕镜像”，或在设备上重新打开视频。</string>
+    <string name="transition_access_denied">视频来源拒绝访问。请在串流控制栏中选择“切换到屏幕镜像”，或在设备上重新打开视频。</string>
     <string name="subtitle_size_value">大小：%1$d%%</string>
     <string name="track_quality">画质</string>
     <string name="track_subtitles">字幕</string>
@@ -384,4 +384,6 @@
     <string name="p_contact_line">联系: alquariz@yandex.com</string>
     <string name="p_source_line">源代码: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">录制音频捕获</string>
+    <string name="permission_audio_capture_body">仅在开始录制时请求，用于采集本应用自身的播放声音。绝不会读取麦克风。</string>
 </resources>

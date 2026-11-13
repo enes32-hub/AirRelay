@@ -64,7 +64,7 @@
     <string name="transition_live">Прямой эфир</string>
     <string name="transition_seek_hint">Влево/вправо: 10 секунд · OK: переход · Назад: отмена</string>
     <string name="transition_playback_error">Не удалось воспроизвести видео (код %1$d). Вернитесь к экрану телефона или выберите другое видео.</string>
-    <string name="transition_access_denied">Источник видео запретил доступ. Выберите повтор экрана в способах воспроизведения или заново откройте видео на устройстве.</string>
+    <string name="transition_access_denied">Источник видео запретил доступ. Выберите «Перейти к повтору экрана» в управлении трансляцией или заново откройте видео на устройстве.</string>
     <string name="subtitle_size_value">Размер: %1$d%%</string>
     <string name="track_quality">Качество</string>
     <string name="track_subtitles">Субтитры</string>

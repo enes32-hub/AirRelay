@@ -35,7 +35,7 @@
     <string name="permission_intro">มาตั้งค่าสิทธิ์ที่ AirRelay ต้องใช้ แต่ละขั้นตอนจะอธิบายสิ่งที่คุณอนุญาต และคุณข้ามสิทธิ์ที่ไม่จำเป็นได้</string>
     <string name="permission_network_title">เชื่อมต่อเครือข่ายเดียวกัน</string>
     <string name="permission_network_body">AirRelay ใช้เครือข่ายภายในเพื่อให้ปรากฏบน iPhone, iPad และ Mac และรับวิดีโอกับเสียง ทีวีใช้ Wi-Fi หรือ Ethernet ได้</string>
-    <string name="permission_network_automatic">Android ให้สิทธิ์เครือข่ายเหล่านี้โดยอัตโนมัติ ไม่มีการขอเข้าถึงกล้อง ไมโครโฟน หรือคลังรูปภาพ</string>
+    <string name="permission_network_automatic">Android ให้สิทธิ์เครือข่ายเหล่านี้โดยอัตโนมัติ การจับเสียงจะถูกขอเมื่อเริ่มบันทึกเท่านั้น และจับเสียงเล่นของแอปนี้เอง ไม่มีการอ่านไมโครโฟน กล้อง หรือคลังรูปภาพ</string>
     <string name="permission_notifications_title">ติดตามสถานะการเชื่อมต่อได้สะดวก</string>
     <string name="permission_notifications_body">การแจ้งเตือนแสดงสถานะการเชื่อมต่อเมื่อตัวรับพร้อมทำงานเบื้องหลัง และให้คุณหยุดการแคสต์ได้</string>
     <string name="permission_notifications_skip">หากไม่ให้สิทธิ์นี้ ตัวรับยังทำงานได้ แต่การแจ้งเตือนสถานะจะถูกซ่อน</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">เปลี่ยนในการตั้งค่าทีวี</string>
     <string name="permission_settings_unavailable">ทีวีนี้เปิดหน้าจอสิทธิ์ไม่ได้ โปรดตรวจสอบ การตั้งค่าทีวี → แอป → AirRelay</string>
     <string name="playback_help_title">ลองรับชมด้วยวิธีอื่น</string>
-    <string name="playback_help_body">วิดีโอบางรายการเล่นบนทีวีโดยตรงไม่ได้ เปิด การเล่น ทางซ้ายของแถบควบคุมด้านล่าง แล้วลอง สะท้อนหน้าจอ จากนั้นเปิดวิดีโออีกครั้งบนอุปกรณ์</string>
+    <string name="playback_help_body">วิดีโอบางรายการเล่นบนทีวีโดยตรงไม่ได้ เปิดตัวควบคุม การเล่น ทางซ้ายของแถบล่างแล้วเลือก สลับไปยังการสะท้อนหน้าจอ จากนั้นเปิดวิดีโออีกครั้งบนอุปกรณ์</string>
     <string name="playback_help_confirm">เข้าใจแล้ว</string>
     <string name="playback_choice_title">การเล่น</string>
     <string name="playback_mirror">สะท้อนหน้าจอ</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">เล่นวิดีโอบนอุปกรณ์แล้วสะท้อนภาพและเสียงไปยังทีวี</string>
     <string name="playback_direct_description">เลือกทีวีนี้ในเมนู AirPlay ของวิดีโอ วิดีโอที่รองรับจะเล่นบนทีวีและควบคุมจากอุปกรณ์ได้ สตรีมสะท้อนหน้าจอที่กำลังใช้อาจไม่เปลี่ยนโดยอัตโนมัติ</string>
     <string name="playback_actual_direct">สตรีม: วิดีโอโดยตรง</string>
-    <string name="playback_switch_hint">ตัวรับยังทำงานอยู่ หากภาพไม่กลับมา ให้เปิดวิดีโออีกครั้งบนอุปกรณ์ บางแอปอาจต้องเชื่อมต่อใหม่</string>
+    <string name="playback_switch_hint">ตัวรับยังทำงานอยู่ การสลับนี้เป็นทางเดียวสำหรับสตรีมปัจจุบัน เปิดวิดีโออีกครั้งบนอุปกรณ์เพื่อรับชมที่นั่น และเชื่อมต่อการสะท้อนหน้าจอใหม่หากไม่มีภาพ</string>
     <string name="playback_return_to_screen">เลือกการสะท้อนหน้าจอแล้ว ออกจากหน้าวิดีโอ AirPlay บนอุปกรณ์และเปิดวิดีโออีกครั้ง หากไม่มีภาพ ให้เชื่อมต่อการสะท้อนหน้าจอใหม่</string>
     <string name="p_quit">ออกจากแอป</string>
     <string name="p_quit_title">ออกจากแอปนี้ไหม?</string>
@@ -81,7 +81,7 @@
     <string name="p_about">เกี่ยวกับ</string>
     <string name="p_version">เวอร์ชัน %1$s (%2$d)</string>
     <string name="p_about_body">แชร์หน้าจอ วิดีโอ และเสียงไปยังทีวีผ่านเครือข่ายภายใน</string>
-    <string name="p_trademark_notice">AirPlay, iPhone, iPad และ Mac เป็นเครื่องหมายการค้าของ Apple Inc.</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad และ Mac เป็นเครื่องหมายการค้าของ Apple Inc. แอปนี้ไม่มีความเกี่ยวข้องและไม่ได้รับการรับรองหรือสนับสนุนจาก Apple Inc.</string>
     <string name="p_open_source_licenses">สัญญาอนุญาตของส่วนประกอบ</string>
     <string name="p_licenses_unavailable">เปิดข้อมูลสัญญาอนุญาตไม่ได้ โปรดติดต่อผู้ให้บริการแอป</string>
     <string name="profile_balanced_detail">สะท้อนหน้าจอที่ 1080p วิดีโอทางอินเทอร์เน็ตเลือกคุณภาพสูงสุดไม่เกิน 8 Mbps</string>
@@ -269,9 +269,9 @@
     <string name="r2_invalid_resolution">ความกว้างและความสูงต้องอยู่ระหว่าง 16 ถึง 16384</string>
     <string name="settings_playback">ภาพและการเล่น</string>
     <string name="help_modes_title">วิดีโอเล่นอย่างไร?</string>
-    <string name="help_modes_body">การสะท้อนหน้าจอแสดงหน้าจอ iPhone, iPad หรือ Mac การเล่นโดยตรงใช้เครื่องเล่นของทีวีเมื่อแอปที่ส่งรองรับ เปลี่ยนการเล่นได้ในการควบคุมสตรีม วิดีโอที่เปิดอยู่อาจไม่เปลี่ยนอัตโนมัติ ให้ปิดแล้วเปิดใหม่บนอุปกรณ์</string>
+    <string name="help_modes_body">การสะท้อนหน้าจอแสดงหน้าจอ iPhone, iPad หรือ Mac การเล่นโดยตรงใช้เครื่องเล่นของทีวีเมื่อแอปที่ส่งรองรับ ระหว่างสตรีม การเล่น มีตัวเลือก สลับไปยังการสะท้อนหน้าจอ และไม่สลับกลับ วิดีโอที่เปิดอยู่อาจไม่เปลี่ยนอัตโนมัติ ให้ปิดแล้วเปิดใหม่บนอุปกรณ์</string>
     <string name="help_video_title">วิดีโอไม่เล่นหรือหน้าจอดำ</string>
-    <string name="help_video_body">หากต้นทางปฏิเสธการเข้าถึง ให้เลือก สะท้อนหน้าจอ ในการเล่น ออกจากหน้าวิดีโอ AirPlay บนอุปกรณ์แล้วเปิดวิดีโอใหม่ เนื้อหาที่มีการป้องกันบางอย่างสะท้อนไม่ได้ หากหน้าจออุปกรณ์ก็ไม่ปรากฏ ให้หยุดการสะท้อนหน้าจอบนอุปกรณ์แล้วเชื่อมต่อใหม่</string>
+    <string name="help_video_body">หากต้นทางปฏิเสธการเข้าถึง ให้เลือก สลับไปยังการสะท้อนหน้าจอ ในการควบคุมสตรีม ออกจากหน้าวิดีโอ AirPlay บนอุปกรณ์แล้วเปิดวิดีโอใหม่ เนื้อหาที่มีการป้องกันบางอย่างสะท้อนไม่ได้ หากหน้าจออุปกรณ์ก็ไม่ปรากฏ ให้หยุดการสะท้อนหน้าจอบนอุปกรณ์แล้วเชื่อมต่อใหม่</string>
     <string name="help_network_title">ภาพค้าง ความหน่วง หรือ VPN</string>
     <string name="help_network_body">ให้ทีวีและอุปกรณ์ที่ส่งอยู่ในเครือข่ายภายในเดียวกัน เครือข่ายผู้มาเยือนและการแยกไคลเอนต์อาจปิดกั้นการเข้าถึง VPN อาจเปลี่ยนการเข้าถึงภายในหรือเส้นทางการเชื่อมต่อที่มีอยู่ อนุญาตการเข้าถึงเครือข่ายภายในหาก VPN มีตัวเลือกนี้ และลองปิด VPN เพื่อเปรียบเทียบหากจำเป็น หากภาพกระตุก ให้ลองโปรไฟล์ความหน่วงต่ำในภาพและการเล่น</string>
     <string name="help_record_title">การบันทึกและดูรายการบันทึก</string>
@@ -370,7 +370,7 @@
     <string name="transition_live">สด</string>
     <string name="transition_seek_hint">ซ้าย/ขวา: 10 วินาที · OK: ไปยังเวลา · ย้อนกลับ: ยกเลิก</string>
     <string name="transition_playback_error">เล่นวิดีโอไม่ได้ (รหัส %1$d) กลับไปที่หน้าจอโทรศัพท์หรือเลือกวิดีโออื่น</string>
-    <string name="transition_access_denied">แหล่งวิดีโอปฏิเสธการเข้าถึง ใช้วิธีเล่นเพื่อลองสะท้อนหน้าจอ หรือเปิดวิดีโออีกครั้งบนอุปกรณ์</string>
+    <string name="transition_access_denied">แหล่งวิดีโอปฏิเสธการเข้าถึง เลือก สลับไปยังการสะท้อนหน้าจอ ในการควบคุมสตรีม หรือเปิดวิดีโออีกครั้งบนอุปกรณ์</string>
     <string name="subtitle_size_value">ขนาด: %1$d%%</string>
     <string name="track_quality">คุณภาพ</string>
     <string name="track_subtitles">คำบรรยาย</string>
@@ -384,4 +384,6 @@
     <string name="p_contact_line">ติดต่อ: alquariz@yandex.com</string>
     <string name="p_source_line">ซอร์สโค้ด: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">การจับเสียงขณะบันทึก</string>
+    <string name="permission_audio_capture_body">ขอเฉพาะเมื่อเริ่มบันทึก เพื่อจับเสียงเล่นของแอปนี้เอง ไม่มีการอ่านไมโครโฟน</string>
 </resources>

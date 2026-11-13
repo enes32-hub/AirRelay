@@ -35,7 +35,7 @@
     <string name="permission_intro">Configurons les autorisations nécessaires à AirRelay. Chaque étape explique l’accès accordé. Les autorisations facultatives peuvent être ignorées.</string>
     <string name="permission_network_title">Connectez-vous au même réseau</string>
     <string name="permission_network_body">AirRelay utilise le réseau local pour apparaître sur iPhone, iPad et Mac et recevoir vidéo et audio. Le téléviseur peut utiliser le Wi-Fi ou Ethernet.</string>
-    <string name="permission_network_automatic">Android accorde automatiquement ces autorisations réseau. Aucun accès à la caméra, au microphone ou à la photothèque n’est demandé.</string>
+    <string name="permission_network_automatic">Android accorde automatiquement ces autorisations réseau. La capture audio n’est demandée qu’au démarrage d’un enregistrement et capte le son de lecture de cette app ; le microphone, la caméra et la photothèque ne sont jamais lus.</string>
     <string name="permission_notifications_title">Gardez le statut de connexion à portée de main</string>
     <string name="permission_notifications_body">Les notifications indiquent le statut de connexion lorsque le récepteur est prêt en arrière-plan et permettent d’arrêter la diffusion.</string>
     <string name="permission_notifications_skip">Sans cette autorisation, le récepteur fonctionne, mais sa notification de statut reste masquée.</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">Modifier dans les réglages du téléviseur</string>
     <string name="permission_settings_unavailable">Impossible d’ouvrir les autorisations. Consultez Réglages du téléviseur → Apps → AirRelay.</string>
     <string name="playback_help_title">Essayez une autre façon de regarder</string>
-    <string name="playback_help_body">Certaines vidéos ne se lisent pas directement sur le téléviseur. Ouvrez Lecture à gauche de la barre de commandes inférieure et essayez Recopier l’écran. Rouvrez ensuite la vidéo sur votre appareil.</string>
+    <string name="playback_help_body">Certaines vidéos ne se lisent pas directement sur le téléviseur. Ouvrez la commande Lecture à gauche de la barre inférieure et choisissez Passer à la recopie d’écran. Rouvrez ensuite la vidéo sur votre appareil.</string>
     <string name="playback_help_confirm">Compris</string>
     <string name="playback_choice_title">Lecture</string>
     <string name="playback_mirror">Recopier l’écran</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">Lisez les vidéos sur votre appareil et recopiez leur image et leur son sur le téléviseur.</string>
     <string name="playback_direct_description">Sélectionnez ce téléviseur dans le menu AirPlay de la vidéo. Les vidéos compatibles sont lues sur le téléviseur et contrôlées depuis votre appareil. Une recopie en cours peut ne pas basculer automatiquement.</string>
     <string name="playback_actual_direct">Flux : Vidéo directe</string>
-    <string name="playback_switch_hint">Le récepteur reste actif. Si l’image ne revient pas, rouvrez la vidéo sur votre appareil. Certaines apps nécessitent une reconnexion.</string>
+    <string name="playback_switch_hint">Le récepteur reste actif. Ce basculement est à sens unique pour le flux en cours : rouvrez la vidéo sur votre appareil pour la regarder là-bas, et reconnectez la recopie si aucune image n’apparaît.</string>
     <string name="playback_return_to_screen">Recopie sélectionnée. Quittez l’écran vidéo AirPlay sur votre appareil et rouvrez la vidéo. Si aucune image n’apparaît, reconnectez la recopie.</string>
     <string name="p_quit">Quitter l’app</string>
     <string name="p_quit_title">Quitter cette app ?</string>
@@ -81,7 +81,7 @@
     <string name="p_about">À propos</string>
     <string name="p_version">Version %1$s (%2$d)</string>
     <string name="p_about_body">Partagez écran, vidéos et audio avec votre téléviseur via le réseau local.</string>
-    <string name="p_trademark_notice">AirPlay, iPhone, iPad et Mac sont des marques d’Apple Inc.</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad et Mac sont des marques d’Apple Inc. Cette app n’est ni affiliée à, ni approuvée, ni parrainée par Apple Inc.</string>
     <string name="p_open_source_licenses">Licences des composants</string>
     <string name="p_licenses_unavailable">Impossible d’ouvrir les licences. Contactez le fournisseur de l’app.</string>
     <string name="profile_balanced_detail">Recopie en 1080p. Les vidéos Internet privilégient un débit jusqu’à 8 Mbps.</string>
@@ -269,9 +269,9 @@
     <string name="r2_invalid_resolution">La largeur et la hauteur doivent être comprises entre 16 et 16384.</string>
     <string name="settings_playback">Image et lecture</string>
     <string name="help_modes_title">Comment les vidéos sont-elles lues ?</string>
-    <string name="help_modes_body">La recopie affiche l’écran de votre iPhone, iPad ou Mac. La lecture directe utilise le lecteur du téléviseur si l’app émettrice le permet. Changez Lecture dans les commandes du flux. Une vidéo ouverte peut ne pas basculer automatiquement ; fermez-la et rouvrez-la sur votre appareil.</string>
+    <string name="help_modes_body">La recopie affiche l’écran de votre iPhone, iPad ou Mac. La lecture directe utilise le lecteur du téléviseur si l’app émettrice le permet. Pendant un flux, Lecture propose Passer à la recopie d’écran et ne revient pas en arrière. Une vidéo ouverte peut ne pas basculer automatiquement ; fermez-la et rouvrez-la sur votre appareil.</string>
     <string name="help_video_title">Vidéo illisible ou écran noir</string>
-    <string name="help_video_body">Si la source refuse l’accès, choisissez Recopie de l’écran dans Lecture. Quittez l’écran vidéo AirPlay et rouvrez la vidéo. Certains contenus protégés ne peuvent pas être recopiés. Si l’écran de l’appareil manque aussi, arrêtez la recopie sur votre appareil puis reconnectez-la.</string>
+    <string name="help_video_body">Si la source refuse l’accès, choisissez Passer à la recopie d’écran dans les commandes du flux. Quittez l’écran vidéo AirPlay et rouvrez la vidéo. Certains contenus protégés ne peuvent pas être recopiés. Si l’écran de l’appareil manque aussi, arrêtez la recopie sur votre appareil puis reconnectez-la.</string>
     <string name="help_network_title">Blocages, retard ou VPN</string>
     <string name="help_network_body">Gardez le téléviseur et l’émetteur sur le même réseau local. Les réseaux invités et l’isolation des clients peuvent bloquer l’accès. Un VPN peut modifier l’accès local ou le trajet de connexion. Autorisez le réseau local dans le VPN si possible ; comparez sans VPN si nécessaire. En cas de saccades, essayez Faible latence dans Image et lecture.</string>
     <string name="help_record_title">Enregistrer et regarder les enregistrements</string>
@@ -370,7 +370,7 @@
     <string name="transition_live">En direct</string>
     <string name="transition_seek_hint">Gauche/droite : 10 secondes · OK : aller · Retour : annuler</string>
     <string name="transition_playback_error">Impossible de lire la vidéo (code %1$d). Revenez à l’écran du téléphone ou choisissez une autre vidéo.</string>
-    <string name="transition_access_denied">La source vidéo refuse l’accès. Essayez Recopier l’écran dans le mode de lecture ou rouvrez la vidéo sur votre appareil.</string>
+    <string name="transition_access_denied">La source vidéo refuse l’accès. Choisissez Passer à la recopie d’écran dans les commandes du flux ou rouvrez la vidéo sur votre appareil.</string>
     <string name="subtitle_size_value">Taille : %1$d%%</string>
     <string name="track_quality">Qualité</string>
     <string name="track_subtitles">Sous-titres</string>
@@ -384,4 +384,6 @@
     <string name="p_contact_line">Contact: alquariz@yandex.com</string>
     <string name="p_source_line">Code source: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">Capture audio d’enregistrement</string>
+    <string name="permission_audio_capture_body">Demandée uniquement au démarrage d’un enregistrement, pour capter le son de lecture de cette app. Le microphone n’est jamais lu.</string>
 </resources>

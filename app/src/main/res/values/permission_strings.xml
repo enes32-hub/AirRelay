@@ -6,7 +6,7 @@
     <string name="permission_intro">Let’s set up the permissions AirRelay needs. Each step explains what you are allowing, and you can skip any optional permission.</string>
     <string name="permission_network_title">Connect on the same network</string>
     <string name="permission_network_body">AirRelay uses the local network to appear on your iPhone, iPad and Mac and receive video and audio. Your TV can use Wi-Fi or Ethernet.</string>
-    <string name="permission_network_automatic">Android grants these network permissions automatically. No access to your camera, microphone or photo library is requested.</string>
+    <string name="permission_network_automatic">Android grants these network permissions automatically. Audio capture is requested only when you start a recording and captures this app\'s own playback sound; the microphone, camera and photo library are never read.</string>
     <string name="permission_notifications_title">Keep connection status handy</string>
     <string name="permission_notifications_body">Notifications show the connection status while the receiver is ready in the background and let you stop casting.</string>
     <string name="permission_notifications_skip">Without this permission, the receiver still works, but its status notification is hidden.</string>
@@ -28,4 +28,6 @@
     <string name="permission_skip">Skip for now</string>
     <string name="permission_manage">Change in TV settings</string>
     <string name="permission_settings_unavailable">This TV could not open the permission screen. Check TV Settings → Apps → AirRelay.</string>
+    <string name="permission_audio_capture_label">Recording audio capture</string>
+    <string name="permission_audio_capture_body">Requested only when you start a recording, to capture this app\'s own playback sound. The microphone is never read.</string>
 </resources>

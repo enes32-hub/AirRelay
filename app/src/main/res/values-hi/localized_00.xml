@@ -35,7 +35,7 @@
     <string name="permission_intro">AirRelay की ज़रूरी अनुमतियाँ सेट करें। हर चरण बताता है कि आप किसकी अनुमति दे रहे हैं। वैकल्पिक अनुमतियाँ छोड़ी जा सकती हैं।</string>
     <string name="permission_network_title">एक ही नेटवर्क से कनेक्ट करें</string>
     <string name="permission_network_body">AirRelay स्थानीय नेटवर्क से iPhone, iPad और Mac पर दिखाई देता है और वीडियो व ऑडियो प्राप्त करता है। टीवी Wi-Fi या Ethernet इस्तेमाल कर सकता है।</string>
-    <string name="permission_network_automatic">Android ये नेटवर्क अनुमतियाँ अपने-आप देता है। कैमरे, माइक्रोफ़ोन या फ़ोटो लाइब्रेरी की पहुँच नहीं माँगी जाती।</string>
+    <string name="permission_network_automatic">Android ये नेटवर्क अनुमतियाँ अपने-आप देता है। ऑडियो कैप्चर केवल रिकॉर्डिंग शुरू करते समय माँगा जाता है और इस ऐप के अपने प्लेबैक की आवाज़ लेता है; माइक्रोफ़ोन, कैमरा और फ़ोटो लाइब्रेरी कभी नहीं पढ़ी जाती।</string>
     <string name="permission_notifications_title">कनेक्शन की स्थिति देखें</string>
     <string name="permission_notifications_body">रिसीवर पृष्ठभूमि में तैयार होने पर सूचनाएँ कनेक्शन की स्थिति दिखाती हैं और कास्टिंग रोकने देती हैं।</string>
     <string name="permission_notifications_skip">इस अनुमति के बिना भी रिसीवर काम करता है, लेकिन उसकी स्थिति की सूचना छिपी रहती है।</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">टीवी की सेटिंग में बदलें</string>
     <string name="permission_settings_unavailable">इस टीवी पर अनुमति स्क्रीन नहीं खुल सकी। टीवी की सेटिंग → ऐप → AirRelay देखें।</string>
     <string name="playback_help_title">देखने का दूसरा तरीका आज़माएँ</string>
-    <string name="playback_help_body">कुछ वीडियो टीवी पर सीधे नहीं चल सकते। नीचे के नियंत्रण बार के बाईं ओर «प्लेबैक» खोलें और «स्क्रीन मिरर करें» आज़माएँ। फिर डिवाइस पर वीडियो दोबारा खोलें।</string>
+    <string name="playback_help_body">कुछ वीडियो टीवी पर सीधे नहीं चल सकते। नीचे की पट्टी के बाईं ओर «प्लेबैक» नियंत्रण खोलें और «स्क्रीन मिररिंग पर जाएँ» चुनें। फिर डिवाइस पर वीडियो दोबारा खोलें।</string>
     <string name="playback_help_confirm">समझ गया</string>
     <string name="playback_choice_title">प्लेबैक</string>
     <string name="playback_mirror">स्क्रीन मिरर करें</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">वीडियो अपने डिवाइस पर चलाएँ और उसकी तस्वीर व आवाज़ टीवी पर दिखाएँ।</string>
     <string name="playback_direct_description">वीडियो के AirPlay मेनू में यह टीवी चुनें। समर्थित वीडियो टीवी पर चलते हैं और डिवाइस से नियंत्रित किए जा सकते हैं। मौजूदा स्क्रीन मिररिंग अपने-आप नहीं बदल सकती।</string>
     <string name="playback_actual_direct">स्ट्रीम: सीधा वीडियो</string>
-    <string name="playback_switch_hint">रिसीवर चलता रहता है। तस्वीर वापस न आए तो डिवाइस पर वीडियो दोबारा खोलें। कुछ ऐप को फिर कनेक्ट करना पड़ सकता है।</string>
+    <string name="playback_switch_hint">रिसीवर चलता रहता है। यह बदलाव मौजूदा स्ट्रीम के लिए एकतरफ़ा है: वीडियो वहाँ देखने के लिए डिवाइस पर दोबारा खोलें, और तस्वीर न दिखे तो स्क्रीन मिररिंग फिर कनेक्ट करें।</string>
     <string name="playback_return_to_screen">स्क्रीन मिररिंग चुनी गई। डिवाइस पर AirPlay वीडियो स्क्रीन से बाहर आएँ और वीडियो दोबारा खोलें। तस्वीर न दिखे तो स्क्रीन मिररिंग फिर कनेक्ट करें।</string>
     <string name="p_quit">ऐप से बाहर निकलें</string>
     <string name="p_quit_title">इस ऐप से बाहर निकलें?</string>
@@ -81,7 +81,7 @@
     <string name="p_about">परिचय</string>
     <string name="p_version">संस्करण %1$s (%2$d)</string>
     <string name="p_about_body">स्थानीय नेटवर्क पर अपनी स्क्रीन, वीडियो और ऑडियो टीवी पर शेयर करें।</string>
-    <string name="p_trademark_notice">AirPlay, iPhone, iPad और Mac, Apple Inc. के ट्रेडमार्क हैं।</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad और Mac, Apple Inc. के ट्रेडमार्क हैं। यह ऐप Apple Inc. से संबद्ध नहीं है और न ही उसके द्वारा अनुमोदित या प्रायोजित है।</string>
     <string name="p_open_source_licenses">घटकों के लाइसेंस</string>
     <string name="p_licenses_unavailable">लाइसेंस की जानकारी नहीं खुल सकी। ऐप प्रदाता से संपर्क करें।</string>
     <string name="profile_balanced_detail">1080p स्क्रीन मिररिंग। इंटरनेट वीडियो के लिए 8 Mbps तक की गुणवत्ता पसंद की जाती है।</string>
@@ -98,4 +98,6 @@
     <string name="p_contact_line">संपर्क: alquariz@yandex.com</string>
     <string name="p_source_line">स्रोत कोड: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">रिकॉर्डिंग ऑडियो कैप्चर</string>
+    <string name="permission_audio_capture_body">केवल रिकॉर्डिंग शुरू करते समय, इस ऐप के अपने प्लेबैक की आवाज़ लेने के लिए माँगा जाता है। माइक्रोफ़ोन कभी नहीं पढ़ा जाता।</string>
 </resources>

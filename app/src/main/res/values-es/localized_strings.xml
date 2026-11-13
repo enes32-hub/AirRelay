@@ -35,7 +35,7 @@
     <string name="permission_intro">Configura los permisos que necesita AirRelay. Cada paso explica lo que autorizas. Puedes omitir los permisos opcionales.</string>
     <string name="permission_network_title">Conecta a la misma red</string>
     <string name="permission_network_body">AirRelay usa la red local para aparecer en tu iPhone, iPad y Mac y recibir vídeo y audio. El televisor puede usar Wi-Fi o Ethernet.</string>
-    <string name="permission_network_automatic">Android concede estos permisos de red automáticamente. No se solicita acceso a la cámara, el micrófono ni las fotos.</string>
+    <string name="permission_network_automatic">Android concede estos permisos de red automáticamente. La captura de audio solo se solicita al iniciar una grabación y captura el sonido de reproducción de esta app; el micrófono, la cámara y las fotos nunca se leen.</string>
     <string name="permission_notifications_title">Ten a mano el estado de conexión</string>
     <string name="permission_notifications_body">Las notificaciones muestran el estado cuando el receptor está listo en segundo plano y permiten detener la transmisión.</string>
     <string name="permission_notifications_skip">Sin este permiso, el receptor sigue funcionando, pero no se muestra la notificación de estado.</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">Cambiar en los ajustes del televisor</string>
     <string name="permission_settings_unavailable">No se pudo abrir la pantalla de permisos. Ve a Ajustes del televisor → Apps → AirRelay.</string>
     <string name="playback_help_title">Prueba otra forma de ver</string>
-    <string name="playback_help_body">Algunos vídeos no se reproducen directamente en el televisor. Abre Reproducción a la izquierda de la barra inferior y prueba Duplicar pantalla. Después, vuelve a abrir el vídeo en tu dispositivo.</string>
+    <string name="playback_help_body">Algunos vídeos no se reproducen directamente en el televisor. Abre el control Reproducción a la izquierda de la barra inferior y elige Cambiar a duplicar pantalla. Después, vuelve a abrir el vídeo en tu dispositivo.</string>
     <string name="playback_help_confirm">Entendido</string>
     <string name="playback_choice_title">Reproducción</string>
     <string name="playback_mirror">Duplicar pantalla</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">Reproduce vídeos en tu dispositivo y duplica su imagen y sonido en el televisor.</string>
     <string name="playback_direct_description">Selecciona este televisor en el menú AirPlay del vídeo. Los vídeos compatibles se reproducen en el televisor y se controlan desde tu dispositivo. Una duplicación activa puede no cambiar automáticamente.</string>
     <string name="playback_actual_direct">Transmisión: Vídeo directo</string>
-    <string name="playback_switch_hint">El receptor sigue activo. Si la imagen no vuelve, abre de nuevo el vídeo en tu dispositivo. Algunas apps requieren reconectar.</string>
+    <string name="playback_switch_hint">El receptor sigue activo. El cambio es de una sola dirección para el flujo actual: vuelve a abrir el vídeo en tu dispositivo para verlo allí y reconecta la duplicación si no aparece imagen.</string>
     <string name="playback_return_to_screen">Duplicación seleccionada. Sal de la pantalla de vídeo AirPlay en tu dispositivo y abre de nuevo el vídeo. Si no hay imagen, vuelve a conectar la duplicación.</string>
     <string name="p_quit">Salir de la app</string>
     <string name="p_quit_title">¿Salir de esta app?</string>
@@ -81,7 +81,7 @@
     <string name="p_about">Acerca de</string>
     <string name="p_version">Versión %1$s (%2$d)</string>
     <string name="p_about_body">Comparte pantalla, vídeos y audio con tu televisor a través de tu red local.</string>
-    <string name="p_trademark_notice">AirPlay, iPhone, iPad y Mac son marcas de Apple Inc.</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad y Mac son marcas de Apple Inc. Esta app no está afiliada, avalada ni patrocinada por Apple Inc.</string>
     <string name="p_open_source_licenses">Licencias de componentes</string>
     <string name="p_licenses_unavailable">No se pudieron abrir las licencias. Contacta con el proveedor de la app.</string>
     <string name="profile_balanced_detail">Duplicación a 1080p. Los vídeos de Internet prefieren hasta 8 Mbps.</string>
@@ -269,9 +269,9 @@
     <string name="r2_invalid_resolution">El ancho y el alto deben estar entre 16 y 16384.</string>
     <string name="settings_playback">Imagen y reproducción</string>
     <string name="help_modes_title">¿Cómo se reproducen los vídeos?</string>
-    <string name="help_modes_body">La duplicación muestra la pantalla del iPhone, iPad o Mac. La reproducción directa usa el reproductor del televisor si la app emisora lo admite. Cambia Reproducción en los controles. Un vídeo abierto puede no cambiar automáticamente; ciérralo y ábrelo de nuevo en tu dispositivo.</string>
+    <string name="help_modes_body">La duplicación muestra la pantalla del iPhone, iPad o Mac. La reproducción directa usa el reproductor del televisor si la app emisora lo admite. Durante un flujo, Reproducción ofrece Cambiar a duplicar pantalla y no vuelve atrás. Un vídeo abierto puede no cambiar automáticamente; ciérralo y ábrelo de nuevo en tu dispositivo.</string>
     <string name="help_video_title">El vídeo no se reproduce o la pantalla está negra</string>
-    <string name="help_video_body">Si la fuente deniega el acceso, elige Duplicar pantalla en Reproducción. Sal de la pantalla de vídeo AirPlay y abre el vídeo otra vez. Algunos contenidos protegidos no pueden duplicarse. Si tampoco aparece la pantalla del dispositivo, detén la duplicación en él y reconecta.</string>
+    <string name="help_video_body">Si la fuente deniega el acceso, elige Cambiar a duplicar pantalla en los controles del flujo. Sal de la pantalla de vídeo AirPlay y abre el vídeo otra vez. Algunos contenidos protegidos no pueden duplicarse. Si tampoco aparece la pantalla del dispositivo, detén la duplicación en él y reconecta.</string>
     <string name="help_network_title">Bloqueos, retraso o VPN</string>
     <string name="help_network_body">Mantén televisor y emisor en la misma red local. Las redes de invitados y el aislamiento de clientes pueden bloquear el acceso. Una VPN puede cambiar el acceso local o la ruta de conexión. Permite la red local en la VPN si ofrece esa opción; compara sin VPN si hace falta. Para tirones, prueba Baja latencia en Imagen y reproducción.</string>
     <string name="help_record_title">Grabar y ver grabaciones</string>
@@ -370,7 +370,7 @@
     <string name="transition_live">En directo</string>
     <string name="transition_seek_hint">Izquierda/derecha: 10 segundos · OK: buscar · Atrás: cancelar</string>
     <string name="transition_playback_error">No se pudo reproducir el vídeo (código %1$d). Vuelve a la pantalla del móvil o elige otro vídeo.</string>
-    <string name="transition_access_denied">La fuente denegó el acceso. Prueba Duplicar pantalla en Método de reproducción o abre de nuevo el vídeo en tu dispositivo.</string>
+    <string name="transition_access_denied">La fuente denegó el acceso. Elige Cambiar a duplicar pantalla en los controles del flujo o vuelve a abrir el vídeo en tu dispositivo.</string>
     <string name="subtitle_size_value">Tamaño: %1$d%%</string>
     <string name="track_quality">Calidad</string>
     <string name="track_subtitles">Subtítulos</string>
@@ -384,4 +384,6 @@
     <string name="p_contact_line">Contacto: alquariz@yandex.com</string>
     <string name="p_source_line">Código fuente: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">Captura de audio al grabar</string>
+    <string name="permission_audio_capture_body">Solo se solicita al iniciar una grabación, para capturar el sonido de reproducción de esta app. El micrófono nunca se lee.</string>
 </resources>

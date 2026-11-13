@@ -85,5 +85,5 @@
     <string name="transition_live">Live</string>
     <string name="transition_seek_hint">Left/right: 10 seconds · OK: seek · Back: cancel</string>
     <string name="transition_playback_error">Video could not be played (code %1$d). Return to your phone screen or choose another video.</string>
-    <string name="transition_access_denied">The video source denied access. Use Playback method to try Mirror screen, or reopen the video on your device.</string>
+    <string name="transition_access_denied">The video source denied access. Choose Switch to screen mirroring in the stream controls, or reopen the video on your device.</string>
 </resources>

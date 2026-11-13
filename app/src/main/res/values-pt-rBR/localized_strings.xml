@@ -35,7 +35,7 @@
     <string name="permission_intro">Configure as permissões necessárias ao AirRelay. Cada etapa explica o que você permite. Você pode pular as permissões opcionais.</string>
     <string name="permission_network_title">Conecte à mesma rede</string>
     <string name="permission_network_body">O AirRelay usa a rede local para aparecer no iPhone, iPad e Mac e receber vídeo e áudio. A TV pode usar Wi-Fi ou Ethernet.</string>
-    <string name="permission_network_automatic">O Android concede essas permissões de rede automaticamente. Não é solicitado acesso à câmera, ao microfone ou às fotos.</string>
+    <string name="permission_network_automatic">O Android concede essas permissões de rede automaticamente. A captura de áudio só é solicitada ao iniciar uma gravação e captura o som de reprodução deste app; o microfone, a câmera e as fotos nunca são lidos.</string>
     <string name="permission_notifications_title">Veja facilmente o status da conexão</string>
     <string name="permission_notifications_body">As notificações mostram o status quando o receptor está pronto em segundo plano e permitem parar a transmissão.</string>
     <string name="permission_notifications_skip">Sem essa permissão, o receptor continua funcionando, mas a notificação de status fica oculta.</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">Alterar nas configurações da TV</string>
     <string name="permission_settings_unavailable">Não foi possível abrir as permissões. Veja Configurações da TV → Apps → AirRelay.</string>
     <string name="playback_help_title">Tente outra forma de assistir</string>
-    <string name="playback_help_body">Alguns vídeos não reproduzem diretamente na TV. Abra Reprodução à esquerda da barra inferior e tente Espelhar tela. Depois, reabra o vídeo no dispositivo.</string>
+    <string name="playback_help_body">Alguns vídeos não reproduzem diretamente na TV. Abra o controle Reprodução à esquerda da barra inferior e escolha Mudar para espelhar tela. Depois, reabra o vídeo no dispositivo.</string>
     <string name="playback_help_confirm">Entendi</string>
     <string name="playback_choice_title">Reprodução</string>
     <string name="playback_mirror">Espelhar tela</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">Reproduza vídeos no dispositivo e espelhe imagem e som na TV.</string>
     <string name="playback_direct_description">Selecione esta TV no menu AirPlay do vídeo. Vídeos compatíveis são reproduzidos na TV e controlados pelo dispositivo. Um espelhamento ativo pode não mudar automaticamente.</string>
     <string name="playback_actual_direct">Transmissão: Vídeo direto</string>
-    <string name="playback_switch_hint">O receptor continua ativo. Se a imagem não voltar, reabra o vídeo no dispositivo. Alguns apps exigem reconexão.</string>
+    <string name="playback_switch_hint">O receptor continua ativo. A mudança é só de ida para a transmissão atual: reabra o vídeo no dispositivo para assistir por lá e reconecte o espelhamento se a imagem não aparecer.</string>
     <string name="playback_return_to_screen">Espelhamento selecionado. Saia da tela de vídeo AirPlay no dispositivo e reabra o vídeo. Se não houver imagem, reconecte o espelhamento.</string>
     <string name="p_quit">Sair do app</string>
     <string name="p_quit_title">Sair deste app?</string>
@@ -81,7 +81,7 @@
     <string name="p_about">Sobre</string>
     <string name="p_version">Versão %1$s (%2$d)</string>
     <string name="p_about_body">Compartilhe tela, vídeos e áudio com sua TV pela rede local.</string>
-    <string name="p_trademark_notice">AirPlay, iPhone, iPad e Mac são marcas da Apple Inc.</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad e Mac são marcas da Apple Inc. Este app não é afiliado, endossado ou patrocinado pela Apple Inc.</string>
     <string name="p_open_source_licenses">Licenças dos componentes</string>
     <string name="p_licenses_unavailable">Não foi possível abrir as licenças. Entre em contato com o fornecedor do app.</string>
     <string name="profile_balanced_detail">Espelhamento em 1080p. Vídeos da internet preferem até 8 Mbps.</string>
@@ -269,9 +269,9 @@
     <string name="r2_invalid_resolution">A largura e a altura devem estar entre 16 e 16384.</string>
     <string name="settings_playback">Imagem e reprodução</string>
     <string name="help_modes_title">Como os vídeos são reproduzidos?</string>
-    <string name="help_modes_body">O espelhamento mostra a tela do iPhone, iPad ou Mac. A reprodução direta usa o player da TV se o app de origem aceitar. Altere Reprodução nos controles. Um vídeo aberto pode não mudar automaticamente; feche e reabra no dispositivo.</string>
+    <string name="help_modes_body">O espelhamento mostra a tela do iPhone, iPad ou Mac. A reprodução direta usa o player da TV se o app de origem aceitar. Durante uma transmissão, Reprodução oferece Mudar para espelhar tela e não volta atrás. Um vídeo aberto pode não mudar automaticamente; feche e reabra no dispositivo.</string>
     <string name="help_video_title">O vídeo não reproduz ou a tela fica preta</string>
-    <string name="help_video_body">Se a origem negar acesso, escolha Espelhar tela em Reprodução. Saia da tela de vídeo AirPlay e reabra o vídeo. Alguns conteúdos protegidos não podem ser espelhados. Se a tela do dispositivo também não aparecer, pare o espelhamento no dispositivo e reconecte.</string>
+    <string name="help_video_body">Se a origem negar acesso, escolha Mudar para espelhar tela nos controles da transmissão. Saia da tela de vídeo AirPlay e reabra o vídeo. Alguns conteúdos protegidos não podem ser espelhados. Se a tela do dispositivo também não aparecer, pare o espelhamento no dispositivo e reconecte.</string>
     <string name="help_network_title">Travamentos, atraso ou VPN</string>
     <string name="help_network_body">Mantenha TV e origem na mesma rede local. Redes de convidados e isolamento de clientes podem bloquear o acesso. Uma VPN pode alterar o acesso local ou a rota da conexão. Permita a rede local na VPN, se disponível; compare com a VPN desligada se necessário. Para travamentos, tente Baixa latência em Imagem e reprodução.</string>
     <string name="help_record_title">Gravar e assistir às gravações</string>
@@ -370,7 +370,7 @@
     <string name="transition_live">Ao vivo</string>
     <string name="transition_seek_hint">Esquerda/direita: 10 segundos · OK: buscar · Voltar: cancelar</string>
     <string name="transition_playback_error">Não foi possível reproduzir o vídeo (código %1$d). Volte à tela do celular ou escolha outro vídeo.</string>
-    <string name="transition_access_denied">A origem do vídeo negou acesso. Tente Espelhar tela no método de reprodução ou reabra o vídeo no dispositivo.</string>
+    <string name="transition_access_denied">A origem do vídeo negou acesso. Escolha Mudar para espelhar tela nos controles da transmissão ou reabra o vídeo no dispositivo.</string>
     <string name="subtitle_size_value">Tamanho: %1$d%%</string>
     <string name="track_quality">Qualidade</string>
     <string name="track_subtitles">Legendas</string>
@@ -384,4 +384,6 @@
     <string name="p_contact_line">Contato: alquariz@yandex.com</string>
     <string name="p_source_line">Código-fonte: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">Captura de áudio ao gravar</string>
+    <string name="permission_audio_capture_body">Solicitada apenas ao iniciar uma gravação, para capturar o som de reprodução deste app. O microfone nunca é lido.</string>
 </resources>

@@ -35,7 +35,7 @@
     <string name="permission_intro">Hãy thiết lập các quyền AirRelay cần. Mỗi bước giải thích nội dung bạn cho phép; bạn có thể bỏ qua mọi quyền không bắt buộc.</string>
     <string name="permission_network_title">Kết nối cùng một mạng</string>
     <string name="permission_network_body">AirRelay dùng mạng cục bộ để xuất hiện trên iPhone, iPad và Mac, đồng thời nhận hình ảnh và âm thanh. TV có thể dùng Wi-Fi hoặc Ethernet.</string>
-    <string name="permission_network_automatic">Android tự động cấp các quyền mạng này. Ứng dụng không yêu cầu truy cập máy ảnh, micrô hay thư viện ảnh.</string>
+    <string name="permission_network_automatic">Android tự động cấp các quyền mạng này. Quyền thu âm thanh chỉ được yêu cầu khi bắt đầu ghi và chỉ thu âm thanh phát của chính ứng dụng này; micrô, máy ảnh và thư viện ảnh không bao giờ bị đọc.</string>
     <string name="permission_notifications_title">Dễ dàng theo dõi trạng thái kết nối</string>
     <string name="permission_notifications_body">Thông báo hiển thị trạng thái kết nối khi bộ thu sẵn sàng trong nền và cho phép bạn dừng truyền.</string>
     <string name="permission_notifications_skip">Nếu không cấp quyền này, bộ thu vẫn hoạt động nhưng thông báo trạng thái sẽ bị ẩn.</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">Đổi trong cài đặt TV</string>
     <string name="permission_settings_unavailable">Không mở được màn hình cấp quyền trên TV này. Hãy kiểm tra Cài đặt TV → Ứng dụng → AirRelay.</string>
     <string name="playback_help_title">Thử cách xem khác</string>
-    <string name="playback_help_body">Một số video không thể phát trực tiếp trên TV. Mở mục Phát ở bên trái thanh điều khiển dưới cùng rồi thử Phản chiếu màn hình. Sau đó mở lại video trên thiết bị.</string>
+    <string name="playback_help_body">Một số video không thể phát trực tiếp trên TV. Mở mục điều khiển Phát ở bên trái thanh dưới và chọn Chuyển sang phản chiếu màn hình. Sau đó mở lại video trên thiết bị.</string>
     <string name="playback_help_confirm">Đã hiểu</string>
     <string name="playback_choice_title">Phát</string>
     <string name="playback_mirror">Phản chiếu màn hình</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">Phát video trên thiết bị rồi phản chiếu hình ảnh và âm thanh lên TV.</string>
     <string name="playback_direct_description">Chọn TV này trong menu AirPlay của video. Video được hỗ trợ sẽ phát trên TV và có thể điều khiển từ thiết bị. Luồng phản chiếu màn hình đang có có thể không tự động chuyển đổi.</string>
     <string name="playback_actual_direct">Luồng: Video trực tiếp</string>
-    <string name="playback_switch_hint">Bộ thu vẫn chạy. Nếu hình ảnh chưa trở lại, hãy mở lại video trên thiết bị. Một số ứng dụng có thể cần kết nối lại.</string>
+    <string name="playback_switch_hint">Bộ thu vẫn chạy. Việc chuyển đổi chỉ một chiều cho luồng hiện tại: mở lại video trên thiết bị để xem ở đó, và kết nối lại phản chiếu màn hình nếu không có hình ảnh.</string>
     <string name="playback_return_to_screen">Đã chọn phản chiếu màn hình. Thoát màn hình video AirPlay trên thiết bị rồi mở lại video. Nếu không có hình ảnh, hãy kết nối lại tính năng phản chiếu màn hình.</string>
     <string name="p_quit">Thoát ứng dụng</string>
     <string name="p_quit_title">Thoát ứng dụng này?</string>
@@ -81,7 +81,7 @@
     <string name="p_about">Giới thiệu</string>
     <string name="p_version">Phiên bản %1$s (%2$d)</string>
     <string name="p_about_body">Chia sẻ màn hình, video và âm thanh với TV qua mạng cục bộ.</string>
-    <string name="p_trademark_notice">AirPlay, iPhone, iPad và Mac là các nhãn hiệu của Apple Inc.</string>
+    <string name="p_trademark_notice">AirPlay, iPhone, iPad và Mac là các nhãn hiệu của Apple Inc. Ứng dụng này không liên kết, không được Apple Inc. chứng thực hay tài trợ.</string>
     <string name="p_open_source_licenses">Giấy phép thành phần</string>
     <string name="p_licenses_unavailable">Không mở được thông tin giấy phép. Vui lòng liên hệ nhà cung cấp ứng dụng.</string>
     <string name="profile_balanced_detail">Phản chiếu màn hình 1080p. Video trên Internet ưu tiên chất lượng tối đa 8 Mbps.</string>
@@ -269,9 +269,9 @@
     <string name="r2_invalid_resolution">Chiều rộng và chiều cao đều phải từ 16 đến 16384.</string>
     <string name="settings_playback">Hình ảnh và phát</string>
     <string name="help_modes_title">Video được phát như thế nào?</string>
-    <string name="help_modes_body">Phản chiếu màn hình hiển thị màn hình iPhone, iPad hoặc Mac. Phát trực tiếp dùng trình phát của TV khi ứng dụng gửi hỗ trợ. Thay đổi mục Phát trong điều khiển luồng. Video đang mở có thể không tự chuyển; hãy đóng và mở lại trên thiết bị.</string>
+    <string name="help_modes_body">Phản chiếu màn hình hiển thị màn hình iPhone, iPad hoặc Mac. Phát trực tiếp dùng trình phát của TV khi ứng dụng gửi hỗ trợ. Trong khi phát, mục Phát cung cấp Chuyển sang phản chiếu màn hình và không chuyển ngược lại. Video đang mở có thể không tự chuyển; hãy đóng và mở lại trên thiết bị.</string>
     <string name="help_video_title">Không phát được video hoặc màn hình đen</string>
-    <string name="help_video_body">Nếu nguồn từ chối truy cập, chọn Phản chiếu màn hình trong mục Phát. Thoát màn hình video AirPlay trên thiết bị rồi mở lại video. Một số nội dung được bảo vệ không thể phản chiếu. Nếu cả màn hình thiết bị cũng không hiện, hãy dừng phản chiếu trên thiết bị rồi kết nối lại.</string>
+    <string name="help_video_body">Nếu nguồn từ chối truy cập, chọn Chuyển sang phản chiếu màn hình trong điều khiển luồng. Thoát màn hình video AirPlay trên thiết bị rồi mở lại video. Một số nội dung được bảo vệ không thể phản chiếu. Nếu cả màn hình thiết bị cũng không hiện, hãy dừng phản chiếu trên thiết bị rồi kết nối lại.</string>
     <string name="help_network_title">Đơ, trễ hoặc VPN</string>
     <string name="help_network_body">Giữ TV và thiết bị gửi trên cùng mạng cục bộ. Mạng khách và cô lập máy khách có thể chặn truy cập. VPN có thể thay đổi quyền truy cập cục bộ hoặc đường kết nối hiện tại. Cho phép truy cập mạng cục bộ nếu VPN có tùy chọn này; thử so sánh khi tắt VPN nếu cần. Khi bị giật, hãy thử cấu hình độ trễ thấp trong Hình ảnh và phát.</string>
     <string name="help_record_title">Ghi và xem bản ghi</string>
@@ -370,7 +370,7 @@
     <string name="transition_live">Trực tiếp</string>
     <string name="transition_seek_hint">Trái/phải: 10 giây · OK: tua · Quay lại: hủy</string>
     <string name="transition_playback_error">Không phát được video (mã %1$d). Quay về màn hình điện thoại hoặc chọn video khác.</string>
-    <string name="transition_access_denied">Nguồn video từ chối truy cập. Dùng Cách phát để thử Phản chiếu màn hình hoặc mở lại video trên thiết bị.</string>
+    <string name="transition_access_denied">Nguồn video từ chối truy cập. Chọn Chuyển sang phản chiếu màn hình trong điều khiển luồng hoặc mở lại video trên thiết bị.</string>
     <string name="subtitle_size_value">Cỡ: %1$d%%</string>
     <string name="track_quality">Chất lượng</string>
     <string name="track_subtitles">Phụ đề</string>
@@ -384,4 +384,6 @@
     <string name="p_contact_line">Liên hệ: alquariz@yandex.com</string>
     <string name="p_source_line">Mã nguồn: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">Thu âm thanh khi ghi</string>
+    <string name="permission_audio_capture_body">Chỉ được yêu cầu khi bắt đầu ghi, để thu âm thanh phát của chính ứng dụng này. Micrô không bao giờ bị đọc.</string>
 </resources>

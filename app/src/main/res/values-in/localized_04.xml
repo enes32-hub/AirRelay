@@ -64,7 +64,7 @@
     <string name="transition_live">Langsung</string>
     <string name="transition_seek_hint">Kiri/kanan: 10 detik · OK: lompat · Kembali: batal</string>
     <string name="transition_playback_error">Video tidak dapat diputar (kode %1$d). Kembali ke layar ponsel atau pilih video lain.</string>
-    <string name="transition_access_denied">Sumber video menolak akses. Gunakan metode Pemutaran untuk mencoba Cerminkan layar, atau buka ulang video di perangkat.</string>
+    <string name="transition_access_denied">Sumber video menolak akses. Pilih Beralih ke pencerminan layar di kontrol siaran atau buka ulang video di perangkat.</string>
     <string name="subtitle_size_value">Ukuran: %1$d%%</string>
     <string name="track_quality">Kualitas</string>
     <string name="track_subtitles">Subtitel</string>

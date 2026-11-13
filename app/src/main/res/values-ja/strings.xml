@@ -35,7 +35,7 @@
     <string name="permission_intro">AirRelay に必要な権限を設定します。各手順で許可する内容を説明します。任意の権限はスキップできます。</string>
     <string name="permission_network_title">同じネットワークに接続</string>
     <string name="permission_network_body">AirRelay はローカルネットワークを使って iPhone、iPad、Mac に表示され、映像と音声を受信します。テレビは Wi-Fi または有線 LAN を使用できます。</string>
-    <string name="permission_network_automatic">これらのネットワーク権限は Android が自動的に許可します。カメラ、マイク、写真ライブラリへのアクセスは求めません。</string>
+    <string name="permission_network_automatic">これらのネットワーク権限は Android が自動的に許可します。音声キャプチャは録画を開始したときだけ要求され、このアプリ自身の再生音を取り込みます。マイク、カメラ、写真ライブラリは読み取りません。</string>
     <string name="permission_notifications_title">接続状態をすぐに確認</string>
     <string name="permission_notifications_body">受信機がバックグラウンドで待機中、通知に接続状態が表示され、キャストを停止できます。</string>
     <string name="permission_notifications_skip">この権限がなくても受信機は動作しますが、状態の通知は表示されません。</string>
@@ -58,7 +58,7 @@
     <string name="permission_manage">テレビの設定で変更</string>
     <string name="permission_settings_unavailable">このテレビでは権限画面を開けませんでした。テレビの設定 → アプリ → AirRelay を確認してください。</string>
     <string name="playback_help_title">別の視聴方法をお試しください</string>
-    <string name="playback_help_body">テレビで直接再生できない動画があります。下部の操作バー左側にある「再生」を開き、「画面ミラーリング」をお試しください。その後、デバイスで動画を開き直してください。</string>
+    <string name="playback_help_body">テレビで直接再生できない動画があります。下部バー左側の「再生」コントロールを開き、「画面ミラーリングに切り替え」を選んでください。その後、デバイスで動画を開き直してください。</string>
     <string name="playback_help_confirm">確認しました</string>
     <string name="playback_choice_title">再生</string>
     <string name="playback_mirror">画面ミラーリング</string>
@@ -67,7 +67,7 @@
     <string name="playback_mirror_description">デバイスで動画を再生し、映像と音声をテレビに映します。</string>
     <string name="playback_direct_description">動画の AirPlay メニューでこのテレビを選択してください。対応する動画はテレビで再生され、デバイスから操作できます。既存の画面ミラーリングは自動的に切り替わらない場合があります。</string>
     <string name="playback_actual_direct">ストリーム：直接再生</string>
-    <string name="playback_switch_hint">受信機は動作を続けます。映像が戻らない場合はデバイスで動画を開き直してください。一部のアプリでは再接続が必要です。</string>
+    <string name="playback_switch_hint">受信機は動作を続けます。この切り替えは現在のストリームでは一方向です。デバイスで動画を開き直してそちらで見てください。映像が出ない場合は画面ミラーリングを再接続してください。</string>
     <string name="playback_return_to_screen">画面ミラーリングを選択しました。デバイスで AirPlay の動画画面を閉じ、動画を開き直してください。映像が出ない場合は画面ミラーリングを再接続してください。</string>
     <string name="p_quit">アプリを終了</string>
     <string name="p_quit_title">アプリを終了しますか？</string>
@@ -81,7 +81,7 @@
     <string name="p_about">このアプリについて</string>
     <string name="p_version">バージョン %1$s (%2$d)</string>
     <string name="p_about_body">ローカルネットワーク経由で画面、動画、音声をテレビと共有します。</string>
-    <string name="p_trademark_notice">AirPlay、iPhone、iPad、Mac は Apple Inc. の商標です。</string>
+    <string name="p_trademark_notice">AirPlay、iPhone、iPad、Mac は Apple Inc. の商標です。このアプリは Apple Inc. と提携しておらず、承認や後援も受けていません。</string>
     <string name="p_open_source_licenses">コンポーネントのライセンス</string>
     <string name="p_licenses_unavailable">ライセンス情報を開けませんでした。アプリの提供元にお問い合わせください。</string>
     <string name="profile_balanced_detail">1080p の画面ミラーリング。インターネット動画は最大 8 Mbps の画質を優先します。</string>
@@ -269,9 +269,9 @@
     <string name="r2_invalid_resolution">幅と高さはそれぞれ 16 から 16384 の範囲にしてください。</string>
     <string name="settings_playback">映像と再生</string>
     <string name="help_modes_title">動画はどのように再生されますか？</string>
-    <string name="help_modes_body">画面ミラーリングは iPhone、iPad、Mac の画面を表示します。直接再生は送信アプリが対応している場合にテレビのプレーヤーを使用します。ストリーム操作の「再生」で変更できます。開いている動画が自動で切り替わらない場合は、デバイスで閉じて開き直してください。</string>
+    <string name="help_modes_body">画面ミラーリングは iPhone、iPad、Mac の画面を表示します。直接再生は送信アプリが対応している場合にテレビのプレーヤーを使用します。ストリーム中、「再生」は「画面ミラーリングに切り替え」を提供し、元には戻しません。開いている動画が自動で切り替わらない場合は、デバイスで閉じて開き直してください。</string>
     <string name="help_video_title">動画が再生されない、または画面が黒い</string>
-    <string name="help_video_body">ソースがアクセスを拒否した場合は、「再生」で「画面ミラーリング」を選んでください。デバイスで AirPlay の動画画面を閉じて動画を開き直してください。一部の保護されたコンテンツはミラーリングできません。デバイスの画面も映らない場合は、デバイス側でミラーリングを停止して再接続してください。</string>
+    <string name="help_video_body">ソースがアクセスを拒否した場合は、ストリーム操作で「画面ミラーリングに切り替え」を選んでください。デバイスで AirPlay の動画画面を閉じて動画を開き直してください。一部の保護されたコンテンツはミラーリングできません。デバイスの画面も映らない場合は、デバイス側でミラーリングを停止して再接続してください。</string>
     <string name="help_network_title">フリーズ、遅延、VPN</string>
     <string name="help_network_body">テレビと送信元を同じローカルネットワークに接続してください。ゲストネットワークや端末分離はアクセスを妨げる場合があります。VPN はローカルアクセスや接続経路を変更する場合があります。VPN にローカルネットワークの許可設定があれば有効にし、必要なら VPN をオフにして比較してください。途切れる場合は「映像と再生」の低遅延設定をお試しください。</string>
     <string name="help_record_title">録画と録画の視聴</string>
@@ -370,7 +370,7 @@
     <string name="transition_live">ライブ</string>
     <string name="transition_seek_hint">左右：10 秒 · 決定：移動 · 戻る：キャンセル</string>
     <string name="transition_playback_error">動画を再生できませんでした（コード %1$d）。スマートフォンの画面に戻るか別の動画を選んでください。</string>
-    <string name="transition_access_denied">動画ソースがアクセスを拒否しました。「再生方法」で画面ミラーリングを試すか、デバイスで動画を開き直してください。</string>
+    <string name="transition_access_denied">動画ソースがアクセスを拒否しました。ストリーム操作の「画面ミラーリングに切り替え」を選ぶか、デバイスで動画を開き直してください。</string>
     <string name="subtitle_size_value">サイズ：%1$d%%</string>
     <string name="track_quality">画質</string>
     <string name="track_subtitles">字幕</string>
@@ -384,4 +384,6 @@
     <string name="p_contact_line">お問い合わせ: alquariz@yandex.com</string>
     <string name="p_source_line">ソースコード: https://github.com/enes32-hub/AirRelay</string>
     <string name="p_copyright_notice">© 2026 Mahmut Enes Bozdoğan — GPL-3.0</string>
+    <string name="permission_audio_capture_label">録画時の音声キャプチャ</string>
+    <string name="permission_audio_capture_body">録画を開始したときだけ、このアプリ自身の再生音を取り込むために要求されます。マイクは読み取りません。</string>
 </resources>

@@ -18,6 +18,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
@@ -94,6 +95,7 @@ fun ReceiverSettings(viewModel: MainViewModel, onAdvanced: () -> Unit, onModalCh
     var allowTakeover by remember { mutableStateOf(false) }
     var restartModal by remember { mutableStateOf(false) }
     var devicePicker by remember { mutableStateOf(false) }
+    var aboutModal by remember { mutableStateOf(false) }
     val themeFocus = remember { FocusRequester() }
     var returnThemeFocus by rememberSaveable { mutableStateOf(false) }
     var themePicker by rememberSaveable { mutableStateOf(false) }
@@ -101,7 +103,7 @@ fun ReceiverSettings(viewModel: MainViewModel, onAdvanced: () -> Unit, onModalCh
     var returnLanguageFocus by rememberSaveable { mutableStateOf(false) }
     var languagePicker by rememberSaveable { mutableStateOf(false) }
     val blocked = LocalBlockingOverlay.current
-    val modal = !blocked && (editName || disablePin || allowTakeover || themePicker || languagePicker || restartModal || devicePicker)
+    val modal = !blocked && (editName || disablePin || allowTakeover || themePicker || languagePicker || restartModal || devicePicker || aboutModal)
     SideEffect { onModalChange(modal) }
     DisposableEffect(Unit) { onDispose { onModalChange(false) } }
     val settingsList = rememberLazyListState()
@@ -132,17 +134,17 @@ fun ReceiverSettings(viewModel: MainViewModel, onAdvanced: () -> Unit, onModalCh
         SettingsCategory.APPEARANCE to R.string.p_section_appearance,
         SettingsCategory.ABOUT to R.string.p_about)
 
-    Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+    Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         PageHeading(stringResource(R.string.p_settings_title), stringResource(R.string.r2_settings_intro))
         BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
             val wide = maxWidth >= 700.dp
             val navigation: @Composable (Modifier) -> Unit = { modifier ->
-                Column(modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Column(modifier, verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     categories.forEach { (item, label) ->
                         TvAction(stringResource(label), { selectCategory(item) }, Modifier.fillMaxWidth(),
                             selected = category == item, focusId = "settings.category.${item.name}", compact = true)
                     }
-                    Spacer(Modifier.height(8.dp))
+                    Spacer(Modifier.height(2.dp))
                     TvAction(stringResource(R.string.p_advanced), onAdvanced, Modifier.fillMaxWidth(),
                         icon = Icons.Rounded.Tune, focusId = "settings.advanced", compact = true)
                 }
@@ -204,14 +206,14 @@ fun ReceiverSettings(viewModel: MainViewModel, onAdvanced: () -> Unit, onModalCh
                             item(key = "boot") { TvPreference(stringResource(R.string.p_setup_boot), stringResource(R.string.p_setup_boot_desc), boot, viewModel::setBootAutoStart, focusId = "settings.boot") }
                             item(key = "background") { TvPreference(stringResource(R.string.p_setup_background), stringResource(R.string.p_setup_background_desc), background, viewModel::setRunInBackground, focusId = "settings.background") }
                             item(key = "automatic-display") {
-                                TvPreference(stringResource(R.string.setting_launch_on_connect), stringResource(R.string.setting_launch_on_connect_desc),
-                                    launchOnConnect, viewModel::setLaunchOnConnect, focusId = "settings.automatic-display")
-                                if (launchOnConnect && !automaticDisplayAllowed) {
-                                    Spacer(Modifier.height(8.dp))
-                                    Text(stringResource(R.string.setting_launch_on_connect_no_permission), style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Warning)
-                                    Spacer(Modifier.height(8.dp))
-                                    TvAction(stringResource(R.string.p_automatic_display_permission), { activity?.requestAutomaticDisplayPermission() },
-                                        enabled = activity != null, compact = true, focusId = "settings.display-permission")
+                                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                                    TvPreference(stringResource(R.string.setting_launch_on_connect), stringResource(R.string.setting_launch_on_connect_desc),
+                                        launchOnConnect, viewModel::setLaunchOnConnect, focusId = "settings.automatic-display")
+                                    if (launchOnConnect && !automaticDisplayAllowed) {
+                                        Text(stringResource(R.string.setting_launch_on_connect_no_permission), style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Warning)
+                                        TvAction(stringResource(R.string.p_automatic_display_permission), { activity?.requestAutomaticDisplayPermission() },
+                                            enabled = activity != null, compact = true, focusId = "settings.display-permission")
+                                    }
                                 }
                             }
                         }
@@ -220,6 +222,14 @@ fun ReceiverSettings(viewModel: MainViewModel, onAdvanced: () -> Unit, onModalCh
                                 PermissionManagementCard(stringResource(R.string.permission_notifications_label),
                                     stringResource(R.string.permission_notifications_body), access.notifications, "settings.permission.notifications") {
                                     activity?.openNotificationSettings()
+                                }
+                            }
+                            if (needsAudioCapturePermission) item(key = "audio-capture") {
+                                PermissionManagementCard(stringResource(R.string.permission_audio_capture_label),
+                                    stringResource(R.string.permission_audio_capture_body), access.audio,
+                                    "settings.permission.audio") {
+                                    if (access.audio) activity?.openApplicationSettings()
+                                    else activity?.requestAudioCapturePermission()
                                 }
                             }
                             if (needsDisplayPermission) item(key = "display-permission") {
@@ -254,13 +264,13 @@ fun ReceiverSettings(viewModel: MainViewModel, onAdvanced: () -> Unit, onModalCh
                             item(key = "text") { TvPreference(stringResource(R.string.p_large_text), stringResource(R.string.p_large_text_desc), largeText, viewModel::setLargeText, focusId = "settings.text") }
                         }
                         SettingsCategory.ABOUT -> {
-                            item(key = "about") { AboutProductContent() }
+                            item(key = "about") { AboutProductContent(onModalChange = { aboutModal = it }) }
                         }
                     }
                 }
             }
             if (wide) Row(Modifier.fillMaxSize(), horizontalArrangement = Arrangement.spacedBy(20.dp)) {
-                navigation(Modifier.width(178.dp).fillMaxHeight().verticalScroll(rememberScrollState()).focusGroup().padding(3.dp))
+                navigation(Modifier.width(228.dp).fillMaxHeight().clipToBounds().verticalScroll(rememberScrollState()).focusGroup().padding(3.dp))
                 settings(Modifier.weight(1f).fillMaxHeight().focusGroup())
             } else Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).focusGroup().padding(3.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import html
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +41,7 @@ STYLE = """
 def inline(text: str) -> str:
     text = html.escape(text, quote=False)
     text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
+    text = re.sub(r"(?<!\*)\*([^*\n]+?)\*(?!\*)", r"<em>\1</em>", text)
     text = re.sub(r"`(.+?)`", r"<code>\1</code>", text)
     return text
 
@@ -94,7 +96,14 @@ def convert(markdown: str, other_page: str, other_label: str) -> str:
                 r"^(#{1,4}\s|[-*]\s|\||---)", lines[index].strip()):
             paragraph.append(lines[index].strip())
             index += 1
-        body.append("<p>" + inline(" ".join(paragraph)) + "</p>")
+        # A block of "**Label:** value" lines is a header/metadata block, not prose: keep its line
+        # breaks instead of collapsing everything into one run-on paragraph.
+        parts: list[str] = []
+        for position, entry in enumerate(paragraph):
+            if position and (entry.startswith("**") or paragraph[position - 1].endswith("**")):
+                parts.append("<br>")
+            parts.append(inline(entry))
+        body.append("<p>" + " ".join(parts) + "</p>")
 
     title = next((re.sub(r"^#\s+", "", l) for l in lines if l.startswith("# ")), "Privacy Policy")
     language_nav = f'<nav class="lang"><a href="{other_page}">{other_label}</a></nav>' if other_page else ""
@@ -133,6 +142,17 @@ INDEX = """<!DOCTYPE html>
 <ul>
   <li><a href="privacy.html">English — Privacy Policy</a></li>
 </ul>
+<h2>Licence and source code</h2>
+<p>AirRelay Receiver is free software, conveyed as a whole under the
+<a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License, version 3</a>.
+It includes third-party components under GPL-3.0, LGPL-2.1-or-later, Apache-2.0, MIT and BSD-2-Clause
+licences; the full licence texts and copyright notices are listed in the corresponding source and in
+the app under <em>Settings → About → Component licences</em>.</p>
+<ul>
+  <li><a href="https://github.com/enes32-hub/AirRelay">Corresponding source code</a></li>
+  <li><a href="https://github.com/enes32-hub/AirRelay/blob/main/legal/NOTICE.md">Third-party notices</a></li>
+  <li><a href="https://github.com/enes32-hub/AirRelay/blob/main/LICENSE">GNU General Public License v3</a></li>
+</ul>
 <h2>Contact</h2>
 <p>E-mail: <a href="mailto:alquariz@yandex.com">alquariz@yandex.com</a></p>
 <hr>
@@ -167,34 +187,49 @@ Play Console requires the policy to be on an active, non-editable URL and reject
 Rebuild after editing the markdown:
 
 ```bash
-python build_site.py
+python build_site.py          # regenerate privacy.html, index.html and this README
+python build_site.py --check  # fail if any generated page is stale (run by scripts/run_full_check.ps1)
 ```
 
 ## Content basis
 
-Every statement about the application was verified against the 1.0.7 source tree, in particular:
+Every statement about the application was verified against the 1.0.8 source tree, in particular:
 
 - no analytics, advertising or crash-reporting SDK is present,
 - the app contains no hard-coded internet address and contacts no developer or third-party server,
 - `RECORD_AUDIO` is required only as the prerequisite of Android's audio-playback-capture API, and
   capture is restricted to the application's own audio output (its own UID); the microphone is never
   read,
-- recordings, saved videos, settings and support logs are stored on the device, with
-  `android:allowBackup="false"`.
+- recordings, app settings and support logs are stored on the device, with
+  `android:allowBackup="false"`,
+- the licence list in section 8 matches the components compiled into the shipped binary.
 """
 
 
+def outputs() -> dict[Path, str]:
+    """Every generated file, so a --check run and a write run cannot disagree."""
+    result: dict[Path, str] = {}
+    for source, (page, other, _label) in PAGES.items():
+        result[ROOT / page] = convert((LEGAL / source).read_text(encoding="utf-8"), other, "")
+    result[ROOT / "index.html"] = INDEX.format(style=STYLE)
+    result[LEGAL / "README.md"] = README.replace("{user}", "enes32-hub")
+    return result
+
+
 def main() -> int:
-    for source, (page, other, other_label) in PAGES.items():
-        markdown = (LEGAL / source).read_text(encoding="utf-8")
-        rendered = convert(markdown, other, "")
-        (ROOT / page).write_text(rendered, encoding="utf-8", newline="\n")
-        print(f"  {source} -> {page} ({len(rendered)} bytes)")
-    (ROOT / "index.html").write_text(INDEX.format(style=STYLE), encoding="utf-8", newline="\n")
-    print("  index.html")
-    user = "enes32-hub"
-    (LEGAL / "README.md").write_text(README.replace("{user}", user), encoding="utf-8", newline="\n")
-    print("  legal/README.md")
+    files = outputs()
+    if "--check" in sys.argv[1:]:
+        stale = [path for path, text in files.items()
+                 if not path.is_file() or path.read_text(encoding="utf-8") != text]
+        for path in stale:
+            print(f"{path.relative_to(ROOT)} is stale; run this script without --check", file=sys.stderr)
+        if stale:
+            return 1
+        print(f"  {len(files)} generated pages are up to date")
+        return 0
+    for path, text in files.items():
+        path.write_text(text, encoding="utf-8", newline="\n")
+        print(f"  {path.relative_to(ROOT)} ({len(text)} bytes)")
     return 0
 
 
