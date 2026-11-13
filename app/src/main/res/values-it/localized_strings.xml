@@ -79,7 +79,7 @@
     <string name="setting_remote_bitrate">Bitrate video preferito</string>
     <string name="setting_remote_bitrate_desc">Dipende dalle qualità disponibili del video Internet. Non modifica la duplicazione schermo.</string>
     <string name="p_about">Informazioni</string>
-    <string name="p_version">Versione %1$s (%2$d)</string>
+    <string name="p_version">Versione %1$s</string>
     <string name="p_about_body">Condividi schermo, video e audio con la TV tramite la rete locale.</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad e Mac sono marchi di Apple Inc. Questa app non è affiliata, approvata o sponsorizzata da Apple Inc.</string>
     <string name="p_open_source_licenses">Licenze dei componenti</string>

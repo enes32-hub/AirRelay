@@ -80,7 +80,7 @@ fun AboutProductContent(onModalChange: (Boolean) -> Unit = {}) {
         ) {
             Text(stringResource(R.string.app_name), style = MaterialTheme.typography.headlineSmall)
             Text(
-                stringResource(R.string.p_version, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE),
+                stringResource(R.string.p_version, BuildConfig.VERSION_NAME),
                 color = AirRelayColors.Muted,
                 style = MaterialTheme.typography.bodySmall,
             )

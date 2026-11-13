@@ -79,7 +79,7 @@
     <string name="setting_remote_bitrate">Taxa de bits de vídeo preferida</string>
     <string name="setting_remote_bitrate_desc">Depende das qualidades disponíveis no vídeo da internet. Não altera o espelhamento.</string>
     <string name="p_about">Sobre</string>
-    <string name="p_version">Versão %1$s (%2$d)</string>
+    <string name="p_version">Versão %1$s</string>
     <string name="p_about_body">Compartilhe tela, vídeos e áudio com sua TV pela rede local.</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad e Mac são marcas da Apple Inc. Este app não é afiliado, endossado ou patrocinado pela Apple Inc.</string>
     <string name="p_open_source_licenses">Licenças dos componentes</string>

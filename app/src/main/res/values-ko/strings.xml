@@ -79,7 +79,7 @@
     <string name="setting_remote_bitrate">선호 동영상 비트레이트</string>
     <string name="setting_remote_bitrate_desc">인터넷 동영상에서 제공하는 화질 옵션에 따라 달라집니다. 화면 미러링에는 영향을 주지 않습니다.</string>
     <string name="p_about">정보</string>
-    <string name="p_version">버전 %1$s (%2$d)</string>
+    <string name="p_version">버전 %1$s</string>
     <string name="p_about_body">로컬 네트워크를 통해 화면, 동영상, 오디오를 TV와 공유합니다.</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad, Mac은 Apple Inc.의 상표입니다. 이 앱은 Apple Inc.와 제휴하지 않았으며 승인이나 후원도 받지 않습니다.</string>
     <string name="p_open_source_licenses">구성 요소 라이선스</string>

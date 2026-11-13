@@ -79,7 +79,7 @@
     <string name="setting_remote_bitrate">पसंदीदा वीडियो बिटरेट</string>
     <string name="setting_remote_bitrate_desc">इंटरनेट वीडियो में उपलब्ध गुणवत्ता विकल्पों पर निर्भर है। स्क्रीन मिररिंग नहीं बदलती।</string>
     <string name="p_about">परिचय</string>
-    <string name="p_version">संस्करण %1$s (%2$d)</string>
+    <string name="p_version">संस्करण %1$s</string>
     <string name="p_about_body">स्थानीय नेटवर्क पर अपनी स्क्रीन, वीडियो और ऑडियो टीवी पर शेयर करें।</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad और Mac, Apple Inc. के ट्रेडमार्क हैं। यह ऐप Apple Inc. से संबद्ध नहीं है और न ही उसके द्वारा अनुमोदित या प्रायोजित है।</string>
     <string name="p_open_source_licenses">घटकों के लाइसेंस</string>
