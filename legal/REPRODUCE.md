@@ -34,7 +34,9 @@ $env:GRADLE_USER_HOME = Join-Path $env:USERPROFILE '.gradle'
 python tools/generate_sbom.py
 ```
 
-Before a release, regenerate from the release configuration and APK/AAB, attach
-all Maven license metadata and notices, validate FFmpeg's exact configure flags,
-and complete the provenance review. The current SBOM has `NOASSERTION` where
-that evidence does not exist.
+Before a release, regenerate from the release configuration and APK/AAB, attach all Maven
+license metadata and notices, and validate FFmpeg's exact configure flags.
+`tools/generate_sbom.py --check` fails when the committed document no longer matches the
+declared dependencies, and every package it emits carries an explicit SPDX licence id: a
+`NOASSERTION` value would mean a licence claim is still missing and must be supplied before
+distribution.

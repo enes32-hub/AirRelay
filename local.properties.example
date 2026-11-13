@@ -9,8 +9,9 @@ sdk.dir=C:/Users/YOUR_USER/AppData/Local/Android/Sdk
 # airrelay.msys.root=C:/msys64
 
 # Optional: release signing. When these four keys are present, app/build.gradle.kts
-# creates the release signing config. Keep real values out of version control.
+# creates the release signing config. Keep real values out of version control:
+# the password is read from this gitignored file, never from the command line.
 # storeFile=C:/keys/airrelay-release.jks
-# storePassword=CHANGE_ME
+# storePassword=
 # keyAlias=airrelay
-# keyPassword=CHANGE_ME
+# keyPassword=

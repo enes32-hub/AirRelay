@@ -74,9 +74,22 @@ Python 3.11+ with the standard library is enough (no pip dependencies):
 pwsh -File scripts/run_full_check.ps1
 ```
 
-This runs source/provenance verification, acceptance bookkeeping, SBOM currency and the unit tests.
+This runs source/provenance verification, the publication rules, acceptance bookkeeping, SBOM
+currency, the generated legal documents and the unit tests.
 `python scripts/check_readiness.py --release` is expected to exit `2` (fail-closed) until the physical
 acceptance work recorded in the project's acceptance matrix is complete.
+
+## Publication rules
+
+Everything committed here is public and is read by people who did not build the project, so the
+repository follows three rules: documents are written in **English only**, they carry **no private
+information** (no machine paths, LAN addresses, device serials or credentials), and they leave **no
+unfinished text** behind (no placeholders, no unresolved licence values).
+
+The rules are not a convention — they are enforced by
+[`scripts/check_publication.py`](scripts/check_publication.py) on every gate run, and the full
+statement, including the permitted exceptions and a checklist for a new document, is
+[`docs/PUBLICATION_POLICY.md`](docs/PUBLICATION_POLICY.md).
 
 ## Licence and third-party components
 

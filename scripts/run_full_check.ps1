@@ -40,6 +40,7 @@ function Invoke-Check {
 
 try {
     Invoke-Check 'Provenance and source checks' @('scripts/productization/check_source.py') | Out-Null
+    Invoke-Check 'Publication rules (English, no private data)' @('scripts/check_publication.py') | Out-Null
     Invoke-Check 'Acceptance bookkeeping (preparation)' @('scripts/check_readiness.py') | Out-Null
     Invoke-Check 'Generated SBOM is current' @('tools/generate_sbom.py', '--check') | Out-Null
     Invoke-Check 'In-app privacy policy is current' @('tools/render_privacy_asset.py', '--check') | Out-Null

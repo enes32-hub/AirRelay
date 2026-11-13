@@ -108,7 +108,7 @@ def convert(markdown: str, other_page: str, other_label: str) -> str:
     title = next((re.sub(r"^#\s+", "", l) for l in lines if l.startswith("# ")), "Privacy Policy")
     language_nav = f'<nav class="lang"><a href="{other_page}">{other_label}</a></nav>' if other_page else ""
     return f"""<!DOCTYPE html>
-<html lang="{'tr' if 'Gizlilik' in title else 'en'}">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
