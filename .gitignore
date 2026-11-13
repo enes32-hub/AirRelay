@@ -119,7 +119,9 @@ artifacts/evidence/*.so
 # Not part of the public distribution — kept in the working copy
 privacy-tr.html
 legal/PRIVACY.tr.md
-tests/
+# Anchored on purpose: a bare "tests/" also matched the vendored FFmpeg tests/ directory and
+# silently dropped files that docs/productization/PROTECTED_CORE_SHA256.json hashes.
+/tests/
 
 # Local scratch directory
 .tmpcheck/
