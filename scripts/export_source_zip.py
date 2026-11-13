@@ -19,7 +19,7 @@ SKIP_SUFFIXES = {'.pyc', '.pyo', '.jks', '.keystore', '.p12', '.pfx', '.pem', '.
 ARTIFACT_SUFFIXES = {'.py', '.ps1', '.sh', '.cmd', '.bat', '.json'}
 
 
-def _allowed(path: Path, relative: str) -> bool:
+def _allowed(path: Path, relative: str, tracked_only: bool = False) -> bool:
     name = path.name
     if path.is_symlink() or not path.is_file():
         return False
@@ -27,7 +27,10 @@ def _allowed(path: Path, relative: str) -> bool:
         return False
     if path.suffix.lower() in SKIP_SUFFIXES or relative.startswith(SKIP_PREFIXES):
         return False
-    if relative.startswith('artifacts/') and path.suffix.lower() not in ARTIFACT_SUFFIXES:
+    # The artifacts/ suffix allow-list exists to drop UNTRACKED build output from a filesystem
+    # walk. Tracked evidence (.md/.txt) belongs to the published tree, so the archive must carry
+    # exactly the same files as the repository.
+    if not tracked_only and relative.startswith('artifacts/') and path.suffix.lower() not in ARTIFACT_SUFFIXES:
         return False
     if name in {'gst-registry.bin', '.ninja_log', '.ninja_deps', 'CMakeCache.txt'}:
         return False
@@ -40,11 +43,14 @@ def files():
     if (ROOT / '.git').exists():
         done = subprocess.run(['git', 'ls-files', '-z'], cwd=ROOT, capture_output=True, check=True)
         tracked = sorted(entry.replace('\\', '/') for entry in done.stdout.decode('utf-8').split('\0') if entry)
+        # 'artifacts' is skipped during a filesystem walk because it holds build output; tracked
+        # files under it (the evidence records) are part of the published tree and stay.
+        blocked_dirs = SKIP_DIRS - {'artifacts'}
         for relative in tracked:
-            if any(part in SKIP_DIRS for part in relative.split('/')[:-1]):
+            if any(part in blocked_dirs for part in relative.split('/')[:-1]):
                 continue
             path = ROOT / relative
-            if _allowed(path, relative):
+            if _allowed(path, relative, tracked_only=True):
                 yield path, relative
         return
     for current, dirs, names in os.walk(ROOT, followlinks=False):
