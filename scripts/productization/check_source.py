@@ -57,13 +57,18 @@ def jni_calls(text):
 
 def main():
     manifest = json.loads(read('docs/productization/PROTECTED_CORE_SHA256.json'))
+    # Hash the canonical LF form, never the checkout's line endings: a fresh clone on Windows
+    # materialises CRLF for files the repository stores as LF, and that used to fail this gate
+    # with "Protected source changed" even though no content had changed.
+    def canonical(path):
+        return (ROOT/path).read_bytes().replace(b'\r\n', b'\n')
     for item in manifest['original_strict']:
-        data=(ROOT/item['path']).read_bytes()
-        assert len(data)==item['bytes'] and sha(data)==item['sha256'], 'Protected source changed: '+item['path']
+        data=canonical(item['path'])
+        assert len(data)==item['lf_bytes'] and sha(data)==item['lf_sha256'], 'Protected source changed: '+item['path']
     print(f"PASS protected original bytes: {len(manifest['original_strict'])} files")
     for item in manifest['output_and_observation_boundaries']:
-        data=(ROOT/item['path']).read_bytes()
-        assert sha(data)==item['reviewed_sha256'], 'Reviewed boundary changed: '+item['path']
+        data=canonical(item['path'])
+        assert sha(data)==item['reviewed_lf_sha256'], 'Reviewed boundary changed: '+item['path']
         baseline = reverse_boundary(item['path'],read(item['path']))
         assert sha(baseline.encode())==item['original_lf_sha256'], 'Unexpected transport change: '+item['path']
     print(f"PASS {len(manifest['output_and_observation_boundaries'])} boundary files: "
