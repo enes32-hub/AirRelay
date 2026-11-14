@@ -158,9 +158,11 @@ internal class MdnsResponder(private val address: InetAddress) {
 
     private fun records(svc: Service, includeQuestion: Boolean): ByteArray {
         val out = ByteArrayOutputStream()
-        // Response header: id 0, flags 0x8400 (authoritative response), no questions, 4 answers.
-        out.write(byteArrayOf(0, 0, 0x84.toByte(), 0x00, 0, 0, 0, if (includeQuestion) 1 else 0,
-            0, 4, 0, 0))
+        // DNS header field order is ID | flags | QDCOUNT | ANCOUNT | NSCOUNT | ARCOUNT, and all four
+        // records this responder writes are answers. Publishing them in the authority section (the
+        // 0/4 layout used before) made the packet claim "no answers", which iOS rejects: the receiver
+        // was announced on the wire yet never listed under Screen Mirroring.
+        out.write(byteArrayOf(0, 0, 0x84.toByte(), 0x00, 0, 0, 0, 4, 0, 0, 0, 0))
         out.write(name(svc.typeFqdn))
         out.write(short(PTR)); out.write(short(CLASS_IN)); out.write(int(4500))
         val ptr = name(svc.instance)

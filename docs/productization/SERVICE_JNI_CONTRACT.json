@@ -8,6 +8,7 @@
     "NativeBridge.nativeGetRaopTxtRecords(nativeHandle)",
     "NativeBridge.nativeGetServerName(nativeHandle)",
     "NativeBridge.nativeInit(this,hwAddr,effectiveName,keyFile,nohold,requirePin)",
+    "NativeBridge.nativeServerAudioCaptureFriendly(handle,on)",
     "NativeBridge.nativeSetAudioEnabled(nativeHandle,advertiseAudio)",
     "NativeBridge.nativeSetCodecs(nativeHandle,alac,aac)",
     "NativeBridge.nativeSetDefaultStreamValues(audioManager.getProperty(AudioManager.PROPERTY_OUTPUT_SAMPLE_RATE)?.toIntOrNull()?:0,audioManager.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER)?.toIntOrNull()?:0)",

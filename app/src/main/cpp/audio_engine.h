@@ -37,6 +37,9 @@ bool audio_engine_start(AudioEngine *engine);
  * clock anchor and rebuild the jitter cushion without ending the session */
 void audio_engine_flush(AudioEngine *engine);
 
+/* keep the output stream inside the platform mixer so AudioPlaybackCapture can record it */
+void audio_engine_set_capture_friendly(AudioEngine *engine, bool on);
+
 /* pause playout, releases audio output devices while paused; idempotent */
 void audio_engine_pause(AudioEngine *engine);
 

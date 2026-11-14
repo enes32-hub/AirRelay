@@ -133,8 +133,6 @@ fun RecordingPanel(onStarted: () -> Unit = {}, canRecord: Boolean = true, canPla
             }, enabled = canPlay && !state.active && !exporting && pendingDelete == null, compact = true, focusId = "record.play.${file.name}")
             TvAction(stringResource(R.string.rec_delete), { pendingDelete = file.name },
                 enabled = !exporting && pendingDelete == null, destructive = true, compact = true, focusId = "record.delete.${file.name}")
-            }
-
             TvAction(stringResource(R.string.rec_export), {
                 message = 0
                 if (android.os.Build.VERSION.SDK_INT >= 29) scope.launch {
@@ -149,6 +147,7 @@ fun RecordingPanel(onStarted: () -> Unit = {}, canRecord: Boolean = true, canPla
                     runCatching { export.launch(file.name) }.onFailure { selected = null; message = R.string.rec_export_failed }
                 }
             }, enabled = !exporting, compact = true, focusId = "record.export.${file.name}")
+            }
         }
     }
 }

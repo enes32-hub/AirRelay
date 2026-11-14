@@ -48,6 +48,8 @@ object NativeBridge {
                                             benchmarkLog: Boolean): Boolean
     external fun nativeServerAudioStart(handle: Long): Boolean
     external fun nativeServerAudioStop(handle: Long)
+    // keeps the output inside the platform mixer while a recording needs capture
+    external fun nativeServerAudioCaptureFriendly(handle: Long, on: Boolean)
     external fun nativeServerAudioFormat(handle: Long, ct: Int, spf: Int)
     // fills direct buffer with packed debug snapshot; false if audio isn't running
     external fun nativeServerAudioDebug(handle: Long, buf: java.nio.ByteBuffer): Boolean

@@ -141,6 +141,10 @@ class RecordingService : Service() {
                 audio = captureAudio
                 if (checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != android.content.pm.PackageManager.PERMISSION_GRANTED)
                     throw SecurityException("Playback audio capture permission unavailable")
+                // AudioPlaybackCapture cannot see an MMAP low-latency stream, so the sender's
+                // soundtrack arrived as digital silence. Ask the audio engine for the mixer path
+                // for as long as this recording runs.
+                io.github.jqssun.airplay.service.AirPlayService.setRecordingCaptureFriendly(true)
                 captureAudio.start(videoStartedNs)
             }
             mutable.value = Status(active = true)
@@ -178,6 +182,7 @@ class RecordingService : Service() {
             Log.w(TAG, "MediaRecorder stop failed: ${e.javaClass.simpleName}: ${e.message} framed=${frames != 0L}")
             saved = false
         }
+        io.github.jqssun.airplay.service.AirPlayService.setRecordingCaptureFriendly(false)
         val sound = audio
         val audioSaved = if (Build.VERSION.SDK_INT >= 29 && sound != null) runCatching { sound.finish() }.isSuccess else false
         audio = null

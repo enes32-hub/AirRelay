@@ -79,6 +79,11 @@ struct AudioEngine {
         return mOutputActive;
     }
 
+    void setCaptureFriendly(bool on) {
+        std::lock_guard<std::mutex> lk(mRebuildLock);
+        if (mOutput) mOutput->setCaptureFriendly(on);
+    }
+
     void pause() {
         std::lock_guard<std::mutex> lk(mRebuildLock);
         mRunning = false;
@@ -280,6 +285,10 @@ bool audio_engine_start(AudioEngine *engine) {
 
 void audio_engine_flush(AudioEngine *engine) {
     if (engine) engine->flush();
+}
+
+void audio_engine_set_capture_friendly(AudioEngine *engine, bool on) {
+    if (engine) engine->setCaptureFriendly(on);
 }
 
 void audio_engine_pause(AudioEngine *engine) {

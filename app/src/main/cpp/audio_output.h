@@ -77,6 +77,22 @@ public:
         return true;
     }
 
+    /*
+     * AudioPlaybackCapture only sees audio that passes through the platform mixer. An AAudio
+     * low-latency (MMAP) stream bypasses it, so a recording started while low latency is on gets
+     * digital silence instead of the soundtrack. Reopening the stream in the power-saving media path
+     * makes it capturable; the cost is a short gap while the new stream starts.
+     */
+    void setCaptureFriendly(bool on) {
+        {
+            std::lock_guard<std::mutex> lk(mLock);
+            if (mCaptureFriendly.load() == on) return;
+            mCaptureFriendly.store(on);
+        }
+        reopenAfterError();
+        mLog->info("Audio output switched to %s path for capture", on ? "capturable" : "low-latency");
+    }
+
     void stop() {
         std::lock_guard<std::mutex> lk(mLock);
         mClosing.store(true);
@@ -124,11 +140,12 @@ private:
             ->setContentType(oboe::ContentType::Music)
             ->setDataCallback(mCallbacks)
             ->setErrorCallback(mCallbacks);
-        if (mLowLatency) {
+        if (mLowLatency && !mCaptureFriendly.load()) {
             // game use case may enable extra latency optimizations
             b.setPerformanceMode(oboe::PerformanceMode::LowLatency)->setUsage(oboe::Usage::Game);
         } else {
-            // media use case may have better quality and lower power
+            // media use case may have better quality and lower power, and stays inside the platform
+            // mixer so AudioPlaybackCapture can record it
             b.setPerformanceMode(oboe::PerformanceMode::PowerSaving)->setUsage(oboe::Usage::Media);
         }
         oboe::Result r = b.openStream(mStream);
@@ -168,6 +185,8 @@ private:
     std::shared_ptr<TimelineBuffer> mTimeline;
     std::shared_ptr<LogSink> mLog;
     std::atomic<bool> mClosing{false};
+    /// While a recording runs the stream must stay in the mixer path so capture can see it.
+    std::atomic<bool> mCaptureFriendly{false};
     std::shared_ptr<OboeCallbacks> mCallbacks;
     std::shared_ptr<oboe::AudioStream> mStream;
     std::mutex mLock;                    // guards open/close

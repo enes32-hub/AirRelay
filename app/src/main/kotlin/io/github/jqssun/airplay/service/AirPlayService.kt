@@ -643,6 +643,7 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
             audioManager.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER)?.toIntOrNull() ?: 0
         )
         nativeHandle = NativeBridge.nativeInit(this, hwAddr, effectiveName, keyFile, nohold, requirePin)
+        if (nativeHandle != 0L) captureFriendlyHandles.add(nativeHandle)
         if (nativeHandle == 0L) {
             log("Native init failed")
             _failStart()
@@ -761,6 +762,7 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
         clearPin()
         mirrorToken = -1L
         val retiredHandle = nativeHandle
+        captureFriendlyHandles.remove(nativeHandle)
         nativeHandle = 0L
         enqueueNativeCleanup(retiredHandle, stopFirst = false)
         nsdManager?.release()
@@ -789,6 +791,7 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
         clearPin()
         _mainHandler.removeCallbacksAndMessages(null)
         val retiredHandle = nativeHandle
+        captureFriendlyHandles.remove(nativeHandle)
         nativeHandle = 0L
         enqueueNativeCleanup(retiredHandle, stopFirst = true)
         dacpController?.reset()
@@ -1787,6 +1790,19 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
         private val nativeCleanupLock = Any()
         private val nativeCleanupScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
         private var nativeCleanupTail: Deferred<Unit>? = null
+        /**
+         * Live native handles, so a recording can ask the audio engine to stay inside the
+         * platform mixer. AudioPlaybackCapture cannot see an MMAP low-latency stream, and the
+         * engine is owned by this service, not by the recorder.
+         */
+        private val captureFriendlyHandles = java.util.concurrent.CopyOnWriteArraySet<Long>()
+
+        fun setRecordingCaptureFriendly(on: Boolean) {
+            captureFriendlyHandles.forEach { handle ->
+                runCatching { io.github.jqssun.airplay.bridge.NativeBridge.nativeServerAudioCaptureFriendly(handle, on) }
+            }
+        }
+
         private const val TAG = "AirPlayService"
         private const val VOL_SYNC_EPS = 0.033f
         private const val VOL_SYNC_MAX_STEPS = 32

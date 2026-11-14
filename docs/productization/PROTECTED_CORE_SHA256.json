@@ -51,18 +51,18 @@
     },
     {
       "path": "app/src/main/cpp/audio_engine.cpp",
-      "lf_bytes": 12193,
-      "lf_sha256": "9ef1bbf66c80da37866769203da819036db80af36e52015c94dbf183aee8078b"
+      "lf_bytes": 12469,
+      "lf_sha256": "9c6a3f6f09220cf0679a7ea297af5238292cfbb4d095fdcafec6d72bc0230050"
     },
     {
       "path": "app/src/main/cpp/audio_engine.h",
-      "lf_bytes": 2425,
-      "lf_sha256": "53260c69a11de97b808e0d85f3f1413fc495e66a8d86bb4eaf0898b2f8e27238"
+      "lf_bytes": 2589,
+      "lf_sha256": "d22e92169f5466632e7e755cc89a077e819a0b4bc60cbb9cd33685375dd5482f"
     },
     {
       "path": "app/src/main/cpp/audio_output.h",
-      "lf_bytes": 7461,
-      "lf_sha256": "96cd01cea3082b922272a870c0e67e23b69e3043132f2ca5fd4475d8303c339a"
+      "lf_bytes": 8452,
+      "lf_sha256": "143498176bc27e1621150500807ca8b59c287bf13201bce17625ded66f39adc7"
     },
     {
       "path": "app/src/main/cpp/audio_time.h",
@@ -52796,8 +52796,8 @@
     },
     {
       "path": "app/src/main/kotlin/io/github/jqssun/airplay/bridge/NativeBridge.kt",
-      "lf_bytes": 2639,
-      "lf_sha256": "d54eb1a9ee1de5879962322f0345e3e2ffa36b125cd5a042bfd7fa095d017db4"
+      "lf_bytes": 2798,
+      "lf_sha256": "cb9626393970b8ca96ed7065d86145756431b1a97623fb8dee6b765d79b88d25"
     },
     {
       "path": "app/src/main/kotlin/io/github/jqssun/airplay/bridge/RaopCallbackHandler.kt",

@@ -495,6 +495,15 @@ Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeServerAudioStart(
 
 extern "C"
 JNIEXPORT void JNICALL
+Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeServerAudioCaptureFriendly(
+        JNIEnv *env, jobject thiz, jlong handle, jboolean on) {
+    server_ctx_t *ctx = (server_ctx_t *)(intptr_t)handle;
+    if (ctx && ctx->cb_ctx.audio_engine)
+        audio_engine_set_capture_friendly(ctx->cb_ctx.audio_engine, on == JNI_TRUE);
+}
+
+extern "C"
+JNIEXPORT void JNICALL
 Java_io_github_jqssun_airplay_bridge_NativeBridge_nativeServerAudioStop(
         JNIEnv *env, jobject thiz, jlong handle) {
     server_ctx_t *ctx = (server_ctx_t *)(intptr_t)handle;
