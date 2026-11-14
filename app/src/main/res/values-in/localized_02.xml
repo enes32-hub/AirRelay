@@ -35,7 +35,7 @@
     <string name="p_follow_logs">Ikuti peristiwa baru</string>
     <string name="p_setup_before_apply">Selesaikan penyiapan awal dari Hubungkan sebelum menerapkan pengaturan penerima.</string>
     <string name="rec_title">Rekaman</string>
-    <string name="rec_description">Rekam hanya gambar dan suara siaran, tanpa menu atau kontrol AirRelay. Izin audio merekam pemutaran aplikasi, bukan mikrofon. Rekaman sebelum Android 10 tidak bersuara. Konten terlindungi tidak dapat direkam. Setiap rekaman dibatasi 1 jam atau 2 GB; berkas tetap ada hingga dihapus.</string>
+    <string name="rec_description">Merekam hanya gambar dan suara siaran. Maksimal 1 jam atau 2 GB per file.</string>
     <string name="rec_start">Mulai merekam</string>
     <string name="rec_stop">Hentikan rekaman</string>
     <string name="rec_active">● Merekam</string>

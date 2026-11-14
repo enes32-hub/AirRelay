@@ -213,7 +213,7 @@
     <string name="p_follow_logs">ติดตามเหตุการณ์ใหม่</string>
     <string name="p_setup_before_apply">ตั้งค่าเริ่มต้นจากหน้าเชื่อมต่อให้เสร็จก่อนใช้การตั้งค่าตัวรับ</string>
     <string name="rec_title">รายการบันทึก</string>
-    <string name="rec_description">บันทึกเฉพาะภาพและเสียงของสตรีม โดยไม่มีเมนูหรือการควบคุมของ AirRelay สิทธิ์เสียงใช้บันทึกเสียงที่แอปเล่น ไม่ใช่ไมโครโฟน การบันทึกบน Android ก่อนเวอร์ชัน 10 จะไม่มีเสียง ไม่สามารถบันทึกเนื้อหาที่มีการป้องกันได้ แต่ละครั้งจำกัดที่ 1 ชั่วโมงหรือ 2 GB ไฟล์จะอยู่จนกว่าคุณจะลบ</string>
+    <string name="rec_description">บันทึกเฉพาะภาพและเสียงของสตรีม สูงสุด 1 ชั่วโมง หรือ 2 GB ต่อไฟล์</string>
     <string name="rec_start">เริ่มบันทึก</string>
     <string name="rec_stop">หยุดบันทึก</string>
     <string name="rec_active">● กำลังบันทึก</string>

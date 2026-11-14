@@ -35,7 +35,7 @@
     <string name="p_follow_logs">متابعة الأحداث الجديدة</string>
     <string name="p_setup_before_apply">أكمل الإعداد الأولي من «اتصال» قبل تطبيق إعدادات المستقبل.</string>
     <string name="rec_title">التسجيلات</string>
-    <string name="rec_description">سجّل صورة البث وصوته فقط، دون قوائم AirRelay أو عناصر التحكم. إذن الصوت يلتقط تشغيل التطبيق وليس الميكروفون. تكون التسجيلات صامتة قبل Android 10. لا يمكن تسجيل المحتوى المحمي. حد كل تسجيل ساعة واحدة أو 2 غيغابايت؛ تبقى الملفات حتى تحذفها.</string>
+    <string name="rec_description">يسجّل صورة البث وصوته فقط. بحد أقصى ساعة واحدة أو 2 غيغابايت لكل ملف.</string>
     <string name="rec_start">بدء التسجيل</string>
     <string name="rec_stop">إيقاف التسجيل</string>
     <string name="rec_active">● جارٍ التسجيل</string>

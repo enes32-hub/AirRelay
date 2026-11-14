@@ -213,7 +213,7 @@
     <string name="p_follow_logs">Theo dõi sự kiện mới</string>
     <string name="p_setup_before_apply">Hoàn tất thiết lập ban đầu từ mục Kết nối trước khi áp dụng cài đặt bộ thu.</string>
     <string name="rec_title">Bản ghi</string>
-    <string name="rec_description">Chỉ ghi hình ảnh và âm thanh của luồng, không gồm menu hay điều khiển AirRelay. Quyền âm thanh thu tiếng ứng dụng phát, không dùng micrô. Bản ghi trên Android trước phiên bản 10 không có tiếng. Không thể ghi nội dung được bảo vệ. Mỗi bản ghi giới hạn 1 giờ hoặc 2 GB; tệp được giữ đến khi bạn xóa.</string>
+    <string name="rec_description">Chỉ ghi hình ảnh và âm thanh của luồng. Tối đa 1 giờ hoặc 2 GB mỗi tệp.</string>
     <string name="rec_start">Bắt đầu ghi</string>
     <string name="rec_stop">Dừng ghi</string>
     <string name="rec_active">● Đang ghi</string>

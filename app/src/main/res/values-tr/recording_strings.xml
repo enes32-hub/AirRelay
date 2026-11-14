@@ -1,6 +1,6 @@
 <resources>
     <string name="rec_title">Kayıtlar</string>
-    <string name="rec_description">Yalnızca yayının görüntüsü ve sesi kaydedilir; AirRelay menüleri ve denetimleri kayda girmez. Ses izni mikrofonu değil, uygulamanın oynatma sesini yakalar. Android 10 öncesinde kayıtlar sessizdir. Korumalı içerik kaydedilemez. Her kayıt 1 saat veya 2 GB ile sınırlıdır; dosyalar sen silene kadar kalır.</string>
+    <string name="rec_description">Yalnızca yayının görüntüsünü ve sesini kaydeder. Her dosya en fazla 1 saat veya 2 GB olur.</string>
     <string name="rec_start">Kaydı başlat</string>
     <string name="rec_stop">Kaydı durdur</string>
     <string name="rec_active">● Kaydediliyor</string>

@@ -35,7 +35,7 @@
     <string name="p_follow_logs">नई घटनाएँ देखें</string>
     <string name="p_setup_before_apply">रिसीवर सेटिंग लागू करने से पहले «कनेक्ट करें» स्क्रीन से शुरुआती सेटअप पूरा करें।</string>
     <string name="rec_title">रिकॉर्डिंग</string>
-    <string name="rec_description">केवल स्ट्रीम की तस्वीर और आवाज़ रिकॉर्ड होती है, AirRelay के मेनू या नियंत्रण नहीं। ऑडियो अनुमति ऐप की आवाज़ रिकॉर्ड करती है, माइक्रोफ़ोन नहीं। Android 10 से पुराने वर्शन में रिकॉर्डिंग बिना आवाज़ की होती है। सुरक्षित सामग्री रिकॉर्ड नहीं हो सकती। हर रिकॉर्डिंग की सीमा 1 घंटा या 2 GB है; मिटाने तक फ़ाइलें रहती हैं।</string>
+    <string name="rec_description">केवल स्ट्रीम की तस्वीर और आवाज़ रिकॉर्ड करता है। प्रति फ़ाइल अधिकतम 1 घंटा या 2 GB।</string>
     <string name="rec_start">रिकॉर्डिंग शुरू करें</string>
     <string name="rec_stop">रिकॉर्डिंग रोकें</string>
     <string name="rec_active">● रिकॉर्ड हो रहा है</string>

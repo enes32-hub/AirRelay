@@ -213,7 +213,7 @@
     <string name="p_follow_logs">새 이벤트 따라가기</string>
     <string name="p_setup_before_apply">수신기 설정을 적용하기 전에 \'연결\'에서 초기 설정을 완료하세요.</string>
     <string name="rec_title">녹화 목록</string>
-    <string name="rec_description">AirRelay 메뉴나 제어를 제외한 스트림 영상과 오디오만 녹화합니다. 오디오 권한은 마이크가 아닌 앱 재생 소리를 캡처합니다. Android 10 이전에는 소리가 녹음되지 않습니다. 보호된 콘텐츠는 녹화할 수 없습니다. 각 녹화는 1시간 또는 2 GB로 제한되며 파일은 삭제할 때까지 유지됩니다.</string>
+    <string name="rec_description">스트림의 화면과 소리만 녹화합니다. 파일당 최대 1시간 또는 2GB.</string>
     <string name="rec_start">녹화 시작</string>
     <string name="rec_stop">녹화 중지</string>
     <string name="rec_active">● 녹화 중</string>

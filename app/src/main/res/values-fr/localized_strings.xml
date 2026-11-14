@@ -213,7 +213,7 @@
     <string name="p_follow_logs">Suivre les nouveaux événements</string>
     <string name="p_setup_before_apply">Terminez la configuration initiale dans Connexion avant d’appliquer les réglages du récepteur.</string>
     <string name="rec_title">Enregistrements</string>
-    <string name="rec_description">Enregistre uniquement l’image et le son du flux, sans menus ni commandes AirRelay. L’autorisation audio capture le son des apps, pas le microphone. Avant Android 10, les enregistrements sont muets. Les contenus protégés sont exclus. Limite : 1 heure ou 2 Go par enregistrement ; les fichiers restent jusqu’à leur suppression.</string>
+    <string name="rec_description">Enregistre uniquement l’image et le son du flux. 1 heure ou 2 Go maximum par fichier.</string>
     <string name="rec_start">Démarrer l’enregistrement</string>
     <string name="rec_stop">Arrêter l’enregistrement</string>
     <string name="rec_active">● Enregistrement</string>

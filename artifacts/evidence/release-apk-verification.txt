@@ -1,6 +1,6 @@
 Artifact: AirRelay-1.0.9-universal-arm64+v7a.apk
-Size: 18132607 bytes
-SHA-256: ef418473cff6fc9d94450e61dc02a2fa30a43ab0d977f2857a112f048e97a0db
+Size: 18127895 bytes
+SHA-256: cef24e9e1b1d0ab8a712d1f85745cba878aa92dcb8cb81d132e1773998c3e7ff
 
 $ aapt2 dump badging
 package: name='com.airrelay.receiver' versionCode='10' versionName='1.0.9' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'

@@ -213,7 +213,7 @@
     <string name="p_follow_logs">Neue Ereignisse verfolgen</string>
     <string name="p_setup_before_apply">Schließe die Ersteinrichtung unter Verbinden ab, bevor du Empfängereinstellungen anwendest.</string>
     <string name="rec_title">Aufnahmen</string>
-    <string name="rec_description">Nimmt nur Bild und Ton der Übertragung auf, ohne AirRelay-Menüs und Steuerung. Die Audioberechtigung erfasst App-Ton, nicht das Mikrofon. Vor Android 10 ohne Ton. Geschützte Inhalte können nicht aufgenommen werden. Maximal 1 Stunde oder 2 GB pro Aufnahme; Dateien bleiben bis zum Löschen.</string>
+    <string name="rec_description">Nimmt nur Bild und Ton des Streams auf. Pro Datei maximal 1 Stunde oder 2 GB.</string>
     <string name="rec_start">Aufnahme starten</string>
     <string name="rec_stop">Aufnahme stoppen</string>
     <string name="rec_active">● Aufnahme läuft</string>

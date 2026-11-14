@@ -213,7 +213,7 @@
     <string name="p_follow_logs">跟随新事件</string>
     <string name="p_setup_before_apply">应用接收器设置前，请先从“连接”完成初始设置。</string>
     <string name="rec_title">录制内容</string>
-    <string name="rec_description">仅录制串流画面和音频，不包含 AirRelay 菜单或控制栏。音频权限用于捕获应用播放声音，不使用麦克风。Android 10 之前的录制没有声音。无法录制受保护的内容。每次录制上限为 1 小时或 2 GB；文件会一直保留，直到您删除。</string>
+    <string name="rec_description">仅录制画面的图像和声音。每个文件最长 1 小时或 2 GB。</string>
     <string name="rec_start">开始录制</string>
     <string name="rec_stop">停止录制</string>
     <string name="rec_active">● 正在录制</string>

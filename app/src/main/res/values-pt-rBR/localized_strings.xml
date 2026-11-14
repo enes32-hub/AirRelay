@@ -213,7 +213,7 @@
     <string name="p_follow_logs">Acompanhar novos eventos</string>
     <string name="p_setup_before_apply">Conclua a configuração inicial em Conectar antes de aplicar as configurações do receptor.</string>
     <string name="rec_title">Gravações</string>
-    <string name="rec_description">Grava somente imagem e som da transmissão, sem menus ou controles do AirRelay. A permissão de áudio captura o som dos apps, não o microfone. Antes do Android 10, as gravações ficam sem som. Conteúdo protegido não pode ser gravado. Limite: 1 hora ou 2 GB por gravação; arquivos ficam até serem excluídos.</string>
+    <string name="rec_description">Grava apenas a imagem e o som da transmissão. Máximo de 1 hora ou 2 GB por arquivo.</string>
     <string name="rec_start">Iniciar gravação</string>
     <string name="rec_stop">Parar gravação</string>
     <string name="rec_active">● Gravando</string>

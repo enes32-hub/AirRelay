@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <string name="rec_title">Recordings</string>
-  <string name="rec_description">Record only the stream picture and audio, without AirRelay menus or controls. Audio permission captures app playback, not the microphone. Recordings are silent before Android 10. Protected content cannot be recorded. Each recording is limited to 1 hour or 2 GB; files remain until you delete them.</string>
+  <string name="rec_description">Records only the stream\'s picture and sound. Each file is limited to 1 hour or 2 GB.</string>
   <string name="rec_start">Start recording</string>
   <string name="rec_stop">Stop recording</string>
   <string name="rec_active">● Recording</string>

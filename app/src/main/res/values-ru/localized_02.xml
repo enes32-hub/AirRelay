@@ -35,7 +35,7 @@
     <string name="p_follow_logs">Следить за новыми событиями</string>
     <string name="p_setup_before_apply">Завершите начальную настройку в разделе подключения, прежде чем применять настройки приёмника.</string>
     <string name="rec_title">Записи</string>
-    <string name="rec_description">Записывается только изображение и звук трансляции, без меню и управления AirRelay. Разрешение на звук записывает воспроизведение приложения, а не микрофон. До Android 10 записи без звука. Защищённый контент записать нельзя. Предел каждой записи — 1 час или 2 ГБ; файлы хранятся до удаления.</string>
+    <string name="rec_description">Записывает только изображение и звук трансляции. До 1 часа или 2 ГБ на файл.</string>
     <string name="rec_start">Начать запись</string>
     <string name="rec_stop">Остановить запись</string>
     <string name="rec_active">● Запись</string>
