@@ -7,6 +7,7 @@
   <string name="rec_active">● Recording</string>
   <string name="rec_saved">Recording saved.</string>
   <string name="rec_failed">Recording could not be saved.</string>
+  <string name="rec_no_stream">Start mirroring from your device first, then record.</string>
   <string name="rec_unavailable">Recording could not start. Your TV may not support screen capture, or storage or encoder resources may be unavailable.</string>
   <string name="rec_export">Export MP4</string>
   <string name="rec_export_cancelled">Export cancelled or no destination selected.</string>

@@ -22,6 +22,8 @@ class RecordingService : Service() {
     companion object {
         private const val TAG = "RecordingService"
         const val STOP = "recording.stop"
+        /** How long a fresh recording waits for the first mirrored frame before giving up. */
+        private const val FRAME_GRACE_MS = 3_500L
         private val mutable = MutableStateFlow(Status())
         val status = mutable.asStateFlow()
         fun files(context: android.content.Context): List<File> =
@@ -142,6 +144,17 @@ class RecordingService : Service() {
                 captureAudio.start(videoStartedNs)
             }
             mutable.value = Status(active = true)
+            // Nothing is drawn into the recorder surface until the sender delivers a frame. Without
+            // one MediaRecorder still accepts start() but rejects stop() with -1007 and leaves no
+            // file behind, so give the stream a short grace period and fail with a message the user
+            // can act on instead of a silent empty recording.
+            val awaiting = cleanTarget
+            handler.postDelayed({
+                if (!finishing && awaiting != null && awaiting.firstFrameNs.get() == 0L) {
+                    Log.w(TAG, "Recording aborted: no video frames within grace period")
+                    finishCapture(R.string.rec_no_stream)
+                }
+            }, FRAME_GRACE_MS)
         } catch (e: Exception) {
             // Keep the real cause visible: a missing RECORD_AUDIO grant, an unsupported
             // capture size or a MediaRecorder failure are very different problems.
@@ -154,10 +167,17 @@ class RecordingService : Service() {
         if (finishing) return
         finishing = true
         var saved = false
+        // Frame count separates "the encoder rejected our geometry" from "no frame ever reached the
+        // recorder surface"; both lose the file, but only the second one is the user's fault.
+        val frames = cleanTarget?.firstFrameNs?.get() ?: 0L
+        Log.i(TAG, "Recording finishing: framed=${frames != 0L} started=$started error=$error")
         runCatching { CleanRecording.detach() }
         try {
             if (started) { recorder?.stop(); saved = true }
-        } catch (_: Exception) { saved = false }
+        } catch (e: Exception) {
+            Log.w(TAG, "MediaRecorder stop failed: ${e.javaClass.simpleName}: ${e.message} framed=${frames != 0L}")
+            saved = false
+        }
         val sound = audio
         val audioSaved = if (Build.VERSION.SDK_INT >= 29 && sound != null) runCatching { sound.finish() }.isSuccess else false
         audio = null

@@ -219,6 +219,7 @@
     <string name="rec_active">● Đang ghi</string>
     <string name="rec_saved">Đã lưu bản ghi.</string>
     <string name="rec_failed">Không lưu được bản ghi.</string>
+    <string name="rec_no_stream">Hãy bắt đầu phản chiếu màn hình từ thiết bị trước, rồi ghi.</string>
     <string name="rec_unavailable">Không bắt đầu ghi được. TV có thể không hỗ trợ chụp màn hình, hoặc bộ nhớ hay tài nguyên mã hóa không khả dụng.</string>
     <string name="rec_export">Xuất MP4</string>
     <string name="rec_export_cancelled">Đã hủy xuất hoặc chưa chọn nơi lưu.</string>

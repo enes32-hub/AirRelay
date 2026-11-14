@@ -219,6 +219,7 @@
     <string name="rec_active">● 正在录制</string>
     <string name="rec_saved">录制已保存。</string>
     <string name="rec_failed">无法保存录制。</string>
+    <string name="rec_no_stream">请先从设备开始屏幕镜像，然后录制。</string>
     <string name="rec_unavailable">无法开始录制。电视可能不支持屏幕捕获，或存储空间、编码器资源不可用。</string>
     <string name="rec_export">导出 MP4</string>
     <string name="rec_export_cancelled">导出已取消或未选择保存位置。</string>

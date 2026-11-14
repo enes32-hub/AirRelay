@@ -219,6 +219,7 @@
     <string name="rec_active">● Enregistrement</string>
     <string name="rec_saved">Enregistrement sauvegardé.</string>
     <string name="rec_failed">Impossible de sauvegarder l’enregistrement.</string>
+    <string name="rec_no_stream">Lancez d’abord la recopie d’écran depuis votre appareil, puis enregistrez.</string>
     <string name="rec_unavailable">Impossible de démarrer l’enregistrement. Le téléviseur peut ne pas prendre en charge la capture, ou le stockage ou l’encodeur sont indisponibles.</string>
     <string name="rec_export">Exporter en MP4</string>
     <string name="rec_export_cancelled">Export annulé ou aucune destination choisie.</string>

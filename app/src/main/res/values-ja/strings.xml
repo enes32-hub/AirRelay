@@ -219,6 +219,7 @@
     <string name="rec_active">● 録画中</string>
     <string name="rec_saved">録画を保存しました。</string>
     <string name="rec_failed">録画を保存できませんでした。</string>
+    <string name="rec_no_stream">先にデバイスから画面ミラーリングを開始してから録画してください。</string>
     <string name="rec_unavailable">録画を開始できませんでした。テレビが画面キャプチャに非対応か、ストレージまたはエンコーダーのリソースが不足している可能性があります。</string>
     <string name="rec_export">MP4 をエクスポート</string>
     <string name="rec_export_cancelled">エクスポートがキャンセルされたか、保存先が選択されていません。</string>

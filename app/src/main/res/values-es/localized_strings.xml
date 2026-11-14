@@ -219,6 +219,7 @@
     <string name="rec_active">● Grabando</string>
     <string name="rec_saved">Grabación guardada.</string>
     <string name="rec_failed">No se pudo guardar la grabación.</string>
+    <string name="rec_no_stream">Inicia primero la duplicación de pantalla desde tu dispositivo y luego graba.</string>
     <string name="rec_unavailable">No se pudo iniciar la grabación. El televisor podría no admitir capturas, o faltar almacenamiento o recursos de codificación.</string>
     <string name="rec_export">Exportar MP4</string>
     <string name="rec_export_cancelled">Exportación cancelada o sin destino seleccionado.</string>

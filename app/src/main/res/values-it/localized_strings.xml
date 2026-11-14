@@ -219,6 +219,7 @@
     <string name="rec_active">● Registrazione</string>
     <string name="rec_saved">Registrazione salvata.</string>
     <string name="rec_failed">Impossibile salvare la registrazione.</string>
+    <string name="rec_no_stream">Avvia prima la duplicazione dello schermo dal tuo dispositivo, poi registra.</string>
     <string name="rec_unavailable">Impossibile avviare la registrazione. La TV potrebbe non supportare la cattura, oppure spazio o risorse di codifica non sono disponibili.</string>
     <string name="rec_export">Esporta MP4</string>
     <string name="rec_export_cancelled">Esportazione annullata o nessuna destinazione scelta.</string>

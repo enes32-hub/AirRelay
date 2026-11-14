@@ -219,6 +219,7 @@
     <string name="rec_active">● กำลังบันทึก</string>
     <string name="rec_saved">บันทึกแล้ว</string>
     <string name="rec_failed">บันทึกไฟล์ไม่ได้</string>
+    <string name="rec_no_stream">เริ่มการสะท้อนหน้าจอจากอุปกรณ์ของคุณก่อน แล้วจึงบันทึก</string>
     <string name="rec_unavailable">เริ่มบันทึกไม่ได้ ทีวีอาจไม่รองรับการจับภาพหน้าจอ หรือพื้นที่จัดเก็บหรือทรัพยากรตัวเข้ารหัสอาจไม่พร้อมใช้งาน</string>
     <string name="rec_export">ส่งออก MP4</string>
     <string name="rec_export_cancelled">ยกเลิกการส่งออกหรือไม่ได้เลือกปลายทาง</string>

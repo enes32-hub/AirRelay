@@ -41,6 +41,7 @@
     <string name="rec_active">● جارٍ التسجيل</string>
     <string name="rec_saved">حُفظ التسجيل.</string>
     <string name="rec_failed">تعذر حفظ التسجيل.</string>
+    <string name="rec_no_stream">ابدأ انعكاس الشاشة من جهازك أولاً، ثم ابدأ التسجيل.</string>
     <string name="rec_unavailable">تعذر بدء التسجيل. قد لا يدعم التلفزيون التقاط الشاشة، أو قد لا تتوفر مساحة تخزين أو موارد ترميز.</string>
     <string name="rec_export">تصدير MP4</string>
     <string name="rec_export_cancelled">أُلغي التصدير أو لم تُحدد وجهة.</string>

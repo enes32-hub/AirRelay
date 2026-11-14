@@ -6,6 +6,7 @@
     <string name="rec_active">● Kaydediliyor</string>
     <string name="rec_saved">Kayıt kaydedildi.</string>
     <string name="rec_failed">Kayıt kaydedilemedi.</string>
+    <string name="rec_no_stream">Önce cihazından ekran yansıtmayı başlat, sonra kaydet.</string>
     <string name="rec_unavailable">Kayıt başlatılamadı. TV’n ekran yakalamayı desteklemiyor olabilir ya da depolama veya kodlayıcı kaynakları yetersiz olabilir.</string>
     <string name="rec_export">MP4 dışa aktar</string>
     <string name="rec_export_cancelled">Dışa aktarma iptal edildi veya hedef seçilmedi.</string>

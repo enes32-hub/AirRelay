@@ -219,6 +219,7 @@
     <string name="rec_active">● Aufnahme läuft</string>
     <string name="rec_saved">Aufnahme gespeichert.</string>
     <string name="rec_failed">Aufnahme konnte nicht gespeichert werden.</string>
+    <string name="rec_no_stream">Starte zuerst die Bildschirmsynchronisierung auf deinem Gerät und nimm dann auf.</string>
     <string name="rec_unavailable">Aufnahme konnte nicht starten. Dein Fernseher unterstützt möglicherweise keine Bildschirmaufnahme, oder Speicher bzw. Encoder sind nicht verfügbar.</string>
     <string name="rec_export">MP4 exportieren</string>
     <string name="rec_export_cancelled">Export abgebrochen oder kein Ziel gewählt.</string>

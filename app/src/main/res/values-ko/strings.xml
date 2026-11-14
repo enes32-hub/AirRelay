@@ -219,6 +219,7 @@
     <string name="rec_active">● 녹화 중</string>
     <string name="rec_saved">녹화를 저장했습니다.</string>
     <string name="rec_failed">녹화를 저장하지 못했습니다.</string>
+    <string name="rec_no_stream">먼저 기기에서 화면 미러링을 시작한 다음 녹화하세요.</string>
     <string name="rec_unavailable">녹화를 시작하지 못했습니다. TV가 화면 캡처를 지원하지 않거나 저장 공간 또는 인코더 자원이 부족할 수 있습니다.</string>
     <string name="rec_export">MP4 내보내기</string>
     <string name="rec_export_cancelled">내보내기를 취소했거나 저장 위치를 선택하지 않았습니다.</string>

@@ -41,6 +41,7 @@
     <string name="rec_active">● Merekam</string>
     <string name="rec_saved">Rekaman disimpan.</string>
     <string name="rec_failed">Rekaman tidak dapat disimpan.</string>
+    <string name="rec_no_stream">Mulai pencerminan layar dari perangkat Anda dulu, lalu rekam.</string>
     <string name="rec_unavailable">Rekaman tidak dapat dimulai. TV mungkin tidak mendukung perekaman layar, atau penyimpanan maupun sumber daya encoder tidak tersedia.</string>
     <string name="rec_export">Ekspor MP4</string>
     <string name="rec_export_cancelled">Ekspor dibatalkan atau tujuan belum dipilih.</string>

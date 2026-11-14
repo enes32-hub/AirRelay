@@ -11,8 +11,8 @@
     },
     {
       "path": "app/build.gradle.kts",
-      "lf_bytes": 6109,
-      "lf_sha256": "f9cb651d3517c3d35fce2ef847bc5752ca34095e381693ca65d617d8f08a4dae"
+      "lf_bytes": 6110,
+      "lf_sha256": "e30be362f4c63199b5e1e9569729b12fa824193e74d9a3ebc25b7a868fd556ce"
     },
     {
       "path": "app/proguard-rules.pro",

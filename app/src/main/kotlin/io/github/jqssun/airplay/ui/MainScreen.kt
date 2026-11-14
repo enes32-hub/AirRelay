@@ -262,7 +262,8 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
                     ProductAlertDialog(onDismissRequest = { showRecordings = false },
                         title = { Text(stringResource(R.string.rec_options_title)) },
                         text = { Column(Modifier.heightIn(max = 400.dp).verticalScroll(rememberScrollState())) {
-                            RecordingPanel(onStarted = { showRecordings = false }, showLibrary = false)
+                            RecordingPanel(onStarted = { showRecordings = false }, showLibrary = false,
+                                canRecord = state.firstFrameSubmitted || mediaActive)
                         } },
                         confirmButton = { TvAction(stringResource(R.string.rec_close), { showRecordings = false }) },
                         dismissButton = {})

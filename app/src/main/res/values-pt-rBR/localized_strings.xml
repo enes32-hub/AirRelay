@@ -219,6 +219,7 @@
     <string name="rec_active">● Gravando</string>
     <string name="rec_saved">Gravação salva.</string>
     <string name="rec_failed">Não foi possível salvar a gravação.</string>
+    <string name="rec_no_stream">Inicie primeiro o espelhamento de tela no seu dispositivo e depois grave.</string>
     <string name="rec_unavailable">Não foi possível iniciar a gravação. A TV pode não aceitar captura de tela, ou faltar armazenamento ou recursos de codificação.</string>
     <string name="rec_export">Exportar MP4</string>
     <string name="rec_export_cancelled">Exportação cancelada ou nenhum destino escolhido.</string>
