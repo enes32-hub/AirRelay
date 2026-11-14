@@ -110,7 +110,7 @@ class RecordingService : Service() {
             capture.setVideoEncoder(MediaRecorder.VideoEncoder.H264)
             capture.setVideoSize(width, height)
             capture.setVideoFrameRate(30)
-            capture.setVideoEncodingBitRate(if (maxHeight == 1080) 8_000_000 else 4_000_000)
+            capture.setVideoEncodingBitRate(if (maxHeight == 1080) 9_000_000 else 5_000_000)
             capture.setOutputFile(file.absolutePath)
             capture.setMaxFileSize(minOf(2L * 1024 * 1024 * 1024, (folder.usableSpace - 128L * 1024 * 1024) / 2))
             capture.setMaxDuration(60 * 60 * 1000)

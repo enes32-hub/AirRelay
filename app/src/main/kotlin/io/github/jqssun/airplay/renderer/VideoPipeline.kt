@@ -249,7 +249,10 @@ class VideoPipeline {
         val core = egl ?: return
         if (recordingFailed || !hasFrame || videoW <= 0 || videoH <= 0) return
         val now = System.nanoTime()
-        if (recordLastNs != 0L && now - recordLastNs < 33_000_000L) return
+        // Only a flood guard: the render loop already paces frames, so a 30 fps cap dropped real
+        // frames and recordings landed at ~24 fps. 16 ms keeps a 120 Hz panel from overrunning the
+        // encoder without touching the 30/60 fps cadence the sender actually delivers.
+        if (recordLastNs != 0L && now - recordLastNs < 16_000_000L) return
         try {
             if (recordWindow == EGL14.EGL_NO_SURFACE) recordWindow = core.windowSurface(target.surface)
             check(recordWindow != EGL14.EGL_NO_SURFACE && core.makeCurrent(recordWindow))

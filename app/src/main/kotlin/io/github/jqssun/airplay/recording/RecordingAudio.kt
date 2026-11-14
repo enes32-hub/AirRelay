@@ -15,6 +15,12 @@ class RecordingAudio(private val projection: MediaProjection, private val output
     @Volatile private var failure: Throwable? = null
     private var thread: Thread? = null
     private var input: AudioRecord? = null
+    /**
+     * Peak absolute PCM sample seen while capturing. Playback capture returns digital silence for
+     * audio that never reaches a capturable route (HDMI passthrough, offload), and Android reports
+     * no error for it, so the caller needs this to avoid shipping a silent soundtrack.
+     */
+    @Volatile private var peak: Int = 0
     var offsetUs: Long = 0; private set
 
     @androidx.annotation.RequiresPermission(android.Manifest.permission.RECORD_AUDIO)
@@ -72,6 +78,7 @@ class RecordingAudio(private val projection: MediaProjection, private val output
                             eosQueued = true
                             eosDeadline = SystemClock.elapsedRealtime() + 3000
                         } else {
+                            if (count > 0) peak = maxOf(peak, peakOf(buffer, count))
                             codec.queueInputBuffer(index, 0, count, pts, 0)
                             frames += count / 4
                             if (count == 0) Thread.sleep(5)
@@ -113,6 +120,20 @@ class RecordingAudio(private val projection: MediaProjection, private val output
         check(!worker.isAlive) { "Audio capture did not stop" }
         failure?.let { throw IllegalStateException("Audio capture failed", it) }
         check(output.length() > 0)
+        // A soundtrack of pure zeros means Android never routed this audio to a capturable output.
+        check(peak > 0) { "Playback audio capture produced silence" }
+    }
+
+    private fun peakOf(buffer: ByteBuffer, length: Int): Int {
+        var highest = 0
+        var index = 0
+        while (index + 1 < length) {
+            val sample = (buffer.get(index).toInt() shl 8) or (buffer.get(index + 1).toInt() and 0xFF)
+            val magnitude = kotlin.math.abs(sample.toShort().toInt())
+            if (magnitude > highest) highest = magnitude
+            index += 2
+        }
+        return highest
     }
 }
 
