@@ -17,7 +17,7 @@
 
     <!-- This is an Android TV receiver.  Declaring Leanback as required makes
          package installers classify the APK as TV-compatible. -->
-    <uses-feature android:name="android.software.leanback" android:required="true" />
+    <uses-feature android:name="android.software.leanback" android:required="false" />
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
     <uses-feature android:name="android.hardware.faketouch" android:required="false" />
     <!-- Local discovery works over Ethernet too; Wi-Fi permissions must not

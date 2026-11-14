@@ -11,7 +11,7 @@
     <string name="setting_remote_bitrate_desc">Depends on the internet video’s available quality options. Does not change screen mirroring.</string>
     <string name="p_about">About</string>
     <string name="p_version">Version %1$s</string>
-    <string name="p_about_body">Share your screen, videos and audio with your TV over your local network.</string>
+    <string name="p_about_body">Share your screen, videos and audio with this device over your local network.</string>
     <string name="p_trademark_notice">AirPlay, iPhone, iPad and Mac are trademarks of Apple Inc. This app is not affiliated with, endorsed by or sponsored by Apple Inc.</string>
     <string name="p_open_source_licenses">Component licences</string>
     <string name="p_licenses_unavailable">Licence information could not be opened. Please contact the app provider.</string>

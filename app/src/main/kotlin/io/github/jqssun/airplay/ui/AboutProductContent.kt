@@ -57,10 +57,11 @@ fun AboutProductContent(onModalChange: (Boolean) -> Unit = {}) {
     val licensesFocus = remember { FocusRequester() }
     val blocked = LocalBlockingOverlay.current
     val inputEnabled = LocalTvInputEnabled.current
+    val tv = isTv()
     SideEffect { onModalChange(openDoc != null && !blocked) }
     DisposableEffect(Unit) { onDispose { onModalChange(false) } }
-    LaunchedEffect(openDoc, returnDoc, blocked, inputEnabled) {
-        if (openDoc == null && returnDoc != null && !blocked && inputEnabled) {
+    LaunchedEffect(openDoc, returnDoc, blocked, inputEnabled, tv) {
+        if (tv && openDoc == null && returnDoc != null && !blocked && inputEnabled) {
             val target = if (returnDoc == "privacy") privacyFocus else licensesFocus
             target.requestFocusUntilLanded()
             returnDoc = null
@@ -73,8 +74,10 @@ fun AboutProductContent(onModalChange: (Boolean) -> Unit = {}) {
                 .fillMaxWidth()
                 .background(AirRelayColors.Panel, RoundedCornerShape(18.dp))
                 .border(1.dp, AirRelayColors.Border.copy(alpha = .6f), RoundedCornerShape(18.dp))
-                .focusRing(RoundedCornerShape(18.dp))
-                .focusable(enabled = inputEnabled)
+                .thenIf(tv) {
+                    focusRing(RoundedCornerShape(18.dp))
+                        .focusable(enabled = inputEnabled)
+                }
                 .padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
@@ -183,10 +186,11 @@ private fun LegalDocumentDialog(
     val scope = rememberCoroutineScope()
     val closeFocus = remember { FocusRequester() }
     val contentFocus = remember { FocusRequester() }
+    val tv = isTv()
     val density = LocalDensity.current
     val stepPx = with(density) { 160.dp.toPx() }
     val pagePx = with(density) { 360.dp.toPx() }
-    LaunchedEffect(asset) { contentFocus.requestFocusUntilLanded() }
+    LaunchedEffect(asset, tv) { if (tv) contentFocus.requestFocusUntilLanded() }
 
     ProductDialog(
         onDismissRequest = onDismiss,
@@ -227,36 +231,38 @@ private fun LegalDocumentDialog(
                         .background(AirRelayColors.Background, RoundedCornerShape(14.dp))
                         .border(1.dp, AirRelayColors.Border.copy(alpha = .7f), RoundedCornerShape(14.dp))
                         .clipToBounds()
-                        .focusRing(RoundedCornerShape(14.dp))
-                        .focusRequester(contentFocus)
-                        .onPreviewKeyEvent { event ->
-                            if (event.type != KeyEventType.KeyDown) return@onPreviewKeyEvent false
-                            when (event.nativeKeyEvent.keyCode) {
-                                android.view.KeyEvent.KEYCODE_DPAD_DOWN -> {
-                                    if (scroll.canScrollForward) scope.launch { scroll.scrollBy(stepPx) }
-                                    true
-                                }
-                                android.view.KeyEvent.KEYCODE_DPAD_UP -> {
-                                    if (scroll.canScrollBackward) {
-                                        scope.launch { scroll.scrollBy(-stepPx) }
-                                        true
-                                    } else {
-                                        runCatching { closeFocus.requestFocus() }
-                                        true
+                        .thenIf(tv) {
+                            focusRing(RoundedCornerShape(14.dp))
+                                .focusRequester(contentFocus)
+                                .onPreviewKeyEvent { event ->
+                                    if (event.type != KeyEventType.KeyDown) return@onPreviewKeyEvent false
+                                    when (event.nativeKeyEvent.keyCode) {
+                                        android.view.KeyEvent.KEYCODE_DPAD_DOWN -> {
+                                            if (scroll.canScrollForward) scope.launch { scroll.scrollBy(stepPx) }
+                                            true
+                                        }
+                                        android.view.KeyEvent.KEYCODE_DPAD_UP -> {
+                                            if (scroll.canScrollBackward) {
+                                                scope.launch { scroll.scrollBy(-stepPx) }
+                                                true
+                                            } else {
+                                                runCatching { closeFocus.requestFocus() }
+                                                true
+                                            }
+                                        }
+                                        android.view.KeyEvent.KEYCODE_PAGE_DOWN -> {
+                                            if (scroll.canScrollForward) scope.launch { scroll.scrollBy(pagePx) }
+                                            true
+                                        }
+                                        android.view.KeyEvent.KEYCODE_PAGE_UP -> {
+                                            if (scroll.canScrollBackward) scope.launch { scroll.scrollBy(-pagePx) }
+                                            true
+                                        }
+                                        else -> false
                                     }
                                 }
-                                android.view.KeyEvent.KEYCODE_PAGE_DOWN -> {
-                                    if (scroll.canScrollForward) scope.launch { scroll.scrollBy(pagePx) }
-                                    true
-                                }
-                                android.view.KeyEvent.KEYCODE_PAGE_UP -> {
-                                    if (scroll.canScrollBackward) scope.launch { scroll.scrollBy(-pagePx) }
-                                    true
-                                }
-                                else -> false
-                            }
-                        }
-                        .focusable(),
+                                .focusable()
+                        },
                 ) {
                     if (blocks == null) {
                         item {

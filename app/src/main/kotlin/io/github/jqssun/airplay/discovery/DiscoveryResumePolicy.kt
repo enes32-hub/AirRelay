@@ -6,5 +6,5 @@ class DiscoveryResumePolicy {
     fun registrationStarted(now: Long) { lastRegistration = now }
     fun shouldRefresh(now: Long, running: Boolean, lan: Boolean, busy: Boolean,
                       registering: Boolean): Boolean = running && lan && !busy && !registering &&
-        (lastRegistration?.let { now - it >= 30_000L } ?: true)
+        (lastRegistration?.let { now - it >= 5_000L } ?: true)
 }

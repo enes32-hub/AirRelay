@@ -22,10 +22,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun RecordingPanel(onStarted: () -> Unit = {}, canRecord: Boolean = true, canPlay: Boolean = false,
     onModalChange: (Boolean) -> Unit = {}, showLibrary: Boolean = true) {
     val context = LocalContext.current
+    val tv = isTv()
     val locale = androidx.compose.ui.platform.LocalConfiguration.current.locales[0]
     val state by RecordingService.status.collectAsStateWithLifecycle()
     var starting by rememberSaveable { mutableStateOf(false) }
@@ -98,9 +100,14 @@ fun RecordingPanel(onStarted: () -> Unit = {}, canRecord: Boolean = true, canPla
         // AudioPlaybackCapture does not exist before API 29; say so only where it applies.
         if (android.os.Build.VERSION.SDK_INT < 29)
             Text(stringResource(R.string.rec_audio_min_android), color = AirRelayColors.Muted)
-        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        val qualityChips: @Composable () -> Unit = {
             listOf(720, 1080).forEach { value -> TvAction("${value}p", { quality = value; preferences.edit().putInt("quality", value).apply() },
                 selected = quality == value, enabled = !state.active, compact = true, focusId = "record.quality.$value") }
+        }
+        if (tv) {
+            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) { qualityChips() }
+        } else {
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) { qualityChips() }
         }
         TvAction(stringResource(if (state.active) R.string.rec_stop else R.string.rec_start), {
             message = 0
@@ -129,7 +136,7 @@ fun RecordingPanel(onStarted: () -> Unit = {}, canRecord: Boolean = true, canPla
             } ?: stringResource(R.string.rec_duration_unknown),
                 android.text.format.Formatter.formatFileSize(context, file.length()),
                 entry.height?.let { "${it}p" } ?: "MP4").joinToString(" · "), color = AirRelayColors.Muted)
-            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            val itemActions: @Composable () -> Unit = {
             TvAction(stringResource(R.string.rec_watch), {
                 runCatching { context.startActivity(Intent(context, io.github.jqssun.airplay.recording.RecordingPlayerActivity::class.java)
                     .putExtra("recording", file.name)) }.onFailure { message = R.string.rec_play_failed }
@@ -150,6 +157,11 @@ fun RecordingPanel(onStarted: () -> Unit = {}, canRecord: Boolean = true, canPla
                     runCatching { export.launch(file.name) }.onFailure { selected = null; message = R.string.rec_export_failed }
                 }
             }, enabled = !exporting, compact = true, focusId = "record.export.${file.name}")
+            }
+            if (tv) {
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) { itemActions() }
+            } else {
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) { itemActions() }
             }
         }
     }

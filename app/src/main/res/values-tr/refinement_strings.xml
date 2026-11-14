@@ -8,10 +8,10 @@
     <string name="r2_audio_body">Bir ses oturumu etkin. Sesi telefonundan kontrol et.</string>
     <string name="r2_connection_guide">Bağlantı rehberi</string>
     <string name="r2_notice_dismiss">Anladım</string>
-    <string name="r2_cannot_find">TV listede görünmüyor mu?</string>
-    <string name="r2_step1">Cihazını ve TV’yi aynı yerel ağa bağla.</string>
+    <string name="r2_cannot_find">Bu alıcı listede görünmüyor mu?</string>
+    <string name="r2_step1">Cihazını ve bu alıcıyı aynı yerel ağa bağla.</string>
     <string name="r2_step2">Denetim Merkezi → Ekran Yansıtma.</string>
-    <string name="r2_step3">Burada gösterilen adı seç; istenirse TV kodunu gir.</string>
+    <string name="r2_step3">Burada gösterilen adı seç; istenirse eşleştirme kodunu gir.</string>
     <string name="r2_settings_intro">Bağlantı, görüntü ve başlangıç tercihlerini düzenle.</string>
     <string name="r2_pending_brief">Yayın ayarları sonraki alıcı başlangıcında etkinleşir.</string>
     <string name="r2_discard_settings">Değişikliklerden vazgeç</string>

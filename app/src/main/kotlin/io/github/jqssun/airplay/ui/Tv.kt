@@ -24,13 +24,16 @@ import androidx.compose.ui.input.key.KeyEventType
 import androidx.compose.ui.input.key.key
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.shape.RoundedCornerShape
 
 fun Context.isTvDevice(): Boolean =
-    packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK) ||
+    (resources.configuration.uiMode and Configuration.UI_MODE_TYPE_MASK) ==
+        Configuration.UI_MODE_TYPE_TELEVISION ||
+        packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK) ||
         (getSystemService(Context.UI_MODE_SERVICE) as UiModeManager).currentModeType ==
         Configuration.UI_MODE_TYPE_TELEVISION
 
@@ -48,8 +51,16 @@ fun Context.mainActivity(): MainActivity? {
 @Composable
 fun isTv(): Boolean {
     val ctx = LocalContext.current
-    return remember(ctx) { ctx.isTvDevice() }
+    val uiMode = LocalConfiguration.current.uiMode
+    return remember(ctx, uiMode) {
+        (uiMode and Configuration.UI_MODE_TYPE_MASK) == Configuration.UI_MODE_TYPE_TELEVISION ||
+            ctx.isTvDevice()
+    }
 }
+
+@Composable
+fun isWideScreen(thresholdDp: Int = 600): Boolean =
+    LocalConfiguration.current.screenWidthDp >= thresholdDp
 
 fun Modifier.dpadFocus(shape: Shape = RoundedCornerShape(12.dp)): Modifier = composed {
     var focused by remember { mutableStateOf(false) }

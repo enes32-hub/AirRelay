@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -27,9 +28,11 @@ import io.github.jqssun.airplay.viewmodel.MainViewModel
 
 @Composable
 fun PairingDialog(pin: String, onCancel: () -> Unit) = DialogInputScope {
+    val tv = isTv()
+    val narrow = !tv && LocalConfiguration.current.screenWidthDp < 420
     val cancel = remember { FocusRequester() }
     var focused by remember { mutableStateOf(false) }
-    LaunchedEffect(pin) { cancel.requestFocusUntilLanded(isFocused = { focused }) }
+    LaunchedEffect(pin, tv) { if (tv) cancel.requestFocusUntilLanded(isFocused = { focused }) }
     ProductDialog(onDismissRequest = onCancel, properties = DialogProperties(
         dismissOnClickOutside = false, usePlatformDefaultWidth = false,
         securePolicy = SecureFlagPolicy.SecureOn)) {
@@ -40,12 +43,12 @@ fun PairingDialog(pin: String, onCancel: () -> Unit) = DialogInputScope {
                 Text(stringResource(R.string.r2_pair_eyebrow), style = MaterialTheme.typography.labelSmall, color = AirRelayColors.Accent)
                 Text(stringResource(R.string.p_pair_title), style = MaterialTheme.typography.headlineMedium)
                 Text(stringResource(R.string.p_pair_body), style = MaterialTheme.typography.bodyMedium, color = AirRelayColors.Muted)
-                Row(Modifier.fillMaxWidth().padding(vertical = 8.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                Row(Modifier.fillMaxWidth().padding(vertical = 8.dp), horizontalArrangement = Arrangement.spacedBy(if (narrow) 6.dp else 10.dp)) {
                     pin.forEach { digit ->
-                        Box(Modifier.weight(1f).heightIn(min = 86.dp).background(AirRelayColors.Background, RoundedCornerShape(16.dp))
+                        Box(Modifier.weight(1f).heightIn(min = if (narrow) 64.dp else 86.dp).background(AirRelayColors.Background, RoundedCornerShape(16.dp))
                             .border(1.dp, AirRelayColors.Accent.copy(alpha = .45f), RoundedCornerShape(16.dp)).padding(vertical = 12.dp),
                             contentAlignment = Alignment.Center) {
-                            Text(digit.toString(), fontSize = if (pin.length > 6) 30.sp else 48.sp,
+                            Text(digit.toString(), fontSize = if (pin.length > 6 || narrow) 30.sp else 48.sp,
                                 fontFamily = FontFamily.Monospace, fontWeight = FontWeight.SemiBold, color = AirRelayColors.Text)
                         }
                     }
@@ -146,9 +149,10 @@ fun ReceiverSetupDialog(viewModel: MainViewModel, onDismiss: () -> Unit) = Dialo
 @Composable
 fun ConfirmReceiverAction(title: String, body: String, confirmLabel: String,
     onConfirm: () -> Unit, onCancel: () -> Unit) = DialogInputScope {
+    val tv = isTv()
     val safe = remember { FocusRequester() }
     var focused by remember { mutableStateOf(false) }
-    LaunchedEffect(Unit) { safe.requestFocusUntilLanded(isFocused = { focused }) }
+    LaunchedEffect(tv) { if (tv) safe.requestFocusUntilLanded(isFocused = { focused }) }
     ProductAlertDialog(onDismissRequest = onCancel, shape = RoundedCornerShape(26.dp), containerColor = AirRelayColors.Panel,
         title = { Text(title) }, text = { Text(body) },
         confirmButton = { TvAction(confirmLabel, onConfirm) },

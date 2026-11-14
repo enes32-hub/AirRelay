@@ -12,7 +12,7 @@
     {
       "path": "app/build.gradle.kts",
       "lf_bytes": 6110,
-      "lf_sha256": "e30be362f4c63199b5e1e9569729b12fa824193e74d9a3ebc25b7a868fd556ce"
+      "lf_sha256": "a114acdbf7ddea08a1c5f368e63cc6ef72b37bbd2b0a641245f56817e4bbcdc5"
     },
     {
       "path": "app/proguard-rules.pro",
@@ -21,8 +21,8 @@
     },
     {
       "path": "app/src/main/AndroidManifest.xml",
-      "lf_bytes": 4587,
-      "lf_sha256": "857b07b50123e991ba26104886cf5b6b65649374bfd5eb2f2d45970798795b66"
+      "lf_bytes": 4588,
+      "lf_sha256": "36473cc480f428961e63cf2a478464a4bb110f59b52d37bbbf9e741dc10d6573"
     },
     {
       "path": "app/src/main/cpp/CMakeLists.txt",
@@ -61,8 +61,8 @@
     },
     {
       "path": "app/src/main/cpp/audio_output.h",
-      "lf_bytes": 8452,
-      "lf_sha256": "143498176bc27e1621150500807ca8b59c287bf13201bce17625ded66f39adc7"
+      "lf_bytes": 8809,
+      "lf_sha256": "2e23292dae4d5810db12c438fcd0b9909a9895ae9689ff4c0235a6a38a7a3b44"
     },
     {
       "path": "app/src/main/cpp/audio_time.h",
@@ -52756,8 +52756,8 @@
     },
     {
       "path": "app/src/main/cpp/timeline_buffer.h",
-      "lf_bytes": 17586,
-      "lf_sha256": "a9ca7fd8f94a2aefd0ecbedaa43e22bcb6a9c9d43bd32e9739e35fb30308da29"
+      "lf_bytes": 17692,
+      "lf_sha256": "8b8b16fbba84bdc3b12c5bf4790edce2ba1be876774bcb41dc1c2ff447f24dc5"
     },
     {
       "path": "app/src/main/kotlin/io/github/jqssun/airplay/Prefs.kt",
@@ -52831,8 +52831,8 @@
     },
     {
       "path": "app/src/main/kotlin/io/github/jqssun/airplay/ui/VideoSurfaceView.kt",
-      "lf_bytes": 3383,
-      "lf_sha256": "450a18e97af60894cced1708b3328b146a300e53f05f499ce2a67f591f774fed"
+      "lf_bytes": 5098,
+      "lf_sha256": "6988eb57617decd9576abf7dd328e0be8886d51abbc294b803ae9612e1cacc6f"
     },
     {
       "path": "build.gradle.kts",

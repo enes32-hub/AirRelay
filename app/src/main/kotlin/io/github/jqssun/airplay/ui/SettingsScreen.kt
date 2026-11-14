@@ -369,7 +369,7 @@ private fun SettingResolution(
                             onValueChange(key)
                         },
                         label = { Text(label) },
-                        modifier = Modifier.dpadFocus()
+                        modifier = Modifier.heightIn(min = if (isTv()) 32.dp else 48.dp).dpadFocus()
                     )
                     presets.forEach { (key, label) -> presetChip(key, label) }
                     FilterChip(
@@ -377,7 +377,7 @@ private fun SettingResolution(
                         selected = !isPreset || editing,
                         onClick = { editing = true },
                         label = { Text(stringResource(R.string.chip_custom)) },
-                        modifier = Modifier.dpadFocus()
+                        modifier = Modifier.heightIn(min = if (isTv()) 32.dp else 48.dp).dpadFocus()
                     )
                     devicePresets.forEach { (key, label) -> presetChip(key, label) }
                 }
@@ -390,7 +390,7 @@ private fun SettingResolution(
                             onValueChange = { width = it.filter { c -> c.isDigit() }.take(5) },
                             singleLine = true,
                             label = { Text(stringResource(R.string.setting_resolution_width)) },
-                            keyboardOptions = KeyboardOptions(showKeyboardOnFocus = false,
+                            keyboardOptions = KeyboardOptions(showKeyboardOnFocus = !isTv(),
                                 keyboardType = KeyboardType.Number,
                                 imeAction = ImeAction.Next
                             ),
@@ -402,7 +402,7 @@ private fun SettingResolution(
                             onValueChange = { height = it.filter { c -> c.isDigit() }.take(5) },
                             singleLine = true,
                             label = { Text(stringResource(R.string.setting_resolution_height)) },
-                            keyboardOptions = KeyboardOptions(showKeyboardOnFocus = false,
+                            keyboardOptions = KeyboardOptions(showKeyboardOnFocus = !isTv(),
                                 keyboardType = KeyboardType.Number,
                                 imeAction = ImeAction.Done
                             ),
@@ -451,7 +451,7 @@ private fun SettingTextField(label: String, value: String, onCommit: (String) ->
                     !valid && range != null -> Text(stringResource(R.string.r2_invalid_number, range.first, range.last))
                     description != null -> Text(description)
                 }
-            }, keyboardOptions = KeyboardOptions(keyboardType = if (range == null) KeyboardType.Text else KeyboardType.Number, imeAction = ImeAction.Done, showKeyboardOnFocus = false),
+            }, keyboardOptions = KeyboardOptions(keyboardType = if (range == null) KeyboardType.Text else KeyboardType.Number, imeAction = ImeAction.Done, showKeyboardOnFocus = !isTv()),
             keyboardActions = KeyboardActions(onDone = { if (valid) { if (text != value) onCommit(text); keyboard?.hide() } }),
             modifier = Modifier.fillMaxWidth().tvFocusId("advanced.field.$key", LocalTvInputEnabled.current))
         TvAction(stringResource(R.string.p_save), { onCommit(text) }, enabled = valid && text != value,
@@ -487,7 +487,7 @@ private fun SettingChipField(
                         selected = !isPreset || editing,
                         onClick = { editing = true },
                         label = { Text(stringResource(R.string.chip_custom)) },
-                        modifier = Modifier.dpadFocus()
+                        modifier = Modifier.heightIn(min = if (isTv()) 32.dp else 48.dp).dpadFocus()
                     )
                 }
                 if (editing || !isPreset) {
@@ -499,7 +499,7 @@ private fun SettingChipField(
                         singleLine = true,
                         isError = !validate(text),
                         label = { Text(placeholder) },
-                        keyboardOptions = KeyboardOptions(showKeyboardOnFocus = false,
+                        keyboardOptions = KeyboardOptions(showKeyboardOnFocus = !isTv(),
                             keyboardType = keyboardType,
                             imeAction = ImeAction.Done
                         ),
@@ -534,7 +534,7 @@ private fun ChipRow(
                 selected = value == key,
                 onClick = { onSelect(key) },
                 label = { Text(label) },
-                modifier = Modifier.dpadFocus()
+                modifier = Modifier.heightIn(min = if (isTv()) 32.dp else 48.dp).dpadFocus()
             )
         }
         trailing()

@@ -1,9 +1,9 @@
-Artifact: AirRelay-1.0.9-universal-arm64+v7a.apk
-Size: 18129887 bytes
-SHA-256: cf00ca5178531db0ce956b66995bc60256df19eefdd09b0c88fe01f5ab21a008
+Artifact: AirRelay-1.1.0-universal-arm64+v7a.apk
+Size: 18149043 bytes
+SHA-256: 76575b593014b85ade89e24690fc4ef81089284817dd84a00b491aa3277e9abe
 
 $ aapt2 dump badging
-package: name='com.airrelay.receiver' versionCode='10' versionName='1.0.9' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+package: name='com.airrelay.receiver' versionCode='11' versionName='1.1.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
 minSdkVersion:'24'
 targetSdkVersion:'36'
 uses-permission: name='android.permission.INTERNET'
@@ -123,7 +123,7 @@ feature-group: label=''
   uses-feature-not-required: name='android.hardware.telephony'
   uses-feature-not-required: name='android.hardware.touchscreen'
   uses-feature-not-required: name='android.hardware.wifi'
-  uses-feature: name='android.software.leanback'
+  uses-feature-not-required: name='android.software.leanback'
 main
 other-activities
 other-receivers
@@ -141,5 +141,5 @@ Signer #1 certificate SHA-1 digest: e4ce9bd3fe78ca3aa80f46181c3303f410d16517
 Signer #1 certificate MD5 digest: 51587be4567aaab86e87bcae16047c73
 
 $ zipalign -c -P 16 -v 4
-16214532 resources.arsc (OK)
+16230912 resources.arsc (OK)
 Verification successful

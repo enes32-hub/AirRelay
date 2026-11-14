@@ -30,7 +30,7 @@
     <string name="setting_aac">AAC desteğini duyur</string>
     <string name="setting_aac_desc">Ekran yansıtma sesinde kullanılan AAC-ELD/AAC-LC bilgisini ağ ilanına ekle.</string>
     <string name="setting_launch_on_connect">Yayın geldiğinde ekrana getir</string>
-    <string name="setting_launch_on_connect_desc">Yeni bir yayın başladığında uygulamayı öne getir. TV izinleri geçerlidir.</string>
+    <string name="setting_launch_on_connect_desc">Yeni bir yayın başladığında uygulamayı öne getir. Sistem izinleri geçerlidir.</string>
     <string name="setting_launch_on_connect_no_permission">Otomatik görüntüleme için diğer uygulamaların üzerinde gösterme izni gerekiyor.</string>
     <string name="setting_resolution">Çözünürlük</string>
     <string name="setting_resolution_desc">Göndericiye önerilen en yüksek görüntü boyutu.</string>

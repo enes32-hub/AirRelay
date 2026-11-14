@@ -6,11 +6,14 @@ import android.view.Surface
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusGroup
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -18,8 +21,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.*
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.ProgressBarRangeInfo
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.progressBarRangeInfo
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.material3.*
@@ -35,15 +41,21 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.input.key.KeyEventType
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalAccessibilityManager
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.jqssun.airplay.R
 import io.github.jqssun.airplay.MainActivity
@@ -92,6 +104,7 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
     var entryToken by remember { mutableIntStateOf(0) }
     val pageStates = rememberSaveableStateHolder()
     val snackbars = remember { SnackbarHostState() }
+    val tv = isTv()
     val context = LocalContext.current
     val experience = remember(context) { context.getSharedPreferences(UserExperiencePrefs.NAME, android.content.Context.MODE_PRIVATE) }
     LaunchedEffect(state.playbackFailureId) {
@@ -112,14 +125,15 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
         if (feedbackText != null) snackbars.showSnackbar(feedbackText, duration = SnackbarDuration.Short)
         viewModel.dismissFeedback(message.sequence)
     }
+    val hasPresentation = state.presentationHeld || state.mirrorRequested || state.mediaPlaying || mediaActive
     LaunchedEffect(setupComplete) { if (setupComplete) showSetup = false }
-    LaunchedEffect(state.presentationHeld, state.pin, autoFullscreen) {
-        if (state.presentationHeld && state.pin == null && autoFullscreen) fullScreen = true
-        if (!state.presentationHeld) fullScreen = false
+    LaunchedEffect(hasPresentation, state.pin, autoFullscreen) {
+        if (hasPresentation && state.pin == null && autoFullscreen) fullScreen = true
+        if (!hasPresentation) fullScreen = false
     }
     LaunchedEffect(mediaActive) { if (mediaActive) fullScreen = true }
-    LaunchedEffect(state.presentationHeld, mediaActive, recording.active) {
-        if (recording.active && !state.presentationHeld && !mediaActive) {
+    LaunchedEffect(hasPresentation, recording.active) {
+        if (recording.active && !hasPresentation) {
             context.startService(android.content.Intent(context, io.github.jqssun.airplay.recording.RecordingService::class.java)
                 .setAction(io.github.jqssun.airplay.recording.RecordingService.STOP))
         }
@@ -128,7 +142,7 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
         if ((!state.running && !state.starting) || !bound) { fullScreen = false; confirmStop = false; confirmMediaStop = false }
     }
     LaunchedEffect(state.pin) { if (state.pin != null) { confirmStop = false; confirmMediaStop = false; confirmQuit = false; confirmMode = false } }
-    val showVideo = (fullScreen && (state.presentationHeld || mediaActive)) || isInPip
+    val showVideo = (fullScreen && hasPresentation) || isInPip
     DisposableEffect(showVideo, metricsEnabled, state.pin) {
         viewModel.setDiagnosticsVisible(showVideo && metricsEnabled && state.pin == null)
         onDispose { viewModel.setDiagnosticsVisible(false) }
@@ -136,8 +150,8 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
     val setupDialog = !setupComplete && showSetup
     val pendingFailure = state.playbackFailureId != 0L && state.playbackFailureId != observedFailureId
     val globalModal = showRecordings || state.pin != null || setupDialog || confirmStop || confirmMediaStop || confirmQuit || confirmMode || showPlaybackHelp || pendingFailure || trackMenu != null
-    LaunchedEffect(setupComplete, bound, state.starting, state.running, globalModal, page) {
-        if (setupComplete && bound && !state.starting && !globalModal && page == ReceiverPage.HOME)
+    LaunchedEffect(tv, setupComplete, bound, state.starting, state.running, globalModal, page) {
+        if (tv && setupComplete && bound && !state.starting && !globalModal && page == ReceiverPage.HOME)
             homePrimary.requestFocusUntilLanded()
     }
     val choosePage: (ReceiverPage) -> Unit = { page = it; entryToken++ }
@@ -241,13 +255,18 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
                         }
                     }
                 }
-                SnackbarHost(snackbars, Modifier.align(Alignment.BottomCenter).padding(bottom = 48.dp)
+                val narrowPhone = !tv && LocalConfiguration.current.screenWidthDp < 600
+                SnackbarHost(snackbars, Modifier.align(Alignment.BottomCenter)
+                    .thenIf(!tv) { windowInsetsPadding(WindowInsets.safeDrawing) }
+                    .padding(bottom = if (narrowPhone) 76.dp else 48.dp)
                     .widthIn(max = 600.dp))
             }
             if (showVideo && metricsEnabled && !globalModal &&
                 (if (mediaActive) mediaDetails.firstFrame else state.firstFrameSubmitted)) {
                 StreamMetrics(metrics, mediaActive, mediaDetails,
-                    Modifier.align(Alignment.TopEnd).padding(18.dp))
+                    Modifier.align(Alignment.TopEnd)
+                        .thenIf(!tv) { windowInsetsPadding(WindowInsets.safeDrawing) }
+                        .padding(18.dp))
             }
             // One global modal at a time. A PIN always takes priority over setup/stop prompts.
             io.github.jqssun.airplay.ui.theme.PlaybackDialogColors(enabled = showVideo && state.pin == null && !setupDialog) {
@@ -291,29 +310,163 @@ fun MainScreen(viewModel: MainViewModel, isInPip: Boolean = false,
 @Composable
 private fun ReceiverShell(page: ReceiverPage, onPage: (ReceiverPage) -> Unit, onQuit: () -> Unit,
     homePrimary: FocusRequester, content: @Composable ColumnScope.() -> Unit) {
-    Row(Modifier.fillMaxSize().background(AirRelayColors.Background)) {
-                Column(Modifier.width(194.dp).fillMaxHeight().background(AirRelayColors.Rail)
-            .padding(horizontal = 18.dp, vertical = 24.dp).verticalScroll(rememberScrollState()),
-            verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            ReceiverBrand(Modifier.fillMaxWidth())
-            Spacer(Modifier.height(38.dp))
-            listOf(Triple(ReceiverPage.HOME, R.string.p_home, Icons.Rounded.Cast),
-                Triple(ReceiverPage.RECORDINGS, R.string.rec_title, Icons.Rounded.VideoLibrary),
-                Triple(ReceiverPage.SETTINGS, R.string.p_settings, Icons.Rounded.Settings),
-                Triple(ReceiverPage.LOGS, R.string.tab_logs, Icons.Rounded.Description),
-                Triple(ReceiverPage.HELP, R.string.p_help, Icons.Rounded.HelpOutline)).forEach { (target, label, icon) ->
-                TvAction(stringResource(label), { onPage(target) }, Modifier.fillMaxWidth(), icon = icon,
-                    selected = page.tab == target, compact = true, focusId = "nav.${target.name.lowercase()}")
+    val navItems = listOf(
+        Triple(ReceiverPage.HOME, R.string.p_home, Icons.Rounded.Cast),
+        Triple(ReceiverPage.RECORDINGS, R.string.rec_title, Icons.Rounded.VideoLibrary),
+        Triple(ReceiverPage.SETTINGS, R.string.p_settings, Icons.Rounded.Settings),
+        Triple(ReceiverPage.LOGS, R.string.tab_logs, Icons.Rounded.Description),
+        Triple(ReceiverPage.HELP, R.string.p_help, Icons.Rounded.HelpOutline),
+    )
+    if (isTv()) {
+        Row(Modifier.fillMaxSize().background(AirRelayColors.Background)) {
+            Column(Modifier.width(194.dp).fillMaxHeight().background(AirRelayColors.Rail)
+                .padding(horizontal = 18.dp, vertical = 24.dp).verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                ReceiverBrand(Modifier.fillMaxWidth())
+                Spacer(Modifier.height(38.dp))
+                navItems.forEach { (target, label, icon) ->
+                    TvAction(stringResource(label), { onPage(target) }, Modifier.fillMaxWidth(), icon = icon,
+                        selected = page.tab == target, compact = true, focusId = "nav.${target.name.lowercase()}")
+                }
+                Spacer(Modifier.height(24.dp))
+                TvAction(stringResource(R.string.p_quit), onQuit, Modifier.fillMaxWidth(),
+                    icon = Icons.Rounded.PowerSettingsNew, compact = true, focusId = "nav.quit")
             }
-            Spacer(Modifier.height(24.dp))
-            TvAction(stringResource(R.string.p_quit), onQuit, Modifier.fillMaxWidth(),
-                icon = Icons.Rounded.PowerSettingsNew, compact = true, focusId = "nav.quit")
+
+            Column(Modifier.weight(1f).fillMaxHeight().padding(start = 28.dp, end = 32.dp,
+                top = 20.dp, bottom = 16.dp)) {
+
+                key("receiver-pages") { content() }
+            }
         }
-        
-        Column(Modifier.weight(1f).fillMaxHeight().padding(start = 28.dp, end = 32.dp,
-            top = 20.dp, bottom = 16.dp)) {
-            
-            key("receiver-pages") { content() }
+        return
+    }
+
+    BoxWithConstraints(
+        Modifier.fillMaxSize()
+            .background(AirRelayColors.Background)
+            .windowInsetsPadding(WindowInsets.safeDrawing)
+    ) {
+        if (maxWidth < 600.dp) {
+            Column(Modifier.fillMaxSize()) {
+                Row(
+                    Modifier.fillMaxWidth()
+                        .background(AirRelayColors.Rail)
+                        .padding(horizontal = 16.dp, vertical = 6.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        androidx.compose.foundation.Image(
+                            painterResource(
+                                if (AirRelayColors.Text.luminance() < 0.5f)
+                                    R.drawable.airrelay_logo_light else R.drawable.airrelay_logo_vector
+                            ),
+                            contentDescription = null,
+                            modifier = Modifier.size(32.dp),
+                            contentScale = androidx.compose.ui.layout.ContentScale.Fit,
+                        )
+                        Text(
+                            stringResource(R.string.app_name),
+                            color = AirRelayColors.Text,
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold,
+                            maxLines = 1,
+                        )
+                    }
+                    IconButton(
+                        onClick = onQuit,
+                        modifier = Modifier.sizeIn(minWidth = 48.dp, minHeight = 48.dp),
+                    ) {
+                        Icon(
+                            Icons.Rounded.PowerSettingsNew,
+                            contentDescription = stringResource(R.string.p_quit),
+                            tint = AirRelayColors.Muted,
+                        )
+                    }
+                }
+                Column(
+                    Modifier.weight(1f).fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 10.dp)
+                ) {
+                    key("receiver-pages") { content() }
+                }
+                Row(
+                    Modifier.fillMaxWidth()
+                        .background(AirRelayColors.Rail)
+                        .padding(horizontal = 4.dp, vertical = 4.dp),
+                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    navItems.forEach { (target, label, icon) ->
+                        val active = page.tab == target
+                        val interactions = remember { MutableInteractionSource() }
+                        Column(
+                            Modifier.weight(1f)
+                                .sizeIn(minWidth = 48.dp, minHeight = 52.dp)
+                                .clip(RoundedCornerShape(12.dp))
+                                .background(if (active) AirRelayColors.SelectedFill else Color.Transparent)
+                                .semantics { selected = active }
+                                .clickable(
+                                    interactionSource = interactions,
+                                    indication = LocalIndication.current,
+                                    role = Role.Tab,
+                                    onClick = { onPage(target) },
+                                )
+                                .padding(horizontal = 2.dp, vertical = 6.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.spacedBy(2.dp, Alignment.CenterVertically),
+                        ) {
+                            Icon(
+                                icon,
+                                contentDescription = null,
+                                modifier = Modifier.size(20.dp),
+                                tint = if (active) AirRelayColors.SelectedInk else AirRelayColors.Muted,
+                            )
+                            Text(
+                                stringResource(label),
+                                style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp, letterSpacing = 0.sp),
+                                color = if (active) AirRelayColors.SelectedInk else AirRelayColors.Muted,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
+                    }
+                }
+            }
+        } else {
+            Row(Modifier.fillMaxSize()) {
+                Column(
+                    Modifier.width(194.dp).fillMaxHeight()
+                        .background(AirRelayColors.Rail)
+                        .padding(horizontal = 16.dp, vertical = 16.dp)
+                        .verticalScroll(rememberScrollState()),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    ReceiverBrand(Modifier.fillMaxWidth())
+                    Spacer(Modifier.height(12.dp))
+                    navItems.forEach { (target, label, icon) ->
+                        TvAction(
+                            stringResource(label), { onPage(target) }, Modifier.fillMaxWidth(), icon = icon,
+                            selected = page.tab == target, compact = true, focusId = "nav.${target.name.lowercase()}"
+                        )
+                    }
+                    Spacer(Modifier.height(12.dp))
+                    TvAction(
+                        stringResource(R.string.p_quit), onQuit, Modifier.fillMaxWidth(),
+                        icon = Icons.Rounded.PowerSettingsNew, compact = true, focusId = "nav.quit"
+                    )
+                }
+                Column(
+                    Modifier.weight(1f).fillMaxHeight()
+                        .padding(horizontal = 24.dp, vertical = 14.dp)
+                ) {
+                    key("receiver-pages") { content() }
+                }
+            }
         }
     }
 }
@@ -350,6 +503,7 @@ internal fun FittedReceiverSurface(aspect: Float, pictureFit: PictureFit, rotati
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isMedia: Boolean,
     pictureFit: PictureFit, onPictureFit: (PictureFit) -> Unit,
@@ -360,9 +514,12 @@ private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isM
     onPlayPause: () -> Unit, onPip: (() -> Unit)?, onTracks: (Int) -> Unit,
     details: io.github.jqssun.airplay.service.VideoPlaybackInfo,
     onSeek: (Long) -> Unit, errorCode: Int?, failureId: Long, hintConsumed: Boolean, onHintConsumed: () -> Unit) {
-    var visible by remember { mutableStateOf(false) }
+    val tv = isTv()
+    val narrowPhone = !tv && LocalConfiguration.current.screenWidthDp < 600
+    var visible by remember { mutableStateOf(waiting) }
     var interaction by remember { mutableIntStateOf(0) }
     var pressed by remember { mutableStateOf(false) }
+    LaunchedEffect(waiting) { if (waiting) visible = true }
     var hidingUp by remember { mutableStateOf(false) }
     fun hideAboveControls() { hidingUp = true; visible = false }
     var seeking by remember(details.mediaId) { mutableStateOf(false) }
@@ -378,11 +535,11 @@ private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isM
     val seekFocus = remember { FocusRequester() }
     var modeHint by remember { mutableStateOf(false) }
     val reducedMotion = LocalReducedMotion.current
-    LaunchedEffect(failureId, modalOpen) {
+    LaunchedEffect(failureId, modalOpen, tv) {
         if (failureId != 0L && !hintConsumed && !modalOpen) {
             visible = true
             withFrameNanos { }
-            modeAction.requestFocusUntilLanded(isFocused = { modeFocused })
+            if (tv) modeAction.requestFocusUntilLanded(isFocused = { modeFocused })
             onHintConsumed() // Consume once per failure, not per visit to the controls.
             try {
                 if (reducedMotion) { modeHint = true; delay(6000) }
@@ -398,8 +555,9 @@ private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isM
             delay(timeout); visible = false
         }
     }
-    LaunchedEffect(visible, modalOpen, details.mediaId, errorCode, isMedia) {
+    LaunchedEffect(tv, visible, modalOpen, details.mediaId, errorCode, isMedia) {
         if (modalOpen) { returningFromDialog = true; wakeGuard.reset() }
+        else if (!tv) Unit
         else if (visible && (errorCode != null || failureId != 0L && !hintConsumed)) modeAction.requestFocusUntilLanded(isFocused = { modeFocused })
         else if (visible && returningFromDialog) {
             returningFromDialog = false
@@ -412,26 +570,39 @@ private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isM
     LaunchedEffect(networkMissing) { if (networkMissing) visible = true }
     LaunchedEffect(errorCode) { if (errorCode != null) visible = true }
     BackHandler(enabled = !modalOpen) { if (visible && errorCode == null) visible = false else onHome() }
-    Box(Modifier.fillMaxSize().onPreviewKeyEvent { event ->
-        if (modalOpen) return@onPreviewKeyEvent false
-        val code = event.nativeKeyEvent.keyCode
-        if (event.type != KeyEventType.KeyDown && event.type != KeyEventType.KeyUp) return@onPreviewKeyEvent false
-        val controlKey = code == AndroidKey.KEYCODE_DPAD_CENTER || code == AndroidKey.KEYCODE_ENTER ||
-            code == AndroidKey.KEYCODE_NUMPAD_ENTER || code == AndroidKey.KEYCODE_DPAD_UP ||
-            code == AndroidKey.KEYCODE_DPAD_DOWN || code == AndroidKey.KEYCODE_DPAD_LEFT || code == AndroidKey.KEYCODE_DPAD_RIGHT
-        val down = event.type == KeyEventType.KeyDown
-        if (code == AndroidKey.KEYCODE_DPAD_UP && hidingUp) {
-            if (down && event.nativeKeyEvent.repeatCount == 0) hidingUp = false
-            else { if (!down) hidingUp = false; return@onPreviewKeyEvent true }
-        }
-        val decision = wakeGuard.event(code, down, event.nativeKeyEvent.repeatCount, controlKey, visible)
-        if (controlKey && down) interaction++
-        if (decision.reveal) visible = true
-        if (decision.consume) return@onPreviewKeyEvent true
-        false // Volume and media keys remain owned by Android/the existing media session.
-    }.focusRequester(rootFocus).onFocusChanged { rootFocused = it.isFocused }
-        .focusable(enabled = !visible && !modalOpen)
-        .pointerInput(modalOpen) { detectTapGestures { if (!modalOpen) { visible = true; interaction++ } } }) {
+    val overlayModifier = if (tv) {
+        Modifier.fillMaxSize().onPreviewKeyEvent { event ->
+            if (modalOpen) return@onPreviewKeyEvent false
+            val code = event.nativeKeyEvent.keyCode
+            if (event.type != KeyEventType.KeyDown && event.type != KeyEventType.KeyUp) return@onPreviewKeyEvent false
+            val controlKey = code == AndroidKey.KEYCODE_DPAD_CENTER || code == AndroidKey.KEYCODE_ENTER ||
+                code == AndroidKey.KEYCODE_NUMPAD_ENTER || code == AndroidKey.KEYCODE_DPAD_UP ||
+                code == AndroidKey.KEYCODE_DPAD_DOWN || code == AndroidKey.KEYCODE_DPAD_LEFT || code == AndroidKey.KEYCODE_DPAD_RIGHT
+            val down = event.type == KeyEventType.KeyDown
+            if (code == AndroidKey.KEYCODE_DPAD_UP && hidingUp) {
+                if (down && event.nativeKeyEvent.repeatCount == 0) hidingUp = false
+                else { if (!down) hidingUp = false; return@onPreviewKeyEvent true }
+            }
+            val decision = wakeGuard.event(code, down, event.nativeKeyEvent.repeatCount, controlKey, visible)
+            if (controlKey && down) interaction++
+            if (decision.reveal) visible = true
+            if (decision.consume) return@onPreviewKeyEvent true
+            false // Volume and media keys remain owned by Android/the existing media session.
+        }.focusRequester(rootFocus).onFocusChanged { rootFocused = it.isFocused }
+            .focusable(enabled = !visible && !modalOpen)
+            .pointerInput(modalOpen) { detectTapGestures { if (!modalOpen) { visible = true; interaction++ } } }
+    } else {
+        Modifier.fillMaxSize()
+            .pointerInput(modalOpen, visible, errorCode) {
+                detectTapGestures {
+                    if (!modalOpen) {
+                        if (visible && errorCode == null) visible = false
+                        else { visible = true; interaction++ }
+                    }
+                }
+            }
+    }
+    Box(overlayModifier) {
         if (waiting) Box(Modifier.fillMaxSize().background(Color.Black), contentAlignment = Alignment.Center) {
             CircularProgressIndicator(Modifier.size(44.dp), color = AirRelayColors.Accent)
         }
@@ -442,13 +613,54 @@ private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isM
             5003 -> stringResource(R.string.playback_return_to_screen)
             else -> stringResource(R.string.transition_playback_error, errorCode)
         },
-            Modifier.align(Alignment.Center).background(Color.Black).padding(24.dp))
+            Modifier.align(Alignment.Center).widthIn(max = 560.dp)
+                .thenIf(!tv) { windowInsetsPadding(WindowInsets.safeDrawing) }
+                .background(Color.Black, RoundedCornerShape(12.dp)).padding(24.dp))
         if (visible) CompositionLocalProvider(LocalControlActivity provides { interaction++ },
             LocalControlPressed provides { pressed = it }, LocalTvInputEnabled provides !modalOpen,
             LocalCapsuleFocused provides { lastAction = it }) {
+            val modeCapsule: @Composable () -> Unit = {
+                CapsuleAction(
+                    stringResource(if (remoteVideoEnabled) R.string.playback_to_mirror
+                        else R.string.p_state_mirroring),
+                    { if (remoteVideoEnabled) onMode() },
+                    if (remoteVideoEnabled) Icons.Rounded.Cast else Icons.Rounded.CheckCircle,
+                    Modifier.focusRequester(modeAction).onFocusChanged { modeFocused = it.isFocused },
+                    selected = modeHint || !remoteVideoEnabled, wide = true, focusId = "player.mode"
+                )
+            }
+            val fitCapsule: @Composable () -> Unit = {
+                CapsuleAction(stringResource(when (pictureFit) {
+                    PictureFit.FIT -> R.string.scale_best_fit
+                    PictureFit.FILL -> R.string.scale_fill
+                    PictureFit.STRETCH -> R.string.scale_stretch
+                }), { onPictureFit(pictureFit.next()) }, Icons.Rounded.AspectRatio, wide = true, focusId = "player.fit")
+            }
+            val rotateCapsule: @Composable () -> Unit = {
+                CapsuleAction(stringResource(R.string.picture_rotate, pictureRotation), onPictureRotation, Icons.Rounded.RotateRight,
+                    if (!isMedia) Modifier.focusRequester(centerAction).onFocusChanged { centerFocused = it.isFocused } else Modifier,
+                    wide = true, focusId = "player.rotate")
+            }
+            val recordCapsule: @Composable () -> Unit = {
+                CapsuleAction(stringResource(if (recording) R.string.rec_stop else R.string.rec_start), onRecord,
+                    if (recording) Icons.Rounded.Stop else Icons.Rounded.FiberManualRecord,
+                    destructive = recording, selected = recording, focusId = "player.record")
+            }
+            val pipCapsule: (@Composable () -> Unit)? = if (onPip != null) {
+                { CapsuleAction(stringResource(R.string.cd_pip), onPip, Icons.Rounded.PictureInPictureAlt) }
+            } else null
+            val settingsCapsule: @Composable () -> Unit = {
+                CapsuleAction(stringResource(R.string.p_settings), onSettings, Icons.Rounded.Settings, wide = !isMedia, focusId = "player.settings")
+            }
+            val endCapsule: @Composable () -> Unit = {
+                CapsuleAction(stringResource(R.string.p_stop_confirm), onEnd, Icons.Rounded.Stop,
+                    destructive = true, wide = !isMedia, focusId = "player.end")
+            }
             Column(Modifier.align(Alignment.BottomCenter).fillMaxWidth()
                 .background(Brush.verticalGradient(listOf(Color.Transparent, AirRelayColors.Background.copy(alpha = .78f))))
-                .padding(horizontal = 24.dp, vertical = 28.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                .thenIf(!tv) { windowInsetsPadding(WindowInsets.safeDrawing) }
+                .padding(horizontal = if (narrowPhone) 12.dp else 24.dp, vertical = if (narrowPhone) 12.dp else 28.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 if (isMedia && details.seekable && details.seekEndMs > details.seekStartMs) {
                     ReceiverSeekBar(details, onSeek, { seeking = it; interaction++ }, enabled = !modalOpen,
                         focus = seekFocus, onExit = { centerAction.requestFocus() }, onHide = { hideAboveControls() })
@@ -456,79 +668,107 @@ private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isM
                     Text(stringResource(R.string.transition_live), color = Color.White)
                 }
                 if (networkMissing) Text(stringResource(R.string.p_network_note), color = AirRelayColors.Warning)
+                val pillShape = RoundedCornerShape(if (narrowPhone) 24.dp else 52.dp)
                 Column(Modifier.align(Alignment.CenterHorizontally).widthIn(max = 1100.dp)
                     .background(Brush.linearGradient(listOf(AirRelayColors.Muted.copy(alpha = .16f),
-                        AirRelayColors.Panel.copy(alpha = .60f))), RoundedCornerShape(52.dp))
-                    .border(1.dp, AirRelayColors.Border.copy(alpha = .20f), RoundedCornerShape(52.dp))
-                    .padding(horizontal = 18.dp, vertical = 6.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                Row(Modifier.align(Alignment.CenterHorizontally)
-                    .horizontalScroll(rememberScrollState()).focusGroup()
-                    .onPreviewKeyEvent { event ->
-                        if (!modalOpen && event.nativeKeyEvent.keyCode == AndroidKey.KEYCODE_DPAD_UP) {
-                            if (event.type == KeyEventType.KeyDown) {
-                                if (isMedia && details.seekable && details.seekEndMs > details.seekStartMs) seekFocus.requestFocus()
-                                else hideAboveControls()
-                            }
-                            true
-                        } else false
-                    }, verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    val fontScale = LocalDensity.current.fontScale.coerceAtLeast(1f)
-                    Row(if (isMedia) Modifier.width((if (onPip != null) 388.dp else 324.dp) * fontScale) else Modifier,
-                        verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                        // One-way control: while direct playback is offered, one click asks for
-                        // confirmation and moves the receiver to screen mirroring. Once mirroring is
-                        // chosen the chip only reports that state; there is no path back to direct,
-                        // because a live mirror session cannot be renegotiated into direct playback.
-                        CapsuleAction(
-                            stringResource(if (remoteVideoEnabled) R.string.playback_to_mirror
-                                else R.string.p_state_mirroring),
-                            { if (remoteVideoEnabled) onMode() },
-                            if (remoteVideoEnabled) Icons.Rounded.Cast else Icons.Rounded.CheckCircle,
-                            Modifier.focusRequester(modeAction).onFocusChanged { modeFocused = it.isFocused },
-                            selected = modeHint || !remoteVideoEnabled, wide = true, focusId = "player.mode")
-                        CapsuleAction(stringResource(when (pictureFit) {
-                            PictureFit.FIT -> R.string.scale_best_fit
-                            PictureFit.FILL -> R.string.scale_fill
-                            PictureFit.STRETCH -> R.string.scale_stretch
-                        }), { onPictureFit(pictureFit.next()) }, Icons.Rounded.AspectRatio, wide = true, focusId = "player.fit")
-                        CapsuleAction(stringResource(R.string.picture_rotate, pictureRotation), onPictureRotation, Icons.Rounded.RotateRight,
-                            if (!isMedia) Modifier.focusRequester(centerAction).onFocusChanged { centerFocused = it.isFocused } else Modifier,
-                            wide = true, focusId = "player.rotate")
-                        CapsuleAction(stringResource(if (recording) R.string.rec_stop else R.string.rec_start), onRecord,
-                            if (recording) Icons.Rounded.Stop else Icons.Rounded.FiberManualRecord,
-                            destructive = recording, selected = recording, focusId = "player.record")
-                        if (onPip != null) CapsuleAction(stringResource(R.string.cd_pip), onPip, Icons.Rounded.PictureInPictureAlt)
-                    }
-                    if (isMedia) {
-                        Box(Modifier.width(1.dp).height(28.dp).background(Color.White.copy(alpha = .14f)))
-                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(2.dp)) {
-                            if (details.seekable && details.seekEndMs > details.seekStartMs)
-                                CapsuleAction("−" + stringResource(R.string.seconds_short, 10), { onSeek((details.positionMs - 10_000).coerceIn(details.seekStartMs, details.seekEndMs)) },
-                                    Icons.Rounded.Replay10, focusId = "player.rewind")
-                            CapsuleAction(stringResource(if (mediaPlaying) R.string.p_pause else R.string.p_play), onPlayPause,
-                                if (mediaPlaying) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
-                                Modifier.focusRequester(centerAction).onFocusChanged { centerFocused = it.isFocused },
-                                prominent = true, focusId = "player.play")
-                            if (details.seekable && details.seekEndMs > details.seekStartMs)
-                                CapsuleAction("+" + stringResource(R.string.seconds_short, 10), { onSeek((details.positionMs + 10_000).coerceIn(details.seekStartMs, details.seekEndMs)) },
-                                    Icons.Rounded.Forward10, focusId = "player.forward")
-                        }
-                        Box(Modifier.width(1.dp).height(28.dp).background(Color.White.copy(alpha = .14f)))
-                    }
-                    Row(if (isMedia) Modifier.width((if (onPip != null) 388.dp else 324.dp) * fontScale) else Modifier,
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(4.dp, Alignment.End)) {
+                        AirRelayColors.Panel.copy(alpha = .60f))), pillShape)
+                    .border(1.dp, AirRelayColors.Border.copy(alpha = .20f), pillShape)
+                    .thenIf(!tv) { pointerInput(Unit) { detectTapGestures { interaction++ } } }
+                    .padding(horizontal = if (narrowPhone) 12.dp else 18.dp, vertical = if (narrowPhone) 10.dp else 6.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    if (narrowPhone) {
                         if (isMedia) {
-                            CapsuleAction(stringResource(R.string.track_subtitles), { onTracks(androidx.media3.common.C.TRACK_TYPE_TEXT) }, Icons.Rounded.Subtitles)
-                            CapsuleAction(stringResource(R.string.track_audio), { onTracks(androidx.media3.common.C.TRACK_TYPE_AUDIO) }, Icons.Rounded.Audiotrack)
-                            CapsuleAction(stringResource(R.string.track_quality), { onTracks(androidx.media3.common.C.TRACK_TYPE_VIDEO) }, Icons.Rounded.HighQuality)
+                            Row(
+                                Modifier.align(Alignment.CenterHorizontally),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            ) {
+                                if (details.seekable && details.seekEndMs > details.seekStartMs)
+                                    CapsuleAction("−" + stringResource(R.string.seconds_short, 10), { onSeek((details.positionMs - 10_000).coerceIn(details.seekStartMs, details.seekEndMs)) },
+                                        Icons.Rounded.Replay10, focusId = "player.rewind")
+                                CapsuleAction(stringResource(if (mediaPlaying) R.string.p_pause else R.string.p_play), onPlayPause,
+                                    if (mediaPlaying) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
+                                    Modifier.focusRequester(centerAction).onFocusChanged { centerFocused = it.isFocused },
+                                    prominent = true, focusId = "player.play")
+                                if (details.seekable && details.seekEndMs > details.seekStartMs)
+                                    CapsuleAction("+" + stringResource(R.string.seconds_short, 10), { onSeek((details.positionMs + 10_000).coerceIn(details.seekStartMs, details.seekEndMs)) },
+                                        Icons.Rounded.Forward10, focusId = "player.forward")
+                            }
                         }
-                        CapsuleAction(stringResource(R.string.p_settings), onSettings, Icons.Rounded.Settings, wide = !isMedia, focusId = "player.settings")
-                        CapsuleAction(stringResource(R.string.p_stop_confirm), onEnd, Icons.Rounded.Stop,
-                            destructive = true, wide = !isMedia, focusId = "player.end")
+                        FlowRow(
+                            Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(4.dp, Alignment.CenterHorizontally),
+                            verticalArrangement = Arrangement.spacedBy(4.dp),
+                        ) {
+                            modeCapsule()
+                            fitCapsule()
+                            rotateCapsule()
+                            recordCapsule()
+                            pipCapsule?.invoke()
+                            if (isMedia) {
+                                CapsuleAction(stringResource(R.string.track_subtitles), { onTracks(androidx.media3.common.C.TRACK_TYPE_TEXT) }, Icons.Rounded.Subtitles)
+                                CapsuleAction(stringResource(R.string.track_audio), { onTracks(androidx.media3.common.C.TRACK_TYPE_AUDIO) }, Icons.Rounded.Audiotrack)
+                                CapsuleAction(stringResource(R.string.track_quality), { onTracks(androidx.media3.common.C.TRACK_TYPE_VIDEO) }, Icons.Rounded.HighQuality)
+                            }
+                            settingsCapsule()
+                            endCapsule()
+                        }
+                    } else {
+                        Row(Modifier.align(Alignment.CenterHorizontally)
+                            .horizontalScroll(rememberScrollState()).focusGroup()
+                            .onPreviewKeyEvent { event ->
+                                if (!modalOpen && event.nativeKeyEvent.keyCode == AndroidKey.KEYCODE_DPAD_UP) {
+                                    if (event.type == KeyEventType.KeyDown) {
+                                        if (isMedia && details.seekable && details.seekEndMs > details.seekStartMs) seekFocus.requestFocus()
+                                        else hideAboveControls()
+                                    }
+                                    true
+                                } else false
+                            }, verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            val fontScale = LocalDensity.current.fontScale.coerceAtLeast(1f)
+                            val wideEnoughForSpacer = tv || LocalConfiguration.current.screenWidthDp >= 900
+                            Row(if (isMedia && wideEnoughForSpacer) Modifier.width((if (onPip != null) 388.dp else 324.dp) * fontScale) else Modifier,
+                                verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                                // One-way control: while direct playback is offered, one click asks for
+                                // confirmation and moves the receiver to screen mirroring. Once mirroring is
+                                // chosen the chip only reports that state; there is no path back to direct,
+                                // because a live mirror session cannot be renegotiated into direct playback.
+                                modeCapsule()
+                                fitCapsule()
+                                rotateCapsule()
+                                recordCapsule()
+                                pipCapsule?.invoke()
+                            }
+                            if (isMedia) {
+                                Box(Modifier.width(1.dp).height(28.dp).background(Color.White.copy(alpha = .14f)))
+                                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(2.dp)) {
+                                    if (details.seekable && details.seekEndMs > details.seekStartMs)
+                                        CapsuleAction("−" + stringResource(R.string.seconds_short, 10), { onSeek((details.positionMs - 10_000).coerceIn(details.seekStartMs, details.seekEndMs)) },
+                                            Icons.Rounded.Replay10, focusId = "player.rewind")
+                                    CapsuleAction(stringResource(if (mediaPlaying) R.string.p_pause else R.string.p_play), onPlayPause,
+                                        if (mediaPlaying) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
+                                        Modifier.focusRequester(centerAction).onFocusChanged { centerFocused = it.isFocused },
+                                        prominent = true, focusId = "player.play")
+                                    if (details.seekable && details.seekEndMs > details.seekStartMs)
+                                        CapsuleAction("+" + stringResource(R.string.seconds_short, 10), { onSeek((details.positionMs + 10_000).coerceIn(details.seekStartMs, details.seekEndMs)) },
+                                            Icons.Rounded.Forward10, focusId = "player.forward")
+                                }
+                                Box(Modifier.width(1.dp).height(28.dp).background(Color.White.copy(alpha = .14f)))
+                            }
+                            Row(if (isMedia && wideEnoughForSpacer) Modifier.width((if (onPip != null) 388.dp else 324.dp) * fontScale) else Modifier,
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(4.dp, Alignment.End)) {
+                                if (isMedia) {
+                                    CapsuleAction(stringResource(R.string.track_subtitles), { onTracks(androidx.media3.common.C.TRACK_TYPE_TEXT) }, Icons.Rounded.Subtitles)
+                                    CapsuleAction(stringResource(R.string.track_audio), { onTracks(androidx.media3.common.C.TRACK_TYPE_AUDIO) }, Icons.Rounded.Audiotrack)
+                                    CapsuleAction(stringResource(R.string.track_quality), { onTracks(androidx.media3.common.C.TRACK_TYPE_VIDEO) }, Icons.Rounded.HighQuality)
+                                }
+                                settingsCapsule()
+                                endCapsule()
+                            }
+                        }
                     }
-                }
                 }
 
             }
@@ -540,14 +780,52 @@ private fun ReceiverPlayerOverlay(waiting: Boolean, networkMissing: Boolean, isM
 private fun ReceiverSeekBar(details: io.github.jqssun.airplay.service.VideoPlaybackInfo,
     onSeek: (Long) -> Unit, onEditing: (Boolean) -> Unit, enabled: Boolean,
     focus: FocusRequester, onExit: () -> Unit, onHide: () -> Unit) {
+    val tv = isTv()
     var draft by remember(details.mediaId) { mutableStateOf<Long?>(null) }
     var focused by remember { mutableStateOf(false) }
     val start = details.seekStartMs
     val end = details.seekEndMs
     val position = (draft ?: (details.positionMs / 1000L * 1000L)).coerceIn(start, end)
     fun cancel() { draft = null; onEditing(false) }
-    BackHandler(enabled = enabled && draft != null) { cancel() }
+    BackHandler(enabled = tv && enabled && draft != null) { cancel() }
     DisposableEffect(details.mediaId) { onDispose { onEditing(false) } }
+    if (!tv) {
+        var dragging by remember(details.mediaId) { mutableStateOf(false) }
+        var sliderPos by remember(details.mediaId) { mutableFloatStateOf(position.toFloat()) }
+        val displayed = if (dragging) sliderPos.toLong().coerceIn(start, end) else position
+        Column(
+            Modifier.fillMaxWidth().padding(horizontal = 4.dp),
+            verticalArrangement = Arrangement.spacedBy(2.dp),
+        ) {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(playbackTime(displayed), color = AirRelayColors.Text)
+                Text(if (details.live) stringResource(R.string.transition_live) else playbackTime(end), color = AirRelayColors.Text)
+            }
+            Slider(
+                enabled = enabled,
+                value = displayed.toFloat(),
+                onValueChange = {
+                    dragging = true
+                    sliderPos = it
+                    onEditing(true)
+                },
+                onValueChangeFinished = {
+                    val target = sliderPos.toLong().coerceIn(start, end)
+                    dragging = false
+                    onEditing(false)
+                    onSeek(target)
+                },
+                valueRange = start.toFloat()..end.coerceAtLeast(start + 1L).toFloat(),
+                colors = SliderDefaults.colors(
+                    thumbColor = AirRelayColors.Accent,
+                    activeTrackColor = AirRelayColors.Accent,
+                    inactiveTrackColor = Color.White.copy(alpha = .24f),
+                ),
+                modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp),
+            )
+        }
+        return
+    }
     Column(Modifier.fillMaxWidth().focusRequester(focus).onPreviewKeyEvent { event ->
         if (!enabled) return@onPreviewKeyEvent false
         val key = event.nativeKeyEvent.keyCode
@@ -600,18 +878,25 @@ private fun playbackTime(ms: Long): String {
 
 @Composable
 private fun PlaybackHelpDialog(onDismiss: () -> Unit) = DialogInputScope {
+    val tv = isTv()
     ProductAlertDialog(onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.playback_help_title)) },
-        text = { Text(stringResource(R.string.playback_help_body)) },
+        text = {
+            Column(Modifier.thenIf(!tv) { verticalScroll(rememberScrollState()) }) {
+                Text(stringResource(R.string.playback_help_body))
+            }
+        },
         confirmButton = { TvAction(stringResource(R.string.playback_help_confirm), onDismiss, primary = true) }, dismissButton = {})
 }
 
 @Composable
 private fun MirrorSwitchDialog(onConfirm: () -> Unit, onDismiss: () -> Unit) = DialogInputScope {
+    val tv = isTv()
     ProductAlertDialog(onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.playback_to_mirror)) },
         text = {
-            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Column(Modifier.thenIf(!tv) { verticalScroll(rememberScrollState()) },
+                verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text(stringResource(R.string.playback_mirror_description),
                     style = MaterialTheme.typography.bodyMedium)
                 Text(stringResource(R.string.playback_switch_hint),

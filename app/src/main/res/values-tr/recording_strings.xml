@@ -8,11 +8,11 @@
     <string name="rec_saved">Kayıt kaydedildi.</string>
     <string name="rec_failed">Kayıt kaydedilemedi.</string>
     <string name="rec_no_stream">Önce cihazından ekran yansıtmayı başlat, sonra kaydet.</string>
-    <string name="rec_unavailable">Kayıt başlatılamadı. TV’n ekran yakalamayı desteklemiyor olabilir ya da depolama veya kodlayıcı kaynakları yetersiz olabilir.</string>
+    <string name="rec_unavailable">Kayıt başlatılamadı. Bu cihaz ekran yakalamayı desteklemiyor olabilir ya da depolama veya kodlayıcı kaynakları yetersiz olabilir.</string>
     <string name="rec_export">MP4 dışa aktar</string>
     <string name="rec_export_cancelled">Dışa aktarma iptal edildi veya hedef seçilmedi.</string>
     <string name="rec_exported">Kayıt dışa aktarıldı.</string>
-    <string name="rec_exported_movies">TV’ndeki Filmler/AirRelay klasörüne kaydedildi.</string>
+    <string name="rec_exported_movies">Bu cihazdaki Movies/AirRelay klasörüne kaydedildi.</string>
     <string name="rec_export_failed">Dışa aktarma başarısız. Hedefi ve boş alanı kontrol et. Orijinal kaydın duruyor.</string>
     <string name="rec_empty">Henüz kayıt yok.</string>
     <string name="rec_close">Kapat</string>

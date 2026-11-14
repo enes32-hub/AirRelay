@@ -30,7 +30,7 @@
     <string name="setting_aac">Advertise AAC codec</string>
     <string name="setting_aac_desc">Offer AAC-ELD/AAC-LC in the mDNS record; used for screen mirroring audio</string>
     <string name="setting_launch_on_connect">Show incoming streams</string>
-    <string name="setting_launch_on_connect_desc">Bring the app forward when a new stream starts. TV permissions apply.</string>
+    <string name="setting_launch_on_connect_desc">Bring the app forward when a new stream starts. System permissions apply.</string>
     <string name="setting_launch_on_connect_no_permission">Automatic display requires permission to appear over other apps.</string>
     <string name="setting_resolution">Resolution</string>
     <string name="setting_resolution_desc">Maximum picture size suggested to the sending device.</string>

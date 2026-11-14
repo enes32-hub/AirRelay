@@ -117,8 +117,10 @@ public:
         for (; b < NBUCKETS - 1; b++) { cum += mHist[b]; if (cum >= thresh) break; }
         // bin is lower bound on delay: take top edge + margin. margin must keep output
         // fed for one data callback and tide us over until next packet
-        const int64_t marginNs = std::max(durNs, mOutputBufferNs.load(std::memory_order_relaxed));
-        const int64_t targetNs = (int64_t)(b + 1) * BUCKET_NS + marginNs;
+        const int64_t outNs = mOutputBufferNs.load(std::memory_order_relaxed);
+        const int64_t marginNs = durNs + outNs;
+        const int64_t minForOutNs = outNs + outNs / 2;
+        const int64_t targetNs = std::max((int64_t)(b + 1) * BUCKET_NS + marginNs, minForOutNs);
         size_t samples = (size_t)(targetNs * mSampleRate / NS_PER_SEC) * mChannels;
         if (samples < mFloor) samples = mFloor;
         if (samples > mCeil) samples = mCeil;

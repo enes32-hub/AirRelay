@@ -27,6 +27,7 @@ import io.github.jqssun.airplay.R
 import io.github.jqssun.airplay.ui.theme.AirRelayColors
 import io.github.jqssun.airplay.viewmodel.MainViewModel
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun LogsScreen(viewModel: MainViewModel, onModalChange: (Boolean) -> Unit = {}) {
     val logs by viewModel.logs.collectAsStateWithLifecycle()
@@ -66,17 +67,28 @@ fun LogsScreen(viewModel: MainViewModel, onModalChange: (Boolean) -> Unit = {}) 
             if (follow && displayed.isNotEmpty() && !list.isScrollInProgress) list.scrollToItem(displayed.lastIndex)
         }
     }
+    val tv = isTv()
+    @Composable
+    fun logActions() {
+        TvAction(stringResource(if (busy) R.string.r2_working else R.string.p_logs_export), { export = true },
+            icon = Icons.Rounded.Share, enabled = !busy, compact = true, focusId = "logs.export")
+        TvAction(stringResource(R.string.p_logs_clear), { clear = true }, icon = Icons.Rounded.DeleteOutline,
+            enabled = !busy, compact = true, focusId = "logs.clear")
+        TvAction(stringResource(R.string.r2_refresh_snapshot), { displayed = logs; initialized = true },
+            icon = Icons.Rounded.Refresh, compact = true, focusId = "logs.refresh")
+        TvAction(stringResource(R.string.p_follow_logs), { follow = !follow }, selected = follow,
+            compact = true, focusId = "logs.follow")
+    }
     Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         PageHeading(stringResource(R.string.p_logs_title), stringResource(R.string.p_logs_body))
-        Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(3.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            TvAction(stringResource(if (busy) R.string.r2_working else R.string.p_logs_export), { export = true },
-                icon = Icons.Rounded.Share, enabled = !busy, compact = true, focusId = "logs.export")
-            TvAction(stringResource(R.string.p_logs_clear), { clear = true }, icon = Icons.Rounded.DeleteOutline,
-                enabled = !busy, compact = true, focusId = "logs.clear")
-            TvAction(stringResource(R.string.r2_refresh_snapshot), { displayed = logs; initialized = true },
-                icon = Icons.Rounded.Refresh, compact = true, focusId = "logs.refresh")
-            TvAction(stringResource(R.string.p_follow_logs), { follow = !follow }, selected = follow,
-                compact = true, focusId = "logs.follow")
+        if (tv) {
+            Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(3.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                logActions()
+            }
+        } else {
+            FlowRow(Modifier.fillMaxWidth().padding(3.dp), horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                logActions()
+            }
         }
         Text(stringResource(if (follow && !reading) R.string.r2_logs_live else R.string.r2_logs_frozen),
             style = MaterialTheme.typography.labelSmall, color = AirRelayColors.Muted)
@@ -85,11 +97,13 @@ fun LogsScreen(viewModel: MainViewModel, onModalChange: (Boolean) -> Unit = {}) 
             "${debug.videoFps} fps · ${debug.bitrateStr} · ${debug.videoRes}",
             style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Muted)
         if (displayed.isEmpty()) Text(stringResource(R.string.p_logs_empty), color = AirRelayColors.Muted)
-        LazyColumn(Modifier.weight(1f).onFocusChanged { reading = it.hasFocus }.focusGroup(), state = list,
+        LazyColumn(Modifier.weight(1f).thenIf(tv) { onFocusChanged { reading = it.hasFocus }.focusGroup() }, state = list,
             contentPadding = PaddingValues(4.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             itemsIndexed(displayed, key = { index, _ -> index }) { index, line ->
-                Text(line, Modifier.fillMaxWidth().tvFocusId("logs.line.$index", LocalTvInputEnabled.current)
-                    .focusRing(RoundedCornerShape(6.dp)).focusable(enabled = LocalTvInputEnabled.current).padding(6.dp),
+                Text(line, Modifier.fillMaxWidth().thenIf(tv) {
+                    tvFocusId("logs.line.$index", LocalTvInputEnabled.current)
+                        .focusRing(RoundedCornerShape(6.dp)).focusable(enabled = LocalTvInputEnabled.current)
+                }.padding(6.dp),
                     style = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Monospace))
             }
         }

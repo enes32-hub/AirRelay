@@ -8,10 +8,10 @@
     <string name="r2_audio_body">An audio session is active. Control it from your phone.</string>
     <string name="r2_connection_guide">Connection guide</string>
     <string name="r2_notice_dismiss">Dismiss</string>
-    <string name="r2_cannot_find">Cannot find your TV?</string>
-    <string name="r2_step1">Connect your device and TV to the same local network.</string>
+    <string name="r2_cannot_find">Cannot find this receiver?</string>
+    <string name="r2_step1">Connect your device and this receiver to the same local network.</string>
     <string name="r2_step2">Control Centre → Screen Mirroring.</string>
-    <string name="r2_step3">Choose the name shown here. Enter the TV code if asked.</string>
+    <string name="r2_step3">Choose the name shown here. Enter the pairing code if asked.</string>
     <string name="r2_settings_intro">Manage connection, picture and startup preferences.</string>
     <string name="r2_pending_brief">Receiver settings take effect the next time the receiver starts.</string>
     <string name="r2_discard_settings">Discard changes</string>

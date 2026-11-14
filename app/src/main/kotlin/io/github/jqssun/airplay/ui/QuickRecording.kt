@@ -56,7 +56,7 @@ fun rememberQuickRecording(): () -> Unit {
     return {
         if (!pending) {
             pending = true
-            if (ContextCompat.checkSelfPermission(context, android.Manifest.permission.RECORD_AUDIO) != android.content.pm.PackageManager.PERMISSION_GRANTED)
+            if (android.os.Build.VERSION.SDK_INT >= 29 && ContextCompat.checkSelfPermission(context, android.Manifest.permission.RECORD_AUDIO) != android.content.pm.PackageManager.PERMISSION_GRANTED)
                 permission.launch(android.Manifest.permission.RECORD_AUDIO)
             else capture()
         }

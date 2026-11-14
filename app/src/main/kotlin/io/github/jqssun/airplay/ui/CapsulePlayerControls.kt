@@ -1,6 +1,7 @@
 package io.github.jqssun.airplay.ui
 
 import io.github.jqssun.airplay.ui.theme.AirRelayColors
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -8,10 +9,12 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
@@ -42,15 +45,26 @@ internal fun CapsuleAction(text: String, onClick: () -> Unit, icon: ImageVector,
     val focusedAction = LocalCapsuleFocused.current
     LaunchedEffect(pressed) { pressChanged(pressed); if (pressed) activity() }
     DisposableEffect(Unit) { onDispose { pressChanged(false) } }
+    val tv = isTv()
     val active = focused || selected
     val size = if (prominent) 58.dp else 44.dp
     val fontScale = LocalDensity.current.fontScale.coerceAtLeast(1f)
-    Column(modifier.width((if (wide) 84.dp else 60.dp) * fontScale)
-        .heightIn(min = 82.dp).tvFocusId(focusId, usable).focusRequester(focus)
-        .onFocusChanged { focused = it.isFocused; if (focused) { activity(); focusedAction(focus) } }
-        .semantics { this.selected = selected }
-        .clickable(enabled = usable, role = Role.Button, interactionSource = interactions,
-            indication = null, onClick = { focusedAction(focus); activity(); onClick() })
+    val columnModifier = if (tv) {
+        modifier.width((if (wide) 84.dp else 60.dp) * fontScale)
+            .heightIn(min = 82.dp).tvFocusId(focusId, usable).focusRequester(focus)
+            .onFocusChanged { focused = it.isFocused; if (focused) { activity(); focusedAction(focus) } }
+            .semantics { this.selected = selected }
+            .clickable(enabled = usable, role = Role.Button, interactionSource = interactions,
+                indication = null, onClick = { focusedAction(focus); activity(); onClick() })
+    } else {
+        modifier.width((if (wide) 84.dp else 60.dp) * fontScale)
+            .sizeIn(minWidth = 48.dp, minHeight = 82.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .semantics { this.selected = selected }
+            .clickable(enabled = usable, role = Role.Button, interactionSource = interactions,
+                indication = LocalIndication.current, onClick = { activity(); onClick() })
+    }
+    Column(columnModifier
         .padding(vertical = 6.dp), horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterVertically)) {
         Box(Modifier.size(size)

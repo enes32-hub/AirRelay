@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="playback_help_title">Try another way to watch</string>
-    <string name="playback_help_body">Some videos cannot play directly on the TV. Choose Switch to screen mirroring at the left of the bottom control bar, then reopen the video on your device.</string>
+    <string name="playback_help_body">Some videos cannot play directly on this receiver. Choose Switch to screen mirroring at the left of the bottom control bar, then reopen the video on your device.</string>
     <string name="playback_help_confirm">Got it</string>
     <string name="playback_choice_title">Playback</string>
     <string name="playback_mirror">Mirror screen</string>
     <string name="playback_direct">Play directly</string>
     <string name="playback_to_mirror">Switch to screen mirroring</string>
-    <string name="playback_mirror_description">Play videos on your device and mirror their picture and sound to the TV.</string>
-    <string name="playback_direct_description">Select this TV in the video’s AirPlay menu. Supported videos play on the TV and can be controlled from your device. An existing screen mirroring stream may not switch automatically.</string>
+    <string name="playback_mirror_description">Play videos on your device and mirror their picture and sound to this receiver.</string>
+    <string name="playback_direct_description">Select this receiver in the video’s AirPlay menu. Supported videos play on this device and can be controlled from your sending device. An existing screen mirroring stream may not switch automatically.</string>
     <string name="playback_actual_direct">Stream: Direct video</string>
     <string name="playback_switch_hint">The receiver stays running. This switch is one-way for the current stream: reopen the video on your device to watch it there, and reconnect screen mirroring if no picture appears.</string>
     <string name="playback_return_to_screen">Screen mirroring selected. Exit the AirPlay video screen on your device and reopen the video. If no picture appears, reconnect screen mirroring.</string>

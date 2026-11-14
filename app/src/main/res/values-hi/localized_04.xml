@@ -9,7 +9,7 @@
     <string name="setting_aac">AAC कोडेक घोषित करें</string>
     <string name="setting_aac_desc">mDNS रिकॉर्ड में AAC-ELD/AAC-LC उपलब्ध कराएँ; स्क्रीन मिररिंग की आवाज़ के लिए</string>
     <string name="setting_launch_on_connect">आने वाली स्ट्रीम दिखाएँ</string>
-    <string name="setting_launch_on_connect_desc">नई स्ट्रीम शुरू होने पर ऐप सामने लाएँ। टीवी की अनुमतियाँ लागू होती हैं।</string>
+    <string name="setting_launch_on_connect_desc">नई स्ट्रीम शुरू होने पर ऐप सामने लाएँ। सिस्टम की अनुमतियाँ लागू होती हैं।</string>
     <string name="setting_launch_on_connect_no_permission">अपने-आप दिखाने के लिए दूसरे ऐप के ऊपर दिखाने की अनुमति चाहिए।</string>
     <string name="setting_resolution">रिज़ॉल्यूशन</string>
     <string name="setting_resolution_desc">भेजने वाले डिवाइस को सुझाया गया अधिकतम तस्वीर आकार।</string>
@@ -72,5 +72,5 @@
     <string name="track_auto">अपने-आप</string>
     <string name="track_off">बंद</string>
     <string name="track_unavailable">इस वीडियो स्रोत में चुनने योग्य ट्रैक नहीं हैं।</string>
-    <string name="transition_transport_interrupted">वीडियो कनेक्शन टूट गया। देखें कि डिवाइस स्थानीय नेटवर्क पर टीवी तक पहुँच सकता है। VPN इस्तेमाल करते हैं तो स्थानीय नेटवर्क की पहुँच दें।</string>
+    <string name="transition_transport_interrupted">वीडियो कनेक्शन टूट गया। देखें कि डिवाइस स्थानीय नेटवर्क पर इस रिसीवर तक पहुँच सकता है। VPN इस्तेमाल करते हैं तो स्थानीय नेटवर्क की पहुँच दें।</string>
 </resources>

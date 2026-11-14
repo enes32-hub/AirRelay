@@ -9,11 +9,11 @@
   <string name="rec_saved">Recording saved.</string>
   <string name="rec_failed">Recording could not be saved.</string>
   <string name="rec_no_stream">Start mirroring from your device first, then record.</string>
-  <string name="rec_unavailable">Recording could not start. Your TV may not support screen capture, or storage or encoder resources may be unavailable.</string>
+  <string name="rec_unavailable">Recording could not start. This device may not support screen capture, or storage or encoder resources may be unavailable.</string>
   <string name="rec_export">Export MP4</string>
   <string name="rec_export_cancelled">Export cancelled or no destination selected.</string>
   <string name="rec_exported">Recording exported.</string>
-  <string name="rec_exported_movies">Saved to Movies/AirRelay on your TV.</string>
+  <string name="rec_exported_movies">Saved to Movies/AirRelay on this device.</string>
   <string name="rec_export_failed">Export failed. Check the destination and available space. Your original recording is still available.</string>
   <string name="rec_empty">No recordings yet.</string>
   <string name="rec_close">Close</string>

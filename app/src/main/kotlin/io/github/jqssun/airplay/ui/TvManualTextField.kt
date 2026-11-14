@@ -21,6 +21,22 @@ fun TvManualTextField(
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default,
 ) {
+    if (!isTv()) {
+        OutlinedTextField(
+            value = value,
+            onValueChange = onValueChange,
+            enabled = enabled,
+            readOnly = false,
+            singleLine = singleLine,
+            isError = isError,
+            label = label,
+            supportingText = supportingText,
+            keyboardOptions = keyboardOptions,
+            keyboardActions = keyboardActions,
+            modifier = modifier,
+        )
+        return
+    }
     var editing by remember { mutableStateOf(false) }
     var activating by remember { mutableStateOf(false) }
     val interactions = remember { MutableInteractionSource() }

@@ -74,6 +74,28 @@ foreach ($name in @('settings.gradle.kts', 'build.gradle.kts', 'gradle.propertie
 Copy-Tree (Join-Path $projectRoot 'gradle') (Join-Path $buildRootFull 'gradle')
 Copy-Tree (Join-Path $projectRoot 'tools') (Join-Path $buildRootFull 'tools') @('toolchain-probe')
 Copy-Tree (Join-Path $projectRoot 'app') (Join-Path $buildRootFull 'app') @('build', '.cxx', '.gradle', '.kotlin')
+if (Test-Path -LiteralPath (Join-Path $projectRoot 'keystore') -PathType Container) {
+    Copy-Tree (Join-Path $projectRoot 'keystore') (Join-Path $buildRootFull 'keystore')
+}
+# Quote PATH exports and avoid resolve() dereferencing temporary drive aliases inside the
+# copied OpenSSL helper when the caller's workspace directory contains spaces.
+$buildEnvPy = Join-Path $buildRootFull 'app\src\main\cpp\third_party\openssl-cmake\scripts\building_env.py'
+if (Test-Path -LiteralPath $buildEnvPy -PathType Leaf) {
+    $envText = Get-Content -LiteralPath $buildEnvPy -Raw
+    $updatedEnvText = $envText.Replace(
+        'Path(__file__).resolve().parents[7]',
+        'Path(os.path.abspath(__file__)).parents[7]'
+    ).Replace(
+        "'export PATH=' + ':'.join((",
+        "'export PATH=`"' + ':'.join(("
+    ).Replace(
+        ")) + '; ' + cmd_line",
+        ")) + '`"; ' + cmd_line"
+    )
+    if ($updatedEnvText -ne $envText) {
+        [System.IO.File]::WriteAllText($buildEnvPy, $updatedEnvText, (New-Object System.Text.UTF8Encoding($false)))
+    }
+}
 Remove-StaleTree (Join-Path $projectRoot 'app\src') (Join-Path $buildRootFull 'app\src')
 if (Test-Path -LiteralPath (Join-Path $projectRoot 'app\libs') -PathType Container) {
     Remove-StaleTree (Join-Path $projectRoot 'app\libs') (Join-Path $buildRootFull 'app\libs')
@@ -131,7 +153,30 @@ Set-Content -LiteralPath (Join-Path $buildRootFull 'local.properties') -Encoding
     "sdk.dir=$escapedSdk",
     "cmake.dir=$escapedCmake"
 ) + $signingLines)
-Push-Location $buildRootFull
+# FFmpeg's configure rejects whitespace in out-of-tree source paths; map the build root
+# parent through a temporary drive alias whenever $buildRootFull contains whitespace.
+$substDrive = $null
+$gradleRoot = $buildRootFull
+if ($buildRootFull -match '\s') {
+    $trimmedBuildRoot = $buildRootFull.TrimEnd('\', '/')
+    $parentDir = [System.IO.Path]::GetDirectoryName($trimmedBuildRoot)
+    $leafDir = [System.IO.Path]::GetFileName($trimmedBuildRoot)
+    foreach ($code in [int][char]'Z'..[int][char]'M') {
+        $letter = [char]$code
+        if (-not (Test-Path -LiteralPath "${letter}:\")) {
+            & "$env:SystemRoot\System32\subst.exe" "${letter}:" $parentDir
+            if ($LASTEXITCODE -eq 0) {
+                $substDrive = $letter
+                $gradleRoot = Join-Path "${letter}:\" $leafDir
+                break
+            }
+        }
+    }
+    if (-not $substDrive) {
+        throw "No free drive letter available for whitespace-safe build alias of '$buildRootFull'."
+    }
+}
+Push-Location $gradleRoot
 try {
     $buildTasks = @(':app:assemble' + $Variant)
     if ($WithIntegrationTests) { $buildTasks += ':app:assembleDebugAndroidTest' }
@@ -139,6 +184,9 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "Gradle build failed: $LASTEXITCODE" }
 } finally {
     Pop-Location
+    if ($substDrive) {
+        & "$env:SystemRoot\System32\subst.exe" "${substDrive}:" /D | Out-Null
+    }
 }
 
 $apkFolder = Join-Path $buildRootFull ('app\build\outputs\apk\' + $Variant.ToLowerInvariant())

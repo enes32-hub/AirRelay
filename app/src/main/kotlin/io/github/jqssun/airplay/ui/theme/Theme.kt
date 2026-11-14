@@ -8,6 +8,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import io.github.jqssun.airplay.receiver.AppearancePolicy
+import io.github.jqssun.airplay.ui.isTv
 
 data class ReceiverPalette(val Background: Color, val Panel: Color, val Elevated: Color,
     val Accent: Color, val Text: Color, val Muted: Color, val Border: Color,
@@ -56,10 +57,11 @@ private val playback = ReceiverPalette(
 @Composable
 fun PlaybackDialogColors(enabled: Boolean = true, content: @Composable () -> Unit) {
     if (!enabled) { content(); return }
+    val tv = isTv()
     CompositionLocalProvider(LocalReceiverPalette provides playback) {
         MaterialTheme(colorScheme = scheme(playback, false)) {
             CompositionLocalProvider(LocalContentColor provides playback.Text,
-                LocalRippleConfiguration provides null, content = content)
+                LocalRippleConfiguration provides if (tv) null else RippleConfiguration(), content = content)
         }
     }
 }
@@ -116,13 +118,14 @@ private val type = Typography(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AirPlayTheme(selected: String = "classic", content: @Composable () -> Unit) {
+    val tv = isTv()
     val effective = AppearancePolicy.resolve(selected)
     val colors = if (effective == "light") light else classic
     val material = remember(colors) { scheme(colors, effective == "light") }
     CompositionLocalProvider(LocalReceiverPalette provides colors) {
         MaterialTheme(colorScheme = material, typography = type) {
             CompositionLocalProvider(LocalContentColor provides colors.Text,
-                LocalRippleConfiguration provides null, content = content)
+                LocalRippleConfiguration provides if (tv) null else RippleConfiguration(), content = content)
         }
     }
 }

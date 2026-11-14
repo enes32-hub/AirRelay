@@ -9,7 +9,7 @@
     <string name="setting_aac">Umumkan codec AAC</string>
     <string name="setting_aac_desc">Tawarkan AAC-ELD/AAC-LC dalam catatan mDNS; digunakan untuk audio pencerminan layar</string>
     <string name="setting_launch_on_connect">Tampilkan siaran masuk</string>
-    <string name="setting_launch_on_connect_desc">Tampilkan aplikasi saat siaran baru dimulai. Izin TV berlaku.</string>
+    <string name="setting_launch_on_connect_desc">Tampilkan aplikasi saat siaran baru dimulai. Izin sistem berlaku.</string>
     <string name="setting_launch_on_connect_no_permission">Tampilan otomatis memerlukan izin tampil di atas aplikasi lain.</string>
     <string name="setting_resolution">Resolusi</string>
     <string name="setting_resolution_desc">Ukuran gambar maksimum yang disarankan kepada perangkat pengirim.</string>
@@ -72,5 +72,5 @@
     <string name="track_auto">Otomatis</string>
     <string name="track_off">Nonaktif</string>
     <string name="track_unavailable">Sumber video ini tidak menyediakan trek yang dapat dipilih.</string>
-    <string name="transition_transport_interrupted">Koneksi video terputus. Pastikan perangkat dapat mengakses TV melalui jaringan lokal. Jika memakai VPN, izinkan akses jaringan lokal.</string>
+    <string name="transition_transport_interrupted">Koneksi video terputus. Pastikan perangkat dapat mengakses penerima ini melalui jaringan lokal. Jika memakai VPN, izinkan akses jaringan lokal.</string>
 </resources>

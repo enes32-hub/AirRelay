@@ -31,12 +31,18 @@ fun ReceiverHome(state: ReceiverUiState, savedName: String, bound: Boolean,
     modifier: Modifier = Modifier, primaryFocus: FocusRequester = remember { FocusRequester() }, onDismissNotice: () -> Unit = {}) {
     val helpFocus = remember { FocusRequester() }
     BoxWithConstraints(modifier.fillMaxSize()) {
-        val showClassicScene = maxWidth >= 640.dp && LocalDensity.current.fontScale < 1.2f
+        val tv = isTv()
+        val largeFont = LocalDensity.current.fontScale >= 1.2f
+        val showClassicScene = maxWidth >= 640.dp && !largeFont
+        val stackedGuide = largeFont || (!tv && maxWidth < 600.dp)
+        val compactHeight = !tv && maxHeight < 500.dp
+        val outerModifier = if (compactHeight) Modifier.fillMaxSize().verticalScroll(rememberScrollState())
+            else Modifier.fillMaxSize()
         // The title, the receiver identity and the primary actions stay fixed. The page is a few
         // pixels taller than a 1080p viewport in longer translations, and scrolling the whole page
         // brought the focused element into view, which sliced the title off the top edge. Only the
         // guide steps scroll, so the title can never be clipped.
-        Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Column(outerModifier, verticalArrangement = Arrangement.spacedBy(16.dp)) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(18.dp)) {
                 HomeIdentity(state, savedName, bound, onStart, onStop, onShowMirror, onHelp,
                     onDismissNotice, primaryFocus, helpFocus, Modifier.weight(1f))
@@ -44,9 +50,11 @@ fun ReceiverHome(state: ReceiverUiState, savedName: String, bound: Boolean,
                     ReceiverScene(Modifier.width(230.dp).height(200.dp).padding(top = 60.dp))
             }
             androidx.compose.material3.HorizontalDivider(color = AirRelayColors.Border)
-            Column(Modifier.weight(1f).verticalScroll(rememberScrollState()),
+            val guideModifier = if (compactHeight) Modifier.fillMaxWidth()
+                else Modifier.weight(1f).verticalScroll(rememberScrollState())
+            Column(guideModifier,
                 verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                if (LocalDensity.current.fontScale < 1.2f) Row(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                if (!stackedGuide) Row(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
                     Box(Modifier.weight(1f)) { GuideStep("1", R.string.p_step1, R.string.r2_step1) }
                     Box(Modifier.weight(1f)) { GuideStep("2", R.string.p_step2, R.string.r2_step2) }
                     Box(Modifier.weight(1f)) { GuideStep("3", R.string.p_step3, R.string.r2_step3) }

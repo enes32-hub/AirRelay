@@ -206,6 +206,7 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
     }
 
     private fun registerCurrentServices() {
+        _mainHandler.removeCallbacks(refreshNetworkDiscovery)
         discoveryResumePolicy.registrationStarted(SystemClock.elapsedRealtime())
         val raopTxt = NativeBridge.nativeGetRaopTxtRecords(nativeHandle) ?: emptyMap()
         val airplayTxt = NativeBridge.nativeGetAirplayTxtRecords(nativeHandle) ?: emptyMap()
@@ -1175,7 +1176,7 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
         _receiverState.update { if (stopping) it else it.observeAudioFormat(usingScreen) }
         if (!usingScreen) _setPlaying(true)
         _setAudioOnly(!_receiverState.value.screenSession)
-        if (!usingScreen) requestIncomingPresentation()
+        requestIncomingPresentation()
         log("Audio format: ct=$ct spf=$spf screen=$usingScreen")
     }
 
@@ -1661,12 +1662,19 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
 
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
+        val nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        runCatching { nm.deleteNotificationChannel("airplay_service") }
         val channel = NotificationChannel(
             CHANNEL_ID,
             io.github.jqssun.airplay.receiver.AppLanguages.context(this).getString(R.string.notification_channel),
-            NotificationManager.IMPORTANCE_LOW
-        )
-        (getSystemService(NOTIFICATION_SERVICE) as NotificationManager).createNotificationChannel(channel)
+            NotificationManager.IMPORTANCE_MIN
+        ).apply {
+            setShowBadge(false)
+            setSound(null, null)
+            enableLights(false)
+            enableVibration(false)
+        }
+        nm.createNotificationChannel(channel)
     }
 
     private fun buildNotification(): Notification {
@@ -1699,6 +1707,10 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
             .setSmallIcon(R.drawable.ic_notification)
             .setContentIntent(pi)
             .setVisibility(NotificationCompat.VISIBILITY_PRIVATE)
+            .setBadgeIconType(NotificationCompat.BADGE_ICON_NONE)
+            .setNumber(0)
+            .setSilent(true)
+            .setShowWhen(false)
             .setOngoing(true)
 
         if (isAudio) {
@@ -1807,7 +1819,7 @@ class AirPlayService : LifecycleService(), RaopCallbackHandler, LogListener {
         private const val VOL_SYNC_EPS = 0.033f
         private const val VOL_SYNC_MAX_STEPS = 32
         private const val VOL_SYNC_TIMEOUT_MS = 800L
-        private const val CHANNEL_ID = "airplay_service"
+        private const val CHANNEL_ID = "airplay_service_nobadge"
         private const val NOTIFICATION_ID = 1
         const val ACTION_PLAY_PAUSE = "io.github.jqssun.airplay.PLAY_PAUSE"
         const val ACTION_NEXT = "io.github.jqssun.airplay.NEXT"

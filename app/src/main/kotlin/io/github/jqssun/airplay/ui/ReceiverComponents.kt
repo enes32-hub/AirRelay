@@ -3,6 +3,7 @@ package io.github.jqssun.airplay.ui
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -62,6 +63,7 @@ fun TvAction(text: String, onClick: () -> Unit, modifier: Modifier = Modifier,
         focused -> 1.015f
         else -> 1f
     }, tween(if (reduced) 0 else if (pressed) 70 else 130), label = "action feedback")
+    val tv = isTv()
     val shape = RoundedCornerShape(if (compact) 12.dp else 16.dp)
     val fill = when {
         focused -> AirRelayColors.Focus
@@ -78,17 +80,31 @@ fun TvAction(text: String, onClick: () -> Unit, modifier: Modifier = Modifier,
         selected -> AirRelayColors.SelectedInk
         else -> AirRelayColors.Text
     }
-    Row(modifier.tvFocusId(focusId, usable)
-        .graphicsLayer { scaleX = scale.value; scaleY = scale.value; alpha = if (usable) 1f else .48f }
-        .onFocusChanged { focused = it.isFocused; if (it.isFocused) activity() }
-        .semantics { this.selected = selected }
-        .heightIn(min = if (compact) 44.dp else 50.dp).clip(shape).background(fill)
-        .border(if (focused) 2.dp else 1.dp,
-            if (focused) AirRelayColors.Focus else if (selected) AirRelayColors.Accent.copy(alpha = .55f)
-            else if (primary) Color.Transparent else AirRelayColors.Border.copy(alpha = .7f), shape)
-        .clickable(enabled = usable, role = Role.Button, interactionSource = interactions,
-            indication = null,
-            onClick = { activity(); onClick() })
+    val interactiveModifier = if (tv) {
+        modifier.tvFocusId(focusId, usable)
+            .graphicsLayer { scaleX = scale.value; scaleY = scale.value; alpha = if (usable) 1f else .48f }
+            .onFocusChanged { focused = it.isFocused; if (it.isFocused) activity() }
+            .semantics { this.selected = selected }
+            .heightIn(min = if (compact) 44.dp else 50.dp).clip(shape).background(fill)
+            .border(if (focused) 2.dp else 1.dp,
+                if (focused) AirRelayColors.Focus else if (selected) AirRelayColors.Accent.copy(alpha = .55f)
+                else if (primary) Color.Transparent else AirRelayColors.Border.copy(alpha = .7f), shape)
+            .clickable(enabled = usable, role = Role.Button, interactionSource = interactions,
+                indication = null,
+                onClick = { activity(); onClick() })
+    } else {
+        modifier
+            .graphicsLayer { scaleX = scale.value; scaleY = scale.value; alpha = if (usable) 1f else .48f }
+            .semantics { this.selected = selected }
+            .sizeIn(minWidth = 48.dp, minHeight = if (compact) 48.dp else 50.dp).clip(shape).background(fill)
+            .border(1.dp,
+                if (selected) AirRelayColors.Accent.copy(alpha = .55f)
+                else if (primary) Color.Transparent else AirRelayColors.Border.copy(alpha = .7f), shape)
+            .clickable(enabled = usable, role = Role.Button, interactionSource = interactions,
+                indication = LocalIndication.current,
+                onClick = { activity(); onClick() })
+    }
+    Row(interactiveModifier
         .padding(horizontal = if (compact) 14.dp else 18.dp, vertical = if (compact) 9.dp else 12.dp),
         horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
         if (icon != null) { Icon(icon, null, Modifier.size(if (compact) 19.dp else 21.dp), tint = ink); Spacer(Modifier.width(9.dp)) }
@@ -103,14 +119,24 @@ fun TvPreference(title: String, description: String, value: Boolean, onChange: (
     var focused by remember { mutableStateOf(false) }
     val interactions = remember { MutableInteractionSource() }
     val pressed by interactions.collectIsPressedAsState()
+    val tv = isTv()
     val usable = LocalTvInputEnabled.current
     val shape = RoundedCornerShape(16.dp)
-    Row(modifier.fillMaxWidth().tvFocusId(focusId, usable)
-        .onFocusChanged { focused = it.isFocused }.clip(shape)
-        .background(if (focused || pressed) AirRelayColors.Elevated else AirRelayColors.Panel)
-        .border(if (focused) 2.dp else 1.dp, if (focused) AirRelayColors.Focus else AirRelayColors.Border.copy(alpha = .6f), shape)
-        .toggleable(value = value, enabled = usable, role = Role.Switch,
-            interactionSource = interactions, indication = null, onValueChange = onChange)
+    val rowModifier = if (tv) {
+        modifier.fillMaxWidth().tvFocusId(focusId, usable)
+            .onFocusChanged { focused = it.isFocused }.clip(shape)
+            .background(if (focused || pressed) AirRelayColors.Elevated else AirRelayColors.Panel)
+            .border(if (focused) 2.dp else 1.dp, if (focused) AirRelayColors.Focus else AirRelayColors.Border.copy(alpha = .6f), shape)
+            .toggleable(value = value, enabled = usable, role = Role.Switch,
+                interactionSource = interactions, indication = null, onValueChange = onChange)
+    } else {
+        modifier.fillMaxWidth().heightIn(min = 56.dp).clip(shape)
+            .background(if (pressed) AirRelayColors.Elevated else AirRelayColors.Panel)
+            .border(1.dp, AirRelayColors.Border.copy(alpha = .6f), shape)
+            .toggleable(value = value, enabled = usable, role = Role.Switch,
+                interactionSource = interactions, indication = LocalIndication.current, onValueChange = onChange)
+    }
+    Row(rowModifier
         .padding(horizontal = 18.dp, vertical = if (compact) 8.dp else 14.dp), verticalAlignment = Alignment.CenterVertically) {
         Column(Modifier.weight(1f)) {
             Text(title, style = MaterialTheme.typography.titleMedium)

@@ -3,14 +3,20 @@ package io.github.jqssun.airplay.recording
 import android.app.Activity
 import android.os.Bundle
 import android.net.Uri
+import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.core.graphics.Insets
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
 import io.github.jqssun.airplay.R
+import io.github.jqssun.airplay.ui.isTvDevice
 
 /** Local recordings have their own player lifecycle; they never take over the AirPlay player. */
 @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
@@ -48,6 +54,28 @@ class RecordingPlayerActivity : Activity() {
             })
         }
         setContentView(view)
+        if (!isTvDevice()) {
+            WindowCompat.setDecorFitsSystemWindows(window, false)
+            val controller = view.findViewById<View>(androidx.media3.ui.R.id.exo_controller)
+            controller?.let { target ->
+                val baseLeft = target.paddingLeft
+                val baseTop = target.paddingTop
+                val baseRight = target.paddingRight
+                val baseBottom = target.paddingBottom
+                ViewCompat.setOnApplyWindowInsetsListener(target) { v, windowInsets ->
+                    val bars: Insets = windowInsets.getInsets(
+                        WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout()
+                    )
+                    v.setPadding(
+                        baseLeft + bars.left,
+                        baseTop + bars.top,
+                        baseRight + bars.right,
+                        baseBottom + bars.bottom
+                    )
+                    windowInsets
+                }
+            }
+        }
     }
 
     override fun dispatchKeyEvent(event: android.view.KeyEvent): Boolean {

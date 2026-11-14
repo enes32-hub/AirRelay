@@ -2,10 +2,10 @@
 <resources>
     <string name="permission_section">Permissions</string>
     <string name="permission_step">Setup · %1$d / 4</string>
-    <string name="permission_welcome">Get your TV ready to share</string>
+    <string name="permission_welcome">Get this device ready to share</string>
     <string name="permission_intro">Let’s set up the permissions AirRelay needs. Each step explains what you are allowing, and you can skip any optional permission.</string>
     <string name="permission_network_title">Connect on the same network</string>
-    <string name="permission_network_body">AirRelay uses the local network to appear on your iPhone, iPad and Mac and receive video and audio. Your TV can use Wi-Fi or Ethernet.</string>
+    <string name="permission_network_body">AirRelay uses the local network to appear on your iPhone, iPad and Mac and receive video and audio. This device can use Wi-Fi or Ethernet.</string>
     <string name="permission_network_automatic">Android grants these network permissions automatically. Audio capture is requested only when you start a recording and captures this app\'s own playback sound; the microphone, camera and photo library are never read.</string>
     <string name="permission_notifications_title">Keep connection status handy</string>
     <string name="permission_notifications_body">Notifications show the connection status while the receiver is ready in the background and let you stop casting.</string>
@@ -13,8 +13,8 @@
     <string name="permission_notifications_grant">Allow notifications</string>
     <string name="permission_notifications_label">Notifications</string>
     <string name="permission_display_title">Open the screen when casting starts</string>
-    <string name="permission_display_body">To open AirRelay and show the pairing code when a device connects from the TV home screen, allow “Display over other apps”.</string>
-    <string name="permission_display_instruction">Find AirRelay in the TV settings and allow access. Then press Back to return here.</string>
+    <string name="permission_display_body">To open AirRelay and show the pairing code when a device connects while AirRelay is in the background, allow “Display over other apps”.</string>
+    <string name="permission_display_instruction">Find AirRelay in system settings and allow access, then return here.</string>
     <string name="permission_display_skip">Without this permission, open AirRelay yourself before connecting.</string>
     <string name="permission_display_grant">Allow automatic display</string>
     <string name="permission_display_label">Automatic display</string>
@@ -26,8 +26,8 @@
     <string name="permission_continue">Continue</string>
     <string name="permission_back">Back</string>
     <string name="permission_skip">Skip for now</string>
-    <string name="permission_manage">Change in TV settings</string>
-    <string name="permission_settings_unavailable">This TV could not open the permission screen. Check TV Settings → Apps → AirRelay.</string>
+    <string name="permission_manage">Change in system settings</string>
+    <string name="permission_settings_unavailable">This device could not open the permission screen. Check Settings → Apps → AirRelay.</string>
     <string name="permission_audio_capture_label">Recording audio capture</string>
     <string name="permission_audio_capture_body">Requested only when you start a recording, to capture this app\'s own playback sound. The microphone is never read.</string>
 </resources>

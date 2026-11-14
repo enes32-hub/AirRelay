@@ -60,10 +60,20 @@ class RecordingService : Service() {
     private fun recordingNotification(): Notification {
         val localized = io.github.jqssun.airplay.receiver.AppLanguages.context(this)
         val manager = getSystemService(NotificationManager::class.java)
-        if (Build.VERSION.SDK_INT >= 26) manager.createNotificationChannel(NotificationChannel("recording", localized.getString(R.string.rec_title), NotificationManager.IMPORTANCE_LOW))
+        if (Build.VERSION.SDK_INT >= 26) {
+            runCatching { manager.deleteNotificationChannel("recording") }
+            val channel = NotificationChannel("recording_nobadge", localized.getString(R.string.rec_title), NotificationManager.IMPORTANCE_LOW).apply {
+                setShowBadge(false)
+                setSound(null, null)
+                enableLights(false)
+                enableVibration(false)
+            }
+            manager.createNotificationChannel(channel)
+        }
         val stop = PendingIntent.getService(this, 0, Intent(this, javaClass).setAction(STOP), PendingIntent.FLAG_IMMUTABLE)
-        return NotificationCompat.Builder(this, "recording")
+        return NotificationCompat.Builder(this, "recording_nobadge")
             .setSmallIcon(io.github.jqssun.airplay.R.drawable.ic_notification).setContentTitle(localized.getString(R.string.rec_active))
+            .setBadgeIconType(NotificationCompat.BADGE_ICON_NONE).setNumber(0).setSilent(true)
             .setOngoing(true).addAction(0, localized.getString(R.string.rec_stop), stop).build()
     }
 

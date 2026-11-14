@@ -9,7 +9,7 @@
     <string name="setting_aac">الإعلان عن ترميز AAC</string>
     <string name="setting_aac_desc">عرض AAC-ELD/AAC-LC في سجل mDNS؛ يُستخدم لصوت انعكاس الشاشة</string>
     <string name="setting_launch_on_connect">عرض البث الوارد</string>
-    <string name="setting_launch_on_connect_desc">إظهار التطبيق عند بدء بث جديد. تنطبق أذونات التلفزيون.</string>
+    <string name="setting_launch_on_connect_desc">إظهار التطبيق عند بدء بث جديد. تنطبق أذونات النظام.</string>
     <string name="setting_launch_on_connect_no_permission">يتطلب العرض التلقائي إذن الظهور فوق التطبيقات الأخرى.</string>
     <string name="setting_resolution">الدقة</string>
     <string name="setting_resolution_desc">أقصى حجم للصورة يُقترح على الجهاز المرسل.</string>
@@ -72,5 +72,5 @@
     <string name="track_auto">تلقائي</string>
     <string name="track_off">إيقاف</string>
     <string name="track_unavailable">لا يوفّر مصدر الفيديو مسارات قابلة للاختيار.</string>
-    <string name="transition_transport_interrupted">فُقد اتصال الفيديو. تحقق من وصول جهازك إلى التلفزيون عبر الشبكة المحلية. إذا كنت تستخدم VPN، فاسمح بالوصول للشبكة المحلية.</string>
+    <string name="transition_transport_interrupted">فُقد اتصال الفيديو. تحقق من وصول جهازك إلى هذا المستقبل عبر الشبكة المحلية. إذا كنت تستخدم VPN، فاسمح بالوصول للشبكة المحلية.</string>
 </resources>

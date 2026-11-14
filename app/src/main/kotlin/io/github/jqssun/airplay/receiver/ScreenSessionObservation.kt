@@ -4,6 +4,7 @@ package io.github.jqssun.airplay.receiver
 fun ReceiverUiState.observeAudioFormat(usingScreen: Boolean): ReceiverUiState {
     val screen = screenSession || usingScreen
     return copy(screenSession = screen, mirrorRequested = mirrorRequested || usingScreen,
+        presentationHeld = presentationHeld || usingScreen,
         audioConnected = !screen && connections > 0)
 }
 

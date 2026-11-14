@@ -221,7 +221,8 @@ fun ReceiverSettings(viewModel: MainViewModel, onAdvanced: () -> Unit, onModalCh
                             item(key = "notification-permission") {
                                 PermissionManagementCard(stringResource(R.string.permission_notifications_label),
                                     stringResource(R.string.permission_notifications_body), access.notifications, "settings.permission.notifications") {
-                                    activity?.openNotificationSettings()
+                                    if (access.notifications) activity?.openNotificationSettings()
+                                    else activity?.requestNotificationPermission()
                                 }
                             }
                             if (needsAudioCapturePermission) item(key = "audio-capture") {
@@ -311,7 +312,7 @@ private fun NameEditor(name: String, onSave: (String) -> Unit, onCancel: () -> U
                 TvManualTextField(value = draft, onValueChange = { draft = it.take(96) },
                     label = { Text(stringResource(R.string.p_name_label)) }, singleLine = true,
                     isError = !valid, modifier = Modifier.fillMaxWidth().focusRequester(field).onFocusChanged { focused = it.isFocused },
-                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done, showKeyboardOnFocus = false),
+                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done, showKeyboardOnFocus = !isTv()),
                     keyboardActions = KeyboardActions(onDone = { if (valid) { if (draft != name) onSave(draft) else onCancel() } }))
                 Text(stringResource(if (valid) R.string.p_receiver_name_desc else R.string.p_name_error), style = MaterialTheme.typography.bodySmall,
                     color = if (valid) AirRelayColors.Muted else MaterialTheme.colorScheme.error)

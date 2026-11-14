@@ -84,12 +84,16 @@ public:
      * makes it capturable; the cost is a short gap while the new stream starts.
      */
     void setCaptureFriendly(bool on) {
-        {
-            std::lock_guard<std::mutex> lk(mLock);
-            if (mCaptureFriendly.load() == on) return;
-            mCaptureFriendly.store(on);
+        std::lock_guard<std::mutex> lk(mLock);
+        if (mCaptureFriendly.load() == on) return;
+        mCaptureFriendly.store(on);
+        if (!mClosing.load() && mStream) {
+            mStream->stop();
+            mStream->close();
+            mStream.reset();
+            mTimeline->reprime();
+            if (openLocked()) mStream->requestStart();
         }
-        reopenAfterError();
         mLog->info("Audio output switched to %s path for capture", on ? "capturable" : "low-latency");
     }
 
@@ -144,9 +148,11 @@ private:
             // game use case may enable extra latency optimizations
             b.setPerformanceMode(oboe::PerformanceMode::LowLatency)->setUsage(oboe::Usage::Game);
         } else {
-            // media use case may have better quality and lower power, and stays inside the platform
-            // mixer so AudioPlaybackCapture can record it
-            b.setPerformanceMode(oboe::PerformanceMode::PowerSaving)->setUsage(oboe::Usage::Media);
+            // media use case stays inside the platform mixer so AudioPlaybackCapture can record
+            // it; avoid PowerSaving when capture-friendly so AAudio doesn't force huge bursts
+            b.setPerformanceMode(mCaptureFriendly.load() ? oboe::PerformanceMode::None
+                                                         : oboe::PerformanceMode::PowerSaving)
+             ->setUsage(oboe::Usage::Media);
         }
         oboe::Result r = b.openStream(mStream);
         if (r != oboe::Result::OK) {
@@ -155,7 +161,7 @@ private:
         }
         if (mOboeBufferFrames > 0) {
             mStream->setBufferSizeInFrames(mOboeBufferFrames);
-        } else if (mLowLatency) {
+        } else if (mLowLatency && !mCaptureFriendly.load()) {
             // smallest reasonable buffer in low-latency mode
             mStream->setBufferSizeInFrames(mStream->getFramesPerBurst() * 2);
         }
