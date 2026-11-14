@@ -36,6 +36,7 @@
     <string name="p_setup_before_apply">Selesaikan penyiapan awal dari Hubungkan sebelum menerapkan pengaturan penerima.</string>
     <string name="rec_title">Rekaman</string>
     <string name="rec_description">Merekam hanya gambar dan suara siaran. Maksimal 1 jam atau 2 GB per file.</string>
+    <string name="rec_audio_min_android">Audio pemutaran hanya dapat direkam di Android 10 atau lebih baru.</string>
     <string name="rec_start">Mulai merekam</string>
     <string name="rec_stop">Hentikan rekaman</string>
     <string name="rec_active">● Merekam</string>

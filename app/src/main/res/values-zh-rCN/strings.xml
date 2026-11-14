@@ -214,6 +214,7 @@
     <string name="p_setup_before_apply">应用接收器设置前，请先从“连接”完成初始设置。</string>
     <string name="rec_title">录制内容</string>
     <string name="rec_description">仅录制画面的图像和声音。每个文件最长 1 小时或 2 GB。</string>
+    <string name="rec_audio_min_android">仅在 Android 10 及以上版本可录制播放声音。</string>
     <string name="rec_start">开始录制</string>
     <string name="rec_stop">停止录制</string>
     <string name="rec_active">● 正在录制</string>

@@ -214,6 +214,7 @@
     <string name="p_setup_before_apply">受信機の設定を適用する前に、「接続」から初期設定を完了してください。</string>
     <string name="rec_title">録画</string>
     <string name="rec_description">配信の映像と音声のみを録画します。1 ファイルあたり最大 1 時間または 2 GB。</string>
+    <string name="rec_audio_min_android">再生音声を録音できるのは Android 10 以降です。</string>
     <string name="rec_start">録画を開始</string>
     <string name="rec_stop">録画を停止</string>
     <string name="rec_active">● 録画中</string>

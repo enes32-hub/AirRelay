@@ -1,6 +1,7 @@
 <resources>
     <string name="rec_title">Kayıtlar</string>
     <string name="rec_description">Yalnızca yayının görüntüsünü ve sesini kaydeder. Her dosya en fazla 1 saat veya 2 GB olur.</string>
+    <string name="rec_audio_min_android">Oynatma sesi yalnızca Android 10 ve üzerinde kaydedilebilir.</string>
     <string name="rec_start">Kaydı başlat</string>
     <string name="rec_stop">Kaydı durdur</string>
     <string name="rec_active">● Kaydediliyor</string>

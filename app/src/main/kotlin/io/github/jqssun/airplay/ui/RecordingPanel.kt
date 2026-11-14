@@ -95,6 +95,9 @@ fun RecordingPanel(onStarted: () -> Unit = {}, canRecord: Boolean = true, canPla
     Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         if (canRecord) {
         Text(stringResource(R.string.rec_description), color = AirRelayColors.Muted)
+        // AudioPlaybackCapture does not exist before API 29; say so only where it applies.
+        if (android.os.Build.VERSION.SDK_INT < 29)
+            Text(stringResource(R.string.rec_audio_min_android), color = AirRelayColors.Muted)
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             listOf(720, 1080).forEach { value -> TvAction("${value}p", { quality = value; preferences.edit().putInt("quality", value).apply() },
                 selected = quality == value, enabled = !state.active, compact = true, focusId = "record.quality.$value") }

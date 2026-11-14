@@ -36,6 +36,7 @@
     <string name="p_setup_before_apply">Завершите начальную настройку в разделе подключения, прежде чем применять настройки приёмника.</string>
     <string name="rec_title">Записи</string>
     <string name="rec_description">Записывает только изображение и звук трансляции. До 1 часа или 2 ГБ на файл.</string>
+    <string name="rec_audio_min_android">Звук воспроизведения записывается только на Android 10 и новее.</string>
     <string name="rec_start">Начать запись</string>
     <string name="rec_stop">Остановить запись</string>
     <string name="rec_active">● Запись</string>

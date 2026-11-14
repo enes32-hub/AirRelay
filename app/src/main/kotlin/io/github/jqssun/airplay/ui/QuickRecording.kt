@@ -79,6 +79,8 @@ fun RecordingQualitySetting() {
     ) {
         Text(stringResource(R.string.rec_options_title), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.rec_description), style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Muted)
+        if (android.os.Build.VERSION.SDK_INT < 29)
+            Text(stringResource(R.string.rec_audio_min_android), style = MaterialTheme.typography.bodySmall, color = AirRelayColors.Muted)
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             listOf(720, 1080).forEach { value ->
                 TvAction(

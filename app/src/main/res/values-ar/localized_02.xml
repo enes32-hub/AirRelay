@@ -36,6 +36,7 @@
     <string name="p_setup_before_apply">أكمل الإعداد الأولي من «اتصال» قبل تطبيق إعدادات المستقبل.</string>
     <string name="rec_title">التسجيلات</string>
     <string name="rec_description">يسجّل صورة البث وصوته فقط. بحد أقصى ساعة واحدة أو 2 غيغابايت لكل ملف.</string>
+    <string name="rec_audio_min_android">لا يمكن تسجيل صوت التشغيل إلا على Android 10 أو أحدث.</string>
     <string name="rec_start">بدء التسجيل</string>
     <string name="rec_stop">إيقاف التسجيل</string>
     <string name="rec_active">● جارٍ التسجيل</string>

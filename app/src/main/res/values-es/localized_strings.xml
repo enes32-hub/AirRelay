@@ -214,6 +214,7 @@
     <string name="p_setup_before_apply">Completa la configuración inicial en Conectar antes de aplicar ajustes del receptor.</string>
     <string name="rec_title">Grabaciones</string>
     <string name="rec_description">Graba solo la imagen y el sonido de la emisión. Máximo 1 hora o 2 GB por archivo.</string>
+    <string name="rec_audio_min_android">El audio de reproducción solo se puede grabar en Android 10 o posterior.</string>
     <string name="rec_start">Iniciar grabación</string>
     <string name="rec_stop">Detener grabación</string>
     <string name="rec_active">● Grabando</string>

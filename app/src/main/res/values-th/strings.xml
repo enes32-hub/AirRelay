@@ -214,6 +214,7 @@
     <string name="p_setup_before_apply">ตั้งค่าเริ่มต้นจากหน้าเชื่อมต่อให้เสร็จก่อนใช้การตั้งค่าตัวรับ</string>
     <string name="rec_title">รายการบันทึก</string>
     <string name="rec_description">บันทึกเฉพาะภาพและเสียงของสตรีม สูงสุด 1 ชั่วโมง หรือ 2 GB ต่อไฟล์</string>
+    <string name="rec_audio_min_android">บันทึกเสียงเล่นได้เฉพาะ Android 10 ขึ้นไป</string>
     <string name="rec_start">เริ่มบันทึก</string>
     <string name="rec_stop">หยุดบันทึก</string>
     <string name="rec_active">● กำลังบันทึก</string>

@@ -214,6 +214,7 @@
     <string name="p_setup_before_apply">수신기 설정을 적용하기 전에 \'연결\'에서 초기 설정을 완료하세요.</string>
     <string name="rec_title">녹화 목록</string>
     <string name="rec_description">스트림의 화면과 소리만 녹화합니다. 파일당 최대 1시간 또는 2GB.</string>
+    <string name="rec_audio_min_android">재생 오디오는 Android 10 이상에서만 녹음할 수 있습니다.</string>
     <string name="rec_start">녹화 시작</string>
     <string name="rec_stop">녹화 중지</string>
     <string name="rec_active">● 녹화 중</string>

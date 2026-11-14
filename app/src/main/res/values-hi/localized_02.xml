@@ -36,6 +36,7 @@
     <string name="p_setup_before_apply">रिसीवर सेटिंग लागू करने से पहले «कनेक्ट करें» स्क्रीन से शुरुआती सेटअप पूरा करें।</string>
     <string name="rec_title">रिकॉर्डिंग</string>
     <string name="rec_description">केवल स्ट्रीम की तस्वीर और आवाज़ रिकॉर्ड करता है। प्रति फ़ाइल अधिकतम 1 घंटा या 2 GB।</string>
+    <string name="rec_audio_min_android">प्लेबैक ऑडियो केवल Android 10 या नए संस्करण पर रिकॉर्ड हो सकता है।</string>
     <string name="rec_start">रिकॉर्डिंग शुरू करें</string>
     <string name="rec_stop">रिकॉर्डिंग रोकें</string>
     <string name="rec_active">● रिकॉर्ड हो रहा है</string>

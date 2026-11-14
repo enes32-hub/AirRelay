@@ -2,6 +2,7 @@
 <resources>
   <string name="rec_title">Recordings</string>
   <string name="rec_description">Records only the stream\'s picture and sound. Each file is limited to 1 hour or 2 GB.</string>
+  <string name="rec_audio_min_android">Playback audio can only be recorded on Android 10 or newer.</string>
   <string name="rec_start">Start recording</string>
   <string name="rec_stop">Stop recording</string>
   <string name="rec_active">● Recording</string>

@@ -214,6 +214,7 @@
     <string name="p_setup_before_apply">Terminez la configuration initiale dans Connexion avant d’appliquer les réglages du récepteur.</string>
     <string name="rec_title">Enregistrements</string>
     <string name="rec_description">Enregistre uniquement l’image et le son du flux. 1 heure ou 2 Go maximum par fichier.</string>
+    <string name="rec_audio_min_android">Le son de lecture ne peut être enregistré que sur Android 10 ou version ultérieure.</string>
     <string name="rec_start">Démarrer l’enregistrement</string>
     <string name="rec_stop">Arrêter l’enregistrement</string>
     <string name="rec_active">● Enregistrement</string>

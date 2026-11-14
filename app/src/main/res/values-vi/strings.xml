@@ -214,6 +214,7 @@
     <string name="p_setup_before_apply">Hoàn tất thiết lập ban đầu từ mục Kết nối trước khi áp dụng cài đặt bộ thu.</string>
     <string name="rec_title">Bản ghi</string>
     <string name="rec_description">Chỉ ghi hình ảnh và âm thanh của luồng. Tối đa 1 giờ hoặc 2 GB mỗi tệp.</string>
+    <string name="rec_audio_min_android">Chỉ ghi được âm thanh phát trên Android 10 trở lên.</string>
     <string name="rec_start">Bắt đầu ghi</string>
     <string name="rec_stop">Dừng ghi</string>
     <string name="rec_active">● Đang ghi</string>
